@@ -1,0 +1,1453 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Batmaz2019}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4986a890c36a6199b707e4746cbb868b}{%
+           family={Batmaz},
+           familyi={B\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b4542aa4835f56c706237d85222fb48f}{%
+           family={Yurekli},
+           familyi={Y\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=54e494951311a1f5140a70b099caedee}{%
+           family={Bilge},
+           familyi={B\bibinitperiod},
+           given={Alper},
+           giveni={A\bibinitperiod}}}%
+        {{hash=92d739ee9019c7429d797576c302ac54}{%
+           family={Kaleli},
+           familyi={K\bibinitperiod},
+           given={Cihan},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4cfe708759365905ec30ee08afe4cb3}
+      \strng{fullhash}{423f57548ce41c9341ccb2410b371a7a}
+      \strng{fullhashraw}{423f57548ce41c9341ccb2410b371a7a}
+      \strng{bibnamehash}{423f57548ce41c9341ccb2410b371a7a}
+      \strng{authorbibnamehash}{423f57548ce41c9341ccb2410b371a7a}
+      \strng{authornamehash}{a4cfe708759365905ec30ee08afe4cb3}
+      \strng{authorfullhash}{423f57548ce41c9341ccb2410b371a7a}
+      \strng{authorfullhashraw}{423f57548ce41c9341ccb2410b371a7a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender systems are effective tools of information filtering that are prevalent due to increasing access to the Internet, personalization trends, and changing habits of computer users. Although existing recommender systems are successful in producing decent recommendations, they still suffer from challenges such as accuracy, scalability, and cold-start. In the last few years, deep learning, the state-of-the-art machine learning technique utilized in many complex tasks, has been employed in recommender systems to improve the quality of recommendations. In this study, we provide a comprehensive review of deep learning-based recommendation approaches to enlighten and guide newbie researchers interested in the subject. We analyze compiled studies within four dimensions which are deep learning models utilized in recommender systems, remedies for the challenges of recommender systems, awareness and prevalence over recommendation domains, and the purposive properties. We also provide a comprehensive quantitative assessment of publications in the field and conclude by discussing gained insights and possible future work on the subject.}
+      \field{issn}{1573-7462}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{A review on deep learning for recommender systems: challenges and remedies}
+      \field{volume}{52}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1007/s10462-018-9654-y
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10462-018-9654-y
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10462-018-9654-y
+      \endverb
+    \endentry
+    \entry{Burke2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=927ab4206ced595b50d2ac5fb4535b88}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{fullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{fullhashraw}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{bibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorbibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authornamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorfullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorfullhashraw}{927ab4206ced595b50d2ac5fb4535b88}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender systems represent user preferences for the purpose of suggesting items to purchase or examine. They have become fundamental applications in electronic commerce and information access, providing suggestions that effectively prune large information spaces so that users are directed toward those items that best meet their needs and preferences. A variety of techniques have been proposed for performing recommendation, including content-based, collaborative, knowledge-based and other techniques. To improve performance, these methods have sometimes been combined in hybrid recommenders. This paper surveys the landscape of actual and possible hybrid recommenders, and introduces a novel hybrid, EntreeC, a system that combines knowledge-based recommendation and collaborative filtering to recommend restaurants. Further, we show that semantic ratings obtained from the knowledge-based part of the system enhance the effectiveness of collaborative filtering.}
+      \field{issn}{1573-1391}
+      \field{journaltitle}{User Modeling and User-Adapted Interaction}
+      \field{month}{11}
+      \field{number}{4}
+      \field{title}{Hybrid Recommender Systems: Survey and Experiments}
+      \field{volume}{12}
+      \field{year}{2002}
+      \field{pages}{331\bibrangedash 370}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1023/A:1021240730564
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1021240730564
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1021240730564
+      \endverb
+    \endentry
+    \entry{He2017}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=cf3f1b6bfe8e9131a8c719c1af0dce5d}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xiangnan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=98c2b47a69b228e811390ee98c8d81f4}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Lizi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6f410a596e335c299e3550a4e9990bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hanwang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bc7884a5203c192ab9125f81d18db97d}{%
+           family={Nie},
+           familyi={N\bibinitperiod},
+           given={Liqiang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=13be76d254e7c2f65cfc92bc75bb18fd}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xia},
+           giveni={X\bibinitperiod}}}%
+        {{hash=57e4257ea3484acff91be2a3df96d16b}{%
+           family={Chua},
+           familyi={C\bibinitperiod},
+           given={Tat-Seng},
+           giveni={T\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International World Wide Web Conferences Steering Committee}%
+      }
+      \strng{namehash}{5288584512ef6ddfdb0f4e97d3bced50}
+      \strng{fullhash}{9ae5af45ea1e621baea878b357a6a477}
+      \strng{fullhashraw}{9ae5af45ea1e621baea878b357a6a477}
+      \strng{bibnamehash}{9ae5af45ea1e621baea878b357a6a477}
+      \strng{authorbibnamehash}{9ae5af45ea1e621baea878b357a6a477}
+      \strng{authornamehash}{5288584512ef6ddfdb0f4e97d3bced50}
+      \strng{authorfullhash}{9ae5af45ea1e621baea878b357a6a477}
+      \strng{authorfullhashraw}{9ae5af45ea1e621baea878b357a6a477}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, deep neural networks have yielded immense success on speech recognition, computer vision and natural language processing. However, the exploration of deep neural networks on recommender systems has received relatively less scrutiny. In this work, we strive to develop techniques based on neural networks to tackle the key problem in recommendation --- collaborative filtering --- on the basis of implicit feedback.Although some recent work has employed deep learning for recommendation, they primarily used it to model auxiliary information, such as textual descriptions of items and acoustic features of musics. When it comes to model the key factor in collaborative filtering --- the interaction between user and item features, they still resorted to matrix factorization and applied an inner product on the latent features of users and items.By replacing the inner product with a neural architecture that can learn an arbitrary function from data, we present a general framework named NCF, short for Neural network-based Collaborative Filtering. NCF is generic and can express and generalize matrix factorization under its framework. To supercharge NCF modelling with non-linearities, we propose to leverage a multi-layer perceptron to learn the user-item interaction function. Extensive experiments on two real-world datasets show significant improvements of our proposed NCF framework over the state-of-the-art methods. Empirical evidence shows that using deeper layers of neural networks offers better recommendation performance.}
+      \field{note}{Republic and Canton of Geneva, CHE}
+      \field{title}{Neural Collaborative Filtering}
+      \field{year}{2017}
+      \field{pages}{173\bibrangedash 182}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3038912.3052569
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3038912.3052569
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3038912.3052569
+      \endverb
+      \keyw{collaborative filtering,deep learning,implicit feedback,matrix factorization,neural networks}
+    \endentry
+    \entry{Hidaka2023}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=495d2f2869642b7ef90746ec556e4219}{%
+           family={Hidaka},
+           familyi={H\bibinitperiod},
+           given={Kazuyoshi},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{fullhash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{fullhashraw}{495d2f2869642b7ef90746ec556e4219}
+      \strng{bibnamehash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{authorbibnamehash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{authornamehash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{authorfullhash}{495d2f2869642b7ef90746ec556e4219}
+      \strng{authorfullhashraw}{495d2f2869642b7ef90746ec556e4219}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{User Modeling and User-Adapted Interaction}
+      \field{month}{11}
+      \field{title}{What influences users to provide explicit feedback? A case of food delivery recommenders}
+      \field{volume}{34}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 44}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1007/s11257-023-09385-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11257-023-09385-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11257-023-09385-8
+      \endverb
+    \endentry
+    \entry{Hidasi2016}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=d4112ec4c80058ecfac126d297274575}{%
+           family={Hidasi},
+           familyi={H\bibinitperiod},
+           given={Balázs},
+           giveni={B\bibinitperiod}}}%
+        {{hash=34b0daf756776ac58e5af9a2b2cdb9ee}{%
+           family={Karatzoglou},
+           familyi={K\bibinitperiod},
+           given={Alexandros},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0ef7dd2efd526493951ed30120da31b6}{%
+           family={Baltrunas},
+           familyi={B\bibinitperiod},
+           given={Linas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6d5ddc893f18f66ca697835a97c7740d}{%
+           family={Tikk},
+           familyi={T\bibinitperiod},
+           given={Domonkos},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c81c42a7c75d29ce161fcdb87b58c17}
+      \strng{fullhash}{d28f6e671010d7448170f1ba9a71dc03}
+      \strng{fullhashraw}{d28f6e671010d7448170f1ba9a71dc03}
+      \strng{bibnamehash}{d28f6e671010d7448170f1ba9a71dc03}
+      \strng{authorbibnamehash}{d28f6e671010d7448170f1ba9a71dc03}
+      \strng{authornamehash}{0c81c42a7c75d29ce161fcdb87b58c17}
+      \strng{authorfullhash}{d28f6e671010d7448170f1ba9a71dc03}
+      \strng{authorfullhashraw}{d28f6e671010d7448170f1ba9a71dc03}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{4th International Conference on Learning Representations (ICLR 2016)}
+      \field{title}{Session-based Recommendations with Recurrent Neural Networks}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.48550/arXiv.1511.06939
+      \endverb
+      \verb{urlraw}
+      \verb https://hidasi.eu/assets/pdf/gru4rec_iclr16.pdf
+      \endverb
+      \verb{url}
+      \verb https://hidasi.eu/assets/pdf/gru4rec_iclr16.pdf
+      \endverb
+    \endentry
+    \entry{Hu2008}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=abca94954939cb7608a6fa0b712c8a57}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=68e28d54204820006ff12df112baa4c7}{%
+           family={Koren},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=769a4c9e2ef003c79d4d043afbae7207}{%
+           family={Volinsky},
+           familyi={V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{fullhash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{fullhashraw}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{bibnamehash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{authorbibnamehash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{authornamehash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{authorfullhash}{fbda603e3f25a6da384fcd453d873b60}
+      \strng{authorfullhashraw}{fbda603e3f25a6da384fcd453d873b60}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2008 Eighth IEEE International Conference on Data Mining}
+      \field{issn}{2374-8486}
+      \field{series}{2008 Eighth IEEE International Conference on Data Mining}
+      \field{title}{Collaborative Filtering for Implicit Feedback Datasets}
+      \field{year}{2008}
+      \field{pages}{263\bibrangedash 272}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ICDM.2008.22
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICDM.2008.22
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICDM.2008.22
+      \endverb
+    \endentry
+    \entry{Kang2018}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=448136e859bc7fdfe9759b68ef755fac}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={W.-C.},
+           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=6c0cef318259c395c73dde59a7de638a}{%
+           family={McAuley},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{fullhash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{fullhashraw}{83f97903ac4e255600be2d90b9995f55}
+      \strng{bibnamehash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{authorbibnamehash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{authornamehash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{authorfullhash}{83f97903ac4e255600be2d90b9995f55}
+      \strng{authorfullhashraw}{83f97903ac4e255600be2d90b9995f55}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Data Mining (ICDM)}
+      \field{issn}{2374-8486}
+      \field{series}{2018 IEEE International Conference on Data Mining (ICDM)}
+      \field{title}{Self-Attentive Sequential Recommendation}
+      \field{year}{2018}
+      \field{pages}{197\bibrangedash 206}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ICDM.2018.00035
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICDM.2018.00035
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICDM.2018.00035
+      \endverb
+    \endentry
+    \entry{Kim2016}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=69c67a7835bae411a48cf54967c18f39}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Donghyun},
+           giveni={D\bibinitperiod}}}%
+        {{hash=84af495585109c80e6f31a58ac143fb8}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Chanyoung},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3b62a95574b0bfbc6f2b2c474b82736f}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Jinoh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=13f4661b9173b2153aaa7862c5d12606}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Sungyoung},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b37db6da3bdae781164e763a40e11f22}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Hwanjo},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{6a19d2f9cfa31659b48d3d0cc2afd36c}
+      \strng{fullhash}{0332126a271769d11fa7bb23bb455576}
+      \strng{fullhashraw}{0332126a271769d11fa7bb23bb455576}
+      \strng{bibnamehash}{0332126a271769d11fa7bb23bb455576}
+      \strng{authorbibnamehash}{0332126a271769d11fa7bb23bb455576}
+      \strng{authornamehash}{6a19d2f9cfa31659b48d3d0cc2afd36c}
+      \strng{authorfullhash}{0332126a271769d11fa7bb23bb455576}
+      \strng{authorfullhashraw}{0332126a271769d11fa7bb23bb455576}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sparseness of user-to-item rating data is one of the major factors that deteriorate the quality of recommender system. To handle the sparsity problem, several recommendation techniques have been proposed that additionally consider auxiliary information to improve rating prediction accuracy. In particular, when rating data is sparse, document modeling-based approaches have improved the accuracy by additionally utilizing textual data such as reviews, abstracts, or synopses. However, due to the inherent limitation of the bag-of-words model, they have difficulties in effectively utilizing contextual information of the documents, which leads to shallow understanding of the documents. This paper proposes a novel context-aware recommendation model, convolutional matrix factorization (ConvMF) that integrates convolutional neural network (CNN) into probabilistic matrix factorization (PMF). Consequently, ConvMF captures contextual information of documents and further enhances the rating prediction accuracy. Our extensive evaluations on three real-world datasets show that ConvMF significantly outperforms the state-of-the-art recommendation models even when the rating data is extremely sparse. We also demonstrate that ConvMF successfully captures subtle contextual difference of a word in a document. Our implementation and datasets are available at http://dm.postech.ac.kr/ConvMF.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Convolutional Matrix Factorization for Document Context-Aware Recommendation}
+      \field{year}{2016}
+      \field{pages}{233\bibrangedash 240}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/2959100.2959165
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2959100.2959165
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2959100.2959165
+      \endverb
+      \keyw{collaborative filtering,contexual information,deep learning,document modeling,neural network' context-aware recommendation,recommender system}
+    \endentry
+    \entry{Ko2022}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=e958161df21fe2f09b34a3a4431c8a64}{%
+           family={Ko},
+           familyi={K\bibinitperiod},
+           given={Hyeyoung},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e88863936b5ff8eacc26c8b73b6a8b1e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Suyeon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d7b764165b4cb81970998b3f6d9b0927}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Yoonseo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e3208f125269cea6806f316b68984ecd}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1707eda465fa19f77b11da661dc09d11}
+      \strng{fullhash}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \strng{fullhashraw}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \strng{bibnamehash}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \strng{authorbibnamehash}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \strng{authornamehash}{1707eda465fa19f77b11da661dc09d11}
+      \strng{authorfullhash}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \strng{authorfullhashraw}{ad0f0b7c3900df8ac3035f7156b4cd5f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper reviews the research trends that link the advanced technical aspects of recommendation systems that are used in various service areas and the business aspects of these services. First, for a reliable analysis of recommendation models for recommendation systems, data mining technology, and related research by application service, more than 135 top-ranking articles and top-tier conferences published in Google Scholar between 2010 and 2021 were collected and reviewed. Based on this, studies on recommendation system models and the technology used in recommendation systems were systematized, and research trends by year were analyzed. In addition, the application service fields where recommendation systems were used were classified, and research on the recommendation system model and recommendation technique used in each field was analyzed. Furthermore, vast amounts of application service-related data used by recommendation systems were collected from 2010 to 2021 without taking the journal ranking into consideration and reviewed along with various recommendation system studies, as well as applied service field industry data. As a result of this study, it was found that the flow and quantitative growth of various detailed studies of recommendation systems interact with the business growth of the actual applied service field. While providing a comprehensive summary of recommendation systems, this study provides insight to many researchers interested in recommendation systems through the analysis of its various technologies and trends in the service field to which recommendation systems are applied.}
+      \field{issn}{2079-9292}
+      \field{number}{1}
+      \field{title}{A Survey of Recommendation Systems: Recommendation Models, Techniques, and Application Fields}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{141}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics11010141
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3390/electronics11010141
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3390/electronics11010141
+      \endverb
+      \keyw{recommender system; recommendation system; content-based filtering; collaborative filtering; hybrid system; recommendation algorithm; recommendation technique}
+    \endentry
+    \entry{Koren2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=68e28d54204820006ff12df112baa4c7}{%
+           family={Koren},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=44e057bfb865c6e13190d32b773029dc}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=769a4c9e2ef003c79d4d043afbae7207}{%
+           family={Volinsky},
+           familyi={V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{fullhash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{fullhashraw}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{bibnamehash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{authorbibnamehash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{authornamehash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{authorfullhash}{0eb9645b39e5d42cf664197e5d0a7367}
+      \strng{authorfullhashraw}{0eb9645b39e5d42cf664197e5d0a7367}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-0814}
+      \field{journaltitle}{Computer}
+      \field{number}{8}
+      \field{title}{Matrix Factorization Techniques for Recommender Systems}
+      \field{volume}{42}
+      \field{year}{2009}
+      \field{pages}{30\bibrangedash 37}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MC.2009.263
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/MC.2009.263
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/MC.2009.263
+      \endverb
+    \endentry
+    \entry{Linden2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ee7d3db055216fe5376fea1eb7eb2146}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=661af25efdcede2da6f1d84feee822d2}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=16752b805f854e8dd063805b873dd889}{%
+           family={York},
+           familyi={Y\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{fullhash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{fullhashraw}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{bibnamehash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{authorbibnamehash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{authornamehash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{authorfullhash}{0257de9c01ce11a8e00d036a8728ca48}
+      \strng{authorfullhashraw}{0257de9c01ce11a8e00d036a8728ca48}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1941-0131}
+      \field{journaltitle}{IEEE Internet Computing}
+      \field{number}{1}
+      \field{title}{Amazon.com recommendations: item-to-item collaborative filtering}
+      \field{volume}{7}
+      \field{year}{2003}
+      \field{pages}{76\bibrangedash 80}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/MIC.2003.1167344
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/MIC.2003.1167344
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/MIC.2003.1167344
+      \endverb
+    \endentry
+    \entry{Loeb1992}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=696a1bfeb81e1cc3849404ba89b96e82}{%
+           family={Loeb},
+           familyi={L\bibinitperiod},
+           given={Shoshana},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{fullhash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{fullhashraw}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{bibnamehash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{authorbibnamehash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{authornamehash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{authorfullhash}{696a1bfeb81e1cc3849404ba89b96e82}
+      \strng{authorfullhashraw}{696a1bfeb81e1cc3849404ba89b96e82}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Architecting personalized delivery of multimedia information}
+      \field{volume}{35}
+      \field{year}{1992}
+      \field{pages}{39\bibrangedash 47}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/138859.138862
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/138859.138862
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/138859.138862
+      \endverb
+      \keyw{user profiling,user models,personalized information delivery,multimedia applications,information retrieval,information filtering,casual information usage}
+    \endentry
+    \entry{Mnih2015}{article}{}{}
+      \name{author}{19}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=677dfee41a39b5ac7e138f5ce14467e9}{%
+           family={Rusu},
+           familyi={R\bibinitperiod},
+           given={Andrei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1cbd91f7404b2298b46bb46c47c08251}{%
+           family={Veness},
+           familyi={V\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=eae3aa0ab9cb8b33a1ade80739e79e57}{%
+           family={Bellemare},
+           familyi={B\bibinitperiod},
+           given={Marc\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9449802bcb467309c0ebced658096818}{%
+           family={Riedmiller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be3d55306c5ab7ee716f96f137dddba6}{%
+           family={Fidjeland},
+           familyi={F\bibinitperiod},
+           given={Andreas\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=46cc21fb5dec973c05ceb0f321e02ca0}{%
+           family={Ostrovski},
+           familyi={O\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4e381e44037009b1cd834d794735c311}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={Stig},
+           giveni={S\bibinitperiod}}}%
+        {{hash=03cf4f0976cc27112d267a8916a2d169}{%
+           family={Beattie},
+           familyi={B\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b827d5121d467eeb30ccac8c61094591}{%
+           family={Sadik},
+           familyi={S\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{%
+           family={Antonoglou},
+           familyi={A\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=59998a15386f62e4d2776176ab58d49c}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a425c81c03d315597e3f92690763e24d}{%
+           family={Kumaran},
+           familyi={K\bibinitperiod},
+           given={Dharshan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d7805381550fb5f8360345f7f72c0b49}{%
+           family={Wierstra},
+           familyi={W\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=afdf5ed50a24cdca0f42433e4f4848d5}{%
+           family={Legg},
+           familyi={L\bibinitperiod},
+           given={Shane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b160026950ebb1e2286dfb40c15482f5}{%
+           family={Hassabis},
+           familyi={H\bibinitperiod},
+           given={Demis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \strng{fullhashraw}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \strng{bibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \strng{authorbibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \strng{authorfullhashraw}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An artificial agent is developed that learns to play a diverse range of classic Atari 2600 computer games directly from sensory experience, achieving a performance comparable to that of an expert human player; this work paves the way to building general-purpose learning algorithms that bridge the divide between perception and action.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{month}{2}
+      \field{number}{7540}
+      \field{title}{Human-level control through deep reinforcement learning}
+      \field{volume}{518}
+      \field{year}{2015}
+      \field{pages}{529\bibrangedash 533}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/nature14236
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/nature14236
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nature14236
+      \endverb
+    \endentry
+    \entry{Resnick1994}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=42c60cd629ab25ff7b8464868a0669aa}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c43a27cdf89c815d8b1941105c95b382}{%
+           family={Iacovou},
+           familyi={I\bibinitperiod},
+           given={Neophytos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3a9887aa642740970bf6eea5d9ad7d04}{%
+           family={Suchak},
+           familyi={S\bibinitperiod},
+           given={Mitesh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b3625e29d8e2da0c3ae5f8f25cedf7d2}{%
+           family={Bergstrom},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fa6abedf9b67cf8423902a986acfb850}
+      \strng{fullhash}{ccb63dcab60011368c383a97b42d0e55}
+      \strng{fullhashraw}{ccb63dcab60011368c383a97b42d0e55}
+      \strng{bibnamehash}{ccb63dcab60011368c383a97b42d0e55}
+      \strng{authorbibnamehash}{ccb63dcab60011368c383a97b42d0e55}
+      \strng{authornamehash}{fa6abedf9b67cf8423902a986acfb850}
+      \strng{authorfullhash}{ccb63dcab60011368c383a97b42d0e55}
+      \strng{authorfullhashraw}{ccb63dcab60011368c383a97b42d0e55}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Collaborative filters help people make choices based on the opinions of other people. GroupLens is a system for collaborative filtering of netnews, to help people find articles they will like in the huge stream of available articles. News reader clients display predicted scores and make it easy for users to rate articles after they read them. Rating servers, called Better Bit Bureaus, gather and disseminate the ratings. The rating servers predict scores based on the heuristic that people who agreed in the past will probably agree again. Users can protect their privacy by entering ratings under pseudonyms, without reducing the effectiveness of the score prediction. The entire architecture is open: alternative software for news clients and Better Bit Bureaus can be developed independently and can interoperate with the components we have developed.}
+      \field{note}{New York, NY, USA}
+      \field{title}{GroupLens: an open architecture for collaborative filtering of netnews}
+      \field{year}{1994}
+      \field{pages}{175\bibrangedash 186}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/192844.192905
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/192844.192905
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/192844.192905
+      \endverb
+      \keyw{Usenet,collaborative filtering,electronic bulletin boards,information filtering,netnews,selective dissemination of information,social filtering,user model}
+    \endentry
+    \entry{Roy2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=3cb27c879db263c6beebad8238892ace}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Deepjyoti},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d5aa531d2045b417745883621ba0d751}{%
+           family={Dutta},
+           familyi={D\bibinitperiod},
+           given={Mala},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{fullhash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{fullhashraw}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{bibnamehash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{authorbibnamehash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{authornamehash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{authorfullhash}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \strng{authorfullhashraw}{a5532b42c749d4d3bf5f9f5dd62b4281}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender systems are efficient tools for filtering online information, which is widespread owing to the changing habits of computer users, personalization trends, and emerging access to the internet. Even though the recent recommender systems are eminent in giving precise recommendations, they suffer from various limitations and challenges like scalability, cold-start, sparsity, etc. Due to the existence of various techniques, the selection of techniques becomes a complex work while building application-focused recommender systems. In addition, each technique comes with its own set of features, advantages and disadvantages which raises even more questions, which should be addressed. This paper aims to undergo a systematic review on various recent contributions in the domain of recommender systems, focusing on diverse applications like books, movies, products, etc. Initially, the various applications of each recommender system are analysed. Then, the algorithmic analysis on various recommender systems is performed and a taxonomy is framed that accounts for various components required for developing an effective recommender system. In addition, the datasets gathered, simulation platform, and performance metrics focused on each contribution are evaluated and noted. Finally, this review provides a much-needed overview of the current state of research in this field and points out the existing gaps and challenges to help posterity in developing an efficient recommender system.}
+      \field{issn}{2196-1115}
+      \field{journaltitle}{Journal of Big Data}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{A systematic review and research perspective on recommender systems}
+      \field{volume}{9}
+      \field{year}{2022}
+      \field{pages}{59}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s40537-022-00592-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s40537-022-00592-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s40537-022-00592-5
+      \endverb
+    \endentry
+    \entry{Salton1975}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=0ece344e5cd40f244e157ac3eefc8fd4}{%
+           family={Salton},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           suffix={G.and\bibnamedelima Wong},
+           suffixi={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=09bbc7b7b2a15d80318e4af2bf2e4d53}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{fullhash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{fullhashraw}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{bibnamehash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{authorbibnamehash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{authornamehash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{authorfullhash}{cac1b559ca526f93c7e8267d700014bc}
+      \strng{authorfullhashraw}{cac1b559ca526f93c7e8267d700014bc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In a document retrieval, or other pattern matching environment where stored entities (documents) are compared with each other or with incoming patterns (search requests), it appears that the best indexing (property) space is one where each entity lies as far away from the others as possible; in these circumstances the value of an indexing system may be expressible as a function of the density of the object space; in particular, retrieval performance may correlate inversely with space density. An approach based on space density computations is used to choose an optimum indexing vocabulary for a collection of documents. Typical evaluation results are shown, demonstating the usefulness of the model.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{A vector space model for automatic indexing}
+      \field{volume}{18}
+      \field{year}{1975}
+      \field{pages}{613\bibrangedash 620}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/361219.361220
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/361219.361220
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/361219.361220
+      \endverb
+      \keyw{document space,content analysis,automatic information retrieval,automatic indexing}
+    \endentry
+    \entry{Sarwar2001}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=df97c54d895b3a4f966cc71817673755}{%
+           family={Sarwar},
+           familyi={S\bibinitperiod},
+           given={Badrul},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3db7df6401b206bb040d6735adbe81e2}{%
+           family={Karypis},
+           familyi={K\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8bad87d5c289efb778eeccbc0a3ce84a}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fb9706c608f2db79c84390f6e0e9600c}
+      \strng{fullhash}{a60eaaeac402f8cfe261a070e583e388}
+      \strng{fullhashraw}{a60eaaeac402f8cfe261a070e583e388}
+      \strng{bibnamehash}{a60eaaeac402f8cfe261a070e583e388}
+      \strng{authorbibnamehash}{a60eaaeac402f8cfe261a070e583e388}
+      \strng{authornamehash}{fb9706c608f2db79c84390f6e0e9600c}
+      \strng{authorfullhash}{a60eaaeac402f8cfe261a070e583e388}
+      \strng{authorfullhashraw}{a60eaaeac402f8cfe261a070e583e388}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{New York, NY, USA}
+      \field{title}{Item-based collaborative filtering recommendation algorithms}
+      \field{year}{2001}
+      \field{pages}{285\bibrangedash 295}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/371920.372071
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/371920.372071
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/371920.372071
+      \endverb
+    \endentry
+    \entry{Sedhain2015}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=908995b50ca7f98a027b2238a0ee884a}{%
+           family={Sedhain},
+           familyi={S\bibinitperiod},
+           given={Suvash},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d5918aa4a3a43984bc6bd2bf025e1869}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Aditya\bibnamedelima Krishna},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b9e05d93531c543fb71674dca5f7d9a2}{%
+           family={Sanner},
+           familyi={S\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0b3e11df6863fd4a4b3368f9b6c1d40}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Lexing},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{37b75404751880a6653f7eee38bd3aea}
+      \strng{fullhash}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \strng{fullhashraw}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \strng{bibnamehash}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \strng{authorbibnamehash}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \strng{authornamehash}{37b75404751880a6653f7eee38bd3aea}
+      \strng{authorfullhash}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \strng{authorfullhashraw}{4ff053ed8a33794de26fe1c9cb9e6022}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes AutoRec, a novel autoencoder framework for collaborative filtering (CF). Empirically, AutoRec's compact and efficiently trainable model outperforms state-of-the-art CF techniques (biased matrix factorization, RBM-CF and LLORMA) on the Movielens and Netflix datasets.}
+      \field{note}{New York, NY, USA}
+      \field{title}{AutoRec: Autoencoders Meet Collaborative Filtering}
+      \field{year}{2015}
+      \field{pages}{111\bibrangedash 112}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/2740908.2742726
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2740908.2742726
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2740908.2742726
+      \endverb
+      \keyw{recommender systems,collaborative filtering,autoencoders}
+    \endentry
+    \entry{Vaswani2017}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=5c48a710d32767cdb8f0a0bfb4922585}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}\bibnamedelima Ukasz},
+           giveni={Ł\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{67ef0afbae143149346a0c5895dae30c}
+      \strng{fullhashraw}{67ef0afbae143149346a0c5895dae30c}
+      \strng{bibnamehash}{67ef0afbae143149346a0c5895dae30c}
+      \strng{authorbibnamehash}{67ef0afbae143149346a0c5895dae30c}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{67ef0afbae143149346a0c5895dae30c}
+      \strng{authorfullhashraw}{67ef0afbae143149346a0c5895dae30c}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Attention is All you Need}
+      \field{volume}{30}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.48550/arXiv.1706.03762
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+    \endentry
+    \entry{Wang2017}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=2f3ea981fa5a715a69118b48e576a9f5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=98c85f16186b9ce495905d4a0dd69e57}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Lantao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fbc51a6317f158547173b93086d9b1a2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Weinan},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a078b5f9e219750df0e6b4771a07569e}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=037aabea5cf2c1e00ab56773419bd6b5}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yinghui},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=07b6ac71b6c34f04b3c5593596b3dc53}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Benyou},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f189b293bd3263254702f8c5fe1d714b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0e288a0b938246b15ffc7b73e4b5d5d2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dell},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{aa7a83578db6d97a4a3107198650dca5}
+      \strng{fullhash}{621eeea7d3fb23739bf61bf081e3fd76}
+      \strng{fullhashraw}{621eeea7d3fb23739bf61bf081e3fd76}
+      \strng{bibnamehash}{621eeea7d3fb23739bf61bf081e3fd76}
+      \strng{authorbibnamehash}{621eeea7d3fb23739bf61bf081e3fd76}
+      \strng{authornamehash}{aa7a83578db6d97a4a3107198650dca5}
+      \strng{authorfullhash}{621eeea7d3fb23739bf61bf081e3fd76}
+      \strng{authorfullhashraw}{621eeea7d3fb23739bf61bf081e3fd76}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper provides a unified account of two schools of thinking in information retrieval modelling: the generative retrieval focusing on predicting relevant documents given a query, and the discriminative retrieval focusing on predicting relevancy given a query-document pair. We propose a game theoretical minimax game to iteratively optimise both models. On one hand, the discriminative model, aiming to mine signals from labelled and unlabelled data, provides guidance to train the generative model towards fitting the underlying relevance distribution over documents given the query. On the other hand, the generative model, acting as an attacker to the current discriminative model, generates difficult examples for the discriminative model in an adversarial way by minimising its discrimination objective. With the competition between these two models, we show that the unified framework takes advantage of both schools of thinking: (i) the generative model learns to fit the relevance distribution over documents via the signals from the discriminative model, and (ii) the discriminative model is able to exploit the unlabelled data selected by the generative model to achieve a better estimation for document ranking. Our experimental results have demonstrated significant performance gains as much as 23.96{\%} on Precision@5 and 15.50{\%} on MAP over strong baselines in a variety of applications including web search, item recommendation, and question answering.}
+      \field{note}{New York, NY, USA}
+      \field{title}{IRGAN: A Minimax Game for Unifying Generative and Discriminative Information Retrieval Models}
+      \field{year}{2017}
+      \field{pages}{515\bibrangedash 524}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3077136.3080786
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3077136.3080786
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3077136.3080786
+      \endverb
+      \keyw{web search,recommender systems,question answering,information retrieval models,information retrieval,adversarial training}
+    \endentry
+    \entry{Wu2022}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=4375d75710702c65a026c6682889ce76}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Shiwen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0fff2d014f575fc5d680e70e02e8ce38}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=617c3dfefd9eb92b86137977ec96fa36}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wentao},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3c4ae59f378e63f88f337a9748b63ce9}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f6c0b53300ebf4c432dfa05ee736c54c}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{59733ab0ac2629860a1a24d5013fadf9}
+      \strng{fullhash}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \strng{fullhashraw}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \strng{bibnamehash}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \strng{authorbibnamehash}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \strng{authornamehash}{59733ab0ac2629860a1a24d5013fadf9}
+      \strng{authorfullhash}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \strng{authorfullhashraw}{8fd91e8d37444f61d9462ec295d2d1d9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the explosive growth of online information, recommender systems play a key role to alleviate such information overload. Due to the important application value of recommender systems, there have always been emerging works in this field. In recommender systems, the main challenge is to learn the effective user/item representations from their interactions and side information (if any). Recently, graph neural network (GNN) techniques have been widely utilized in recommender systems since most of the information in recommender systems essentially has graph structure and GNN has superiority in graph representation learning. This article aims to provide a comprehensive review of recent research efforts on GNN-based recommender systems. Specifically, we provide a taxonomy of GNN-based recommendation models according to the types of information used and recommendation tasks. Moreover, we systematically analyze the challenges of applying GNN on different types of data and discuss how existing works in this field address these challenges. Furthermore, we state new perspectives pertaining to the development of this field. We collect the representative papers along with their open-source implementations in .}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{12}
+      \field{number}{5}
+      \field{title}{Graph Neural Networks in Recommender Systems: A Survey}
+      \field{volume}{55}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1145/3535101
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3535101
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3535101
+      \endverb
+      \keyw{Recommender system,graph neural network,survey}
+    \endentry
+    \entry{Zhang2019}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=53eda2415f95a1d1f76572f661905aab}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3f0f958e6b8421de727e2c1977907d6a}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Lina},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8b562490f05b03da5ef1aca562e8b589}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Aixin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7579658a0aca8cb0e17a89deb28b8ccc}{%
+           family={Tay},
+           familyi={T\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{99449cc3aa6f0fbe8a4f7e40ac6da48a}
+      \strng{fullhash}{04bf8a18134c1ab7195508609c6c8f40}
+      \strng{fullhashraw}{04bf8a18134c1ab7195508609c6c8f40}
+      \strng{bibnamehash}{04bf8a18134c1ab7195508609c6c8f40}
+      \strng{authorbibnamehash}{04bf8a18134c1ab7195508609c6c8f40}
+      \strng{authornamehash}{99449cc3aa6f0fbe8a4f7e40ac6da48a}
+      \strng{authorfullhash}{04bf8a18134c1ab7195508609c6c8f40}
+      \strng{authorfullhashraw}{04bf8a18134c1ab7195508609c6c8f40}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the growing volume of online information, recommender systems have been an effective strategy to overcome information overload. The utility of recommender systems cannot be overstated, given their widespread adoption in many web applications, along with their potential impact to ameliorate many problems related to over-choice. In recent years, deep learning has garnered considerable interest in many research fields such as computer vision and natural language processing, owing not only to stellar performance but also to the attractive property of learning feature representations from scratch. The influence of deep learning is also pervasive, recently demonstrating its effectiveness when applied to information retrieval and recommender systems research. The field of deep learning in recommender system is flourishing. This article aims to provide a comprehensive review of recent research efforts on deep learning-based recommender systems. More concretely, we provide and devise a taxonomy of deep learning-based recommendation models, along with a comprehensive summary of the state of the art. Finally, we expand on current trends and provide new perspectives pertaining to this new and exciting development of the field.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Deep Learning Based Recommender System: A Survey and New Perspectives}
+      \field{volume}{52}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1145/3285029
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3285029
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3285029
+      \endverb
+      \keyw{survey,deep learning,Recommender system}
+    \endentry
+    \entry{Zhang2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fd8216a36735a9f3107aef444551ecb2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yongfeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4f4900cae2c11cda82284d85107e92ae}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hanover, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Now Publishers Inc.}%
+      }
+      \strng{namehash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{fullhash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{fullhashraw}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{bibnamehash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{authorbibnamehash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{authornamehash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{authorfullhash}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \strng{authorfullhashraw}{b5ff90d6becebcc0a0b10069fceb79a5}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Explainable recommendation attempts to develop models that generate not only high-quality recommendations but also intuitive explanations. The explanations may either be post-hoc or directly come from an explainable model (also called interpretable or transparent model in some contexts). Explainable recommendation tries to address the problem of why: by providing explanations to users or system designers, it helps humans to understand why certain items are recommended by the algorithm, where the human can either be users or system designers. Explainable recommendation helpsendation systems. It also facilitates system design to improve the transparency, persuasiveness, effectiveness, trustworthiness, and satisfaction of recommers for better system debugging. In recent years, a large number of explainable recommendation approaches -- especially model-based methods -- have been proposed and applied in real-world systems.In this survey, we provide a comprehensive review for the explainable recommendation research. We first highlight the position of explainable recommendation in recommender system research by categorizing recommendation problems into the 5W, i.e., what, when, who, where, and why. We then conduct a comprehensive survey of explainable recommendation on three perspectives: 1) We provide a chronological research timeline of explainable recommendation, including user study approaches in the early years and more recent model-based approaches. 2) We provide a two-dimensional taxonomy to classify existing explainable recommendation research: one dimension is the information source (or display style) of the explanations, and the other dimension is the algorithmic mechanism to generate explainable recommendations. 3) We summarize how explainable recommendation applies to different recommendation tasks, such as product recommendation, social recommendation, and POI recommendation.We also devote a section to discuss the explanation perspectives in broader IR and AI/ML research. We end the survey by discussing potential future directions to promote the explainable recommendation research area and beyond.}
+      \field{issn}{1554-0669}
+      \field{journaltitle}{Found. Trends Inf. Retr.}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{Explainable Recommendation: A Survey and New Perspectives}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 101}
+      \range{pages}{101}
+      \verb{doi}
+      \verb 10.1561/1500000066
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1561/1500000066
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1561/1500000066
+      \endverb
+    \endentry
+    \entry{Zheng2018}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=fc2303e573cbd4d55805cf3f63fb47ca}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Guanjie},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c123919bc93706c902dadde0f7fa0b04}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Fuzheng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=db0cb71ed9ef782bb466be24f0336fb8}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Zihan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=baa983e0769e57b7f9a497fc98e9a245}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7b148e1061a6ad9bd829d4995ba34205}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Nicholas\bibnamedelima Jing},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0801da56d6877e3eff32e6a6030425d3}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xing},
+           giveni={X\bibinitperiod}}}%
+        {{hash=25ebc6d8b181f6379a65892949d0ddf3}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhenhui},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International World Wide Web Conferences Steering Committee}%
+      }
+      \strng{namehash}{978f133ed587a266aff6d824fb43a084}
+      \strng{fullhash}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \strng{fullhashraw}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \strng{bibnamehash}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \strng{authorbibnamehash}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \strng{authornamehash}{978f133ed587a266aff6d824fb43a084}
+      \strng{authorfullhash}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \strng{authorfullhashraw}{bc6b46f6a2f40e385a3d201d2792aaf5}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we propose a novel Deep Reinforcement Learning framework for news recommendation. Online personalized news recommendation is a highly challenging problem due to the dynamic nature of news features and user preferences. Although some online recommendation models have been proposed to address the dynamic nature of news recommendation, these methods have three major issues. First, they only try to model current reward (e.g., Click Through Rate). Second, very few studies consider to use user feedback other than click / no click labels (e.g., how frequent user returns) to help improve recommendation. Third, these methods tend to keep recommending similar news to users, which may cause users to get bored. Therefore, to address the aforementioned challenges, we propose a Deep Q-Learning based recommendation framework, which can model future reward explicitly. We further consider user return pattern as a supplement to click / no click label in order to capture more user feedback information. In addition, an effective exploration strategy is incorporated to find new attractive news for users. Extensive experiments are conducted on the offline dataset and online production environment of a commercial news recommendation application and have shown the superior performance of our methods.}
+      \field{note}{Republic and Canton of Geneva, CHE}
+      \field{title}{DRN: A Deep Reinforcement Learning Framework for News Recommendation}
+      \field{year}{2018}
+      \field{pages}{167\bibrangedash 176}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3178876.3185994
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3178876.3185994
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3178876.3185994
+      \endverb
+      \keyw{deep Q-Learning,news recommendation,reinforcement learning}
+    \endentry
+    \entry{Zhou2023}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=47a465d4ac3f604967b0ee58efb190c1}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Hongde},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0494a2e24317dea84ee7278dce535558}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e87e8a8c9f80416167a7af5cae54e7e6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hongshu},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{fullhash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{fullhashraw}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{bibnamehash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{authorbibnamehash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{authornamehash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{authorfullhash}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \strng{authorfullhashraw}{23dc7c4745667a5ad0b31f25f60fd23f}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the increasing abundance of information resources and the development of deep learning techniques, recommender systems (RSs) based on deep learning have gradually become a research focus. Although RSs have evolved in recent years, a systematic review of existing RS approaches is still warranted. The main focus of this paper is on recommendation models that incorporate deep learning techniques. The objective is to guide novice researchers interested in this field through the investigation and application of the proposed recommendation models. Specifically, we first categorize existing RS approaches into four types: content-based recommendations, sequence recommendations, cross-domain recommendations, and social recommendation methods. We then introduce the definitions and address the challenges associated with these RS methodologies. Subsequently, we propose a comprehensive categorization framework and novel taxonomies for these methodologies, providing a thorough account of their research advancements. Finally, we discuss future developments regarding this topic.}
+      \field{issn}{2076-3417}
+      \field{number}{20}
+      \field{title}{A Comprehensive Survey of Recommender Systems Based on Deep Learning}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{11378}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/app132011378
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3390/app132011378
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3390/app132011378
+      \endverb
+      \keyw{recommender systems; deep learning; social networks; sequence recommendation; cross-domain recommendation}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

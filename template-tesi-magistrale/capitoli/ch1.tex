@@ -1,0 +1,693 @@
+\chapter{Sistemi di raccomandazione}
+\label{chap:sistemi-raccomandazione}
+
+L'evoluzione del Web e la pervasività dei dispositivi mobili intelligenti hanno trasformato radicalmente il modo in cui gli utenti interagiscono con i servizi online. La crescita esponenziale del traffico su piattaforme web, app e social network ha generato un enorme quantitativo di dati, portando al fenomeno noto come \textit{information overload}. In questo scenario gli utenti si trovano spesso nell'incapacità di prendere decisioni efficienti a causa della sovrabbondanza di opzioni disponibili. \cite{Ko2022}
+
+I Sistemi di Raccomandazione (RS) emergono come la soluzione tecnologica chiave a questo problema; essi sono sistemi avanzati di filtraggio delle informazioni (\textit{information filtering tools}), il cui obiettivo è ridurre lo sforzo cognitivo e il tempo che l'utente deve dedicare alla ricerca di contenuti rilevanti. Non si tratta più di suggerire prodotti, ma di personalizzare l'intera esperienza utente analizzando pattern comportamentali complessi. \cite{Roy2022}
+
+L'evoluzione della ricerca in questo campo è stata guidata dal cambiamento nella tipologia di dati disponibili. Mentre i primi sistemi si basavano quasi esclusivamente su feedback espliciti (come i rating o i "like"), le architetture moderne sfruttano massicciamente i dati impliciti derivanti dal \textit{clickstream}, dai log di navigazione, e più recentemente, dai sensori dei dispositivi IoT e wearable. \cite{Ko2022}
+
+Tuttavia, nonostante il loro successo commerciale in settori come l'e-commerce (Amazon, eBay, Alibaba) e lo streaming multimediale (Netflix, Spotify), lo sviluppo di un RS efficace presenta sfide ingegneristiche notevoli. La selezione dell'algoritmo più adatto è strettamente legata al dominio applicativo e deve affrontare limitazioni intrinseche quali la scarsità dei dati (\textit{data sparsity}), la difficoltà nel gestire nuovi utenti o item (\textit{cold-start problem}) e la necessità di garantire la scalabilità su grandi dataset. A queste criticità si aggiunge l'esigenza di bilanciare l'accuratezza predittiva con obiettivi di qualità quali la novità (\textit{novelty}) e la diversità (\textit{diversity}) delle proposte, fondamentali per mantenere alto il coinvolgimento dell'utente. \cite{Roy2022}
+
+In questo capitolo verrà analizzato lo stato dell'arte dei Sistemi di Raccomandazione, partendo dai modelli statistici tradizionali fino alle recenti applicazioni di Deep Learning e Intelligenza Artificiale Generativa, esaminando come la letteratura scientifica abbia affrontato le sfide sopra citate.
+
+\section{Formalizzazione del problema}
+\label{sec:formalizzazione}
+
+Prima di analizzare le architetture algoritmiche, è necessario definire il formalismo matematico che sottende il funzionamento di un Sistema di Raccomandazione e le tipologie di dati su cui esso opera.
+
+\subsection{Notazione matematica}
+
+In un contesto generico di raccomandazione, definiamo $\mathcal{U} = \{u_1, u_2, \dots, u_M\}$ come l'insieme degli utenti (\textit{users}) e $\mathcal{I} = \{i_1, i_2, \dots, i_N\}$ come l'insieme degli oggetti (\textit{items}). Lo spazio delle possibili interazioni è rappresentato da una matrice di utilità $\mathbf{R} \in \mathbb{R}^{M \times N}$, dove l'elemento $r_{ui}$ indica il grado di preferenza dell'utente $u$ per l'item $i$.
+
+Una criticità intrinseca di questo modello è l'elevata sparsità della matrice $\mathbf{R}$,  dovuta al fatto che un utente tipico interagisce solo con una mininima frazione degli oggetti disponibili (si veda la Tabella \ref{tab:matrix_example}).
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c|ccccc}
+        \toprule
+        & \textbf{Item 1} & \textbf{Item 2} & \textbf{Item 3} & $\dots$ & \textbf{Item N} \\
+        \midrule
+        \textbf{User 1} & 5 & ? & 3 & $\dots$ & ? \\
+        \textbf{User 2} & ? & 4 & ? & $\dots$ & 1 \\
+        \textbf{User 3} & 2 & ? & ? & $\dots$ & ? \\
+        $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\
+        \textbf{User M} & ? & ? & 5 & $\dots$ & 4 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Esempio di Matrice di Utilità sparsa ($\mathbf{R}$). Il simbolo '?' indica i rating mancanti che il sistema deve predire.}
+    \label{tab:matrix_example}
+\end{table}
+
+Definiamo $\Omega = \{(u, i) \mid r_{ui} \text{ è osservato} \}$ come l'insieme delle interazioni note.
+L'obiettivo del sistema è stimare una funzione di scoring $f: \mathcal{U} \times \mathcal{I} \rightarrow \mathbb{R}$ in grado di predire i valori mancanti o di generare una lista ordinata di item (Top-K) non ancora fruiti dall'utente, massimizzando una specifica funzione di utilità. \cite{Roy2022}
+
+\subsection{Tipologie di Feedback}
+
+La natura del valore $r_{ui}$ determina la classe di algoritmi applicabili e la complessità del problema. La letteratura scientifica distingue due categorie principali di input:
+
+\begin{itemize}
+    \item \textbf{Feedback Esplicito}: l'utente esprime intenzionalmente e direttamente la propria preferenza, ad esempio tramite un voto numerico, (es: scala 1-5 stelle) o un'azione binaria ("like"/"dislike"). Questo approccio offre un segnale inequivocabile della soddisfazione (o insoddisfazione) dell'utente. Tuttavia, il principale svantaggio risiede nella difficoltà di raccogliere questi dati in volumi massivi, a causa del carico cognitivo richiesto all'utente nel compiere l'azione di valutazione. \cite{Resnick1994}
+    \item \textbf{Feedback Implicito}: il sistema inferisce le preferenze osservando il comportamento naturale dell'utente, senza richiedere un input diretto. Esempi includono la cronologia degli acquisti, il tempo di permanenza su una pagina, i click o il numero di volte che un brano è stato riprodotto. Sebbene questi dati siano intrinsecamente rumorosi (un click non implica necessariamente gradimento) e manchino di feedback negativo esplicito, la loro abbondanza li rende la fonte primaria per i moderni sistemi di raccomandazione su larga scala. \cite{Hu2008}
+\end{itemize}
+
+La figura \ref{fig:feedback-sources} illustra schematicamente le sorgenti di dati più comuni per entrambe le categorie, evidenziando come il feedback esplicito derivi da valutazioni dirette, mentre quello implicito da tracce comportamentali.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{feedback_sources.png}
+    \caption{Classificazione delle sorgenti in Feedback Esplicito e Implicito. \\
+    Immagine tratta da \cite{Hidaka2023}}
+    \label{fig:feedback-sources}
+\end{figure}
+
+Sebbene la distinzione sia netta, nello scenario operativo reale i sistemi di raccomandazione adottano quasi sempre un approccio ibrido nella raccolta dati. L'utilizzo congiunto delle due tipologie permette di compensare le rispettive debolezze: l'abbondanza del feedback implicito viene utilizzata per mitigare il problema della \textit{data sparsity}, mentre il feedback esplicito (ove disponibile) funge da \textit{ground truth} per validare l'accuratezza delle predizioni. \cite{Roy2022}
+
+\subsection{Definizione del Task}
+
+In funzione dell'obiettivo finale, il problema di raccomandazione viene modellato in letteratura secondo diverse formulazioni. Questa distinzione determina l'architettura della funzione di apprendimento (\textit{Loss function}) e la struttura dei dati in input:
+
+\begin{itemize}
+    \item \textbf{Rating Prediction (Regressione)}: il sistema ha l'obiettivo di stimare il valore esatto $\hat{r}_{ui}$ che l'utente $u$ assegnerebbe all'item $i$. Questo approccio tratta il problema come un task di \textit{regressione}, dove l'obiettivo è minimizzare l'errore quadratico (es. RMSE) tra il voto predetto e quello reale. Sebbene fosse predominante in passato, l'uso di questo task è diminuito con il declino dei feedback espliciti.
+    \item \textbf{Top-N Recommendation (Ranking)}: il sistema genera una lista ordinata $\mathcal{L}_u = \{i_1, i_2, \dots, i_N\}$ di $N$ item che siano i più rilevanti per l'utente. Attualmente rappresenta lo standard per scenari con feedback implicito, trattando il problema come un task di \textit{classificazione} (prevedere la probabilità di interazione) o di \textit{learning-to-rank}. L'obiettivo è posizionare gli item rilevanti ai primi posti della lista, valutando la qualità dell'ordinamento tramite metriche posizionali (es. NDCG). \cite{Zhang2019}
+    \item \textbf{Sequential Recommendation (Next-Item)}: a differenza del Top-N statico, qui l'ordine temporale delle interazioni è cruciale. L'obiettivo è predire l'item successivo $i_{t+1}$ basandosi sulla sequenza storica immediata $\mathcal{S}_u = \{i_1, i_2, \dots, i_t\}$. Questo task è essenziale per modellare l'evoluzione dinamica degli interessi dell'utente (es. sessioni di navigazione anonime), sfruttando architetture come RNN o Transformer. \cite{Batmaz2019}
+    \item \textbf{Cross-Domain Recommendation}: in questo scenario, il sistema mira a migliorare le raccomandazioni in un dominio target (es. vendita di libri) sfruttando la conoscenza appresa da un dominio sorgente differente ma correlato (es. visione di film). Questo task è essenziale per mitigare il problema del \textit{cold-start} in domini dove i dati sono scarsi, utilizzando tecniche di \textit{Transfer Learning}. \cite{Zhou2023}
+    \item \textbf{Multi-Criteria Recommendation}: mentre i sistemi tradizionali si basano su un singolo valore di utilità, questo task modella la preferenza come un vettore di valutazioni su molteplici aspetti dell'item (es. per un hotel: pulizia, posizione, prezzo). L'obiettivo è stimare un rating complessivo aggregando le predizioni sui singoli criteri, offrendo una granularità maggiore nella profilazione dell'utente. \cite{Zhou2023}
+    \item \textbf{Explainable Recommendation}: con l'avvento delle normative sull'IA (es. AI Act), diventa un task a sé stante non solo predire l'item, ma generare una spiegazione intelligibile (testuale o visuale) del perché quell'item è stato scelto. Il modello deve quindi ottimizzare congiuntamente l'accuratezza della raccomandazione e la qualità semantica della spiegazione. \cite{Zhang2020}
+    \item \textbf{Context-Aware Recommendation}: in questo scenario, la funzione di utilità viene estesa per includere variabili d'ambiente $c$ (es. orario, posizione geografica, dispositivo). Il task diventa la stima di una funzione multidimensionale $f(u, i, c) \rightarrow \mathbb{R}$, permettendo di adattare la raccomandazione alla situazione specifica in cui si trova l'utente al momento della fruizione. \cite{Roy2022}
+    \item \textbf{Link Prediction}: tipico dei sistemi modellati come grafi (es. Social Network o Knowledge Graphs), questo task mira a predire l'esistenza di una connessione futura o mancante tra due nodi. In un grafo bipartito utente-item, la raccomandazione viene formulata come la stima della probabilità di formazione di un arco $(u, i)$. Questo task è utilizzato principalmente nelle Graph Neural Networks (GNN). \cite{Wu2022}
+\end{itemize}
+
+\subsection{Sfide e Vincoli del Problema}
+
+La formulazione della funzione obiettivo $f$ è soggetta a vincoli intrinseci alla natura dei dati e requisiti operativi, che influenzano la scelta degli algoritmi. Identifichiamo le seguenti criticità principali:
+
+\begin{itemize}
+    \item \textbf{Data Sparsity}: la matrice $\mathbf{R}$ è definita solo su un sottoinsieme $\Omega$ molto limitato. Il grado di sparsità è spesso superiore al 99\% in sistemi reali. Questo rende difficile il calcolo di similarità affidabili tra utenti o item, degradando le performance degli algoritmi collaborativi.
+    \item \textbf{Cold-Start}: si riferisce alla difficoltà di inferire preferenze in assenza di dati storici. Si distingue in \textit{New User Problem} (il sistema non ha dati su un nuovo utente) e \textit{New Item Problem} (un nuovo item non ha ancora ricevuto un feedback). In questi scenari, i metodi puramente collaborativi falliscono, richiedendo l'adozione di strategie ibride o content-based. \cite{Roy2022}
+    \item \textbf{Scalabilità}: con la crescita esponenziale del numero di utenti $M$ e di item $N$, la complessità computazionale di algoritmi come il k-NN ($O(M^2)$) diventa insostenibile per applicazioni che richiedono risposta in tempo reale. È necessario bilanciare l'accuratezza della predizione con la latenza di risposta, spesso ricorrendo a tecniche di riduzione della dimensionalità o al calcolo distribuito.
+    \item \textbf{Grey Sheep Problem}: questo termine indica quegli utenti le cui preferenze sono idiosincratiche, ovvero non condivise dalla maggior parte degli utenti, e non mostrano correlazioni significative con nessun gruppo di utenti (cluster) dominante. Per questi profili "atipici", i sistemi collaborativi faticano a generare raccomandazioni accurate a causa della mancanza di vicini simili. \cite{Roy2022}
+    \item \textbf{Robustezza}: i sistemi di raccomandazione, basandosi su input esterni (feedback utenti), sono intrinsecamente vulnerabili a manipolazioni dei dati note come \textit{Shilling Attacks}. La sfida consiste nel garantire l'affidabilità delle predizioni anche in presenza di profili malevoli inseriti per alterare la popolarità degli item. A causa della rilevanza critica di questo aspetto per l'integrità del sistema, la tassonomia degli attacchi verrà trattata in dettaglio nella Sezione \ref{sec:attacchi}.
+    \item \textbf{Privacy e Sicurezza}: l'utilizzo massivo di dati personali (spesso sensibili nel caso di sistemi Context-Aware) pone vincoli legali ed etici stringenti. Le moderne architetture devono integrare tecniche di \textit{Privacy-Preserving Data Mining} per operare in conformità con normative come il GDPR, cercando di non degradare eccessivamente la qualità della raccomandazione a fronte dell'anonimizzazione dei dati. \cite{Zhou2023}
+\end{itemize}
+
+\section{Modelli di Raccomandazione}
+\label{sec:modelli}
+
+La letteratura scientifica ha prodotto nel corso degli anni una vasta tassonomia di algoritmi, evolvendo da semplici euristiche basate sulle similarità a complesse architetture neurali generative.
+
+\subsection{Modelli di Raccomandazione tradizionali}
+\label{subsec:modelli-tradizionali}
+
+La letteratura scientifica classifica gli approcci consolidati in tre macro-categorie, distinte in base alla tipologia di dati utilizzati per l'inferenza delle preferenze e alla logica algoritmica adottata. La figura \ref{fig:traditional_rs} illustra questa tassonomia.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{traditional_rs.png}
+    \caption{Tassonomia gerarchica dei modelli di raccomandazione tradizionali. \\
+    Immagine tratta da \cite{Ko2022}}
+    \label{fig:traditional_rs}
+\end{figure}
+
+\subsubsection{Content-Based Filtering (CBF)}
+
+L'approccio \textit{Content-Based} si fonda sull'assunto che le preferenze di un utente tendano a mantenersi stabili rispetto alle caratteristiche intrinseche degli oggetti. Se un utente ha apprezzato un item con determinate proprietà in passato, è probabile che apprezzerà item simili in futuro. \cite{Loeb1992}
+
+Il sistema opera costruendo due entità vettoriali:
+\begin{itemize}
+    \item \textbf{Item Profile}: una rappresentazione strutturata delle caratteristiche dell'oggetto (es. per un film: genere, regista, cast; per un documento: keywords estratte).
+    \item \textbf{User Profile}: un vettore che aggrega le caratteristiche degli item con cui l'utente ha interagito positivamente, pesandole in base al gradimento.
+\end{itemize}
+
+Il vantaggio ingegneristico del CBF è l'indipendenza degli altri utenti (\textit{User Independence}). Questo permette di risolvere il problema del \textit{New Item Cold-Start}: non appena un nuovo oggetto viene inserito nel catalogo con i suoi metadati, può essere immediatamente raccomandato senza attendere i voti della comunità. \cite{Ko2022}
+
+\paragraph*{Vector Space Model}  ~\\
+
+Dal punto di vista implementativo, il CBF tratta la raccomandazione come un problema di \textit{Information Retrieval}. I dati non strutturati vengono trasformati in vettori numerici nello spazio delle feature tramite il \textit{Vector Space Model}. \cite{Salton1975}
+
+La tecnica standard per la ponderazione delle feature è il **TF-IDF** (\textit{Term Frequency-Inverse Document Frequency}). Questo schema assegna un peso a ogni termine $t$ in un documento $d$ (item) secondo la formula:
+
+\begin{equation}
+    w_{t,d} = \text{TF}(t, d) \cdot \log\left(\frac{N}{|\{d \in D : t \in d\}|}\right)
+\end{equation}
+
+Dove:
+\begin{itemize}
+    \item $\text{TF}(t,d)$ è la frequenza del termine del documento (quanto il termine descrive l'item).
+    \item il secondo termine è l'\textit{Inverse Document Frequency} (IDF), dove $N$ è il numero totale di documenti e il denominatore è il numero di documenti che contengono il termine $t$. Questo fattore serve a penalizzare le parole troppo comuni che hanno scarso potere discriminante. \cite{Salton1975}
+\end{itemize}
+
+Una volta mappati l'utente $u$ e l'item $i$ nello spazio vettoriale come vettori $\mathbf{p}_u$ e $\mathbf{q}_i$, la rilevanza viene calcolata tramite la **Cosine-Similarity**:
+
+\begin{equation}
+    \text{sim}(\mathbf{p}_u, \mathbf{q}_i) = \cos(\theta) = \frac{\mathbf{p}_u \cdot \mathbf{q}_i}{||\mathbf{p}_u|| \cdot ||\mathbf{q}_i||}
+\end{equation}
+
+Maggiore è il valore (prossimo a 1), maggiore è l'allineamento tra il profilo utente e le caratteristiche dell'item.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{cbf_rs.png}
+    \caption{Schema logico del modello Content-Based Filtering. \\
+    Immagine tratta da \cite{Ko2022}}
+    \label{fig:cbf_rs}
+\end{figure}
+
+\subsubsection{Collaborative Filtering (CF)}
+
+A differenza degli approcci \textit{Content-Based}, il \textit{Collaborative Filtering} non richiede l'analisi delle caratteristiche intrinseche degli oggetti (es. testo o immagini), ma basa le sue predizioni esclusivamente sulle interazioni passate registrate nella matrice di utilità $\mathbf{R}$.
+
+Il principio fondante dei CF è l'\textbf{omofilia}: l'assunto sociologico secondo cui utenti che hanno manifestato preferenze simili in passato tenderanno a concordare anche in futuro. Questo approccio permette di catturare pattern latenti (es. la qualità della scrittura o lo stile di regia) che non sono esplicitamente descrivibili tramite metadati, sfruttando la cosiddetta \textit{wisdom of the crowd}. \cite{Ko2022}
+
+La letteratura scientifica divide il CF in due grandi famiglie algoritmiche: \textit{Memory-Based} e \textit{Model-Based}.
+
+\paragraph*{Memory-Based (Neighborhood Methods)} ~\\
+
+Questi algoritmi sono euristici e calcolano la similarità direttamente sulla matrice di interazione senza una fase di training globale. Si distinguono in due varianti:
+
+\begin{itemize}
+    \item \textbf{User-Based CF}: identifica i $k$ utenti più simili all'utente target $u$ (i "vicini") e stima il voto come media pesata del loro rating. \cite{Resnick1994} La similarità tra due utenti $u$ e $v$ è calcolata tramite la \textbf{Pearson correlation}, che è preferibile alla \textit{Cosine Similarity} in quanto sottrae la media dei voti dell'utente $(\bar{r}_u$), gestendo così il bias di utenti che tendono a votare sempre alto o sempre basso:
+    
+    \begin{equation}
+        \text{sim}(u, v) = \frac{\sum_{i \in I_{uv}} (r_{ui} - \bar{r}_u)(r_{vi} - \bar{r}_v)}{\sqrt{\sum_{i \in I_{uv}} (r_{ui} - \bar{r}_u)^2} \sqrt{\sum_{i \in I_{uv}} (r_{vi} - \bar{r}_v)^2}}
+    \end{equation}
+
+    \item \textbf{Item-Based CF}: calcola la similarità tra coppie di \textit{item} basandosi sulla co-occorrenza dei voti ricevuti dagli stessi utenti (es. "Chi ha comprato X ha anche comprato Y"). \cite{Sarwar2001,Linden2003} Questo approccio è generalmente più stabile e scalabile dello User-Based, poiché la natura degli oggetti cambia meno frequentemente rispetto ai gusti degli utenti e il numero di item è spesso inferiore al numero totale degli utenti.
+\end{itemize}
+
+\paragraph*{Model-Based (Matrix Factorization (MF))} ~\\
+
+I metodi Memory-Based degradano rapidamente in condizioni di alta sparsità. I metodi \textit{Model-Based} risolvono il problema utilizzando un approccio a \textbf{fattori latenti}. \cite{Koren2009}
+L'ipotesi è che le preferenze dipendano da un piccolo numero di fattori nascosti in uno spazio di dimensione $K$. La matrice sparsa $\mathbf{R}$ viene approssimata dal prodotto di due matrici dense: $\mathbf{R} \approx \mathbf{P} \times \mathbf{Q}^T$.
+
+\subparagraph*{Standard MF (Feedback Esplicito)} ~\\
+
+Nel caso classico, ogni utente $u$ e item $i$ sono associati ai vettori $\mathbf{p}_u, \mathbf{q}_i \in \mathbb{R}^K$. La predizione è il loro prodotto scalare:
+
+\begin{equation}
+    \hat{r}_{ui} = \mathbf{p}_u^T \mathbf{q}_i = \sum_{k=1}^K p_{uk} q_{ik}
+\end{equation}
+
+I parametri vengono appresi minimizzando l'errore quadratico sui soli rating osservati tramite \textit{Stochastic Gradient Descent} (SGD).
+
+\subparagraph*{Weighted Regularized MF (WRMF - Feedback Implicito)} ~\\
+
+Quando si lavora con feedback implicito (es. click), l'assenza di interazione è un dato mancante, non un feedback negativo.
+
+Introduciamo il concetto di \textit{livello di confidenza}: $c_{ui} = 1 + \alpha \cdot r_{ui}$ per la \textit{Weighted Regularized Matrix Factorization} (WRMF). \cite{Hu2008}
+La funzione obiettivo minimizza l'errore su tutte le coppie (osservate e non), pesate dalla confidenza:
+
+\begin{equation}
+    \min_{\mathbf{P}, \mathbf{Q}} \sum_{u,i} c_{ui} (p_{ui} - \mathbf{p}_u^T \mathbf{q}_i)^2 + \lambda (\|\mathbf{p}_u\|^2 + \|\mathbf{q}_i\|^2)
+\end{equation}
+
+Questo approccio rende WRMF la baseline di riferimento per i dati impliciti.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{cf_rs.png}
+    \caption{Schema logico del modello Collaborative Filtering. \\
+    Immagine tratta da \cite{Ko2022}}
+    \label{fig:cf_rs}
+\end{figure}
+
+\subsubsection{Hybrid System}
+
+Nessun algoritmo è esente da difetti strutturali: il \textit{Content-Based Filtering} soffre di scarsa diversità e non sfrutta la wisdom of the crowd, mentre il \textit{Collaborative Filtering} fallisce in presenza di nuovi item o nuovi utenti (\textit{Cold-Start}) a causa della mancanza di interazioni pregresse.
+I sistemi ibridi nascono per combinare i punti di forza di entrambi gli approcci, mitigandone le rispettive debolezze attraverso tecniche di fusione dei dati o dei modelli.
+
+Secondo la tassonomia standard, le architetture ibride possono essere classificate in base alla modalità di integrazione: \cite{Burke2002,Roy2022}
+
+\begin{itemize}
+    \item \textbf{Weighted}: il punteggio finale di un item è calcolato come combinazione lineare degli score di diversi recommender. Ad esempio, data una predizione $s_{CBF}$ e una $s_{CF}$ il voto finale sarà $s_{tot} = \alpha \cdot s_{CBF} + (1 - \alpha) \cdot s_{CF}$. I pesi $\alpha$ possono essere appresi o fissati sperimentalmente.
+    \item \textbf{Switching}: il sistema seleziona dinamicamente un unico algoritmo tra quelli disponibili in base allo stato del sistema o alla confidenza della predizione (es. una CBF per i nuovi utenti e commuta a CF quando il profilo è sufficientemente denso).
+    \item \textbf{Cascased}: un processo gerarchico in cui un primo algoritmo genera un insieme di candidati grezzo, che viene poi raffinato e riordinato da un secondo algoritmo più preciso. È molto efficiente per ridurre lo spazio di ricerca su grandi cataloghi.
+    \item \textbf{Mixed}: il sistema presenta simultaneamente i risultati di diversi algoritmi in un'unica interfaccia (es. una lista "Consigliati per te" basata sul CF e una lista "Simili a ciò che hai visto" basata sul CBF). È utile per risolvere il problema del \textit{New Item} mostrando contenuti basati sul contenuto insieme a quelli popolari.
+    \item \textbf{Feature Combination}: le feature provenienti da diversi soggetti vengono fuse in un unico vettore di input per un singolo algoritmo di raccomandazione. Questo approccio non usa due modelli separati, ma un unico modello che apprende da dati eterogenei.
+    \item \textbf{Feature Augmentation}: l'output di un modello viene utilizzato come feature di input per un altro. Ad esempio, le predizioni di un modello Content-Based possono essere usate per riempire i valori mancanti nella matrice di utilità, permettendo poi a un modello Collaborative di operare su una matrice più densa.
+    \item \textbf{Meta-Level}: il modello interno appreso da un algoritmo (e non solo il suo output) viene usato come input per un altro. Ad esempio, un modello Content-Based può apprendere una rappresentazione vettoriale dell'utente che verrà usata come input per un kernel in un sistema Collaborative.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{hybrid_rs.png}
+    \caption{Schema logico del modello ibrido. \\
+    Immagina tratta da \cite{Ko2022}}
+    \label{fig:hybrid_rs}
+\end{figure}
+
+\subsection{Modelli di raccomandazione basati su Deep Learning}
+\label{subsec:modelli-deep-learning}
+
+A partire dal 2016, la ricerca nel campo dei RS ha subito un cambio di paradigma con l'introduzione massiva del \textit{Deep Learning}. Mentre i modelli tradizionali sono intrinsecamente lineari (basati sul prodotto scalare), le reti neurali permettono di approssimare funzioni di interazione continua arbitrarie e non lineari, catturando relazioni complesse tra utenti e item. \cite{Zhang2019}
+
+\subsubsection{Neural Collaborative Filtering (NCF)}
+
+Nasce per superare il limite intrinseco della Matrix Factorization: l'uso del prodotto scalare come funzione di interazione fissa.
+Sebbene efficace, il prodotto scalare impone che le interazioni tra utenti e item risiedano in uno spazio lineare, limitando l'espressività del modello (violazione della disuguaglianza triangolare nello spazio latente). \cite{He2017}
+
+NCF propone di sostituire il prodotto scalare con una rete neurale apprendibile, in grado di approssimare qualsiasi funzione continua (grazie all'\textit{Universal Approximation Theorem}). L'architettura completa denominata \textit{NeuMF} (Neural Matrix Factorization), unisce due sotto-architetture parallele per catturare sia le relazioni lineari che quelle non lineari: la \textit{Generalized Matrix Factorization} e il \textit{Multi-Layer Perceptron} (MLP).
+
+\paragraph*{Generalized Matrix Factorization (GMF)} ~\\
+
+Questa componente è una reinterpretazione neurale della fattorizzazione classica. Dati i vettori di embedding dell'utente $\mathbf{p}_u^G$ e dell'item $\mathbf{q}_i^G$, l'interazione è modellata tramite un prodotto element-wise ($\odot$):
+\begin{equation}
+    \phi^{GMF} = \mathbf{p}_u^G \odot \mathbf{q}_i^G
+\end{equation}
+Questo vettore viene poi proiettato verso l'output, mantenendo la capacità di catturare le relazioni lineari tipiche della MF.
+
+
+\paragraph*{Multi-Layer Perceptron (MLP)} ~\\
+
+Per catturare le interazioni non lineari complesse, NCF utilizza una torre di strati densi. Qui, gli embedding di utente $\mathbf{p}_u^M$ ed item $\mathbf{q}_i^M$ (distinti da quelli della GMF per maggiore flessibilità) vengono concatenati:
+\begin{equation}
+    \mathbf{z}_0 = \begin{bmatrix} \mathbf{p}_u^M \\ \mathbf{q}_i^M \end{bmatrix}
+\end{equation}
+Il segnale attraversa $L$ strati nascosti con funzione di attivazione ReLU, che introduce la non-linearità necessaria:
+\begin{equation}
+    \mathbf{z}_l = \text{ReLU}(\mathbf{W}_l \cdot \mathbf{z}_{l-1} + \mathbf{b}_l), \quad l = 1 \dots L
+\end{equation}
+dove $\mathbf{W}_l$ e $\mathbf{b}_l$ sono rispettivamente la matrice dei pesi e il vettore di bias dell'$l$-esimo strato.
+
+\paragraph*{NeuMF: Fusione e Training} ~\\
+
+L'output finale $\hat{y}_{ui}$ è ottenuto concatenando l'uscita delle due componenti (GMF e MLP) e passandola a un layer di output finale, chiamato strato di NeuMF, con funzione di attivazione Sigmoide $\sigma$:
+\begin{equation}
+    \hat{y}_{ui} = \sigma\left( \mathbf{h}^T \cdot \begin{bmatrix} \phi^{GMF} \\ \mathbf{z}_L \end{bmatrix} \right)
+\end{equation}
+Poiché NCF è progettato principalmente per feedback implicito (dove $y_{ui} = 1$ se c'è interazione, $0$ altrimenti), il modello non viene addestrato minimizzando l'errore quadratico (MSE), bensì trattando il problema come una classificazione binaria probabilistica. La funzione obiettivo è la **Binary Cross-Entropy (Log Loss)**:
+\begin{equation}
+    L = - \sum_{(u,i) \in \mathcal{Y}^+} \log(\hat{y}_{ui}) - \sum_{(u,j) \in \mathcal{Y}^-} \log(1 - \hat{y}_{uj})
+\end{equation}
+dove $\mathcal{Y}^+$ sono le interazioni osservate e $\mathcal{Y}^-$ sono campioni negativi (item non interagiti) generati tramite \textit{Negative Sampling}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ncf_rs.png}
+    \caption{Schema architetturale del modello Neural Collaborative Filtering. \\
+    Immagine tratta da \cite{He2017}}
+    \label{fig:ncf_rs}
+\end{figure}
+
+\subsubsection{Autoencoder-based Collaborative Filtering}
+
+Parallelamente all'approccio NCF, che modella l'interazione puntuale utente-item, la ricerca ha esplorato l'uso di modelli di ricostruzione, in particolare gli \textit{Autoencoder} (AE). Mentre la Matrix Factorization e la NCF cercano di apprendere una funzione di scoring, gli approcci basati su AE riformulano il problema del Collaborative Filtering come un compito di \textit{Matrix Completion}: l'obiettivo è assumere in input vettori di rating parziali (sparsi) e ricostruirli in output riempiendo i valori mancanti. \cite{Zhang2019}
+
+Il modello pionieristico che ha formalizzato l'uso degli autoencoder per il rating prediction è \textit{AutoRec}. \cite{Sedhain2015} A differenza delle tecniche precedenti che apprendevano proiezioni lineari (come SVD), AutoRec introduce non-linearità nel processo di codifica e decodifica, permettendo di catturare pattern di co-occorrenza più complessi tra gli item o gli utenti.
+
+Il modello può essere istanziato in due varianti strutturali simmetriche, a seconda che si voglia ricostruire il profilo di un item o di un utente.
+
+\paragraph*{Item-based AutoRec (I-AutoRec)} ~\\
+
+In questa configurazione, il modello impara a ricostruire i vettori colonna della matrice di rating. Dato un insieme di $m$ utenti, l'input è il vettore $\mathbf{r}^{(i)} \in \mathbb{R}^m$, contenente i voti ricevuti dall'$i$-esimo item.
+La ricostruzione $h(\mathbf{r}^{(i)}; \theta)$ avviene proiettando l'input in uno spazio latente $k$-dimensionale e ricostruendolo:
+
+\begin{equation}
+    h(\mathbf{r}^{(i)}; \theta) = f\left( \mathbf{W} \cdot g(\mathbf{V} \cdot \mathbf{r}^{(i)} + \boldsymbol{\mu}) + \mathbf{b} \right)
+\end{equation}
+
+Dove $\mathbf{V} \in \mathbb{R}^{k \times m}$ e $\mathbf{W} \in \mathbb{R}^{m \times k}$ sono le matrici di pesi rispettivamente di encoder e decoder. Poiché il numero di utenti $m$ può essere molto elevato, questa variante richiede un numero di parametri proporzionale alla base utenti.
+
+\paragraph*{User-based AutoRec (U-AutoRec)} ~\\
+
+In questa configurazione, l'obiettivo è ricostruire i vettori riga. Dato un insieme di $n$ item, l'input è il vettore $\mathbf{r}^{(u)} \in \mathbb{R}^n$, contenente i voti assegnati dall'$u$-esimo utente.
+La formulazione matematica è analoga ma dimensionalmente trasposta:
+
+\begin{equation}
+    h(\mathbf{r}^{(u)}; \theta) = f\left( \mathbf{W} \cdot g(\mathbf{V} \cdot \mathbf{r}^{(u)} + \boldsymbol{\mu}) + \mathbf{b} \right)
+\end{equation}
+
+In questo caso, le matrici di peso hanno dimensioni $\mathbf{V} \in \mathbb{R}^{k \times n}$ e $\mathbf{W} \in \mathbb{R}^{n \times k}$.
+
+\paragraph*{Confronto e Funzioni di Attivazione} ~\\
+
+Sebbene i modelli siano strutturalmente simmetrici, \textit{I-AutoRec} tende ad ottenere prestazioni superiori (RMSE inferiore). \cite{Sedhain2015} Questo fenomeno è attribuibile alla varianza dei dati: il numero medio di valutazioni per item è spesso superiore a quello per utente, fornendo all'autoencoder vettori di input più densi e informativi per l'apprendimento delle feature latenti. 
+
+Le funzioni $g(\cdot)$ e $f(\cdot)$ sono le attivazioni non lineari (tipicamente Sigmoide o Identità). L'uso di attivazioni non lineari è cruciale: senza di esse, AutoRec collasserebbe in una semplice fattorizzazione di matrice lineare.
+
+\paragraph*{Funzione Obiettivo: Masked Error} ~\\
+
+La sfida principale nell'addestramento è la sparsità dei dati. A differenza della compressione di immagini, dove ogni pixel ha un valore noto, qui la maggior parte delle entrate nei vettori $\mathbf{r}$ sono sconosciute.
+Il modello non deve essere penalizzato per non aver ricostruito gli zeri che rappresentano dati mancanti. Pertanto, AutoRec impiega una funzione di costo basata su **Masked Mean Squared Error** (MMSE).
+
+Indipendentemente dalla variante scelta (utente o item), la backpropagation aggiorna i pesi considerando solamente i rating osservati. La funzione obiettivo da minimizzare per I-AutoRec (analoga per U-AutoRec) è:
+
+\begin{equation}
+    \min_{\theta} \sum_{i=1}^{n} \left\| \mathbf{r}^{(i)} - h(\mathbf{r}^{(i)}; \theta) \right\|_{\mathcal{O}}^2 + \frac{\lambda}{2} \cdot (\|\mathbf{W}\|_F^2 + \|\mathbf{V}\|_F^2)
+\end{equation}
+
+dove $\|\cdot\|_{\mathcal{O}}^2$ indica che la norma euclidea viene calcolata solo sulle componenti per cui il rating è osservato. Il termine $\lambda$ controlla la regolarizzazione $L_2$ per prevenire l'overfitting.
+
+Una volta addestrato il modello, la predizione $\hat{R}_{ui}$ si ottiene prelevando la componente corrispondente dal vettore ricostruito: l'$u$-esima componente di $h(\mathbf{r}^{(i)})$ nel caso I-AutoRec, o l'$i$-esima componente di $h(\mathbf{r}^{(u)})$ nel caso U-AutoRec.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{autoencoder_rs.png}
+    \caption{Schema logico del modello Item-based AutoRec. \\
+    Immagine tratta da \cite{Sedhain2015}}
+    \label{fig:autoencoder_rs}
+\end{figure}
+
+\subsubsection{Session-based Recommendations with Recurrent Neural Networks}
+
+Esiste una classe di problemi in cui la dimensione temporale è predominante. In scenari come l'e-commerce o lo streaming, l'identità dell'utente potrebbe non essere nota (sessioni anonime) o le intenzioni potrebbero cambiare rapidamente. \cite{Zhang2019}
+
+Per affrontare questo problema, la ricerca si è spostata verso le \textit{Session-based Recommendation} utilizzando le Reti Neurali Ricorrenti (RNN) per modellare la sequenzialità delle interazioni. \cite{Hidasi2016}
+
+\paragraph*{GRU4Rec} ~\\
+
+La sessione utente viene trattata come una sequenza ordinata di item $S = [1_1, i_2, \dots, i_t]$. Il compito del sistema è predire l'item $i_{t+1}$ dato il contesto della sequenza precedente.
+
+Al cuore dell'architettura vi sono le \textit{Gated Recurrent Units} (GRU). Vengono preferite rispetto alle classiche \textit{Long Short-Term Memory} (LSTM) poiché, a parità di capacità nel gestire il problema del \textit{vanishing gradient}, risultano computazionalmente più efficienti e richiedono un numero inferiore di parametri.
+
+Si inizia con un \textbf{Input Layer} in cui lo stato corrente della sessione (l'ultimo item cliccato $i_t$) viene rappresentato tramite un vettore one-hot $\mathbf{x}_t$ (o tramite un livello di embedding appreso). Successivamente si passa ad una serie di \textbf{GRU Layer} nei quali il segnale passa attraverso uno o più strati GRU. Lo stato nascosto $\mathbf{h}_t$, che funge da memoria della sessione, viene aggiornato combinando l'input attuale con lo stato precedente:
+
+ \begin{equation}
+        \mathbf{h}_t = \text{GRU}(\mathbf{x}_t, \mathbf{h}_{t-1}) = (1 - \mathbf{z}_t) \odot \mathbf{h}_{t-1} + \mathbf{z}_t \odot \tilde{\mathbf{h}}_t
+ \end{equation}
+
+dove $\mathbf{z}_t$ è la porta di aggiornamento (\textit{update gate}) che decide quanto dell'informazione passata mantenere.
+
+Infine avremo un \textbf{Output Layer} in cui l'output GRU viene proiettato nello spazio degli item. Si applica infine una funzione \textit{Softmax} per ottenere una distribuzione di probabilità $\hat{\mathbf{y}}_t$ su tutti i possibili item candidati per il passo $t+1$:
+
+\begin{equation}
+        \hat{\mathbf{y}}_t = \text{Softmax}(\mathbf{W}_{out} \cdot \mathbf{h}_t + \mathbf{b}_{out})
+\end{equation}
+
+\paragraph*{Session-Parallel Mini-Batches} ~\\
+
+Le sessioni hanno lunghezze estremamente variabili; le tecniche standard (come il padding delle sequenze) risulterebbero inefficienti in questo contesto.
+Il modello utilizza una tecnica chiamata \textit{Session-Parallel Mini Batches} dove le diverse sessioni vengono processate in parallelo su "corsie" distinte. Quando una sessione termina, viene rimpiazzata immediatamente dalla successiva disponibile nel dataset, resettando lo stato nascosto solo per quella specifica corsia, massimizzando così il throughput della GPU. \cite{Hidasi2016}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{session_parallel_mini_batches.png}
+    \caption{Creazione della session-parallel mini batch. \\
+    Immagine tratta da \cite{Hidasi2016}}
+    \label{fig:session-parallel_mini_batch}
+\end{figure}
+
+\paragraph*{Ranking Loss} ~\\
+
+L'obiettivo del modello non è stimare il valore esatto di un rating, ma ordinare correttamente gli item (\textit{Learning to Rank}). Le funzioni di loss classiche (es. Cross-Entropy) si sono rivelate sub-ottimali. GRU4Rec propone l'uso di funzioni di costo specifiche calcolate su campioni negativi:
+
+\begin{itemize}
+    \item \textbf{Bayesian Personalized Ranking (BPR)}: si tratta di una loss a coppie che penalizza il modello se lo score dell'item target positivo $\hat{r}_{si}$ non è superiore a quello di un item negativo $\hat{r}_{sj}$:
+    \begin{equation}
+        L_{BPR} = - \frac{1}{N_S} \sum_{j=1}^{N_S} \log(\sigma(\hat{r}_{si} - \hat{r}_{sj}))
+    \end{equation}
+    
+    \item \textbf{TOP1 Loss}: è un'approssimazione regolarizzata del rango relativo dell'item corretto. A differenza di BPR, include un termine di regolarizzazione che spinge verso zero i punteggi degli item negativi (evitando che diventino infinitamente negativi senza migliorare il ranking):
+    \begin{equation}
+        L_{TOP1} = \frac{1}{N_S} \sum_{j=1}^{N_S} \sigma(\hat{r}_{sj} - \hat{r}_{si}) + \sigma(\hat{r}_{sj}^2)
+    \end{equation}
+    Il primo termine penalizza i casi in cui l'item negativo ha uno score superiore al positivo, mentre il secondo termine ($\sigma(\hat{r}_{sj}^2)$) agisce da regolarizzatore sugli score negativi.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gru_rs.png}
+    \caption{Schema architetturale di GRU4Rec. \\
+    Immagine tratta da \cite{Hidasi2016}}
+    \label{fig:gru_rs}
+\end{figure}
+
+\subsubsection{Convolutional Matrix Factorization for Document Context-Aware Recommendation}
+
+Un limite dei modelli di Collaborative Filtering, come NCF e AutoRec, è la drastica riduzione delle performance in condizioni di elevata sparsità o nel caso di nuovi item (\textit{Cold Start}). Mentre i modelli basati su MLP o RNN si concentrano sulla modellazione delle interazioni, le \textit{Reti Neurali Convoluzionali} (RNN) trovano la loro applicazione nell'estrazione di feature di dati ausiliari non strutturati (es. immagini o testo) per arricchire la rappresentazione degli item. \cite{Zhang2019}
+
+Prima dell'avvento del Deep Learning, l'integrazione di testo avveniva tramite modelli \textit{Bag-of-Words} (BoW), che però ignorano l'ordine delle parole e il contesto semantico.
+La \textit{Convolutional Matrix Factorization} (ConvMF), un modello ibrido che integra una CNN all'interno del framework della \textit{Probabilistic Matrix Factorization} (PMF), permette di catturare le sfumature contestuali dei documenti per generare rappresentazioni latenti più ricche. \cite{Kim2016}
+
+\paragraph*{ConvMF} ~\\
+
+Viene utilizzata la CNN non come un semplice estrattore di feature statico, ma come componente che influenza attivamente la generazione dei fattori latenti all'interno del modello probabilistico.
+
+Nel classico PMF, i vettori latenti degli item $\mathbf{v}_j$ sono generati da una distribuzione Gaussiana con media zero:  $\mathbf{v}_j \sim \mathcal{N}(\mathbf{0}, \sigma_V^2 \mathbf{I})$.
+In ConvMF, la media della distribuzione dell'item $j$ non è zero, bensì è determinata dall'output della CNN applicata al documento descrittivo $d_j$.
+
+Dato il documento $d_j$ e i pesi della CNN $\mathbf{W}_{cnn}$, il vettore latente dell'item è modellato come:
+
+\begin{equation}
+    \mathbf{v}_j = \text{CNN}(\mathbf{W}_{cnn}, d_j) + \epsilon_j, \quad \epsilon_j \sim \mathcal{N}(\mathbf{0}, \sigma_V^2 \mathbf{I})
+\end{equation}
+
+Il profilo dell'item $\mathbf{v}_j$ è la somma delle caratteristiche semantiche estratte dal testo e di un termine di rumore Gaussiano $\epsilon_j$ che cattura le variazioni specifiche dei rating non spiegabili dal solo contenuto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{convMF.png}
+    \caption{Schema logico del modello ConvMF: PMF a sinistra, CNN a destra. \\
+    Immagine tratta da \cite{Kim2016}}
+    \label{fig:convMF}
+\end{figure}
+
+\paragraph*{Architettura della CNN} ~\\
+
+La componente CNN è progettata per elaborare documenti di lunghezza variabile seguendo questi step:
+\begin{enumerate}
+    \item \textbf{Embedding Layer}: le parole del documento vengono trasformate in vettori densi (spesso pre-addestrati con word2vec), creando una matrice di rappresentazione.
+    \item \textbf{Convolutional Layer}: diversi filtri (kernel) di varie dimensioni scorrono sulla matrice per catturare pattern locali (es. n-grammi significativi).
+    \item \textbf{Max-Pooling}: viene estratta la feature più rilevante per ogni feature map, riducendo la dimensionalità e fornendo invarianza alla posizione.
+    \item \textbf{Output Projection}: le feature aggregate vengono proiettate tramite uno strato denso per coincidere con la dimensione $k$ dello spazio latente della fattorizzazione.
+\end{enumerate}
+
+\paragraph*{Ottimizzazione e Funzione Obiettivo}
+
+L'obiettivo è massimizzare la probabilità a posteriori dei vettori latenti di utenti $U$ e item $V$ e dei pesi della rete. La funzione di costo risultante combina l'errore quadratico sui rating osservati con un termine di regolarizzazione legato alla CNN:
+
+\begin{equation}
+    L = \sum_{(u,j) \in \mathcal{Y}} (R_{uj} - \mathbf{u}_u^T \mathbf{v}_j)^2 + \lambda_V \sum_{j=1}^{N} \|\mathbf{v}_j - \text{CNN}(\mathbf{W}_{cnn}, d_j)\|^2 + \lambda_{reg} \|\theta\|^2
+\end{equation}
+
+Il primo termine è la classica perdita di ricostruzione dei rating. Il secondo termine forza il vettore latente dell'item $\mathbf{v}_j$ a essere simile alla rappresentazione generata dal testo.
+L'addestramento avviene alternando l'ottimizzazione dei parametri latenti, tramite \textit{Coordinate Descent}, e l'aggiornamento dei pesi della CNN, tramite \textit{Backpropagation}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{cnn_convMF.png}
+    \caption{Schema architetturale della rete CNN per la convMF. \\
+    Immagine tratta da \cite{Kim2016}}
+    \label{fig:cnn_convMF}
+\end{figure}
+
+\subsubsection{Self-Attentive Sequential Recommendation (SASRec)}
+
+Sebbene modelli come GRU4Rec abbiano dimostrato l'efficacia del Deep Learning per la raccomandazione sequenziale, le reti ricorrenti (RNN) presentano due limitazioni intrinseche: la difficoltà nel modellare dipendenze a lungo termine (nonostante l'uso di \textit{gating mechanisms}) e l'impossibilità di parallelizzare il calcolo, poiché ogni passo dipende dallo stato nascosto precedente.
+
+L'introduzione del meccanismo di \textit{Self-Attention} \cite{Vaswani2017} con l'architettura Transformer per il \textit{Natural Language Processing} (NLP), ha segnato una svolta. \cite{Zhang2019} Questo meccanismo permette ai modelli di "pesare" selettivamente l'importanza degli item passati Indipendentemente dalla loro distanza temporale. \textit{SASRec} adatta questo paradigma ai sistemi di raccomandazione, combinando la capacità delle catene di Markov di modellare interazioni recenti con la capacità delle RNN di catturare pattern a lungo termine, ma superando entrambe in efficienza grazie alla parallelizzazione. \cite{Kang2018}
+
+\paragraph*{Embedding e Positional Encoding} ~\\
+
+A differenza delle RNN, il meccanismo di attenzione è invariante all'ordine: elabora l'intera sequenza simultaneamente. Per preservare l'informazione sulla sequenzialità degli acquisti, SASRec somma all'embedding dell'item un embedding posizionale apprendibile.
+
+Data una sequenza di input $S = (s_1, s_2, \dots, s_n)$, la rappresentazione iniziale $\hat{\mathbf{E}} \in \mathbb{R}^{n \times d}$ è data da:
+
+\begin{equation}
+    \hat{\mathbf{E}} = \mathbf{E}_{item} + \mathbf{P}_{pos}
+\end{equation}
+
+dove $\mathbf{E}_{item}$ contiene i vettori latenti degli oggetti e $\mathbf{P}_{pos}$ codifica la posizione assoluta dell'item nella sequenza.
+
+\paragraph*{Self-Attention Block} ~\\
+
+Il cuore del modello è il blocco di \textit{Self-Attention}, che permette a ogni item nella sequenza di "attendere" (prestare attenzione) a tutti gli altri item precedenti per calcolare la sua nuova rappresentazione.
+Il meccanismo utilizzato è il \textit{Scaled Dot-Product Attention}. \cite{Vaswani2017} Date le proiezioni lineari per le Query $\mathbf{Q}$, le Key $\mathbf{K}$ e i Value $\mathbf{V}$ a partire dall'input $\hat{\mathbf{E}}$:
+
+\begin{equation}
+    \text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{d}}\right)\mathbf{V}
+\end{equation}
+
+Il termine $\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{d}}$ calcola la similarità tra tutti gli elementi della sequenza.
+
+È fondamentale notare che, essendo un problema sequenziale, il modello non può "vedere il futuro". Viene applicata una maschera causale (\textit{causality mask}) che modifica la matrice di attenzione impostando a $-\infty$ i valori corrispondenti alle connessioni $j > i$ (item futuri), garantendo che la predizione al tempo $t$ dipenda solo dagli item $1 \dots t$.
+
+\paragraph*{Point-Wise Feed-Forward e Stacking} ~\\
+
+Per introdurre non-linearità e interazioni più profonde tra le dimensioni latenti, l'output dell'attenzione passa attraverso una \textit{rete Feed-Forward} (FNN) applicata indipendentemente a ogni posizione (\textit{Point-Wise FNN}), composta da due trasformazioni lineari con attivazione ReLU nel mezzo.
+SASRec impila $b$ di questi blocchi (Attention + FFN), utilizzando la normalizzazione dei layer (\textit{LayerNorm}) tipiche dei Transformer:
+
+\begin{equation}
+    \mathbf{F}_l = \text{LayerNorm}(\mathbf{F}_{l-1} + \text{SelfAttention}(\mathbf{F}_{l-1}))
+\end{equation}
+
+\paragraph*{Predizione e Funzione Obiettivo} ~\\
+
+Dopo $b$ blocchi, l'output $\mathbf{F}_b$ al passo $t$ aggrega l'informazione dell'intera cronologia rilevante. La rilevanza (score) dell'item $i$ come candidato successivo è calcolato tramite il prodotto scalare tra la rappresentazione contestuale e l'embedding dell'item:
+
+\begin{equation}
+    r_{i,t} = \mathbf{F}_b^{(t)} \cdot \mathbf{N}_i^T
+\end{equation}
+
+dove $\mathbf{N}$ è la matrice degli embedding degli item (spesso condivisa con quella di input per ridurre i parametri).
+Il modello viene addestrato minimizzando la **Binary Cross-Entropy**, trattando l'item successivo reale come campione positivo e campionando un item negativo casuale per ogni passo temporale.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sasRec_rs.png}
+    \caption{Schema logico del modello SASRec. \\
+    Immagine tratta da \cite{Kang2018}}
+    \label{fig:sasRec_rs}
+\end{figure}
+
+\subsubsection{Generative Adversarial Networks based Recommendation}
+
+La maggior parte dei modelli di raccomandazione visti finora sono di natura \textit{discriminativa}, ovvero cercano di classificare se un utente apprezzerà un item o predirne il rating.
+
+L'emergere dei modelli \textit{generativi}, in particolare delle \textit{Generative Adversarial Networks} (GAN), hanno portato ad un nuovo paradigma, basato sulla Teoria dei Giochi, dove vengono addestrate due reti neurali in competizione tra loro in un gioco a somma zero. \cite{Zhang2019} Il lavoro seminale che ha adottato questo approccio all'\textit{Information Retrieval} e ai RS è \textit{IRGAN}. \cite{Wang2017}
+
+\paragraph*{IRGAN} ~\\
+
+IRGAN definisce due agenti antagonisti:
+
+\begin{itemize}
+    \item \textbf{Modello Generativo (Generator $G$)}: il suo obiettivo è apprendere la distribuzione di probabilità sottostante delle preferenze dell'utente $p_{true}(d|u)$ per generare (raccomandare) item $d$ che siano indistinguibili da quelli realmente rilevanti. Cerca di "ingannare" il discriminatore proponendo item plausibili.
+    \item \textbf{Modello Discriminativo (Discriminator $D$)}: il suo obiettivo è distinguere tra gli item veramente rilevanti (interazioni reali osservate nel training set) e quelli generati (campionati) dal Generatore.
+\end{itemize}
+
+Il training avviene attraverso un gioco \textit{Min-Max}, dove si cerca di minimizzare la funzione obiettivo rispetto el Generatore e massimizzarla rispetto al Discriminatore. La funzione obiettivo è:
+
+\begin{equation}
+    J = \min_{\theta_G} \max_{\phi_D} \sum_{n=1}^{N} \left( \mathbb{E}_{d \sim p_{true}} [\log D(d|u)] + \mathbb{E}_{d \sim p_{\theta_G}} [\log (1 - D(d|u))] \right)
+\end{equation}
+
+\paragraph*{Ottimizzazione su Dati Discreti} ~\\
+
+A differenza delle immagini (dati continui), gli item in un sistema di raccomandazione sono discreti. Questo impedisce l'uso della backpropagation standard per aggiornare il Generatore, poiché l'operazione di selezione di un item (campionamento) non è differenziabile.
+Per superare questo ostacolo si utilizzano tecniche di \textit{Reinforcement Learning}, specificamente un approccio basato su Policy Gradient. \cite{Wang2017} Il Generatore agisce come un agente che intraprende un'azione (selezionare un item) e riceve come ricompensa (\textit{reward}) il giudizio del Discriminatore.
+
+Questo approccio permette a IRGAN di superare i limiti dei metodi statici di \textit{Negative Sampling}, poiché il Generatore impara a creare esempi negativi sempre più "difficili" e realistici, costringendo il Discriminatore, quindi il sistema di raccomandazione finale, a diventare più accurato e robusto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{irgan_rs.png}
+    \caption{Schema logico del training del modello IRGAN. \\
+    Immagine tratta da \cite{Wang2017}}
+    \label{fig:irgan_rs}
+\end{figure}
+
+\subsubsection{Deep Reinforcement Learning based Recommendation}
+
+La maggior parte dei modelli analizzati finora (NCF, GRU4Rec) sono intrinsecamente "miopi" o \textit{greedy}: sono addestrati per massimizzare la probabilità di un'interazione immediata (es. il prossimo click) basandosi su dati storici statici.
+Tuttavia, il processo di raccomandazione è, per natura, un'interazione sequenziale e dinamica tra il sistema e l'utente, dove l'azione corrente influenza lo stato futuro delle preferenze. \cite{Zhang2019}
+
+Per modellare questa dinamica, la ricerca si è orientata verso il \textit{Deep Reinforcement Learning} (DRL). In questo paradigma, il sistema di raccomandazione non è più un semplice classificatore, ma un \textit{Agente} che interagisce con un'\textit{Ambiente} cercando di massimizzare una ricompensa cumulativa nel tempo (es. la durata totale della sessione o la fidelizzazione a lungo termine).
+
+\paragraph*{MDP} ~\\
+
+Il problema viene formalizzato come un \textit{Markov Decision Process} (MDP).
+Le componenti principali del \textit{Deep Reinforcement Learning based Recommendation} (DRN) sono: \cite{Zheng2018}
+
+\begin{itemize}
+    \item \textbf{Stato ($S_t$)}: rappresenta il contesto corrente e la storia dell'utente al tempo $t$. Include le feature dell'utente, le feature del contesto (es. ora del giorno) e gli ultimi item consumati.
+    \item \textbf{Azione ($A_t$)}: corrisponde all'item (o alla lista di item) che l'agente sceglie di raccomandare tra quelli disponibili.
+    \item \textbf{Reward ($R_t$)}: è il feedback ricevuto dall'ambiente dopo l'azione. In DRN, il reward non è solo binario (click/no-click), ma include metriche di engagement come il tempo di lettura attivo, per evitare il fenomeno del \textit{click-bait}.
+    \item \textbf{Transizione ($P$)}: la probabilità che lo stato dell'utente cambi da $S_t$ a $S_{t+1}$ dopo aver raccomandato l'item $A_t$.
+\end{itemize}
+
+\paragraph*{Q-Learning e Deep Q-Network} ~\\
+
+L'obiettivo dell'agente è apprendere una \textit{Policy} ottimale $\pi(S_t)$ che scelga l'azione migliore. DRN utilizza un approccio basato su \textit{Deep Q-Network} (DQN), l'algoritmo combina il reinforcement learning (RL) con le reti neurali profonde. \cite{Mnih2015} La rete stima la funzione $Q(S_t, A_t)$, che rappresenta il valore atteso della ricompensa futura (\textit{discounted cumulative reward}) scegliendo l'azione $A_t$ nello stato $S_t$:
+
+\begin{equation}
+    Q(S_t, A_t) = \mathbb{E} \left[ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \mid S_t, A_t \right]
+\end{equation}
+
+dove $\gamma$ è il fattore di sconto. L'addestramento avviene minimizzando l'errore quadratico medio basato sull'equazione di Bellman:
+
+\begin{equation}
+    L = \mathbb{E} \left[ (R_{t+1} + \gamma \max_{a'} Q(S_{t+1}, a'; \theta^-) - Q(S_t, A_t; \theta))^2 \right]
+\end{equation}
+
+Per una trattazione teorica approfondita dell'algoritmo DQN generico e delle sue componenti architetturali (Experience Replay e Target Network), si rimanda alla sezione \ref{sec:dqn}.
+
+\paragraph*{Exploration vs Exploitation} ~\\
+
+Uno dei vantaggi del DRL rispetto ai metodi tradizionali è la gestione attiva del trade-off tra \textit{Exploitation} (raccomandare ciò che si sa piacere all'utente) ed \textit{Exploration} (raccomandare item nuovi o incerti per acquisire informazioni).
+DRN implementa una strategia di esplorazione (es. Dueling Bandit Gradient Descent) che perturba leggermente i parametri della rete per esplorare nuove aree dello spazio degli item, permettendo al modello di adattarsi dinamicamente ai cambiamenti nei gusti dell'utente (\textit{Concept Drift}) in tempo reale.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{drn_rs.png}
+    \caption{Schema dell'interazione Agente-Ambiente nel modello DRN. \\
+    Immagine tratta da \cite{Zheng2018}}
+    \label{fig:drn_rs}
+\end{figure}
+
+\subsection{Modelli di raccomandazione basati sui grafi}
+\label{subsec:modelli-gnn}
+
+Un limite intrinseco dei modelli di Collaborative Filtering basati su Deep Learning analizzati nelle sezioni precedenti è che trattano le interazioni utente-item come istanze indipendenti (i.i.d.). Tuttavia, i dati reali possiedono una struttura relazionale complessa che può essere modellata più naturalmente tramite grafi.
+
+I sistemi di raccomandazione basati sui \textit{Graph Neural Networks} (GNN) possono essere suddivisi in quattro macro-categorie, a seconda della struttura dati utilizzata \cite{Wu2022}:
+
+
+\begin{enumerate}
+    \item \textbf{General Recommendation}: si basa sul grafo bipartito utente-item, dove l'obiettivo è predire i link mancanti sfruttando la connettività di alto ordine. Tra i modelli di riferimento figurano \textit{PinSage}, utilizzato da Pinterest per gestire grafi su larga scala tramite aggregazione convoluzionale \cite{Ying2018}, e \textit{GC-MC}, che formula il completamento della matrice come un problema di link prediction su grafi \cite{Berg2017}.
+    
+    \item \textbf{Sequential Recommendation}: i dati sono modellati come una sequenza di transizioni tra item (grafo di sessione). Un esempio rilevante è il \textit{Session-based Recommendation with GNN} (SR-GNN), che apprende le rappresentazioni degli item catturando le transizioni complesse all'interno di una sessione, superando i limiti delle RNN nel gestire dipendenze non consecutive \cite{Wu2019_SRGNN}.
+    
+    \item \textbf{Social Recommendation}: integra il grafo delle interazioni con il \textit{social graph} (amicizie tra utenti) per mitigare la sparsità dei dati. Modelli rappresentativi sono \textit{GraphRec}, che modella congiuntamente l'opinione degli amici e le interazioni storiche \cite{Fan2019}, e \textit{DiffNet}, che simula la diffusione dell'influenza sociale nel grafo per raffinare gli embedding utente \cite{Wu2019_DiffNet}.
+    
+    \item \textbf{Knowledge Graph-based Recommendation}: arricchisce le interazioni con grafi di conoscenza eterogenei che descrivono le proprietà semantiche degli item (es. regista, genere). Lo standard in questo ambito è il \textit{Knowledge Graph Attention Network} (KGAT), che utilizza meccanismi di attenzione per pesare i vicini nel Knowledge Graph durante la propagazione \cite{Wang2019_KGAT}.
+\end{enumerate}
+
+% Da attenzionare
+Poiché l'obiettivo di questa tesi e i modelli implementati nel sistema proposto ricadono nel dominio del \textit{Collaborative Filtering} puro (senza dati sociali o semantici esterni), ci concentreremo sulla prima categoria: la \textit{General Recommendation}.
+In questo contesto, le GNN vengono utilizzate per catturare il segnale collaborativo propagando gli embedding attraverso il grafo bipartito. Di seguito analizziamo le due architetture fondamentali di questa famiglia.
+
+\subsubsection{Neural Graph Collaborative Filtering (NGCF)}
+
+Il \textit{Neural Graph Collaborative Filtering} (NGCF) è stato il primo modello a integrare esplicitamente la struttura grafo nel processo di embedding. \cite{Wang2019} L'idea chiave è raffinare la rappresentazione dell'utente aggregando ricorsivamente i messaggi dai vicini.
+Al livello $l$, l'embedding dell'utente $u$ viene aggiornato aggregando i messaggi dai vicini $\mathcal{N}_u$:
+
+\begin{equation}
+    \mathbf{e}_u^{(l+1)} = \sigma \left( \mathbf{W}_1 \mathbf{e}_u^{(l)} + \sum_{i \in \mathcal{N}_u} \frac{1}{\sqrt{|\mathcal{N}_u| |\mathcal{N}_i|}} \left( \mathbf{W}_1 \mathbf{e}_i^{(l)} + \mathbf{W}_2 (\mathbf{e}_i^{(l)} \odot \mathbf{e}_u^{(l)}) \right) \right)
+\end{equation}
+
+NGCF definisce il messaggio propagato includendo non solo la somma delle feature, ma anche le interazioni tra feature (prodotto element-wise $\odot$). Introduce inoltre matrici di pesi apprendibili ($\mathbf{W}_1, \mathbf{W}_2$) e funzioni di attivazione non lineari ($\sigma$) a ogni strato. Sebbene potente, questa complessità rende il modello computazionalmente oneroso.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ngcf_rs.png}
+    \caption{Schema architetturale del modello Neural Graph Collaborative Filtering. \\
+    Immagine tratta da \cite{Wang2019}}
+    \label{fig:ngcf_rs}
+\end{figure}
+
+\subsubsection{LightGCN}
+
+Le componenti di non-linearità e le trasformazioni di feature delle GCN sono utili per compiti di classificazione di nodi ma superflue e dannose per il Collaborative Filtering.
+Nasce così \textit{LightGCN} che semplifica drasticamente l'architettura mantenendo solo la \textit{propagazione lineare dei vicini}. \cite{He2020}
+
+L'aggiornamento al layer $k+1$ è una somma pesata normalizzata:
+
+\begin{equation}
+    \mathbf{e}_u^{(k+1)} = \sum_{i \in \mathcal{N}_u} \frac{1}{\sqrt{|\mathcal{N}_u| |\mathcal{N}_i|}} \mathbf{e}_i^{(k)}
+\end{equation}
+
+L'embedding finale utilizzato per la predizione (prodotto scalare) è la somma pesata degli embedding ottenuti a tutti i livelli $K$, permettendo di catturare sia le similarità dirette (layer bassi) che quelle a lungo raggio (layer alti):
+
+\begin{equation}
+    \mathbf{e}_u^* = \sum_{k=0}^K \alpha_k \mathbf{e}_u^{(k)}
+\end{equation}
+
+Grazie alla sua efficienza e robustezza, LightGCN è considerato l'attuale \textit{state-of-the-art} per le GNN supervisionate ed è la base su cui sono costruiti i modelli contrastivi più recenti.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{lightGCN_rs.png}
+    \caption{Schema architetturale del modello LightGCN. \\
+    Immagine tratta da \cite{He2020}}
+    \label{fig:lightGCN_rs}
+\end{figure}
+
+\subsection{Modelli di raccomandazione basati su Graph Contrastive Learning}
+\label{subsec:modelli-gcl}
+
+\subsection{Modelli di raccomandazione basati su Large Language Model}
+\label{subsec:modelli-llm}
+
+\section{Tassonomia degli attacchi}
+\label{sec:attacchi}
