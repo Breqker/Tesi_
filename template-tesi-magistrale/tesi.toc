@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {1.2.3.4}Knowledge Graph-based Recommendation}{43}{subsubsection.1.2.3.4}%
 \contentsline {subsection}{\numberline {1.2.4}Modelli di raccomandazione basati su Self-Supervised Learning}{43}{subsection.1.2.4}%
 \contentsline {subsubsection}{\numberline {1.2.4.1}Generative SSL}{44}{subsubsection.1.2.4.1}%
-\contentsline {subsubsection}{\numberline {1.2.4.2}Contrastive SSL (Graph Contrastive Learning)}{46}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Contrastive SSL}{46}{subsubsection.1.2.4.2}%
 \contentsline {subsubsection}{\numberline {1.2.4.3}Predictive SSL}{49}{subsubsection.1.2.4.3}%
 \contentsline {subsubsection}{\numberline {1.2.4.4}Hybrid SSL}{50}{subsubsection.1.2.4.4}%
 \contentsline {subsection}{\numberline {1.2.5}Modelli di raccomandazione basati su Large Language Model}{51}{subsection.1.2.5}%
