@@ -951,21 +951,45 @@ In questo approccio, la potenza degli LLM (spesso modelli tipo BERT) viene sfrut
 \paragraph*{Universal Sequence Representation (UniSRec)} ~\\
 
 Un limite dei modelli sequenziali classici (come SASRec) è che gli embedding degli item sono legati agli ID specifici di un dataset e non sono trasferibili. UniSRec propone di utilizzare il testo descrittivo dell'item come input universale.
-Il modello utilizza un encoder basato su BERT per generare rappresentazioni degli item basate sul testo. Successivamente, utilizza un meccanismo di attenzione per modellare la sequenza di interazioni in uno spazio semantico universale. Questo permette al modello di effettuare raccomandazioni \textit{Cross-Domain} e \textit{Inductive}, funzionando anche su dataset diversi da quello di training. \cite{Hou2022}
+Il modello utilizza un encoder basato su BERT per generare rappresentazioni degli item basate sul testo. Successivamente, utilizza un meccanismo di attenzione per modellare la sequenza di interazioni in uno spazio semantico universale. Questo permette al modello di effettuare raccomandazioni \textit{Cross-Domain} e \textit{Inductive}, funzionando anche su dataset diversi da quello di training. \cite{Hou2022_UniSRec}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{uniSRec_rs.png}
+    \caption{Schema architetturale del modello UniSRec. \\
+    Immagine tratta da \cite{Hou2022_UniSRec}}
+    \label{fig:uniSRec_rs}
+\end{figure}
 
 \subsubsection{Generative LLM-based Recommendation}
 
 In questo approccio, il sistema di raccomandazione viene unificato con i task di NLP. L'input è un \textit{Prompt} in linguaggio naturale e l'output è una sequenza di testo generata.
 
-\paragraph*{P5 (Pre-train, Personalized Prompt, Predict Paradigm)} ~\\
+\paragraph*{Pre-train, Personalized Prompt, Predict Paradigm (P5)} ~\\
 
 P5 è stato uno dei primi a unificare diversi task di raccomandazione (Sequential Recommendation, Rating Prediction, Explanation) in un unico framework \textit{sequence-to-sequence}.
 Tutti i dati (utenti, item, interazioni) vengono convertiti in stringhe di testo tramite template di prompt personalizzati (es. "Dato lo storico dell'utente X, predici il prossimo acquisto"). Il modello, basato su T5, viene pre-addestrato su questi prompt, imparando a svolgere raccomandazioni come se fosse un compito di traduzione o riassunto. \cite{Geng2022}
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{p5_rs.png}
+    \caption{Schema architetturale del modello P5. \\
+    Immagine tratta da \cite{Geng2022}}
+    \label{fig:p5_rs}
+\end{figure}
+
 \paragraph*{TALLRec (Instruction Tuning)} ~\\
 
 Mentre P5 si basa sul pre-training, TALLRec si concentra sull'\textit{Instruction Tuning} di LLM generalisti (come LLaMA). Gli LLM "vanilla" faticano a seguire istruzioni di raccomandazione specifiche (es. ordinare una lista) senza un fine-tuning mirato.
-TALLRec costruisce un dataset di istruzioni specifiche per la raccomandazione (con esempi positivi e negativi) ed effettua il fine-tuning l'LLM in modo efficiente (utilizzando LoRA \cite{Hu2022}) per allineare le capacità del modello al task di ranking, ottenendo prestazioni superiori in scenari \textit{Few-Shot}. \cite{Bao2023} 
+TALLRec costruisce un dataset di istruzioni specifiche per la raccomandazione (con esempi positivi e negativi) ed effettua il fine-tuning l'LLM in modo efficiente (utilizzando LoRA \cite{Hu2022}) per allineare le capacità del modello al task di ranking, ottenendo prestazioni superiori in scenari \textit{Few-Shot}. \cite{Bao2023}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{tallRec_rs.png}
+    \caption{Schema logico del modello TALLRec. \\
+    Immagine tratta da \cite{Bao2023}}
+    \label{fig:tallRec_rs}
+\end{figure}
 
 \subsection{Modelli di raccomandazione basati su State Space Model}
 \label{subsec:modelli-ssm}

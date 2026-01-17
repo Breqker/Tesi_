@@ -19,6 +19,71 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{Bao2023}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=5754190a8d69ebac1420d25666032a55}{%
+           family={Bao},
+           familyi={B\bibinitperiod},
+           given={Keqin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7bdb2a27119a30bf0e5e47eab570f924}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jizhi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e760d38078aff4a5b24c867aa5178c26}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ef9bdc54d75d968beef9cad1e2d4c1ac}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wenjie},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9090db11da70fe0d8b95cbf3d73a6216}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Fuli},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cf3f1b6bfe8e9131a8c719c1af0dce5d}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xiangnan},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d9bee11d3cfdf5ff2db6a022ca41fd9e}
+      \strng{fullhash}{5873513422e4b4123cd5fdb8a72ce36e}
+      \strng{fullhashraw}{5873513422e4b4123cd5fdb8a72ce36e}
+      \strng{bibnamehash}{5873513422e4b4123cd5fdb8a72ce36e}
+      \strng{authorbibnamehash}{5873513422e4b4123cd5fdb8a72ce36e}
+      \strng{authornamehash}{d9bee11d3cfdf5ff2db6a022ca41fd9e}
+      \strng{authorfullhash}{5873513422e4b4123cd5fdb8a72ce36e}
+      \strng{authorfullhashraw}{5873513422e4b4123cd5fdb8a72ce36e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Large Language Models (LLMs) have demonstrated remarkable performance across diverse domains, thereby prompting researchers to explore their potential for use in recommendation systems. Initial attempts have leveraged the exceptional capabilities of LLMs, such as rich knowledge and strong generalization through In-context Learning, which involves phrasing the recommendation task as prompts. Nevertheless, the performance of LLMs in recommendation tasks remains suboptimal due to a substantial disparity between the training tasks for LLMs and recommendation tasks, as well as inadequate recommendation data during pre-training. To bridge the gap, we consider building a Large Recommendation Language Model by tunning LLMs with recommendation data. To this end, we propose an efficient and effective Tuning framework for Aligning LLMs with Recommendations, namely TALLRec. We have demonstrated that the proposed TALLRec framework can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with a limited dataset of fewer than 100 samples. Additionally, the proposed framework is highly efficient and can be executed on a single RTX 3090 with LLaMA-7B. Furthermore, the fine-tuned LLM exhibits robust cross-domain generalization. Our code and data are available at https://github.com/SAI990323/TALLRec.}
+      \field{note}{New York, NY, USA}
+      \field{title}{TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation}
+      \field{year}{2023}
+      \field{pages}{1007\bibrangedash 1014}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3604915.3608857
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3604915.3608857
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3604915.3608857
+      \endverb
+      \keyw{Instruction Tuning,Large Language Models,Recommendation}
+    \endentry
     \entry{Batmaz2019}{article}{}{}
       \name{author}{4}{}{%
         {{hash=4986a890c36a6199b707e4746cbb868b}{%
@@ -119,6 +184,194 @@
       \verb https://doi.org/10.48550/arXiv.1706.02263
       \endverb
     \endentry
+    \entry{Brown2020}{misc}{}{}
+      \name{author}{31}{}{%
+        {{hash=ad9f5a3d8c696d78ce2a831ce8ac7524}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d4543c3bcd6aaf414da4296b349603e5}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9ac58bd43db2434e8e1ffd6182c3fcda}{%
+           family={Ryder},
+           familyi={R\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9ed243177743da3e650f1cff6376bb3c}{%
+           family={Subbiah},
+           familyi={S\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1e2dad58400c2dd6405837788e785d19}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jared\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ca421ceeb5b516dd8fc64bea5a23f2a}{%
+           family={Neelakantan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ab5d7d7b9cfeaad635c4a60e8950d7dd}{%
+           family={Shyam},
+           familyi={S\bibinitperiod},
+           given={Pranav},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3c1d9a663596faaf544c1a65aac581be}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={Girish},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1e84eff933be9f4887bf369cf181bf12}{%
+           family={Askell},
+           familyi={A\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod}}}%
+        {{hash=abe4801e322e893b23785fd6d0800b5c}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Sandhini},
+           giveni={S\bibinitperiod}}}%
+        {{hash=787b9715a98ea66a8d5e6bae042ae0b9}{%
+           family={Herbert-Voss},
+           familyi={H\bibinithyphendelim V\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c3a5cc5e520e0d1a9f8bbf377c74cd27}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eb1d3044b466619459c76843f0e98bb9}{%
+           family={Henighan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5c2f5c2e6d4a9ec8681377f8a8e5e6af}{%
+           family={Child},
+           familyi={C\bibinitperiod},
+           given={Rewon},
+           giveni={R\bibinitperiod}}}%
+        {{hash=82063a12702e7b2c026ae0ff03b8f102}{%
+           family={Ramesh},
+           familyi={R\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=84650a9afb83d2e878b03bef608700cf}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=495187f3a2c93ddb8083bd18a5702527}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fdaff50f84c08440dcb5fad75b559780}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod}}}%
+        {{hash=07acc23f6ec051b64b82cd33255c0a69}{%
+           family={Hesse},
+           familyi={H\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fb15a691583ec94aafe0be6e7da4878f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a5f009f12a0567430729b5ace41435d}{%
+           family={Sigler},
+           familyi={S\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e5aa3a709cbe706efba113bec9789364}{%
+           family={Litwin},
+           familyi={L\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7006ca8c1ce969019b89de50fece60dd}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=01f70651539bbd7dccc01e86ed9c78c3}{%
+           family={Chess},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1480c861b1a73e1d1de1b227e985b179}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ca86811e7a0582a9e7cb8d33e7ab445d}{%
+           family={Berner},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b51e7c5fe92844f39ce52b8a5fa5675f}{%
+           family={McCandlish},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1e6adbf36ab730cd5fdadb838b4d2667}{%
+           family={Amodei},
+           familyi={A\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{fullhash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{fullhashraw}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{bibnamehash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authorbibnamehash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authornamehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authorfullhash}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \strng{authorfullhashraw}{28676992274ff1a4ebfa6e23ba7b2efd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Language Models are Few-Shot Learners}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{pages}{1877\bibrangedash 1901}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.48550/arXiv.2005.14165
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+      \endverb
+    \endentry
     \entry{Burke2002}{article}{}{}
       \name{author}{1}{}{%
         {{hash=927ab4206ced595b50d2ac5fb4535b88}{%
@@ -157,6 +410,61 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1023/A:1021240730564
+      \endverb
+    \endentry
+    \entry{Devlin2019}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorbibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7{\%} (4.6{\%} absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).}
+      \field{month}{6}
+      \field{note}{Minneapolis, Minnesota}
+      \field{title}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \field{pages}{4171\bibrangedash 4186}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/N19-1423
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.18653/v1/N19-1423
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.18653/v1/N19-1423
       \endverb
     \endentry
     \entry{Fan2019}{misc}{}{}
@@ -228,6 +536,66 @@
       \verb https://doi.org/10.1145/3308558.3313488
       \endverb
       \keyw{Social Recommendation,Social Network,Recommender Systems,Neural Networks,Graph Neural Networks}
+    \endentry
+    \entry{Geng2022}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=6b08640f38e5ddc30b8bb80b6b0e0307}{%
+           family={Geng},
+           familyi={G\bibinitperiod},
+           given={Shijie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=447bc9b54e6ffe1e87d95cfaa583f6cf}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Shuchang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cc1eaf6f9f7f306fe14c70aab776f1d5}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Zuohui},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=da28b729cdffa08e807a83178fe130c7}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={Yingqiang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fd8216a36735a9f3107aef444551ecb2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yongfeng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{84adc253e39f3007678aefe3cfd3a824}
+      \strng{fullhash}{d02cf534a3d45828d42edff705bcaf4b}
+      \strng{fullhashraw}{d02cf534a3d45828d42edff705bcaf4b}
+      \strng{bibnamehash}{d02cf534a3d45828d42edff705bcaf4b}
+      \strng{authorbibnamehash}{d02cf534a3d45828d42edff705bcaf4b}
+      \strng{authornamehash}{84adc253e39f3007678aefe3cfd3a824}
+      \strng{authorfullhash}{d02cf534a3d45828d42edff705bcaf4b}
+      \strng{authorfullhashraw}{d02cf534a3d45828d42edff705bcaf4b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For a long time, different recommendation tasks require designing task-specific architectures and training objectives. As a result, it is hard to transfer the knowledge and representations from one task to another, thus restricting the generalization ability of existing recommendation approaches. To deal with such issues, considering that language can describe almost anything and language grounding is a powerful medium to represent various problems or tasks, we present a flexible and unified text-to-text paradigm called ``Pretrain, Personalized Prompt, and Predict Paradigm'' (P5) for recommendation, which unifies various recommendation tasks in a shared framework. In P5, all data such as user-item interactions, user descriptions, item metadata, and user reviews are converted to a common format --- natural language sequences. The rich information from natural language assists P5 to capture deeper semantics for personalization and recommendation. Specifically, P5 learns different tasks with the same language modeling objective during pretraining. Thus, it serves as the foundation model for various downstream recommendation tasks, allows easy integration with other modalities, and enables instruction-based recommendation. P5 advances recommender systems from shallow model to deep model to big model, and will revolutionize the technical form of recommender systems towards universal recommendation engine. With adaptive personalized prompt for different users, P5 is able to make predictions in a zero-shot or few-shot manner and largely reduces the necessity for extensive fine-tuning. On several benchmarks, we conduct experiments to show the effectiveness of P5. To help advance future research on Recommendation as Language Processing (RLP), Personalized Foundation Models (PFM), and Universal Recommendation Engine (URE), we release the source code, dataset, prompts, and pretrained P5 model at https://github.com/jeykigung/P5.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt {\&} Predict Paradigm (P5)}
+      \field{year}{2022}
+      \field{pages}{299\bibrangedash 315}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1145/3523227.3546767
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3523227.3546767
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3523227.3546767
+      \endverb
+      \keyw{Language Modeling,Multitask Learning,Natural Language Processing,Personalized Prompt,Recommender Systems,Unified Model}
     \endentry
     \entry{He2020}{misc}{}{}
       \name{author}{6}{}{%
@@ -446,6 +814,72 @@
       \verb https://hidasi.eu/assets/pdf/gru4rec_iclr16.pdf
       \endverb
     \endentry
+    \entry{Hou2022_UniSRec}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=678f15f5b4dbc1aaed429148209c1670}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Yupeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=55527a8999c371fb65ed61a6f30d3f68}{%
+           family={Mu},
+           familyi={M\bibinitperiod},
+           given={Shanlei},
+           giveni={S\bibinitperiod}}}%
+        {{hash=64942cca497eff6cd6c5b264afdc5dd6}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Wayne\bibnamedelima Xin},
+           giveni={W\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=c4b43451450d2631465d73b9dc65d89d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yaliang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a4189394f9ccf96207d091dd64e3fd2d}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Bolin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5ff29ba5ea8e6fdd73a84f998eec45f2}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Ji-Rong},
+           giveni={J\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{a5c785c5aae3329f78e6c16599574094}
+      \strng{fullhash}{7cddadab4df0a5271d04559861313a7f}
+      \strng{fullhashraw}{7cddadab4df0a5271d04559861313a7f}
+      \strng{bibnamehash}{7cddadab4df0a5271d04559861313a7f}
+      \strng{authorbibnamehash}{7cddadab4df0a5271d04559861313a7f}
+      \strng{authornamehash}{a5c785c5aae3329f78e6c16599574094}
+      \strng{authorfullhash}{7cddadab4df0a5271d04559861313a7f}
+      \strng{authorfullhashraw}{7cddadab4df0a5271d04559861313a7f}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In order to develop effective sequential recommenders, a series of sequence representation learning (SRL) methods are proposed to model historical user behaviors. Most existing SRL methods rely on explicit item IDs for developing the sequence models to better capture user preference. Though effective to some extent, these methods are difficult to be transferred to new recommendation scenarios, due to the limitation by explicitly modeling item IDs. To tackle this issue, we present a novel universal sequence representation learning approach, named UniSRec. The proposed approach utilizes the associated description text of items to learn transferable representations across different recommendation scenarios. For learning universal item representations, we design a lightweight item encoding architecture based on parametric whitening and mixture-of-experts enhanced adaptor. For learning universal sequence representations, we introduce two contrastive pre-training tasks by sampling multi-domain negatives. With the pre-trained universal sequence representation model, our approach can be effectively transferred to new recommendation domains or platforms in a parameter-efficient way, under either inductive or transductive settings. Extensive experiments conducted on real-world datasets demonstrate the effectiveness of the proposed approach. Especially, our approach also leads to a performance improvement in a cross-platform setting, showing the strong transferability of the proposed universal SRL method. The code and pre-trained model are available at: https://github.com/RUCAIBox/UniSRec.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Towards Universal Sequence Representation Learning for Recommender Systems}
+      \field{year}{2022}
+      \field{pages}{585\bibrangedash 593}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3534678.3539381
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3534678.3539381
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3534678.3539381
+      \endverb
+      \keyw{sequential recommendation,universal representation learning}
+    \endentry
     \entry{Hou2022}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=e8adc1788926113d64ddd05706c390e1}{%
@@ -495,6 +929,7 @@
       \strng{authornamehash}{4ab9433ff4846609f57739bd47d3e0aa}
       \strng{authorfullhash}{9897334b589c8b5a7ca40be5c91222d9}
       \strng{authorfullhashraw}{9897334b589c8b5a7ca40be5c91222d9}
+      \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -515,6 +950,75 @@
       \verb https://doi.org/10.1145/3534678.3539321
       \endverb
       \keyw{graph neural networks,graph representation learning,self-supervised learning}
+    \endentry
+    \entry{Hu2022}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=e6a95d07b8ae7f14e4eb777c6980a059}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Edward\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1701c0f05662e92cf52cfc8c16437496}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Yelong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ab0fdbc1586103dda7ac5e0852e5b2c3}{%
+           family={Wallis},
+           familyi={W\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eaa5cc98b7f19b4ce07c832213a13b9d}{%
+           family={Allen-Zhu},
+           familyi={A\bibinithyphendelim Z\bibinitperiod},
+           given={Zeyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0d2c91b24f885b22d373a892a768abc8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuanzhi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b654b88ecd4c3ff1ea29da275bce701c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shean},
+           giveni={S\bibinitperiod}}}%
+        {{hash=55f210233ac686af68eba11a97bd84e2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=05d71a9c5e7ac79222e01a55af0ccb93}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Weizhu},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d775178c34083951ab1e07df578582c3}
+      \strng{fullhash}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{fullhashraw}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{bibnamehash}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{authorbibnamehash}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{authornamehash}{d775178c34083951ab1e07df578582c3}
+      \strng{authorfullhash}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{authorfullhashraw}{08f4b49735d5d145be00bc9c07f38975}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks.}
+      \field{note}{International Conference on Learning Representations (ICLR)}
+      \field{title}{LoRA: Low-Rank Adaptation of Large Language Models}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.48550/arXiv.2106.09685
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2106.09685
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2106.09685
+      \endverb
     \endentry
     \entry{Hu2008}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -767,6 +1271,117 @@
       \verb https://doi.org/10.1109/MC.2009.263
       \endverb
     \endentry
+    \entry{Lin2025}{article}{}{}
+      \name{author}{14}{}{%
+        {{hash=6039a6bb1ffccf02aa613e777c63e951}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Jianghao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e530c37e601ae59df76e639361cc34c7}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Xinyi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7ad0129cb5a47961c85225c69a5dbe30}{%
+           family={Xi},
+           familyi={X\bibinitperiod},
+           given={Yunjia},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3a56fcbac490c2ec2d74eb81349d393b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Weiwen},
+           giveni={W\bibinitperiod}}}%
+        {{hash=31960f03389184b7f052f5b197cc9fdf}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bc6c6f66f139beef784a50d9f1485019}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a429df9214aeaeb673535ebb905cae3c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chuhan},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f26d46d449172ef91dd8ba69e854b5ba}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiangyang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=9b5189807f3875464c9b0dbfe1a6a2f7}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Chenxu},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3a7ebdbb9a440e9929d856af891d02c3}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Huifeng},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c447a713c11f58a40c2a899040774a98}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b1ea45fbb17b97fc513d6589d9f9623f}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Ruiming},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fbc51a6317f158547173b93086d9b1a2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Weinan},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b65a467d6c40d57fdc04e547c263d0df}
+      \strng{fullhash}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \strng{fullhashraw}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \strng{bibnamehash}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \strng{authorbibnamehash}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \strng{authornamehash}{b65a467d6c40d57fdc04e547c263d0df}
+      \strng{authorfullhash}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \strng{authorfullhashraw}{5ee51c73ad728dc6297bfc2fe537c7ae}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the rapid development of online services and web applications, recommender systems (RS) have become increasingly indispensable for mitigating information overload and matching users' information needs by providing personalized suggestions over items. Although the RS research community has made remarkable progress over the past decades, conventional recommendation models (CRM) still have some limitations, e.g., lacking open-domain world knowledge, and difficulties in comprehending users' underlying preferences and motivations. Meanwhile, large language models (LLM) have shown impressive general intelligence and human-like capabilities for various natural language processing (NLP) tasks, which mainly stem from their extensive open-world knowledge, logical and commonsense reasoning abilities, as well as their comprehension of human culture and society. Consequently, the emergence of LLM is inspiring the design of RS and pointing out a promising research direction, i.e., whether we can incorporate LLM and benefit from their common knowledge and capabilities to compensate for the limitations of CRM. In this article, we conduct a comprehensive survey on this research direction, and draw a bird's-eye view from the perspective of the whole pipeline in real-world RS. Specifically, we summarize existing research works from two orthogonal aspects: where and how to adapt LLM to RS. For the ``WHERE'' question, we discuss the roles that LLM could play in different stages of the recommendation pipeline, i.e., feature engineering, feature encoder, scoring/ranking function, user interaction, and pipeline controller. For the ``HOW'' question, we investigate the training and inference strategies, resulting in two fine-grained taxonomy criteria, i.e., whether to tune LLM or not during training, and whether to involve CRM for inference. Detailed analysis and general development paths are provided for both ``WHERE'' and ``HOW'' questions, respectively. Then, we highlight the key challenges in adapting LLM to RS from three aspects, i.e., efficiency, effectiveness, and ethics. Finally, we summarize the survey and discuss the future prospects.}
+      \field{issn}{1046-8188}
+      \field{journaltitle}{ACM Trans. Inf. Syst.}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{How Can Recommender Systems Benefit from Large Language Models: A Survey}
+      \field{volume}{43}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1145/3678004
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3678004
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3678004
+      \endverb
+      \keyw{Recommender systems,large language models}
+    \endentry
     \entry{Lin2022}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=eed59c9def84751806f42cce93136fdb}{%
@@ -801,6 +1416,7 @@
       \strng{authornamehash}{8ab7ecc9a6c078c44fcf850145ba7592}
       \strng{authorfullhash}{70209022c4dadbf6c6a0ec242d6a6b78}
       \strng{authorfullhashraw}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -1382,6 +1998,106 @@
       \verb https://doi.org/10.1145/3357384.3357895
       \endverb
       \keyw{bidirectional sequential model,cloze,sequential recommendation}
+    \endentry
+    \entry{Touvron2023}{article}{}{}
+      \name{author}{14}{}{%
+        {{hash=a2a13fcd633ec70c55a7f3f4812afdcf}{%
+           family={Touvron},
+           familyi={T\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c641a91d616b6eda08cbbdca7b7eb186}{%
+           family={Lavril},
+           familyi={L\bibinitperiod},
+           given={Thibaut},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a32ece3bc966e7e88747e905158c9a6a}{%
+           family={Izacard},
+           familyi={I\bibinitperiod},
+           given={Gautier},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7222f9d76b0fff504f39e7c9c2a526be}{%
+           family={Martinet},
+           familyi={M\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=08284515d256b832e9dba10a88af84f4}{%
+           family={Lachaux},
+           familyi={L\bibinitperiod},
+           given={Marie-Anne},
+           giveni={M\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=1d29ae55d8d993d9f195b3c97bd34f7c}{%
+           family={Lacroix},
+           familyi={L\bibinitperiod},
+           given={Timothée},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e0d9a8657c1043f53c54f3f5a6ff305f}{%
+           family={Rozière},
+           familyi={R\bibinitperiod},
+           given={Baptiste},
+           giveni={B\bibinitperiod}}}%
+        {{hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=00ce63f55ae2ce6ea638e5f991996584}{%
+           family={Hambro},
+           familyi={H\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5373a3313da61427121b3e9733df1ed2}{%
+           family={Azhar},
+           familyi={A\bibinitperiod},
+           given={Faisal},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a829e25f1d50c3545ed8e99f12890acc}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Aurelien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=977d047821122d1c2e7aa855c30c8cf2}{%
+           family={Joulin},
+           familyi={J\bibinitperiod},
+           given={Armand},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ebdea2c3aa9f759075733b20dce6b873}{%
+           family={Grave},
+           familyi={G\bibinitperiod},
+           given={Edouard},
+           giveni={E\bibinitperiod}}}%
+        {{hash=56509a94ba6cdaf0c71304d6cf806cee}{%
+           family={Lample},
+           familyi={L\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c237483431fea681283a37adbb23a59f}
+      \strng{fullhash}{39aeaa201007bcb705db32778f923cb2}
+      \strng{fullhashraw}{39aeaa201007bcb705db32778f923cb2}
+      \strng{bibnamehash}{39aeaa201007bcb705db32778f923cb2}
+      \strng{authorbibnamehash}{39aeaa201007bcb705db32778f923cb2}
+      \strng{authornamehash}{c237483431fea681283a37adbb23a59f}
+      \strng{authorfullhash}{39aeaa201007bcb705db32778f923cb2}
+      \strng{authorfullhashraw}{39aeaa201007bcb705db32778f923cb2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.}
+      \field{journaltitle}{arXiv preprint arXiv:2302.13971}
+      \field{month}{2}
+      \field{title}{LLaMA: Open and Efficient Foundation Language Models}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2302.13971
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2302.13971
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2302.13971
+      \endverb
     \endentry
     \entry{Vaswani2017}{misc}{}{}
       \name{author}{8}{}{%
@@ -2290,6 +3006,94 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1561/1500000066
+      \endverb
+    \endentry
+    \entry{Zhao2024}{article}{}{}
+      \name{author}{11}{}{%
+        {{hash=b34c3c1161c484ebb0bd152b415359db}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=44daba4ecc7d571b0f2fb0568e9fa40b}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ce084360cc68e7db4fe6cae1287b3adf}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=199fccc51e70aacda359eab77e202198}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ea047479c8654da81b0d04041456b3ae}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3768cb3691d9f8be784a4b189ba55772}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b2ff85d118c95088c7ca004045563aa8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cfc592e67cc246310d6f048315973684}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=34eb0d3545d5a6175d27a342936002b1}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{8501a8759d62823d8417a0c7fe05eb20}
+      \strng{fullhash}{3dc1281638f0d60effb1f08c7922c729}
+      \strng{fullhashraw}{3dc1281638f0d60effb1f08c7922c729}
+      \strng{bibnamehash}{3dc1281638f0d60effb1f08c7922c729}
+      \strng{authorbibnamehash}{3dc1281638f0d60effb1f08c7922c729}
+      \strng{authornamehash}{8501a8759d62823d8417a0c7fe05eb20}
+      \strng{authorfullhash}{3dc1281638f0d60effb1f08c7922c729}
+      \strng{authorfullhashraw}{3dc1281638f0d60effb1f08c7922c729}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-2191}
+      \field{journaltitle}{IEEE Transactions on Knowledge and Data Engineering}
+      \field{number}{11}
+      \field{title}{Recommender Systems in the Era of Large Language Models (LLMs)}
+      \field{volume}{36}
+      \field{year}{2024}
+      \field{pages}{6889\bibrangedash 6907}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1109/TKDE.2024.3392335
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/TKDE.2024.3392335
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/TKDE.2024.3392335
       \endverb
     \endentry
     \entry{Zheng2018}{misc}{}{}
