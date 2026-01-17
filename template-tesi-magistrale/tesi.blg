@@ -1,31 +1,31 @@
-[1] Config.pm:328> INFO - This is Biber 2.21
-[2] Config.pm:331> INFO - Logfile is 'tesi.blg'
-[480] biber-MSWIN64:342> INFO - === 
-[599] Biber.pm:421> INFO - Reading 'tesi.bcf'
-[1045] Biber.pm:1002> INFO - Found 49 citekeys in bib section 0
-[1093] Biber.pm:4487> INFO - Processing section 0
-[1142] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia.bib' for section 0
-[1343] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1841] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia.bib'
-[4837] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4837] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4838] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'it-IT'
-[4838] Biber.pm:4313> INFO - No sort tailoring available for locale 'it-IT'
-[5170] bbl.pm:676> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
-[5410] bbl.pm:779> INFO - Output to tesi.bbl
-[5411] Biber.pm:132> WARN - Duplicate entry key: 'Zhou2023' in file 'bibliografia.bib', skipping ...
-[5411] Biber.pm:132> WARN - legacy month field 'May' in entry 'Roy2022' is not an integer - this will probably not sort properly.
-[5411] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Hidaka2023' is not an integer - this will probably not sort properly.
-[5411] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Zhang2019' is not an integer - this will probably not sort properly.
-[5412] Biber.pm:132> WARN - legacy month field 'Jun' in entry 'Batmaz2019' is not an integer - this will probably not sort properly.
-[5412] Biber.pm:132> WARN - legacy month field 'Mar' in entry 'Zhang2020' is not an integer - this will probably not sort properly.
-[5412] Biber.pm:132> WARN - legacy month field 'Dec' in entry 'Wu2022' is not an integer - this will probably not sort properly.
-[5412] Biber.pm:132> WARN - legacy month field 'Dec' in entry 'Loeb1992' is not an integer - this will probably not sort properly.
-[5412] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Salton1975' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Burke2002' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Mnih2015' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Jul' in entry 'Wu2019_SRGNN' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Jun' in entry 'Devlin2019' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Touvron2023' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:132> WARN - legacy month field 'Jan' in entry 'Lin2025' is not an integer - this will probably not sort properly.
-[5413] Biber.pm:134> INFO - WARNINGS: 15
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'tesi.blg'
+[218] biber-MSWIN64:342> INFO - === 
+[314] Biber.pm:421> INFO - Reading 'tesi.bcf'
+[513] Biber.pm:1002> INFO - Found 49 citekeys in bib section 0
+[531] Biber.pm:4487> INFO - Processing section 0
+[546] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia.bib' for section 0
+[673] bibtex.pm:1713> INFO - LaTeX decoding ...
+[825] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia.bib'
+[1499] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1499] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1499] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'it-IT'
+[1499] Biber.pm:4313> INFO - No sort tailoring available for locale 'it-IT'
+[1569] bbl.pm:676> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
+[1649] bbl.pm:779> INFO - Output to tesi.bbl
+[1649] Biber.pm:132> WARN - Duplicate entry key: 'Zhou2023' in file 'bibliografia.bib', skipping ...
+[1650] Biber.pm:132> WARN - legacy month field 'May' in entry 'Roy2022' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Hidaka2023' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Zhang2019' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Jun' in entry 'Batmaz2019' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Mar' in entry 'Zhang2020' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Dec' in entry 'Wu2022' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Dec' in entry 'Loeb1992' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Salton1975' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Nov' in entry 'Burke2002' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Mnih2015' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Jul' in entry 'Wu2019_SRGNN' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Jun' in entry 'Devlin2019' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Touvron2023' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:132> WARN - legacy month field 'Jan' in entry 'Lin2025' is not an integer - this will probably not sort properly.
+[1650] Biber.pm:134> INFO - WARNINGS: 15

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tesi"] 1768679420.81333 "tesi.bcf" "tesi.bbl" "tesi" 1768679489.90355 0
-  "bibliografia.bib" 1768678260 85623 40a7efe10bcd141b23bde32d5a3b8b5b ""
+["biber tesi"] 1768682492.92887 "tesi.bcf" "tesi.bbl" "tesi" 1768682497.65162 0
+  "bibliografia.bib" 1768682491 88582 3e4b82667e48d628dd24ebead7b1d7af ""
   "tesi.bcf" 1768679489 117592 a74d5cadb9f21c25dc3fe46af0eea349 "pdflatex"
   (generated)
   "tesi.bbl"
   "tesi.blg"
   (rewritten before read)
-["pdflatex"] 1768679453.46209 "c:/Users/giafe/Documents/Tesi_magistrale/template-tesi-magistrale/tesi.tex" "tesi.pdf" "tesi" 1768679489.90458 0
+["pdflatex"] 1768679453.46209 "c:/Users/giafe/Documents/Tesi_magistrale/template-tesi-magistrale/tesi.tex" "tesi.pdf" "tesi" 1768682497.65192 0
   "C:/Users/giafe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1767784329 82705 9cc9f144eacd499bc23a611703921467 ""
   "C:/Users/giafe/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.pk" 1767784679 24152 95f13f6ef05a8fdb80e3879347ade24d ""
   "C:/Users/giafe/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1767783072 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -232,7 +232,7 @@
   "images/uniSRec_rs.png" 1768678888 622220 562dcd30aa48c78fbb24788f68c6b846 ""
   "impostazioni-tesi.tex" 1768305210 7260 3eb1ddd493a5df6fd8d0013ce9267bc6 ""
   "tesi.aux" 1768679489 16277 245753188f8c3c80e972616e42ad48b8 "pdflatex"
-  "tesi.bbl" 1768679434 175144 3e47da93636a9fe8ee11e72313fdabe6 "biber tesi"
+  "tesi.bbl" 1768682497 175144 3e47da93636a9fe8ee11e72313fdabe6 "biber tesi"
   "tesi.lof" 1768679489 5942 e12787e3d5aae7c05f39bd417d8b4b76 "pdflatex"
   "tesi.out" 1768679489 9555 f514c02de1299f76b3f90053a5dec69c "pdflatex"
   "tesi.run.xml" 1768679489 2307 4aa111667bd8a658d354a3affc6c066b "pdflatex"
