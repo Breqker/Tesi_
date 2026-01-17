@@ -21,16 +21,23 @@
 \contentsline {subsubsection}{\numberline {1.2.2.6}Generative Adversarial Networks based Recommendation}{32}{subsubsection.1.2.2.6}%
 \contentsline {subsubsection}{\numberline {1.2.2.7}Deep Reinforcement Learning based Recommendation}{34}{subsubsection.1.2.2.7}%
 \contentsline {subsection}{\numberline {1.2.3}Modelli di raccomandazione basati sui grafi}{36}{subsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.3.1}Neural Graph Collaborative Filtering (NGCF)}{37}{subsubsection.1.2.3.1}%
-\contentsline {subsubsection}{\numberline {1.2.3.2}LightGCN}{38}{subsubsection.1.2.3.2}%
-\contentsline {subsection}{\numberline {1.2.4}Modelli di raccomandazione basati su Graph Contrastive Learning}{40}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Modelli di raccomandazione basati su Large Language Model}{40}{subsection.1.2.5}%
-\contentsline {section}{\numberline {1.3}Tassonomia degli attacchi}{40}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Reinforcement Learning}{41}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Deep Q-Network}{41}{section.2.1}%
-\contentsline {chapter}{\numberline {3}State Space Models}{42}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Sistema proposto}{43}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{44}{chapter.5}%
-\contentsline {chapter}{Conclusioni}{45}{section*.48}%
-\contentsline {chapter}{Elenco delle figure}{47}{section*.50}%
-\contentsline {chapter}{Bibliografia}{48}{section*.52}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}General Recommendation}{37}{subsubsection.1.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Sequential Recommendation}{40}{subsubsection.1.2.3.2}%
+\contentsline {subsubsection}{\numberline {1.2.3.3}Social Recommendation}{41}{subsubsection.1.2.3.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.4}Knowledge Graph-based Recommendation}{43}{subsubsection.1.2.3.4}%
+\contentsline {subsection}{\numberline {1.2.4}Modelli di raccomandazione basati su Self-Supervised Learning}{43}{subsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}Generative SSL}{44}{subsubsection.1.2.4.1}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Contrastive SSL (Graph Contrastive Learning)}{46}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.3}Predictive SSL}{49}{subsubsection.1.2.4.3}%
+\contentsline {subsubsection}{\numberline {1.2.4.4}Hybrid SSL}{50}{subsubsection.1.2.4.4}%
+\contentsline {subsection}{\numberline {1.2.5}Modelli di raccomandazione basati su Large Language Model}{51}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Modelli di raccomandazione basati su State Space Model}{51}{subsection.1.2.6}%
+\contentsline {section}{\numberline {1.3}Tassonomia degli attacchi}{51}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Reinforcement Learning}{52}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Deep Q-Network}{52}{section.2.1}%
+\contentsline {chapter}{\numberline {3}State Space Models}{53}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Sistema proposto}{54}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{55}{chapter.5}%
+\contentsline {chapter}{Conclusioni}{56}{section*.81}%
+\contentsline {chapter}{Elenco delle figure}{58}{section*.83}%
+\contentsline {chapter}{Bibliografia}{60}{section*.85}%

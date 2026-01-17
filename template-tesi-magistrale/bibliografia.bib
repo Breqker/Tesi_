@@ -483,20 +483,6 @@
 	url={https://ojs.aaai.org/index.php/AAAI/article/view/3804},
 	url={https://doi.org/10.1609/aaai.v33i01.3301346}
 }
-
-@Misc{Ying2018,
-	author={Ying, Rex and He, Ruining and Chen, Kaifeng and Eksombatchai, Pong and Hamilton, William L. and Leskovec, Jure},
-	title={Graph Convolutional Neural Networks for Web-Scale Recommender Systems},
-	year={2018},
-	publisher={Association for Computing Machinery},
-	pages={974--983},
-	keywords={scalability, recommender systems, graph convolutional networks, deep learning},
-	abstract={Recent advancements in deep neural networks for graph-structured data have led to state-of-the-art performance on recommender system benchmarks. However, making these methods practical and scalable to web-scale recommendation tasks with billions of items and hundreds of millions of users remains an unsolved challenge. Here we describe a large-scale deep recommendation engine that we developed and deployed at Pinterest. We develop a data-efficient Graph Convolutional Network (GCN) algorithm, which combines efficient random walks and graph convolutions to generate embeddings of nodes (i.e., items) that incorporate both graph structure as well as node feature information. Compared to prior GCN approaches, we develop a novel method based on highly efficient random walks to structure the convolutions and design a novel training strategy that relies on harder-and-harder training examples to improve robustness and convergence of the model. We also develop an efficient MapReduce model inference algorithm to generate embeddings using a trained model. Overall, we can train on and embed graphs that are four orders of magnitude larger than typical GCN implementations. We show how GCN embeddings can be used to make high-quality recommendations in various settings at Pinterest, which has a massive underlying graph with 3 billion nodes representing pins and boards, and 17 billion edges. According to offline metrics, user studies, as well as A/B tests, our approach generates higher-quality recommendations than comparable deep learning based systems. To our knowledge, this is by far the largest application of deep graph embeddings to date and paves the way for a new generation of web-scale recommender systems based on graph convolutional architectures.},
-	note={New York, NY, USA},
-	doi={10.1145/3219819.3219890},
-	url={https://doi.org/10.1145/3219819.3219890}
-}
-
 @Misc{Wu2019_DiffNet,
 author={Wu, Le and Sun, Peijie and Fu, Yanjie and Hong, Richang and Wang, Xiting and Wang, Meng},
 title={A Neural Influence Diffusion Model for Social Recommendation},
@@ -535,3 +521,72 @@ url={https://doi.org/10.1145/3331184.3331214}
 	doi={10.1145/3308558.3313488},
 	url={https://doi.org/10.1145/3308558.3313488}
 }
+
+@Article{Yu2024,
+	author={Yu, J. and Yin, H. and Xia, X. and Chen, T. and Li, J. and Huang, Z.},
+	title={Self-Supervised Learning for Recommender Systems: A Survey},
+	journal={IEEE Transactions on Knowledge and Data Engineering},
+	year={2024},
+	volume={36},
+	number={1},
+	pages={335-355},
+	issn={1558-2191},
+	doi={10.1109/TKDE.2023.3282907},
+	url={https://doi.org/10.1109/TKDE.2023.3282907}
+}
+
+@Misc{Sun2019,
+	author={Sun, Fei and Liu, Jun and Wu, Jian and Pei, Changhua and Lin, Xiao and Ou, Wenwu and Jiang, Peng},
+	title={BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer},
+	year={2019},
+	publisher={Association for Computing Machinery},
+	pages={1441--1450},
+	keywords={bidirectional sequential model, cloze, sequential recommendation},
+	abstract={Modeling users' dynamic preferences from their historical behaviors is challenging and crucial for recommendation systems. Previous methods employ sequential neural networks to encode users' historical interactions from left to right into hidden representations for making recommendations. Despite their effectiveness, we argue that such left-to-right unidirectional models are sub-optimal due to the limitations including: begin enumerate* [label=seriesitshapealph*upshape)] item unidirectional architectures restrict the power of hidden representation in users' behavior sequences; item they often assume a rigidly ordered sequence which is not always practical. end enumerate* To address these limitations, we proposed a sequential recommendation model called BERT4Rec, which employs the deep bidirectional self-attention to model user behavior sequences. To avoid the information leakage and efficiently train the bidirectional model, we adopt the Cloze objective to sequential recommendation, predicting the random masked items in the sequence by jointly conditioning on their left and right context. In this way, we learn a bidirectional representation model to make recommendations by allowing each item in user historical behaviors to fuse information from both left and right sides. Extensive experiments on four benchmark datasets show that our model outperforms various state-of-the-art sequential models consistently.},
+	note={New York, NY, USA},
+	doi={10.1145/3357384.3357895},
+	url={https://doi.org/10.1145/3357384.3357895}
+}
+
+@Misc{Hou2022,
+	author={Hou, Zhenyu and Liu, Xiao and Cen, Yukuo and Dong, Yuxiao and Yang, Hongxia and Wang, Chunjie and Tang, Jie},
+	title={GraphMAE: Self-Supervised Masked Graph Autoencoders},
+	year={2022},
+	publisher={Association for Computing Machinery},
+	pages={594--604},
+	keywords={graph neural networks, graph representation learning, self-supervised learning},
+	abstract={Self-supervised learning (SSL) has been extensively explored in recent years. Particularly, generative SSL has seen emerging success in natural language processing and other fields, such as the wide adoption of BERT and GPT. Despite this, contrastive learning---which heavily relies on structural data augmentation and complicated training strategies---has been the dominant approach in graph SSL, while the progress of generative SSL on graphs, especially graph autoencoders (GAEs), has thus far not reached the potential as promised in other fields. In this paper, we identify and examine the issues that negatively impact the development of GAEs, including their reconstruction objective, training robustness, and error metric. We present a masked graph autoencoder GraphMAE (code is publicly available at https://github.com/THUDM/GraphMAE) that mitigates these issues for generative self-supervised graph learning. Instead of reconstructing structures, we propose to focus on feature reconstruction with both a masking strategy and scaled cosine error that benefit the robust training of GraphMAE. We conduct extensive experiments on 21 public datasets for three different graph learning tasks. The results manifest that GraphMAE---a simple graph autoencoder with our careful designs---can consistently generate outperformance over both contrastive and generative state-of-the-art baselines. This study provides an understanding of graph autoencoders and demonstrates the potential of generative self-supervised learning on graphs.},
+	note={New York, NY, USA},
+	doi={10.1145/3534678.3539321},
+	url={https://doi.org/10.1145/3534678.3539321}
+}
+
+@Article{Zhou2023,
+	author={Zhou, Xin and Sun, Aixin and Liu, Yong and Zhang, Jie and Miao, Chunyan},
+	title={SelfCF: A Simple Framework for Self-supervised Collaborative Filtering},
+	journal={ACM Trans. Recomm. Syst.},
+	year={2023},
+	month={Jun},
+	publisher={Association for Computing Machinery},
+	address={New York, NY, USA},
+	volume={1},
+	number={2},
+	keywords={Collaborative filtering, self-supervised learning, recommender systems, Siamese networks},
+	abstract={Collaborative filtering (CF) is widely used to learn informative latent representations of users and items from observed interactions. Existing CF-based methods commonly adopt negative sampling to discriminate different items. That is, observed user-item pairs are treated as positive instances; unobserved pairs are considered as negative instances and are sampled under a defined distribution for training. Training with negative sampling on large datasets is computationally expensive. Further, negative items should be carefully sampled under the defined distribution, in order to avoid selecting an observed positive item in the training dataset. Unavoidably, some negative items sampled from the training dataset could be positive in the test set. Recently, self-supervised learning (SSL), has emerged as a powerful tool to learn a model without negative samples. In this paper, we propose a self-supervised collaborative filtering framework (SelfCF), that is specially designed for recommender scenario with implicit feedback. The proposed SelfCF framework simplifies Siamese networks and can be easily applied to existing deep-learning based CF models, which we refer to as backbone networks. The main idea of SelfCF is to augment the latent embeddings generated by backbone networks instead of the raw input of user/item ids. We propose and study three embedding perturbation techniques that can be applied to different types of backbone networks including both traditional CF models and graph-based models. The framework enables learning informative representations of users and items without negative samples, and is agnostic to the encapsulated backbones. We conduct experimental comparisons on four datasets, one self-supervised framework, and eight baselines to show that our framework may achieve even better recommendation accuracy than the encapsulated supervised counterpart with a 2{\texttimes}--4{\texttimes} faster training speed. The results also demonstrate that SelfCF can boost up the accuracy of a self-supervised framework BUIR by 17.79{\%} on average and shows competitive performance with baselines.},
+	doi={10.1145/3591469},
+	url={https://doi.org/10.1145/3591469}
+}
+
+@Misc{Yu2021,
+	author={Yu, Junliang and Yin, Hongzhi and Li, Jundong and Wang, Qinyong and Hung, Nguyen Quoc Viet and Zhang, Xiangliang},
+	title={Self-Supervised Multi-Channel Hypergraph Convolutional Network for Social Recommendation},
+	year={2021},
+	publisher={Association for Computing Machinery},
+	pages={413--424},
+	keywords={Graph Convolutional Network, Hypergraph Learning, Recommender Systems, Self-supervised Learning, Social Recommendation},
+	abstract={Social relations are often used to improve recommendation quality when user-item interaction data is sparse in recommender systems. Most existing social recommendation models exploit pairwise relations to mine potential user preferences. However, real-life interactions among users are very complex and user relations can be high-order. Hypergraph provides a natural way to model high-order relations, while its potentials for improving social recommendation are under-explored. In this paper, we fill this gap and propose a multi-channel hypergraph convolutional network to enhance social recommendation by leveraging high-order user relations. Technically, each channel in the network encodes a hypergraph that depicts a common high-order user relation pattern via hypergraph convolution. By aggregating the embeddings learned through multiple channels, we obtain comprehensive user representations to generate recommendation results. However, the aggregation operation might also obscure the inherent characteristics of different types of high-order connectivity information. To compensate for the aggregating loss, we innovatively integrate self-supervised learning into the training of the hypergraph convolutional network to regain the connectivity information with hierarchical mutual information maximization. Extensive experiments on multiple real-world datasets demonstrate the superiority of the proposed model over the current SOTA methods, and the ablation study verifies the effectiveness and rationale of the multi-channel setting and the self-supervised task. The implementation of our model is available via https://github.com/Coder-Yu/RecQ.},
+	note={New York, NY, USA},
+	doi={10.1145/3442381.3449844},
+	url={https://doi.org/10.1145/3442381.3449844}
+}
+

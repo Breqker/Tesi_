@@ -620,26 +620,47 @@ DRN implementa una strategia di esplorazione (es. Dueling Bandit Gradient Descen
 
 Un limite intrinseco dei modelli di Collaborative Filtering basati su Deep Learning analizzati nelle sezioni precedenti è che trattano le interazioni utente-item come istanze indipendenti (i.i.d.). Tuttavia, i dati reali possiedono una struttura relazionale complessa che può essere modellata più naturalmente tramite grafi.
 
-I sistemi di raccomandazione basati sui \textit{Graph Neural Networks} (GNN) possono essere suddivisi in quattro macro-categorie, a seconda della struttura dati utilizzata \cite{Wu2022}:
+I sistemi di raccomandazione basati sui \textit{Graph Neural Networks} (GNN) sfruttano la capacità di propagare informazioni tra nodi connessi (\textit{Message Passing}) per catturare dipendenze. Questi sistemi possono essere suddivisi in quattro macro-categorie, a seconda della struttura dati utilizzata \cite{Wu2022}:
 
+\begin{itemize}
+    \item \textbf{General Recommendation}: basata sul grafo bipartito utente-item.
+    \item \textbf{Sequential Recommendation}: Basata su grafi di sessione o transizione temporale.
+    \item \textbf{Social Recommendation}: basata sull'integrazione del grafo sociale tra utenti.
+    \item \textbf{Knowledge Graph-based Recommendation}: basata su grafi di conoscenza eterogenei (entità e relazioni).
+\end{itemize}
 
-\begin{enumerate}
-    \item \textbf{General Recommendation}: si basa sul grafo bipartito utente-item, dove l'obiettivo è predire i link mancanti sfruttando la connettività di alto ordine. Tra i modelli di riferimento figurano \textit{PinSage}, utilizzato da Pinterest per gestire grafi su larga scala tramite aggregazione convoluzionale \cite{Ying2018}, e \textit{GC-MC}, che formula il completamento della matrice come un problema di link prediction su grafi \cite{Berg2017}.
-    
-    \item \textbf{Sequential Recommendation}: i dati sono modellati come una sequenza di transizioni tra item (grafo di sessione). Un esempio rilevante è il \textit{Session-based Recommendation with GNN} (SR-GNN), che apprende le rappresentazioni degli item catturando le transizioni complesse all'interno di una sessione, superando i limiti delle RNN nel gestire dipendenze non consecutive \cite{Wu2019_SRGNN}.
-    
-    \item \textbf{Social Recommendation}: integra il grafo delle interazioni con il \textit{social graph} (amicizie tra utenti) per mitigare la sparsità dei dati. Modelli rappresentativi sono \textit{GraphRec}, che modella congiuntamente l'opinione degli amici e le interazioni storiche \cite{Fan2019}, e \textit{DiffNet}, che simula la diffusione dell'influenza sociale nel grafo per raffinare gli embedding utente \cite{Wu2019_DiffNet}.
-    
-    \item \textbf{Knowledge Graph-based Recommendation}: arricchisce le interazioni con grafi di conoscenza eterogenei che descrivono le proprietà semantiche degli item (es. regista, genere). Lo standard in questo ambito è il \textit{Knowledge Graph Attention Network} (KGAT), che utilizza meccanismi di attenzione per pesare i vicini nel Knowledge Graph durante la propagazione \cite{Wang2019_KGAT}.
-\end{enumerate}
+\subsubsection{General Recommendation}
 
-% Da attenzionare
-Poiché l'obiettivo di questa tesi e i modelli implementati nel sistema proposto ricadono nel dominio del \textit{Collaborative Filtering} puro (senza dati sociali o semantici esterni), ci concentreremo sulla prima categoria: la \textit{General Recommendation}.
-In questo contesto, le GNN vengono utilizzate per catturare il segnale collaborativo propagando gli embedding attraverso il grafo bipartito. Di seguito analizziamo le due architetture fondamentali di questa famiglia.
+I dati sono rappresentati come un grafo bipartito $\mathcal{G} = (\mathcal{U} \cup \mathcal{I}, \mathcal{E})$, dove gli utenti e gli item sono nodi e le interazioni sono archi. L'obiettivo è apprendere rappresentazioni di nodi che incorporino la struttura locale per predire i link mancanti.
 
-\subsubsection{Neural Graph Collaborative Filtering (NGCF)}
+\paragraph*{Graph Convolutional Matrix Completion (GC-MC)} ~\\
 
-Il \textit{Neural Graph Collaborative Filtering} (NGCF) è stato il primo modello a integrare esplicitamente la struttura grafo nel processo di embedding. \cite{Wang2019} L'idea chiave è raffinare la rappresentazione dell'utente aggregando ricorsivamente i messaggi dai vicini.
+GC-MC formula il completamento della  matrice di rating come un problema di link prediction. Il modello utilizza un autoencoder a convoluzione su grafo: l'encoder aggrega le feature dei vicini immediati per generare embedding latenti, mentre il decoder ricostruisce i rating. Una particolarità è che tratta ogni possibile valore di rating (es. 1-5 stelle) come un tipo di arco distinto, apprendendo pesi specifici per ogni classe di voto. \cite{Berg2017}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gc-mc_rs.png}
+    \caption{Schema logico del modello GC-MC. \\
+    Immagine tratta da \cite{Berg2017}}
+    \label{fig:gc-mc_rs}
+\end{figure}
+
+\paragraph*{PinSage} ~\\
+
+PinSage rappresenta una pietra miliare per la scalabilità industriale. Sviluppato da Pinterest, affronta il problema dell'enorme dimensione dei grafi reali (miliardi di nodi) dove le GCN standard (che richiedono l'intera matrice Laplaciana) falliscono.
+PinSage introduce una strategia di campionamento basata su \textit{Random Walk}: invece di aggregare informazioni da tutti i vicini, il modello campiona un intorno di nodi visitati da passeggiate casuali e applica convoluzioni localizzate. Questo permette di gestire grafi su web-scale in modo efficiente. \cite{Ying2018}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pinSage_rs.png}
+    \caption{Schema architetturale del modello PinSage. \\
+    Immagine tratta da \cite{Ying2018}}
+    \label{fig:pinSage_rs}
+\end{figure}
+
+\paragraph*{Neural Graph Collaborative Filtering (NGCF)} ~ \\
+NGCF è stato il primo modello a integrare esplicitamente la struttura grafo nel processo di embedding. L'idea chiave è raffinare la rappresentazione dell'utente aggregando ricorsivamente i messaggi dai vicini. \cite{Wang2019}
+
 Al livello $l$, l'embedding dell'utente $u$ viene aggiornato aggregando i messaggi dai vicini $\mathcal{N}_u$:
 
 \begin{equation}
@@ -648,7 +669,7 @@ Al livello $l$, l'embedding dell'utente $u$ viene aggiornato aggregando i messag
 
 NGCF definisce il messaggio propagato includendo non solo la somma delle feature, ma anche le interazioni tra feature (prodotto element-wise $\odot$). Introduce inoltre matrici di pesi apprendibili ($\mathbf{W}_1, \mathbf{W}_2$) e funzioni di attivazione non lineari ($\sigma$) a ogni strato. Sebbene potente, questa complessità rende il modello computazionalmente oneroso.
 
-\begin{figure}[t]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{ngcf_rs.png}
     \caption{Schema architetturale del modello Neural Graph Collaborative Filtering. \\
@@ -656,8 +677,7 @@ NGCF definisce il messaggio propagato includendo non solo la somma delle feature
     \label{fig:ngcf_rs}
 \end{figure}
 
-\subsubsection{LightGCN}
-
+\paragraph*{LightGCN} ~\\
 Le componenti di non-linearità e le trasformazioni di feature delle GCN sono utili per compiti di classificazione di nodi ma superflue e dannose per il Collaborative Filtering.
 Nasce così \textit{LightGCN} che semplifica drasticamente l'architettura mantenendo solo la \textit{propagazione lineare dei vicini}. \cite{He2020}
 
@@ -683,11 +703,240 @@ Grazie alla sua efficienza e robustezza, LightGCN è considerato l'attuale \text
     \label{fig:lightGCN_rs}
 \end{figure}
 
-\subsection{Modelli di raccomandazione basati su Graph Contrastive Learning}
-\label{subsec:modelli-gcl}
+\subsubsection{Sequential Recommendation}
+
+Qui l'ordine temporale è cruciale. I dati vengono modellati come un grafo diretto dove i nodi sono gli item e gli archi rappresentano le transizioni consecutive in una sessione.
+
+\paragraph*{Session-based Recommendation with GNN (SR-GNN)} ~\\
+
+A differenza delle RNN che modellano solo sequenze unidirezionali, SR-GNN costruisce un grafo per ogni sessione e utilizza GNN con meccanismi di \textit{Gated Update} per catturare transizioni complesse tra item. Infine, combina un'attenzione sull'ultimo item cliccato (interesse locale) con una rappresentazione globale della sessione per predire il prossimo click. \cite{Wu2019_SRGNN}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sr-gnn_rs.png}
+    \caption{Schema architetturale del modello SR-GNN. \\
+    Immagine tratta da \cite{Wu2019_SRGNN}}
+    \label{fig:sr-gnn_rs}
+\end{figure}
+
+\subsubsection{Social Recommendation}
+
+Questa categoria integra il grafo delle interazioni con il \textit{Social Graph} (le amicizie tra utenti) per mitigare la sparsità dei dati, basandosi sulla teoria dell'omofilia.
+
+\paragraph*{GraphRec} ~\\
+
+GraphRec aggrega separatamente le informazioni dall'item-space (storia dell'utente) e dal social-space (opinioni degli amici). Si utilizzano meccanismi di attenzione a livello di nodo per pesare l'influenza dei diversi amici, riconoscendo che non tutti i legami sociali sono ugualmente rilevanti per ogni dominio di prodotto. \cite{Fan2019}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphRec_rs.png}
+    \caption{Schema architetturale del modello GraphRec. \\
+    Immagine tratta da \cite{Fan2019}}
+    \label{fig:graphRec_rs}
+\end{figure}
+
+\paragraph*{DiffNet} ~\\
+
+DiffNet simula la diffusione ricorsiva dell'influenza sociale. L'embedding di un utente evolve iterativamente, venendo influenzato dalla combinazione lineare dei suoi vicini nel grafo sociale. Questo permette di modellare come le preferenze si propagano attraverso la rete di amicizie nel tempo. \cite{Wu2019_DiffNet}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{diffNet_rs.png}
+    \caption{Schema architetturale del modello DiffNet. \\
+    Immagine tratta da \cite{Wu2019_DiffNet}}
+    \label{fig:diffNet_rs}
+\end{figure}
+
+\subsubsection{Knowledge Graph-based Recommendation}
+
+Questi modelli arricchiscono le interazioni con informazioni esterne strutturate in un grafo eterogeneo \textit{Knowledge Graph} (KG), dove i nodi sono entità (es. Attori, Registi) e gli archi sono relazioni semantiche.
+
+\paragraph*{Knowledge Graph Attention Network (KGAT)} ~\\
+
+KGAT integra il KG direttamente nel processo di embedding tramite una GNN. Utilizza un meccanismo di \textit{Attention} relazionale per discriminare l'importanza dei vicini nel KG: ad esempio, per raccomandare un film, il modello impara autonomamente se pesare di più la relazione "diretto da" o "appartiene al genere", propagando le preferenze attraverso path semantici di alto ordine. \cite{Wang2019_KGAT}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.8\textwidth]{kgat_rs.png}
+    \caption{Schema architetturale del modello KGAT. \\
+    Immagine tratta da \cite{Wang2019_KGAT}}
+    \label{fig:kgat_rs}
+\end{figure}
+
+\subsection{Modelli di raccomandazione basati su Self-Supervised Learning}
+\label{subsec:modelli-ssl}
+
+Le GNN soffrono di limitazioni intrinseche quando i dati sono sparsi (\textit{data sparsity}) o affetti da rumore (interazioni non intenzionali). Inoltre, l'apprendimento supervisionato classico basato solo sulla loss BPR tende a causare una distribuzione non uniforme degli embedding nello spazio latente ("representation collapse").
+
+Il \textit{Self-Supervised Learning} (SSL) permette di apprendere rappresentazioni migliori estraendo segnali di supervisione direttamente dai dati stessi, senza etichette umane. \cite{Yu2024}
+
+Gli approcci \textit{Self Supervised Learning} vengono classificati in quattro macro-categorie principali:
+
+\begin{enumerate}
+    \item \textbf{Generative SSL}: ispirato al Natural Language Processing (es. BERT), maschera parte dei dati e addestra il modello a ricostruirli.
+    \item \textbf{Contrastive SSL}: massimizza la similarità tra diverse viste aumentate dello stesso nodo e la minimizza rispetto ad altri nodi.
+    \item \textbf{Predictive SSL}: utilizza i dati per generare pseudo-etichette e risolve compiti di classificazione ausiliari.
+    \item \textbf{Hybrid SSL}: combina più paradigmi per sfruttarne i vantaggi complementari.
+\end{enumerate}
+
+\subsubsection{Generative SSL}
+
+I metodi generativi seguono il principio del \textit{Mask-and-Reconstruct}. L'idea è corrompere o nascondere una parte dell'input originale (nodi, archi o feature) e forzare il modello a ricostruire l'informazione mancante sfruttando il contesto rimanente.
+
+\paragraph*{Sequential Masking} ~\\
+
+Nei sistemi sequenziali, l'obiettivo è ricostruire item mancanti nella storia dell'utente per apprendere dipendenze più profonde.
+
+\subparagraph*{BERT4Rec} ~\\
+
+Ispirato al modello BERT per il NLP, BERT4Rec rappresenta un punto di svolta nella raccomandazione sequenziale. A differenza dei modelli causali "Left-to-Right" (come SASRec o GRU4Rec) che possono utilizzare solo le informazioni passate per predire il futuro, BERT4Rec adotta un approccio \textit{bidirezionale}.
+Durante il training, viene applicato il \textit{Cloze objective}: una percentuale degli item nella sequenza storica dell'utente viene sostituita da un token speciale \texttt{[MASK]}. Il modello, basato su Transformer, deve predire l'ID dell'item originale utilizzando il contesto proveniente sia da sinistra (passato) che da destra (futuro). Questo permette di apprendere rappresentazioni degli item molto più robuste e contestualizzate, catturando relazioni complesse all'interno della sessione utente. \cite{Sun2019}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bert4Rec_rs.png}
+    \caption{Schema architetturale del modello BERT4Rec. \\
+    Immagine tratta da \cite{Sun2019}}
+    \label{fig:bert4Rec_rs}
+\end{figure}
+
+\paragraph*{Graph Masking} ~\\
+Nei sistemi basati su grafi, la ricostruzione può avvenire a livello di struttura o di attributi dei nodi.
+
+\subparagraph*{GraphMAE} ~\\
+
+GraphMAE è un modello generativo per grafi che si concentra sulla ricostruzione delle feature. A differenza degli approcci che ricostruiscono la struttura (link prediction), che spesso soffrono di overfitting, GraphMAE maschera una porzione delle feature dei nodi e utilizza un encoder GNN per mappare il grafo parziale in uno spazio latente. Un decoder successivo tenta di ricostruire le feature originali dei nodi mascherati.
+Un aspetto cruciale di GraphMAE è l'uso della funzione di perdita \textit{Scaled Cosine Error} al posto del classico MSE (Mean Squared Error). L'errore coseno scalato si è dimostrato molto più efficace nel gestire la dimensionalità delle feature nei grafi sparsi, costringendo la rete ad apprendere pattern strutturali robusti e trasferibili. \cite{Hou2022}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphMAE_rs.png}
+    \caption{Schema architetturale del modello GraphMAE. \\
+    Immagine tratta da \cite{Hou2022}}
+    \label{fig:graphMAE_rs}
+\end{figure}
+
+\subsubsection{Contrastive SSL (Graph Contrastive Learning)}
+
+L'obiettivo è apprendere rappresentazioni invarianti massimizzando la \textit{Mutual Information} tra diverse "viste" (\textit{views}) generate tramite Data Augmentation. La funzione di costo tipica è la \textit{InfoNCE}:
+
+\begin{equation}
+    \mathcal{L}_{ssl} = \sum_{u \in \mathcal{U}} -\log \frac{\exp(\text{sim}(\mathbf{z}_u', \mathbf{z}_u'') / \tau)}{\sum_{v \in \mathcal{U}} \exp(\text{sim}(\mathbf{z}_u', \mathbf{z}_v'') / \tau)}
+\end{equation}
+
+dove $\mathbf{z}_u', \mathbf{z}_u''$ sono le rappresentazioni aumentate dello stesso nodo (coppia positiva), $\tau$ è la temperatura che regola la durezza dei negativi, e il denominatore somma su tutti gli altri nodi (coppie negative).
+
+\paragraph*{Structure-level Augmentation}~ \\
+
+Questo approccio genera viste diverse modificando esplicitamente la topologia del grafo (matrice di adiacenza).
+
+\subparagraph*{Self-Supervised Graph Learning (SGL)} ~\\
+
+SGL integra il contrastive learning in LightGCN. Per ogni epoca, vengono generate due viste del grafo $\mathcal{G}_1, \mathcal{G}_2$ applicando operatori stocastici:
+\begin{itemize}
+    \item \textit{Node Dropout}: rimozione casuale di nodi con probabilità $\rho$.
+    \item \textit{Edge Dropout}: rimozione casuale di archi.
+    \item \textit{Random Walk}: Utilizzo di percorsi di propagazione differenti tra i layer.
+\end{itemize}
+
+SGL impone che la rappresentazione di un nodo rimanga coerente anche se la struttura locale viene alterata. Sebbene efficace, la necessità di rigenerare la matrice di adiacenza sparsa a ogni iterazione introduce un overhead computazionale significativo. \cite{Wu2021}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sgl_rs.png}
+    \caption{Schema logico del modello SGL. \\
+    Immagine tratta da \cite{Wu2021}}
+    \label{fig:sgl_rs}
+\end{figure}
+
+\paragraph*{Feature-level Augmentation} ~\\
+
+Questo approccio mantiene la struttura inalterata ma perturba lo spazio latente per migliorare l'uniformità degli embedding.
+
+\subparagraph*{Simple Graph Contrastive Learning (SimGCL)} ~\\
+
+Le complesse manipolazioni topologiche di SGL non sono strettamente necessarie. SimGCL semplifica il processo rimuovendo l'augmentation del grafo e applicando invece un rumore casuale uniforme direttamente agli embedding:
+
+\begin{equation}
+    \mathbf{e}_u' = \mathbf{e}_u + \Delta, \quad \Delta \sim U(-\epsilon, \epsilon)
+\end{equation}
+
+Questa perturbazione agisce come una data augmentation nello spazio delle feature. Geometricamente, SimGCL favorisce l'\textit{uniformità} della distribuzione degli embedding sulla ipersfera latente, prevenendo il problema del "dimensional collapse" e rendendo le rappresentazioni più discriminative, il tutto con un'efficienza computazionale superiore a SGL. \cite{Yu2022}
+ 
+\subparagraph*{Cross-Layer SimGCL (XSimGCL)} ~\\
+
+Una variante evolutiva di SimGCL è XSimGCL, che estende il concetto di SimGCL applicando il contrasto in modalità \textit{Cross-Layer}. Invece di contrastare l'embedding finale di una vista con l'embedding finale dell'altra, XSimGCL incrocia gli embedding ottenuti ai diversi strati intermedi della GNN (es. layer $l$ contro layer $L$). Questo meccanismo forza il modello a mantenere una coerenza semantica attraverso la profondità della rete, facilitando la propagazione del gradiente verso i layer iniziali e catturando feature a diversi livelli di astrazione (locale vs globale). \cite{Yu2022}
+
+\paragraph*{Semantic-level Augmentation} ~\\
+
+Questo approccio cerca correlazioni semantiche non esplicite nella topologia del grafo (es. utenti simili che non hanno interagito con gli stessi item).
+
+\subparagraph*{Neighborhood-enriched Contrastive Learning (NCL)} ~\\
+
+NCL critica i metodi precedenti perché contrastano un nodo solo con se stesso (augmentation), ignorando le relazioni semantiche tra nodi diversi. NCL introduce un contrasto basato su \textit{prototipi} utilizzando l'algoritmo \textit{Expectation-Maximization} (EM):
+
+\begin{itemize}
+    \item \textbf{E-Step}: i nodi vengono raggruppati in cluster latenti tramite K-Means.
+    \item \textbf{M-Step}: ogni nodo viene contrastato positivamente con il centroide del suo cluster (\textit{prototipo semantico}) e con i suoi vicini strutturali omogenei (vicini di vicini).
+\end{itemize}
+
+Questo permette di catturare strutture globali latenti: due utenti che appartengono allo stesso cluster semantico verranno avvicinati nello spazio degli embedding anche se non hanno interazioni comuni nel grafo bipartito. \cite{Lin2022}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ncl_rs.png}
+    \caption{Schema logico del modello NCL. \\
+    Immagine tratta da \cite{Lin2022}}
+    \label{fig:ncl_rs}
+\end{figure}
+
+\subsubsection{Predictive SSL}
+
+In questo paradigma, il segnale di supervisione non deriva dalla ricostruzione (Generative) o dal confronto (Contrastive), ma dalla generazione di pseudo-etichette (\textit{Pseudo-Labeling}) per densificare i dati.
+
+\paragraph*{Self-CF} ~\\
+
+Self-CF affronta il problema della sparsità senza utilizzare l'augmentation di dati (che può essere computazionalmente costosa).
+Il funzionamento si basa sul principio del \textit{Self-Training}: l'encoder del sistema di raccomandazione genera le predizioni per le coppie utente-item non osservate. Le coppie che ottengono uno score di confidenza molto alto vengono promosse a "esempi positivi" (pseudo-labels).
+La loss function minimizza la distanza tra l'output del modello e queste pseudo-etichette, permettendo di estrarre informazioni dai dati non etichettati e di regolarizzare lo spazio latente spingendo gli embedding verso strutture più discriminative. \cite{Zhou2023}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{self-CF_rs.png}
+    \caption{Schema logico del modello Self-CF. \\
+    Immagine tratta da \cite{Zhou2023}}
+    \label{fig:self-CF_rs}
+\end{figure}
+
+\subsubsection{Hybrid SSL}
+
+I metodi ibridi combinano due o più paradigmi SSL per sfruttarne i vantaggi sinergici. La combinazione più diffusa è quella tra \textit{Contrastive Learning} (per l'allineamento delle feature) e \textit{Predictive Learning} (per l'espansione dei dati).
+
+\paragraph*{SEPT (Self-Supervised Evolution on Graph)} ~\\
+
+SEPT propone un apprendimento ibrido basato sulla teoria del \textit{Tri-Training} (una tecnica di apprendimento semi-supervisionato).
+L'architettura utilizza tre viste diverse del grafo (generate tramite augmentation) processate da tre encoder GNN distinti. Il training avviene in due modalità congiunte:
+
+\begin{enumerate}
+    \item \textbf{Predictive (Label Propagation)}: se due encoder concordano con alta confidenza su una predizione per un item non osservato, questa viene usata come pseudo-etichetta per addestrare il terzo encoder.
+    \item \textbf{Contrastive}: viene applicata una loss contrastiva tra le rappresentazioni generate dai tre encoder per garantire consistenza e robustezza.
+\end{enumerate}
+
+Questo approccio permette di migliorare drasticamente le performance in scenari con pochissime interazioni (estrema sparsità). \cite{Yu2021}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sept_rs.png}
+    \caption{Schema architetturale del modello SEPT. \\
+    Immagine tratta da \cite{Yu2021}}
+    \label{fig:sept_rs}
+\end{figure}
 
 \subsection{Modelli di raccomandazione basati su Large Language Model}
 \label{subsec:modelli-llm}
+
+\subsection{Modelli di raccomandazione basati su State Space Model}
+\label{subsec:modelli-ssm}
 
 \section{Tassonomia degli attacchi}
 \label{sec:attacchi}

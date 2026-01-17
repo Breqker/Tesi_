@@ -446,6 +446,76 @@
       \verb https://hidasi.eu/assets/pdf/gru4rec_iclr16.pdf
       \endverb
     \endentry
+    \entry{Hou2022}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=e8adc1788926113d64ddd05706c390e1}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Zhenyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=dd8304255c910bcbd7d7d0cb4f7ed860}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b7ab9e18cfb8215361c51c41301f4cba}{%
+           family={Cen},
+           familyi={C\bibinitperiod},
+           given={Yukuo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5fd8ccf894ae8131d46d95e71572ffae}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Yuxiao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d6d4a344c3ae687de4e4e9f6be05c6ed}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Hongxia},
+           giveni={H\bibinitperiod}}}%
+        {{hash=655fcd62c04bdc7006d47bb7712c197e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chunjie},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d0b3008e85b1a8b38f46556abf1791c7}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4ab9433ff4846609f57739bd47d3e0aa}
+      \strng{fullhash}{9897334b589c8b5a7ca40be5c91222d9}
+      \strng{fullhashraw}{9897334b589c8b5a7ca40be5c91222d9}
+      \strng{bibnamehash}{9897334b589c8b5a7ca40be5c91222d9}
+      \strng{authorbibnamehash}{9897334b589c8b5a7ca40be5c91222d9}
+      \strng{authornamehash}{4ab9433ff4846609f57739bd47d3e0aa}
+      \strng{authorfullhash}{9897334b589c8b5a7ca40be5c91222d9}
+      \strng{authorfullhashraw}{9897334b589c8b5a7ca40be5c91222d9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Self-supervised learning (SSL) has been extensively explored in recent years. Particularly, generative SSL has seen emerging success in natural language processing and other fields, such as the wide adoption of BERT and GPT. Despite this, contrastive learning---which heavily relies on structural data augmentation and complicated training strategies---has been the dominant approach in graph SSL, while the progress of generative SSL on graphs, especially graph autoencoders (GAEs), has thus far not reached the potential as promised in other fields. In this paper, we identify and examine the issues that negatively impact the development of GAEs, including their reconstruction objective, training robustness, and error metric. We present a masked graph autoencoder GraphMAE (code is publicly available at https://github.com/THUDM/GraphMAE) that mitigates these issues for generative self-supervised graph learning. Instead of reconstructing structures, we propose to focus on feature reconstruction with both a masking strategy and scaled cosine error that benefit the robust training of GraphMAE. We conduct extensive experiments on 21 public datasets for three different graph learning tasks. The results manifest that GraphMAE---a simple graph autoencoder with our careful designs---can consistently generate outperformance over both contrastive and generative state-of-the-art baselines. This study provides an understanding of graph autoencoders and demonstrates the potential of generative self-supervised learning on graphs.}
+      \field{note}{New York, NY, USA}
+      \field{title}{GraphMAE: Self-Supervised Masked Graph Autoencoders}
+      \field{year}{2022}
+      \field{pages}{594\bibrangedash 604}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/3534678.3539321
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3534678.3539321
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3534678.3539321
+      \endverb
+      \keyw{graph neural networks,graph representation learning,self-supervised learning}
+    \endentry
     \entry{Hu2008}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=abca94954939cb7608a6fa0b712c8a57}{%
@@ -696,6 +766,61 @@
       \verb{url}
       \verb https://doi.org/10.1109/MC.2009.263
       \endverb
+    \endentry
+    \entry{Lin2022}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=eed59c9def84751806f42cce93136fdb}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Zihan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=50377ba64779988ee3e2e9b367168571}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Changxin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=678f15f5b4dbc1aaed429148209c1670}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Yupeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=64942cca497eff6cd6c5b264afdc5dd6}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Wayne\bibnamedelima Xin},
+           giveni={W\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{8ab7ecc9a6c078c44fcf850145ba7592}
+      \strng{fullhash}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \strng{fullhashraw}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \strng{bibnamehash}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \strng{authorbibnamehash}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \strng{authornamehash}{8ab7ecc9a6c078c44fcf850145ba7592}
+      \strng{authorfullhash}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \strng{authorfullhashraw}{70209022c4dadbf6c6a0ec242d6a6b78}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recently, graph collaborative filtering methods have been proposed as an effective recommendation approach, which can capture users' preference over items by modeling the user-item interaction graphs. Despite the effectiveness, these methods suffer from data sparsity in real scenarios. In order to reduce the influence of data sparsity, contrastive learning is adopted in graph collaborative filtering for enhancing the performance. However, these methods typically construct the contrastive pairs by random sampling, which neglect the neighboring relations among users (or items) and fail to fully exploit the potential of contrastive learning for recommendation. To tackle the above issue, we propose a novel contrastive learning approach, named Neighborhood-enriched Contrastive Learning, named NCL, which explicitly incorporates the potential neighbors into contrastive pairs. Specifically, we introduce the neighbors of a user (or an item) from graph structure and semantic space respectively. For the structural neighbors on the interaction graph, we develop a novel structure-contrastive objective that regards users (or items) and their structural neighbors as positive contrastive pairs. In implementation, the representations of users (or items) and neighbors correspond to the outputs of different GNN layers. Furthermore, to excavate the potential neighbor relation in semantic space, we assume that users with similar representations are within the semantic neighborhood, and incorporate these semantic neighbors into the prototype-contrastive objective. The proposed NCL can be optimized with EM algorithm and generalized to apply to graph collaborative filtering methods. Extensive experiments on five public datasets demonstrate the effectiveness of the proposed NCL, notably with 26{\%} and 17{\%} performance gain over a competitive graph collaborative filtering base model on the Yelp and Amazon-book datasets, respectively. Our implementation code is available at: https://github.com/RUCAIBox/NCL.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Improving Graph Collaborative Filtering with Neighborhood-enriched Contrastive Learning}
+      \field{year}{2022}
+      \field{pages}{2320\bibrangedash 2329}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3485447.3512104
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3485447.3512104
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3485447.3512104
+      \endverb
+      \keyw{Collaborative Filtering,Contrastive Learning,Graph Neural Network,Recommender System}
     \endentry
     \entry{Linden2003}{article}{}{}
       \name{author}{3}{}{%
@@ -1188,6 +1313,76 @@
       \endverb
       \keyw{recommender systems,collaborative filtering,autoencoders}
     \endentry
+    \entry{Sun2019}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=0fff2d014f575fc5d680e70e02e8ce38}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f2a0a4f5a03bef37fc5552061319cb71}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb371597af3d6d97a656e6f879c0189d}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=46518ae7e34858f82e417641272a1393}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={Changhua},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8bd77c05192decfa1a28f0261a6041ba}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=929d106dcb7cd193785f5aea5ada5006}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Wenwu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a6cd330d65a61e5776df47ea793c79e3}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{3194e1556ebc5c352042c0969b68e903}
+      \strng{fullhash}{66154590c0d2ab7271f81c424137cbba}
+      \strng{fullhashraw}{66154590c0d2ab7271f81c424137cbba}
+      \strng{bibnamehash}{66154590c0d2ab7271f81c424137cbba}
+      \strng{authorbibnamehash}{66154590c0d2ab7271f81c424137cbba}
+      \strng{authornamehash}{3194e1556ebc5c352042c0969b68e903}
+      \strng{authorfullhash}{66154590c0d2ab7271f81c424137cbba}
+      \strng{authorfullhashraw}{66154590c0d2ab7271f81c424137cbba}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modeling users' dynamic preferences from their historical behaviors is challenging and crucial for recommendation systems. Previous methods employ sequential neural networks to encode users' historical interactions from left to right into hidden representations for making recommendations. Despite their effectiveness, we argue that such left-to-right unidirectional models are sub-optimal due to the limitations including: begin enumerate* [label=seriesitshapealph*upshape)] item unidirectional architectures restrict the power of hidden representation in users' behavior sequences; item they often assume a rigidly ordered sequence which is not always practical. end enumerate* To address these limitations, we proposed a sequential recommendation model called BERT4Rec, which employs the deep bidirectional self-attention to model user behavior sequences. To avoid the information leakage and efficiently train the bidirectional model, we adopt the Cloze objective to sequential recommendation, predicting the random masked items in the sequence by jointly conditioning on their left and right context. In this way, we learn a bidirectional representation model to make recommendations by allowing each item in user historical behaviors to fuse information from both left and right sides. Extensive experiments on four benchmark datasets show that our model outperforms various state-of-the-art sequential models consistently.}
+      \field{note}{New York, NY, USA}
+      \field{title}{BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer}
+      \field{year}{2019}
+      \field{pages}{1441\bibrangedash 1450}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3357384.3357895
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3357384.3357895
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3357384.3357895
+      \endverb
+      \keyw{bidirectional sequential model,cloze,sequential recommendation}
+    \endentry
     \entry{Vaswani2017}{misc}{}{}
       \name{author}{8}{}{%
         {{hash=7f28e84700536646dd6620a0db07ad09}{%
@@ -1457,6 +1652,77 @@
       \endverb
       \keyw{collaborative filtering,embedding propagation,graph neural network,high-order connectivity,recommendation}
     \endentry
+    \entry{Wu2021}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=ea8d9f16c5d553a2ed2a4c26be5b191e}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jiancan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8fde8559617f603b3e2b3cf30cb48e9b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=9090db11da70fe0d8b95cbf3d73a6216}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Fuli},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cf3f1b6bfe8e9131a8c719c1af0dce5d}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xiangnan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ddc1e4faf59edc7d7675723be4296244}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=0838975efd823c96d9fe318998235b56}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Jianxun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0801da56d6877e3eff32e6a6030425d3}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xing},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fdeed692c8f795b4ce67c446a05693c7}
+      \strng{fullhash}{ad26aa9124774b659858abbf93830fb9}
+      \strng{fullhashraw}{ad26aa9124774b659858abbf93830fb9}
+      \strng{bibnamehash}{ad26aa9124774b659858abbf93830fb9}
+      \strng{authorbibnamehash}{ad26aa9124774b659858abbf93830fb9}
+      \strng{authornamehash}{fdeed692c8f795b4ce67c446a05693c7}
+      \strng{authorfullhash}{ad26aa9124774b659858abbf93830fb9}
+      \strng{authorfullhashraw}{ad26aa9124774b659858abbf93830fb9}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Representation learning on user-item graph for recommendation has evolved from using single ID or interaction history to exploiting higher-order neighbors. This leads to the success of graph convolution networks (GCNs) for recommendation such as PinSage and LightGCN. Despite effectiveness, we argue that they suffer from two limitations: (1) high-degree nodes exert larger impact on the representation learning, deteriorating the recommendations of low-degree (long-tail) items; and (2) representations are vulnerable to noisy interactions, as the neighborhood aggregation scheme further enlarges the impact of observed edges.In this work, we explore self-supervised learning on user-item graph, so as to improve the accuracy and robustness of GCNs for recommendation. The idea is to supplement the classical supervised task of recommendation with an auxiliary self-supervised task, which reinforces node representation learning via self-discrimination. Specifically, we generate multiple views of a node, maximizing the agreement between different views of the same node compared to that of other nodes. We devise three operators to generate the views --- node dropout, edge dropout, and random walk --- that change the graph structure in different manners. We term this new learning paradigm asSelf-supervised Graph Learning (SGL), implementing it on the state-of-the-art model LightGCN. Through theoretical analyses, we find that SGL has the ability of automatically mining hard negatives. Empirical studies on three benchmark datasets demonstrate the effectiveness of SGL, which improves the recommendation accuracy, especially on long-tail items, and the robustness against interaction noises. Our implementations are available at urlhttps://github.com/wujcan/SGL.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Self-supervised Graph Learning for Recommendation}
+      \field{year}{2021}
+      \field{pages}{726\bibrangedash 735}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3404835.3462862
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3404835.3462862
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3404835.3462862
+      \endverb
+      \keyw{collaborative filtering,graph neural network,long-tail recommendation,self-supervised learning}
+    \endentry
     \entry{Wu2019_DiffNet}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=fa1018e5a64f8c77d48cc132dae15d52}{%
@@ -1501,7 +1767,7 @@
       \strng{authornamehash}{7c7df1dafdf244f629928a41fd9e041f}
       \strng{authorfullhash}{0900d6a82c560e0a8bd7639382f5d174}
       \strng{authorfullhashraw}{0900d6a82c560e0a8bd7639382f5d174}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -1565,7 +1831,7 @@
       \strng{authornamehash}{59733ab0ac2629860a1a24d5013fadf9}
       \strng{authorfullhash}{8fd91e8d37444f61d9462ec295d2d1d9}
       \strng{authorfullhashraw}{8fd91e8d37444f61d9462ec295d2d1d9}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -1630,7 +1896,7 @@
       \strng{authornamehash}{d5ed9b1b5eb10fc9bd3e07803a79ad26}
       \strng{authorfullhash}{ca1202b76bd66881bc9d61f53692d99f}
       \strng{authorfullhashraw}{ca1202b76bd66881bc9d61f53692d99f}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -1718,6 +1984,202 @@
       \verb https://doi.org/10.1145/3219819.3219890
       \endverb
       \keyw{scalability,recommender systems,graph convolutional networks,deep learning}
+    \endentry
+    \entry{Yu2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=89b432fa4bb24ef9e7312fd806fb771b}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d2c98597f95b4e5de3ecaabeed2e3c10}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0088600888dd582c37cfeb4663ad46f9}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=17541c65107086b7d7dd596d7ad81405}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=038f0fdd7e236813f6a46ced7288f3c1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebf31d2ea71f502eefb31d4563831d49}
+      \strng{fullhash}{4119b6b3750da411143c31603edf6fdf}
+      \strng{fullhashraw}{4119b6b3750da411143c31603edf6fdf}
+      \strng{bibnamehash}{4119b6b3750da411143c31603edf6fdf}
+      \strng{authorbibnamehash}{4119b6b3750da411143c31603edf6fdf}
+      \strng{authornamehash}{ebf31d2ea71f502eefb31d4563831d49}
+      \strng{authorfullhash}{4119b6b3750da411143c31603edf6fdf}
+      \strng{authorfullhashraw}{4119b6b3750da411143c31603edf6fdf}
+      \field{extraname}{1}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-2191}
+      \field{journaltitle}{IEEE Transactions on Knowledge and Data Engineering}
+      \field{number}{1}
+      \field{title}{Self-Supervised Learning for Recommender Systems: A Survey}
+      \field{volume}{36}
+      \field{year}{2024}
+      \field{pages}{335\bibrangedash 355}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1109/TKDE.2023.3282907
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/TKDE.2023.3282907
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/TKDE.2023.3282907
+      \endverb
+    \endentry
+    \entry{Yu2021}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=2f77368a25dacefba7f868b398b1c2da}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Junliang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=684a7485a58d733155967691eae9a57f}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Hongzhi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e65a1a296c495b084e18c6871049b59e}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jundong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=67b37afc884ac475d05f012eca3b4a9b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qinyong},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=788d1f0cd454e1118bc96b95dbe8fcf6}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Nguyen\bibnamedelimb Quoc\bibnamedelima Viet},
+           giveni={N\bibinitperiod\bibinitdelim Q\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=78602a740c55ebc62bc5530e131d12d1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiangliang},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4110d32e948c870f2121f9775141c5c9}
+      \strng{fullhash}{ba34bbecd5d2f226c78064736869d4f1}
+      \strng{fullhashraw}{ba34bbecd5d2f226c78064736869d4f1}
+      \strng{bibnamehash}{ba34bbecd5d2f226c78064736869d4f1}
+      \strng{authorbibnamehash}{ba34bbecd5d2f226c78064736869d4f1}
+      \strng{authornamehash}{4110d32e948c870f2121f9775141c5c9}
+      \strng{authorfullhash}{ba34bbecd5d2f226c78064736869d4f1}
+      \strng{authorfullhashraw}{ba34bbecd5d2f226c78064736869d4f1}
+      \field{extraname}{2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Social relations are often used to improve recommendation quality when user-item interaction data is sparse in recommender systems. Most existing social recommendation models exploit pairwise relations to mine potential user preferences. However, real-life interactions among users are very complex and user relations can be high-order. Hypergraph provides a natural way to model high-order relations, while its potentials for improving social recommendation are under-explored. In this paper, we fill this gap and propose a multi-channel hypergraph convolutional network to enhance social recommendation by leveraging high-order user relations. Technically, each channel in the network encodes a hypergraph that depicts a common high-order user relation pattern via hypergraph convolution. By aggregating the embeddings learned through multiple channels, we obtain comprehensive user representations to generate recommendation results. However, the aggregation operation might also obscure the inherent characteristics of different types of high-order connectivity information. To compensate for the aggregating loss, we innovatively integrate self-supervised learning into the training of the hypergraph convolutional network to regain the connectivity information with hierarchical mutual information maximization. Extensive experiments on multiple real-world datasets demonstrate the superiority of the proposed model over the current SOTA methods, and the ablation study verifies the effectiveness and rationale of the multi-channel setting and the self-supervised task. The implementation of our model is available via https://github.com/Coder-Yu/RecQ.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Self-Supervised Multi-Channel Hypergraph Convolutional Network for Social Recommendation}
+      \field{year}{2021}
+      \field{pages}{413\bibrangedash 424}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3442381.3449844
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3442381.3449844
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3442381.3449844
+      \endverb
+      \keyw{Graph Convolutional Network,Hypergraph Learning,Recommender Systems,Self-supervised Learning,Social Recommendation}
+    \endentry
+    \entry{Yu2022}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=2f77368a25dacefba7f868b398b1c2da}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Junliang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=684a7485a58d733155967691eae9a57f}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Hongzhi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=389bc525f2088642cfd16749beb3312e}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=84e53870b10b90866b8483be8fe5a60e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tong},
+           giveni={T\bibinitperiod}}}%
+        {{hash=375f79f434e65b63f3750a03a388ed99}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Lizhen},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2fff699c67514c16f4375166b14bf88d}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Quoc\bibnamedelimb Viet\bibnamedelima Hung},
+           giveni={Q\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4110d32e948c870f2121f9775141c5c9}
+      \strng{fullhash}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \strng{fullhashraw}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \strng{bibnamehash}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \strng{authorbibnamehash}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \strng{authornamehash}{4110d32e948c870f2121f9775141c5c9}
+      \strng{authorfullhash}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \strng{authorfullhashraw}{d54351fd0f1ede02d5d5f2af02c4a8ac}
+      \field{extraname}{3}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Contrastive learning (CL) recently has spurred a fruitful line of research in the field of recommendation, since its ability to extract self-supervised signals from the raw data is well-aligned with recommender systems' needs for tackling the data sparsity issue. A typical pipeline of CL-based recommendation models is first augmenting the user-item bipartite graph with structure perturbations, and then maximizing the node representation consistency between different graph augmentations. Although this paradigm turns out to be effective, what underlies the performance gains is still a mystery. In this paper, we first experimentally disclose that, in CL-based recommendation models, CL operates by learning more uniform user/item representations that can implicitly mitigate the popularity bias. Meanwhile, we reveal that the graph augmentations, which used to be considered necessary, just play a trivial role. Based on this finding, we propose a simple CL method which discards the graph augmentations and instead adds uniform noises to the embedding space for creating contrastive views. A comprehensive experimental study on three benchmark datasets demonstrates that, though it appears strikingly simple, the proposed method can smoothly adjust the uniformity of learned representations and has distinct advantages over its graph augmentation-based counterparts in terms of recommendation accuracy and training efficiency. The code is released at https://github.com/Coder-Yu/QRec.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Are Graph Augmentations Necessary? Simple Graph Contrastive Learning for Recommendation}
+      \field{year}{2022}
+      \field{pages}{1294\bibrangedash 1303}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3477495.3531937
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3477495.3531937
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3477495.3531937
+      \endverb
+      \keyw{contrastive learning,data augmentation,recommendation,self-supervised learning}
     \endentry
     \entry{Zhang2019}{article}{}{}
       \name{author}{4}{}{%

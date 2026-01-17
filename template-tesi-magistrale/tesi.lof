@@ -15,8 +15,20 @@
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Schema logico del modello SASRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Kang2018}}}{32}{figure.caption.38}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Schema logico del training del modello IRGAN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2017}}}{34}{figure.caption.41}%
 \contentsline {figure}{\numberline {1.14}{\ignorespaces Schema dell'interazione Agente-Ambiente nel modello DRN. Immagine tratta da \blx@tocontentsinit {0}\cite {Zheng2018}}}{36}{figure.caption.45}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Schema architetturale del modello Neural Graph Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019}}}{38}{figure.caption.46}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Schema architetturale del modello LightGCN. Immagine tratta da \blx@tocontentsinit {0}\cite {He2020}}}{39}{figure.caption.47}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Schema logico del modello GC-MC. Immagine tratta da \blx@tocontentsinit {0}\cite {Berg2017}}}{37}{figure.caption.47}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Schema architetturale del modello PinSage. Immagine tratta da \blx@tocontentsinit {0}\cite {Ying2018}}}{38}{figure.caption.49}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Schema architetturale del modello Neural Graph Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019}}}{39}{figure.caption.51}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Schema architetturale del modello LightGCN. Immagine tratta da \blx@tocontentsinit {0}\cite {He2020}}}{40}{figure.caption.53}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Schema architetturale del modello SR-GNN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_SRGNN}}}{41}{figure.caption.55}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Schema architetturale del modello GraphRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2019}}}{42}{figure.caption.57}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Schema architetturale del modello DiffNet. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_DiffNet}}}{42}{figure.caption.59}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Schema architetturale del modello KGAT. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019_KGAT}}}{43}{figure.caption.61}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Schema architetturale del modello BERT4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Sun2019}}}{45}{figure.caption.64}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Schema architetturale del modello GraphMAE. Immagine tratta da \blx@tocontentsinit {0}\cite {Hou2022}}}{46}{figure.caption.67}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Schema logico del modello SGL. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2021}}}{47}{figure.caption.70}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Schema logico del modello NCL. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2022}}}{49}{figure.caption.76}%
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Schema logico del modello Self-CF. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhou2023}}}{50}{figure.caption.78}%
+\contentsline {figure}{\numberline {1.28}{\ignorespaces Schema architetturale del modello SEPT. Immagine tratta da \blx@tocontentsinit {0}\cite {Yu2021}}}{51}{figure.caption.80}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
