@@ -590,3 +590,202 @@ url={https://doi.org/10.1145/3331184.3331214}
 	url={https://doi.org/10.1145/3442381.3449844}
 }
 
+@Article{Zhao2024,
+	author={Zhao, Z. and Fan, W. and Li, J. and Liu, Y. and Mei, X. and Wang, Y. and Wen, Z. and Wang, F. and Zhao, X. and Tang, J. and Li, Q.},
+	title={Recommender Systems in the Era of Large Language Models (LLMs)},
+	journal={IEEE Transactions on Knowledge and Data Engineering},
+	year={2024},
+	volume={36},
+	number={11},
+	pages={6889-6907},
+	issn={1558-2191},
+	doi={10.1109/TKDE.2024.3392335},
+	url={https://doi.org/10.1109/TKDE.2024.3392335}
+}
+
+@Article{Lin2025,
+	author={Lin, Jianghao and Dai, Xinyi and Xi, Yunjia and Liu, Weiwen and Chen, Bo and Zhang, Hao and Liu, Yong and Wu, Chuhan and Li, Xiangyang and Zhu, Chenxu and Guo, Huifeng and Yu, Yong and Tang, Ruiming and Zhang, Weinan},
+	title={How Can Recommender Systems Benefit from Large Language Models: A Survey},
+	journal={ACM Trans. Inf. Syst.},
+	year={2025},
+	month={Jan},
+	publisher={Association for Computing Machinery},
+	address={New York, NY, USA},
+	volume={43},
+	number={2},
+	keywords={Recommender systems, large language models},
+	abstract={With the rapid development of online services and web applications, recommender systems (RS) have become increasingly indispensable for mitigating information overload and matching users' information needs by providing personalized suggestions over items. Although the RS research community has made remarkable progress over the past decades, conventional recommendation models (CRM) still have some limitations, e.g., lacking open-domain world knowledge, and difficulties in comprehending users' underlying preferences and motivations. Meanwhile, large language models (LLM) have shown impressive general intelligence and human-like capabilities for various natural language processing (NLP) tasks, which mainly stem from their extensive open-world knowledge, logical and commonsense reasoning abilities, as well as their comprehension of human culture and society. Consequently, the emergence of LLM is inspiring the design of RS and pointing out a promising research direction, i.e., whether we can incorporate LLM and benefit from their common knowledge and capabilities to compensate for the limitations of CRM. In this article, we conduct a comprehensive survey on this research direction, and draw a bird's-eye view from the perspective of the whole pipeline in real-world RS. Specifically, we summarize existing research works from two orthogonal aspects: where and how to adapt LLM to RS. For the ``WHERE'' question, we discuss the roles that LLM could play in different stages of the recommendation pipeline, i.e., feature engineering, feature encoder, scoring/ranking function, user interaction, and pipeline controller. For the ``HOW'' question, we investigate the training and inference strategies, resulting in two fine-grained taxonomy criteria, i.e., whether to tune LLM or not during training, and whether to involve CRM for inference. Detailed analysis and general development paths are provided for both ``WHERE'' and ``HOW'' questions, respectively. Then, we highlight the key challenges in adapting LLM to RS from three aspects, i.e., efficiency, effectiveness, and ethics. Finally, we summarize the survey and discuss the future prospects.},
+	issn={1046-8188},
+	doi={10.1145/3678004},
+	url={https://doi.org/10.1145/3678004}
+}
+
+@Misc{Hou2022,
+	author={Hou, Yupeng and Mu, Shanlei and Zhao, Wayne Xin and Li, Yaliang and Ding, Bolin and Wen, Ji-Rong},
+	title={Towards Universal Sequence Representation Learning for Recommender Systems},
+	year={2022},
+	publisher={Association for Computing Machinery},
+	pages={585--593},
+	keywords={sequential recommendation, universal representation learning},
+	abstract={In order to develop effective sequential recommenders, a series of sequence representation learning (SRL) methods are proposed to model historical user behaviors. Most existing SRL methods rely on explicit item IDs for developing the sequence models to better capture user preference. Though effective to some extent, these methods are difficult to be transferred to new recommendation scenarios, due to the limitation by explicitly modeling item IDs. To tackle this issue, we present a novel universal sequence representation learning approach, named UniSRec. The proposed approach utilizes the associated description text of items to learn transferable representations across different recommendation scenarios. For learning universal item representations, we design a lightweight item encoding architecture based on parametric whitening and mixture-of-experts enhanced adaptor. For learning universal sequence representations, we introduce two contrastive pre-training tasks by sampling multi-domain negatives. With the pre-trained universal sequence representation model, our approach can be effectively transferred to new recommendation domains or platforms in a parameter-efficient way, under either inductive or transductive settings. Extensive experiments conducted on real-world datasets demonstrate the effectiveness of the proposed approach. Especially, our approach also leads to a performance improvement in a cross-platform setting, showing the strong transferability of the proposed universal SRL method. The code and pre-trained model are available at: https://github.com/RUCAIBox/UniSRec.},
+	note={New York, NY, USA},
+	doi={10.1145/3534678.3539381},
+	url={https://doi.org/10.1145/3534678.3539381}
+}
+
+@Misc{Geng2022,
+author={Geng, Shijie and Liu, Shuchang and Fu, Zuohui and Ge, Yingqiang and Zhang, Yongfeng},
+title={Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt {\&} Predict Paradigm (P5)},
+year={2022},
+publisher={Association for Computing Machinery},
+pages={299--315},
+keywords={Language Modeling, Multitask Learning, Natural Language Processing, Personalized Prompt, Recommender Systems, Unified Model},
+abstract={For a long time, different recommendation tasks require designing task-specific architectures and training objectives. As a result, it is hard to transfer the knowledge and representations from one task to another, thus restricting the generalization ability of existing recommendation approaches. To deal with such issues, considering that language can describe almost anything and language grounding is a powerful medium to represent various problems or tasks, we present a flexible and unified text-to-text paradigm called ``Pretrain, Personalized Prompt, and Predict Paradigm'' (P5) for recommendation, which unifies various recommendation tasks in a shared framework. In P5, all data such as user-item interactions, user descriptions, item metadata, and user reviews are converted to a common format --- natural language sequences. The rich information from natural language assists P5 to capture deeper semantics for personalization and recommendation. Specifically, P5 learns different tasks with the same language modeling objective during pretraining. Thus, it serves as the foundation model for various downstream recommendation tasks, allows easy integration with other modalities, and enables instruction-based recommendation. P5 advances recommender systems from shallow model to deep model to big model, and will revolutionize the technical form of recommender systems towards universal recommendation engine. With adaptive personalized prompt for different users, P5 is able to make predictions in a zero-shot or few-shot manner and largely reduces the necessity for extensive fine-tuning. On several benchmarks, we conduct experiments to show the effectiveness of P5. To help advance future research on Recommendation as Language Processing (RLP), Personalized Foundation Models (PFM), and Universal Recommendation Engine (URE), we release the source code, dataset, prompts, and pretrained P5 model at https://github.com/jeykigung/P5.},
+note={New York, NY, USA},
+doi={10.1145/3523227.3546767},
+url={https://doi.org/10.1145/3523227.3546767}
+}
+
+@Misc{Bao2023,
+	author={Bao, Keqin and Zhang, Jizhi and Zhang, Yang and Wang, Wenjie and Feng, Fuli and He, Xiangnan},
+	title={TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation},
+	year={2023},
+	publisher={Association for Computing Machinery},
+	pages={1007--1014},
+	keywords={Instruction Tuning, Large Language Models, Recommendation},
+	abstract={Large Language Models (LLMs) have demonstrated remarkable performance across diverse domains, thereby prompting researchers to explore their potential for use in recommendation systems. Initial attempts have leveraged the exceptional capabilities of LLMs, such as rich knowledge and strong generalization through In-context Learning, which involves phrasing the recommendation task as prompts. Nevertheless, the performance of LLMs in recommendation tasks remains suboptimal due to a substantial disparity between the training tasks for LLMs and recommendation tasks, as well as inadequate recommendation data during pre-training. To bridge the gap, we consider building a Large Recommendation Language Model by tunning LLMs with recommendation data. To this end, we propose an efficient and effective Tuning framework for Aligning LLMs with Recommendations, namely TALLRec. We have demonstrated that the proposed TALLRec framework can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with a limited dataset of fewer than 100 samples. Additionally, the proposed framework is highly efficient and can be executed on a single RTX 3090 with LLaMA-7B. Furthermore, the fine-tuned LLM exhibits robust cross-domain generalization. Our code and data are available at https://github.com/SAI990323/TALLRec.},
+	note={New York, NY, USA},
+	doi={10.1145/3604915.3608857},
+	url={https://doi.org/10.1145/3604915.3608857}
+}
+
+@Misc{Devlin2019,
+	author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+	title={BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+	year={2019},
+	month={Jun},
+	publisher={Association for Computational Linguistics},
+	pages={4171-4186},
+	abstract={We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7{\%} (4.6{\%} absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+	note={Minneapolis, Minnesota},
+	doi={10.18653/v1/N19-1423},
+	url={https://doi.org/10.18653/v1/N19-1423}
+}
+
+@Misc{Brown2020,
+	author={Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D. and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+	title={Language Models are Few-Shot Learners},
+	year={2020},
+	publisher={Curran Associates, Inc.},
+	volume={33},
+	pages={1877-1901},
+	doi={10.48550/arXiv.2005.14165},
+	url={https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf}
+}
+
+@Article{Touvron2023,
+	author={Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and Rodriguez, Aurelien and Joulin, Armand and Grave, Edouard and Lample, Guillaume},
+	title={LLaMA: Open and Efficient Foundation Language Models},
+	journal={arXiv preprint arXiv:2302.13971},
+	year={2023},
+	month={Feb},
+	day={27},
+	abstract={We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.},
+	doi={10.48550/arXiv.2302.13971},
+	url={https://doi.org/10.48550/arXiv.2302.13971}
+}
+
+@InProceedings{Hu2022,
+	author={Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+	title={LoRA: Low-Rank Adaptation of Large Language Models},
+	year={2022},
+	abstract={We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks.},
+	note={International Conference on Learning Representations (ICLR)},
+	doi={10.48550/arXiv.2106.09685},
+	url={https://doi.org/10.48550/arXiv.2106.09685}
+}
+
+@Article{Gu2023,
+	author={Gu, Albert and Dao, Tri},
+	title={Mamba: Linear-Time Sequence Modeling with Selective State Spaces},
+	journal={arXiv preprint arXiv:2312.00752},
+	year={2023},
+	month={Dec},
+	day={01},
+	abstract={Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. We propose a new class of selective state space models (SSMs) that improves on prior work on several axes to achieve the modeling power of Transformers while scaling linearly in sequence length.},
+	doi={10.48550/arXiv.2312.00752},
+	url={https://doi.org/10.48550/arXiv.2312.00752}
+}
+
+@InProceedings{Gu2022,
+	author={Gu, Albert and Goel, Karan and R{\'e}, Christopher},
+	title={Efficiently Modeling Long Sequences with Structured State Spaces},
+	year={2022},
+	abstract={We propose the Structured State Space sequence model (S4) based on a new parameterization for the SSM, and show that it can be computed much more efficiently than prior approaches while preserving their theoretical strengths. S4 achieves strong empirical results across a diverse range of benchmarks, including significantly outperforming Transformers on long-range tasks.},
+	note={International Conference on Learning Representations (ICLR)},
+	doi={10.48550/arXiv.2111.00396},
+	url={https://doi.org/10.48550/arXiv.2111.00396}
+}
+
+@Article{Liu2024,
+	author={Liu, Chengkai and Lin, Jianghao and Wang, Jianling and Liu, Hanzhou and Caverlee, James},
+	title={Mamba4Rec: Towards Efficient Sequential Recommendation with Selective State Space Models},
+	journal={arXiv preprint arXiv:2403.03900},
+	year={2024},
+	month={Mar},
+	day={06},
+	abstract={Sequential recommendation aims to estimate dynamic user preferences and sequential dependencies among historical user behaviors. Inspired by the recent success of state space models (SSMs), we propose Mamba4Rec, which is the first work to explore the potential of selective SSMs for efficient sequential recommendation. Built upon the basic Mamba block, we design a series of sequential modeling techniques to further promote model performance while maintaining inference efficiency.},
+	doi={10.48550/arXiv.2403.03900},
+	url={https://doi.org/10.48550/arXiv.2403.03900}
+}
+
+@Article{Wang2024,
+	author={Wang, Yuda and He, Xuxin and Zhu, Shengxin},
+	title={EchoMamba4Rec: Harmonizing Bidirectional State Space Models with Spectral Filtering for Advanced Sequential Recommendation},
+	journal={arXiv preprint arXiv:2406.02638},
+	year={2024},
+	month={Jun},
+	day={04},
+	abstract={Drawing inspiration from the recent advancements of state space models (SSMs) in control theory... we introduce EchoMamba4Rec, a novel architecture that harmonizes bidirectional SSMs with spectral filtering to capture both sequential dependencies and frequency-domain patterns efficiently.},
+	doi={10.48550/arXiv.2406.02638},
+	url={https://doi.org/10.48550/arXiv.2406.02638}
+}
+
+@Article{Xiao2025,
+	author={Xiao, Wei and Wang, Huiying and Zhou, Qifeng and Wang, Qing},
+	title={SS4Rec: Continuous-Time Sequential Recommendation with State Space Models},
+	journal={arXiv preprint arXiv:2502.08132},
+	year={2025},
+	month={Feb},
+	day={12},
+	abstract={Sequential recommendation is a key area in the field of recommendation systems aiming to model user interest based on historical interaction sequences with irregular intervals. We propose SS4Rec, which integrates a time-aware SSM to handle irregular time intervals and a relation-aware SSM to model contextual dependencies, enabling it to infer user interest from both temporal and sequential perspectives.},
+	doi={10.48550/arXiv.2502.08132},
+	url={https://doi.org/10.48550/arXiv.2502.08132}
+}
+
+@Article{Dao2024,
+	author={Dao, Tri and Gu, Albert},
+	title={Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality},
+	journal={arXiv preprint arXiv:2405.21060},
+	year={2024},
+	month={May},
+	day={31},
+	abstract={We show that the dual forms of structured state space models (SSMs) and attention are closely related through a framework we call Structured State Space Duality (SSD). This allows us to design Mamba-2, an architecture that is 2-8x faster than Mamba while being competitive with Transformers.},
+	doi={10.48550/arXiv.2405.21060},
+	url={https://doi.org/10.48550/arXiv.2405.21060}
+}
+
+@InProceedings{Zhang2025,
+	author={Zhang, Shun and Zhang, Runsen and Yin, Ziqiang and Yang, Zhirong},
+	editor={Huang, De-Shuang and Chen, Wei and Pan, Yijie and Chen, Haiming},
+	title={MaTrRec: A Mamba-Transformer Framework for Robust Sequential Recommendation},
+	booktitle={Advanced Intelligent Computing Technology and Applications},
+	year={2025},
+	publisher={Springer Nature Singapore},
+	address={Singapore},
+	pages={448-459},
+	abstract={Sequential recommendation techniques aim at providing personalized recommendations by analyzing the dynamic preferences and sequential dependencies in user behavior sequences. However, dense datasets consisting of long sequences have the difficulty of fully capturing the sequential dependencies within historical user behaviors, while sparsity datasets of short sequences often struggle to extract sufficient interaction information due to the limited historical user behaviors. These challenges lead to undesirable recommendation performance and exacerbate the difficulty of achieving effective recommendations in sparse data scenarios. Then, we propose a novel sequential recommendation model named MaTrRec that integrates Mamba and Transformer. This model leverages the linear complexity advantages of Mamba while effectively enhancing sequential dependency modeling through its state-space representation and efficient sequential processing capabilities in continuous space, enabling the extraction of deeper sequential information from historical user behaviors. Moreover, it utilizes the global attention mechanism of Transformer to thoroughly explore the dependencies among items in historical user behaviors, thereby enhancing the model's predictive performance and robustness across both long and short sequence datasets by effectively capturing both local and global contextual information. To further optimize the computational complexity of the model, we design a linear sequential recommendation model called MaTrRec*, which reduces the computational complexity through a linear attention mechanism and effectively balances the complexity and recommendation accuracy. Experimental valuations on five widely used public datasets demonstrate that MaTrRec and MaTrRec* outperform the state-of-the-art sequential recommendation models. Our MaTrRec can significantly achieve up to 8.49{\%} higher model accuracy. Code: https://github.com/Unintelligentmumu/MaTrRec.},
+	isbn={978-981-95-0017-8},
+	doi={10.48550/arXiv.2407.19239},
+	url={https://doi.org/10.48550/arXiv.2407.19239}
+}

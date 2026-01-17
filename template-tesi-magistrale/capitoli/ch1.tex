@@ -789,7 +789,7 @@ Nei sistemi sequenziali, l'obiettivo è ricostruire item mancanti nella storia d
 
 \subparagraph*{BERT4Rec} ~\\
 
-Ispirato al modello BERT per il NLP, BERT4Rec rappresenta un punto di svolta nella raccomandazione sequenziale. A differenza dei modelli causali "Left-to-Right" (come SASRec o GRU4Rec) che possono utilizzare solo le informazioni passate per predire il futuro, BERT4Rec adotta un approccio \textit{bidirezionale}.
+Ispirato al modello BERT \cite{Devlin2019} per il NLP, BERT4Rec rappresenta un punto di svolta nella raccomandazione sequenziale. A differenza dei modelli causali "Left-to-Right" (come SASRec o GRU4Rec) che possono utilizzare solo le informazioni passate per predire il futuro, BERT4Rec adotta un approccio \textit{bidirezionale}.
 Durante il training, viene applicato il \textit{Cloze objective}: una percentuale degli item nella sequenza storica dell'utente viene sostituita da un token speciale \texttt{[MASK]}. Il modello, basato su Transformer, deve predire l'ID dell'item originale utilizzando il contesto proveniente sia da sinistra (passato) che da destra (futuro). Questo permette di apprendere rappresentazioni degli item molto più robuste e contestualizzate, catturando relazioni complesse all'interno della sessione utente. \cite{Sun2019}
 
 \begin{figure}[H]
@@ -935,8 +935,43 @@ Questo approccio permette di migliorare drasticamente le performance in scenari 
 \subsection{Modelli di raccomandazione basati su Large Language Model}
 \label{subsec:modelli-llm}
 
+L'avvento dei \textit{Large Language Models} (LLM) come BERT \cite{Devlin2019}, GPT \cite{Brown2020}, e LLaMA \cite{Touvron2023} ha rivoluzionato il campo dell'Intelligenza Artificiale. Mentre i sistemi di raccomandazione tradizionali si basano su ID univoci per rappresentare utenti e item, soffrendo del problema del \textit{Cold Start} e mancando di capacità di ragionamento semantico, gli LLM possiedono una vasta conoscenza del mondo (\textit{World Knowledge}) e capacità di generalizzazione \textit{zero-shot}.
+
+Gi LLM nei sistemi di raccomandazione possono essere classificati in due paradigmi fondamentali, a seconda del ruolo svolto dal modello linguistico \cite{Zhao2024, Lin2025}:
+
+\begin{enumerate}
+    \item \textbf{LLM as Encoder (Discriminative)}: l'LLM viene utilizzato come feature extractor per generare embedding semantici di alta qualità, che vengono poi processati da un modello di raccomandazione tradizionale.
+    \item \textbf{LLM as Recommender (Generative)}: l'LLM funge direttamente da decisore. Il compito di ranking viene riformulato come un problema di generazione di linguaggio naturale (NLG), dove il modello deve generare il titolo dell'item raccomandato.
+\end{enumerate}
+
+\subsubsection{Discriminative LLM-based Recommendation}
+
+In questo approccio, la potenza degli LLM (spesso modelli tipo BERT) viene sfruttata per comprendere il contenuto testuale degli item (titoli, descrizioni) e trasformarlo in vettori densi. Questo permette di trasferire conoscenza tra domini diversi e gestire item nuovi.
+
+\paragraph*{Universal Sequence Representation (UniSRec)} ~\\
+
+Un limite dei modelli sequenziali classici (come SASRec) è che gli embedding degli item sono legati agli ID specifici di un dataset e non sono trasferibili. UniSRec propone di utilizzare il testo descrittivo dell'item come input universale.
+Il modello utilizza un encoder basato su BERT per generare rappresentazioni degli item basate sul testo. Successivamente, utilizza un meccanismo di attenzione per modellare la sequenza di interazioni in uno spazio semantico universale. Questo permette al modello di effettuare raccomandazioni \textit{Cross-Domain} e \textit{Inductive}, funzionando anche su dataset diversi da quello di training. \cite{Hou2022}
+
+\subsubsection{Generative LLM-based Recommendation}
+
+In questo approccio, il sistema di raccomandazione viene unificato con i task di NLP. L'input è un \textit{Prompt} in linguaggio naturale e l'output è una sequenza di testo generata.
+
+\paragraph*{P5 (Pre-train, Personalized Prompt, Predict Paradigm)} ~\\
+
+P5 è stato uno dei primi a unificare diversi task di raccomandazione (Sequential Recommendation, Rating Prediction, Explanation) in un unico framework \textit{sequence-to-sequence}.
+Tutti i dati (utenti, item, interazioni) vengono convertiti in stringhe di testo tramite template di prompt personalizzati (es. "Dato lo storico dell'utente X, predici il prossimo acquisto"). Il modello, basato su T5, viene pre-addestrato su questi prompt, imparando a svolgere raccomandazioni come se fosse un compito di traduzione o riassunto. \cite{Geng2022}
+
+\paragraph*{TALLRec (Instruction Tuning)} ~\\
+
+Mentre P5 si basa sul pre-training, TALLRec si concentra sull'\textit{Instruction Tuning} di LLM generalisti (come LLaMA). Gli LLM "vanilla" faticano a seguire istruzioni di raccomandazione specifiche (es. ordinare una lista) senza un fine-tuning mirato.
+TALLRec costruisce un dataset di istruzioni specifiche per la raccomandazione (con esempi positivi e negativi) ed effettua il fine-tuning l'LLM in modo efficiente (utilizzando LoRA \cite{Hu2022}) per allineare le capacità del modello al task di ranking, ottenendo prestazioni superiori in scenari \textit{Few-Shot}. \cite{Bao2023} 
+
 \subsection{Modelli di raccomandazione basati su State Space Model}
 \label{subsec:modelli-ssm}
+
+Nel panorama della \textit{Sequential Recommendation}, i modelli basati su Transformer (es. SASRec) hanno dominato per anni grazie alla capacità di catturare dipendenze a lungo raggio. Tuttavia, la loro complessità computazionale quadratica $O(L^2)$ rispetto alla lunghezza della sequenza $L$ li rende proibitivi per gestire storici utente molto lunghi (\textit{Lifetime History}).
+Al contrario, le RNN (es. GRU4Rec) offrono efficienza lineare $O(L)$ ma soffrono nella ritenzione di informazioni a lungo termine (\textit{forgetting problem}).
 
 \section{Tassonomia degli attacchi}
 \label{sec:attacchi}
