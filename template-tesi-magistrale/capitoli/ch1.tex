@@ -932,7 +932,7 @@ Questo approccio permette di migliorare drasticamente le performance in scenari 
     \label{fig:sept_rs}
 \end{figure}
 
-\subsection{Modelli di raccomandazione basati su Large Language Model}
+\subsection{Modelli di raccomandazione basati su Large Language Models}
 \label{subsec:modelli-llm}
 
 L'avvento dei \textit{Large Language Models} (LLM) come BERT \cite{Devlin2019}, GPT \cite{Brown2020}, e LLaMA \cite{Touvron2023} ha rivoluzionato il campo dell'Intelligenza Artificiale. Mentre i sistemi di raccomandazione tradizionali si basano su ID univoci per rappresentare utenti e item, soffrendo del problema del \textit{Cold Start} e mancando di capacità di ragionamento semantico, gli LLM possiedono una vasta conoscenza del mondo (\textit{World Knowledge}) e capacità di generalizzazione \textit{zero-shot}.
@@ -991,11 +991,104 @@ TALLRec costruisce un dataset di istruzioni specifiche per la raccomandazione (c
     \label{fig:tallRec_rs}
 \end{figure}
 
-\subsection{Modelli di raccomandazione basati su State Space Model}
+\subsection{Modelli di raccomandazione basati su State Space Models}
 \label{subsec:modelli-ssm}
 
 Nel panorama della \textit{Sequential Recommendation}, i modelli basati su Transformer (es. SASRec) hanno dominato per anni grazie alla capacità di catturare dipendenze a lungo raggio. Tuttavia, la loro complessità computazionale quadratica $O(L^2)$ rispetto alla lunghezza della sequenza $L$ li rende proibitivi per gestire storici utente molto lunghi (\textit{Lifetime History}).
 Al contrario, le RNN (es. GRU4Rec) offrono efficienza lineare $O(L)$ ma soffrono nella ritenzione di informazioni a lungo termine (\textit{forgetting problem}).
+
+Gli \textit{State Space Models} (SSM) sono emersi come la soluzione unificante. Gli SSM modellano la sequenza come un sistema dinamico continuo discretizzato, offrendo i vantaggi di entrambi i paradigmi: training parallelizzabile e inferenza efficiente a memoria costante.
+
+La svolta per i sistemi di raccomandazione è arrivata con l'architettura \textit{Mamba} \cite{Gu2023}, che ha introdotto il meccanismo di \textit{Selective State Space}.
+
+Per una trattazione teorica approfondita di Mamba e delle sue componenti architetturali, si rimanda alla sezione \ref{sec:mamba}.
+
+\subsubsection{Structured State Space (S4)}
+
+S4 propone una parametrizzazione per gli SSM basata su matrici strutturate (HiPPO) che permette di modellare dipendenze a lunghissimo raggio in modo efficiente.
+S4 ha dimostrato che è possibile ottenere performance competitive con i Transformer mantenendo una complessità lineare. Tuttavia, S4 è un sistema \textit{Linear Time-Invariant} (LTI): le dinamiche di transizione sono fisse e non dipendono dall'input corrente. Questo limita la capacità del modello di "focalizzarsi" su specifici item o di ignorarne altri in base al contesto, una caratteristica (content-awareness) cruciale per la raccomandazione. \cite{Gu2022}
+
+\subsubsection{Selective SSM (Mamba4Rec)}
+
+Per superare i limiti LTI di S4, l'architettura \textit{Mamba} \cite{Gu2023} ha introdotto il meccanismo di \textit{Selective State Space}, rendendo i parametri del sistema funzioni dell'input.
+L'applicazione di questo paradigma ai RS è \textit{Mamba4Rec}.
+Mamba4Rec identifica nella selettività come chiave per risolvere il problema del rumore nei dati sequenziali. A differenza delle RNN che aggiornano lo stato indiscriminatamente, Mamba4Rec può decidere dinamicamente quali informazioni "ricordare" e quali "dimenticare" (es. click accidentali). Grazie a questa proprietà, il modello scala su sequenze molto lunghe superando SASRec in efficienza e accuratezza. \cite{Liu2024}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mamba4Rec_rs.png}
+    \caption{Schema architetturale del modello Mamba4Rec. \\
+    Immagine tratta da \cite{Liu2024}}
+    \label{fig:mamba4Rec_rs}
+\end{figure}
+
+\subsubsection{Continuous-Time Modeling (SS4Rec)}
+
+Mentre la maggior parte dei modelli tratta le interazioni come passi discreti, SS4Rec sfrutta la natura intrinseca degli SSM (derivati da equazioni differenziali continue) per integrare il tempo continuo.
+Il modello utilizza l'intervallo di tempo reale tra due interazioni per calcolare la matrice di transizione dinamica. SS4Rec integra due componenti: un \textit{Time-aware SSM} per gestire intervalli irregolari e un \textit{Relation-aware SSM} per le dipendenze contestuali, permettendo di inferire l'interesse dell'utente da una prospettiva temporale più realistica rispetto ai passi discreti. \cite{Xiao2025}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ss4Rec_rs.png}
+    \caption{Schema architetturale del modello SS4Rec. \\
+    Immagine tratta da \cite{Xiao2025}}
+    \label{fig:ss4Rec_rs}
+\end{figure}
+
+\subsubsection{Bidirectional \& Frequency-Enhanced (EchoMamba4Rec)}
+
+Poiché Mamba è nativamente causale (unidirezionale), EchoMamba4Rec propone un'architettura bidirezionale per catturare il contesto completo della sequenza.
+Il modello introduce l'armonizzazione tra il dominio del tempo e quello della frequenza: il modello integra blocchi SSM bidirezionali con tecniche di \textit{filtro spettrale}. Questo permette di catturare non solo le dipendenze sequenziali, ma anche pattern periodici nel comportamento dell'utente, migliorando la robustezza della rappresentazione. \cite{Wang2024}
+
+\subsubsection{Structured State Space Duality (SSD)}
+
+La \textit{Structured State Space Duality} (SSD) introdotta in \textit{Mamba-2} unifica SSM e Attention Lineare, permettendo ottimizzazioni hardware estreme (es. Matrix Multiplication). \cite{Dao2024}
+
+\paragraph*{SSD4Rec} ~\\
+
+SSD4Rec sfrutta la dualità e può essere addestrato parallelamente come un Transformer ma eseguito ricorrentemente come un SSM. Questo garantisce una scalabilità quasi lineare rispetto alla lunghezza della sequenza, rendendolo ideale per piattaforme (come TikTok o YouTube Shorts) caratterizzate da sequenze di interazioni utente lunghissime e ad alta frequenza. \cite{Qu2024}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ssd4Rec_rs.png}
+    \caption{Schema architetturale del modello SSD4Rec. \\
+    Immagine tratta da \cite{Qu2024}}
+    \label{fig:ssd4Rec_rs}
+\end{figure}
+
+\paragraph*{TiM4Rec} ~ \\
+
+Nonostante l'efficienza, SSD soffre di degrado delle prestazioni in scenari a bassa dimensionalità tipici dei RS. TiM4Rec risolve questo problema integrando la consapevolezza temporale direttamente nella struttura duale.
+Il modello introduce una \textit{Time-aware Structured Masked Matrix} all'interno del blocco SSD. Questo permette di pesare le interazioni passate non solo in base alla posizione nella sequenza, ma in base all'intervallo temporale effettivo, migliorando la capacità di catturare l'evoluzione degli interessi a breve termine senza sacrificare l'efficienza computazionale del backend Mamba-2. \cite{Fan2025}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{tiM4Rec_rs.png}
+    \caption{Schema architetturale del modello TiM4Rec. \\
+    Immagine tratta da \cite{Fan2025}}
+    \label{fig:tiM4Rec_rs}
+\end{figure}
+
+\subsubsection{Hybrid Architectures: Mamba + Transformer (MaTrRec)}
+
+Nonostante i progressi degli SSM, il meccanismo di \textit{Global Attention} dei Transformer rimane insuperabile nel catturare relazioni "Point-to-Point" precise e complesse su finestre locali ("needle in a haystack"). Per questo motivo, la ricerca più recente si è orientata verso sistemi ibridi.
+
+MaTrRec combina esplicitamente i punti di forza dei due paradigmi. L'architettura è progettata per gestire il trade-off tra efficienza globale e precisione locale:
+
+\begin{itemize}
+    \item \textbf{Mamba Layer}: viene utilizzato come encoder primario per processare l'intera sequenza storica. Grazie alla sua complessità lineare, comprime efficientemente il contesto a lungo termine in uno stato latente, filtrando il rumore sequenziale.
+    \item \textbf{Transformer Layer}: opera a valle (o in parallelo su finestre locali) per raffinare le rappresentazioni. L'attenzione globale permette di modellare esplicitamente le correlazioni dirette tra l'item target candidato e gli item specifici nello storico recente, che potrebbero essere stati "sfocati" dalla compressione dello stato di Mamba.
+\end{itemize}
+
+Viene introdotta anche una variante linearizzata per ridurre ulteriormente i costi, dimostrando che l'ibridazione porta a una robustezza superiore rispetto all'uso esclusivo di uno dei due componenti. \cite{Zhang2025}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{maTrRec_rs.png}
+    \caption{Schema architetturale del modello MaTrRec. \\
+    Immagine tratta da \cite{Zhang2025}}
+    \label{fig:maTrRec_rs}
+\end{figure}
 
 \section{Tassonomia degli attacchi}
 \label{sec:attacchi}

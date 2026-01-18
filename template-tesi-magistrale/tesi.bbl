@@ -412,6 +412,46 @@
       \verb https://doi.org/10.1023/A:1021240730564
       \endverb
     \endentry
+    \entry{Dao2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ede2395a7f566a456448fcb5f8222c99}{%
+           family={Dao},
+           familyi={D\bibinitperiod},
+           given={Tri},
+           giveni={T\bibinitperiod}}}%
+        {{hash=aa9ec56190423bb01ead50d96b94ba93}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{fullhash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{fullhashraw}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{bibnamehash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{authorbibnamehash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{authornamehash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{authorfullhash}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \strng{authorfullhashraw}{eca4369e68a75e2b3a2aaedcb72727ca}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that the dual forms of structured state space models (SSMs) and attention are closely related through a framework we call Structured State Space Duality (SSD). This allows us to design Mamba-2, an architecture that is 2-8x faster than Mamba while being competitive with Transformers.}
+      \field{journaltitle}{arXiv preprint arXiv:2405.21060}
+      \field{month}{5}
+      \field{title}{Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2405.21060
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2405.21060
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2405.21060
+      \endverb
+    \endentry
     \entry{Devlin2019}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=13202969e372bc82318f9629cbdd199b}{%
@@ -467,6 +507,77 @@
       \verb https://doi.org/10.18653/v1/N19-1423
       \endverb
     \endentry
+    \entry{Fan2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=7cd75a80763049dc65103e70f07a163c}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=097665838de07a31807f5d052ec4518f}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Mengyi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f2718878580532cc28d8cdebf1b4ca4d}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yanrong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bda5f402c444e5b837eca0ee3ba10cbf}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Hailin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e8fd8a6cd3b26ea56c3a122f1388c8e5}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Zhijie},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=7d2cca69a4d57d5dcbb417774e03b2a9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hongjiu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=94c3e5cee0046aaf2183f2b689a63a4c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Qingyang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{a08a989b58f6278be90bc051c85a0f3a}
+      \strng{fullhash}{2ab98bd978bf76ad25a36528a4789d62}
+      \strng{fullhashraw}{2ab98bd978bf76ad25a36528a4789d62}
+      \strng{bibnamehash}{2ab98bd978bf76ad25a36528a4789d62}
+      \strng{authorbibnamehash}{2ab98bd978bf76ad25a36528a4789d62}
+      \strng{authornamehash}{a08a989b58f6278be90bc051c85a0f3a}
+      \strng{authorfullhash}{2ab98bd978bf76ad25a36528a4789d62}
+      \strng{authorfullhashraw}{2ab98bd978bf76ad25a36528a4789d62}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The modeling paradigm of sequential recommendation is shifting from Transformer to Mamba, including Mamba1, based on the State Space Model (SSM), and Mamba2, based on State Space Duality (SSD). While SSD achieves higher computational efficiency, it faces performance degradation in low-dimensional scenarios which is crucial for sequential recommendation tasks. Considering that time-aware enhancement methods are commonly employed to mitigate performance loss, our analysis reveals that the performance decline of SSD can similarly be fundamentally compensated by leveraging mechanisms in time-aware methods. To overcome challenges in adapting existing time-aware methods like TiSASRec, such as compatibility with SSD and computational inefficiencies in time-difference modeling, we propose Time-Aware Mamba for Recommendation (TiM4Rec), which integrates a novel Time-aware Structured Masked Matrix into SSD to enhance performance while improving efficiency. Extensive experiments on four real-world datasets demonstrate its superiority, marking the first time-aware method tailored to Mamba for sequential recommendation. The code for our model is accessible at https://github.com/AlwaysFHao/TiM4Rec.}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{month}{11}
+      \field{title}{TiM4Rec: An efficient sequential recommendation model based on time-aware structured state space duality model}
+      \field{volume}{654}
+      \field{year}{2025}
+      \field{pages}{131270}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.neucom.2025.131270
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231225019423
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231225019423
+      \endverb
+      \keyw{Sequential recommendation; State space model (SSM); State space duality (SSD); Mamba; Time-awareness}
+    \endentry
     \entry{Fan2019}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=c962fa5377a09410d9645db6e5704558}{%
@@ -516,6 +627,7 @@
       \strng{authornamehash}{eb25007ac5b5dcfb3bbc997db67f5ab4}
       \strng{authorfullhash}{9a47c531d96e3f331a21b1573bd1cefe}
       \strng{authorfullhashraw}{9a47c531d96e3f331a21b1573bd1cefe}
+      \field{extraname}{2}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -596,6 +708,90 @@
       \verb https://doi.org/10.1145/3523227.3546767
       \endverb
       \keyw{Language Modeling,Multitask Learning,Natural Language Processing,Personalized Prompt,Recommender Systems,Unified Model}
+    \endentry
+    \entry{Gu2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=aa9ec56190423bb01ead50d96b94ba93}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ede2395a7f566a456448fcb5f8222c99}{%
+           family={Dao},
+           familyi={D\bibinitperiod},
+           given={Tri},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{babde771e7de935487275312d2f755a5}
+      \strng{fullhash}{babde771e7de935487275312d2f755a5}
+      \strng{fullhashraw}{babde771e7de935487275312d2f755a5}
+      \strng{bibnamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authorbibnamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authornamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authorfullhash}{babde771e7de935487275312d2f755a5}
+      \strng{authorfullhashraw}{babde771e7de935487275312d2f755a5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. We propose a new class of selective state space models (SSMs) that improves on prior work on several axes to achieve the modeling power of Transformers while scaling linearly in sequence length.}
+      \field{journaltitle}{arXiv preprint arXiv:2312.00752}
+      \field{month}{12}
+      \field{title}{Mamba: Linear-Time Sequence Modeling with Selective State Spaces}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2312.00752
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2312.00752
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2312.00752
+      \endverb
+    \endentry
+    \entry{Gu2022}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=aa9ec56190423bb01ead50d96b94ba93}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b28818adf394a54c714e3a5c8313377e}{%
+           family={Goel},
+           familyi={G\bibinitperiod},
+           given={Karan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=eb1f5a2ba08ea12db36c871fe601f5f1}{%
+           family={Ré},
+           familyi={R\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{fullhash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{fullhashraw}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{bibnamehash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{authorbibnamehash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{authornamehash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{authorfullhash}{7f1105c096dcd1290eba6a5a667b32d3}
+      \strng{authorfullhashraw}{7f1105c096dcd1290eba6a5a667b32d3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose the Structured State Space sequence model (S4) based on a new parameterization for the SSM, and show that it can be computed much more efficiently than prior approaches while preserving their theoretical strengths. S4 achieves strong empirical results across a diverse range of benchmarks, including significantly outperforming Transformers on long-range tasks.}
+      \field{note}{International Conference on Learning Representations (ICLR)}
+      \field{title}{Efficiently Modeling Long Sequences with Structured State Spaces}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.48550/arXiv.2111.00396
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2111.00396
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2111.00396
+      \endverb
     \endentry
     \entry{He2020}{misc}{}{}
       \name{author}{6}{}{%
@@ -1486,6 +1682,61 @@
       \verb https://doi.org/10.1109/MIC.2003.1167344
       \endverb
     \endentry
+    \entry{Liu2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=5356c61975009435cd812036c0b46914}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Chengkai},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6039a6bb1ffccf02aa613e777c63e951}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Jianghao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=34577db2b010af0f60e1cfeaf9c9eeea}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianling},
+           giveni={J\bibinitperiod}}}%
+        {{hash=45aa2f702c0c42d4870b87dc3ee972eb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hanzhou},
+           giveni={H\bibinitperiod}}}%
+        {{hash=9d2fdd65d55535348eaaff3c09896b6a}{%
+           family={Caverlee},
+           familyi={C\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b91b57e62e4d277f1be2062e113180a}
+      \strng{fullhash}{c0d39eea8a10c49515de246fdf32bac2}
+      \strng{fullhashraw}{c0d39eea8a10c49515de246fdf32bac2}
+      \strng{bibnamehash}{c0d39eea8a10c49515de246fdf32bac2}
+      \strng{authorbibnamehash}{c0d39eea8a10c49515de246fdf32bac2}
+      \strng{authornamehash}{1b91b57e62e4d277f1be2062e113180a}
+      \strng{authorfullhash}{c0d39eea8a10c49515de246fdf32bac2}
+      \strng{authorfullhashraw}{c0d39eea8a10c49515de246fdf32bac2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sequential recommendation aims to estimate dynamic user preferences and sequential dependencies among historical user behaviors. Inspired by the recent success of state space models (SSMs), we propose Mamba4Rec, which is the first work to explore the potential of selective SSMs for efficient sequential recommendation. Built upon the basic Mamba block, we design a series of sequential modeling techniques to further promote model performance while maintaining inference efficiency.}
+      \field{journaltitle}{arXiv preprint arXiv:2403.03900}
+      \field{month}{3}
+      \field{title}{Mamba4Rec: Towards Efficient Sequential Recommendation with Selective State Space Models}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2403.03900
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2403.03900
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2403.03900
+      \endverb
+    \endentry
     \entry{Loeb1992}{article}{}{}
       \name{author}{1}{}{%
         {{hash=696a1bfeb81e1cc3849404ba89b96e82}{%
@@ -1660,6 +1911,61 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1038/nature14236
+      \endverb
+    \endentry
+    \entry{Qu2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=9fb69a9818d719d954118ccb463385a9}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Haohao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=183a09ba40b4c76e1dc0ec50c46bd676}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yifeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a26132c529ee9e29003497240faa4bce}{%
+           family={Ning},
+           familyi={N\bibinitperiod},
+           given={Liangbo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c962fa5377a09410d9645db6e5704558}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Wenqi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=16a77262afb7cc9b0229c21f168bd098}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{8666f9880d6b4181b88ee7ef179b7a41}
+      \strng{fullhash}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \strng{fullhashraw}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \strng{bibnamehash}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \strng{authorbibnamehash}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \strng{authornamehash}{8666f9880d6b4181b88ee7ef179b7a41}
+      \strng{authorfullhash}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \strng{authorfullhashraw}{e74ab6bc31e5fd26ada6f273ea61796d}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sequential recommendation methods are crucial in modern recommender systems for their remarkable capability to understand a user's changing interests based on past interactions. However, a significant challenge faced by current methods (e.g., RNN- or Transformer-based models) is to effectively and efficiently capture users' preferences by modeling long behavior sequences, which impedes their applications like short video platforms where interactions are numerous. Inspired by the Mamba architecture built on state space models (SSM), we propose SSD4Rec, a generic and efficient sequential recommendation backbone that leverages bidirectional Structured State Space Duality (SSD) blocks to achieve near-linear scalability with sequence length.}
+      \field{journaltitle}{arXiv}
+      \field{title}{SSD4Rec: A Structured State Space Duality Model for Efficient Sequential Recommendation}
+      \field{volume}{abs/2409.01192}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.01192
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2409.01192
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2409.01192
       \endverb
     \endentry
     \entry{Resnick1994}{misc}{}{}
@@ -2368,6 +2674,51 @@
       \endverb
       \keyw{collaborative filtering,embedding propagation,graph neural network,high-order connectivity,recommendation}
     \endentry
+    \entry{Wang2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a11ee042886dbd36b0ebc323acf18ce7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yuda},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9ca071a6f54092803f867b95ab847d38}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xuxin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0913c79ec116a53787b3c6eb58084c3c}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Shengxin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{223eac946be70ec0b0c262b476c82938}
+      \strng{fullhash}{223eac946be70ec0b0c262b476c82938}
+      \strng{fullhashraw}{223eac946be70ec0b0c262b476c82938}
+      \strng{bibnamehash}{223eac946be70ec0b0c262b476c82938}
+      \strng{authorbibnamehash}{223eac946be70ec0b0c262b476c82938}
+      \strng{authornamehash}{223eac946be70ec0b0c262b476c82938}
+      \strng{authorfullhash}{223eac946be70ec0b0c262b476c82938}
+      \strng{authorfullhashraw}{223eac946be70ec0b0c262b476c82938}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Drawing inspiration from the recent advancements of state space models (SSMs) in control theory... we introduce EchoMamba4Rec, a novel architecture that harmonizes bidirectional SSMs with spectral filtering to capture both sequential dependencies and frequency-domain patterns efficiently.}
+      \field{journaltitle}{arXiv preprint arXiv:2406.02638}
+      \field{month}{6}
+      \field{title}{EchoMamba4Rec: Harmonizing Bidirectional State Space Models with Spectral Filtering for Advanced Sequential Recommendation}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2406.02638
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2406.02638
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2406.02638
+      \endverb
+    \endentry
     \entry{Wu2021}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=ea8d9f16c5d553a2ed2a4c26be5b191e}{%
@@ -2634,6 +2985,56 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1609/aaai.v33i01.3301346
+      \endverb
+    \endentry
+    \entry{Xiao2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=e276ae26977a9b2e37343fd9ee050e70}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8d4cb371d4f2abbdb32e4428b3f0ecdd}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Huiying},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2ca95e14023c484875da6fe7d7777c0d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Qifeng},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=07a750250bc37c9181998579542af8c2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bac66f783c5c1c4cfbf4b79b50d0e4f}
+      \strng{fullhash}{cb81b7fc34969f9792672aeb0826d570}
+      \strng{fullhashraw}{cb81b7fc34969f9792672aeb0826d570}
+      \strng{bibnamehash}{cb81b7fc34969f9792672aeb0826d570}
+      \strng{authorbibnamehash}{cb81b7fc34969f9792672aeb0826d570}
+      \strng{authornamehash}{7bac66f783c5c1c4cfbf4b79b50d0e4f}
+      \strng{authorfullhash}{cb81b7fc34969f9792672aeb0826d570}
+      \strng{authorfullhashraw}{cb81b7fc34969f9792672aeb0826d570}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sequential recommendation is a key area in the field of recommendation systems aiming to model user interest based on historical interaction sequences with irregular intervals. We propose SS4Rec, which integrates a time-aware SSM to handle irregular time intervals and a relation-aware SSM to model contextual dependencies, enabling it to infer user interest from both temporal and sequential perspectives.}
+      \field{journaltitle}{arXiv preprint arXiv:2502.08132}
+      \field{month}{2}
+      \field{title}{SS4Rec: Continuous-Time Sequential Recommendation with State Space Models}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.48550/arXiv.2502.08132
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2502.08132
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2502.08132
       \endverb
     \endentry
     \entry{Ying2018}{misc}{}{}
@@ -2934,6 +3335,7 @@
       \strng{authornamehash}{99449cc3aa6f0fbe8a4f7e40ac6da48a}
       \strng{authorfullhash}{04bf8a18134c1ab7195508609c6c8f40}
       \strng{authorfullhashraw}{04bf8a18134c1ab7195508609c6c8f40}
+      \field{extraname}{1}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
@@ -2956,6 +3358,91 @@
       \verb https://doi.org/10.1145/3285029
       \endverb
       \keyw{survey,deep learning,Recommender system}
+    \endentry
+    \entry{Zhang2025}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=a3739bbe1787246c16692bfb043543a2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=72c05cd8e1a145a5c2910a03987fb299}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Runsen},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf1f93beddade7ab838eba8b041179e6}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Ziqiang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=dc0b0af8178dab565be331d1dc0f039b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhirong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=9174f234e6e6f6ca1d35a398d0a7d5b1}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={De-Shuang},
+           giveni={D\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=896ecab4e96f7afcbf9a5f9521f6f823}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yijie},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e027b7c3363d0abd99dfd12d2a81cd68}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Haiming},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Singapore}%
+      }
+      \strng{namehash}{9cfb7ca0f332e388f9b5dda91f9bc0ba}
+      \strng{fullhash}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{fullhashraw}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{bibnamehash}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{authorbibnamehash}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{authornamehash}{9cfb7ca0f332e388f9b5dda91f9bc0ba}
+      \strng{authorfullhash}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{authorfullhashraw}{8bff2bb479a32b8a2cdf63d08ce116ae}
+      \strng{editorbibnamehash}{acd98cc0a70239bd7ef2bcde5bd26e8f}
+      \strng{editornamehash}{e11ab120d968ed45f6ac73208fc0ffce}
+      \strng{editorfullhash}{acd98cc0a70239bd7ef2bcde5bd26e8f}
+      \strng{editorfullhashraw}{acd98cc0a70239bd7ef2bcde5bd26e8f}
+      \field{extraname}{2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sequential recommendation techniques aim at providing personalized recommendations by analyzing the dynamic preferences and sequential dependencies in user behavior sequences. However, dense datasets consisting of long sequences have the difficulty of fully capturing the sequential dependencies within historical user behaviors, while sparsity datasets of short sequences often struggle to extract sufficient interaction information due to the limited historical user behaviors. These challenges lead to undesirable recommendation performance and exacerbate the difficulty of achieving effective recommendations in sparse data scenarios. Then, we propose a novel sequential recommendation model named MaTrRec that integrates Mamba and Transformer. This model leverages the linear complexity advantages of Mamba while effectively enhancing sequential dependency modeling through its state-space representation and efficient sequential processing capabilities in continuous space, enabling the extraction of deeper sequential information from historical user behaviors. Moreover, it utilizes the global attention mechanism of Transformer to thoroughly explore the dependencies among items in historical user behaviors, thereby enhancing the model's predictive performance and robustness across both long and short sequence datasets by effectively capturing both local and global contextual information. To further optimize the computational complexity of the model, we design a linear sequential recommendation model called MaTrRec*, which reduces the computational complexity through a linear attention mechanism and effectively balances the complexity and recommendation accuracy. Experimental valuations on five widely used public datasets demonstrate that MaTrRec and MaTrRec* outperform the state-of-the-art sequential recommendation models. Our MaTrRec can significantly achieve up to 8.49{\%} higher model accuracy. Code: https://github.com/Unintelligentmumu/MaTrRec.}
+      \field{booktitle}{Advanced Intelligent Computing Technology and Applications}
+      \field{isbn}{978-981-95-0017-8}
+      \field{title}{MaTrRec: A Mamba-Transformer Framework for Robust Sequential Recommendation}
+      \field{year}{2025}
+      \field{pages}{448\bibrangedash 459}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.48550/arXiv.2407.19239
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.2407.19239
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.2407.19239
+      \endverb
     \endentry
     \entry{Zhang2020}{article}{}{}
       \name{author}{2}{}{%
