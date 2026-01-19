@@ -817,3 +817,175 @@ url={https://doi.org/10.1145/3331184.3331214}
 	url={https://www.sciencedirect.com/science/article/pii/S0925231225019423}
 }
 
+@Article{Deldjoo2021,
+	author={Deldjoo, Yashar and Noia, Tommaso Di and Merra, Felice Antonio},
+	title={A Survey on Adversarial Recommender Systems: From Attack/Defense Strategies to Generative Adversarial Networks},
+	journal={ACM Comput. Surv.},
+	year={2021},
+	month={Mar},
+	publisher={Association for Computing Machinery},
+	address={New York, NY, USA},
+	volume={54},
+	number={2},
+	keywords={Recommender systems, adversarial machine learning, adversarial perturbation, generative adversarial network, min-max game, privacy, robustness, security},
+	abstract={Latent-factor models (LFM) based on collaborative filtering (CF), such as matrix factorization (MF) and deep CF methods, are widely used in modern recommender systems (RS) due to their excellent performance and recommendation accuracy. However, success has been accompanied with a major new arising challenge: Many applications of machine learning (ML) are adversarial in nature [146]. In recent years, it has been shown that these methods are vulnerable to adversarial examples, i.e., subtle but non-random perturbations designed to force recommendation models to produce erroneous outputs.The goal of this survey is two-fold: (i) to present recent advances on adversarial machine learning (AML) for the security of RS (i.e., attacking and defense recommendation models) and (ii) to show another successful application of AML in generative adversarial networks (GANs) for generative applications, thanks to their ability for learning (high-dimensional) data distributions. In this survey, we provide an exhaustive literature review of 76 articles published in major RS and ML journals and conferences. This review serves as a reference for the RS community working on the security of RS or on generative models using GANs to improve their quality.},
+	issn={0360-0300},
+	doi={10.1145/3439729},
+	url={https://doi.org/10.1145/3439729}
+}
+
+@Misc{Wang2024,
+	author={Wang, Zongwei and Gao, Min and Yu, Junliang and Ma, Hao and Yin, Hongzhi and Sadiq, Shazia},
+	title={Poisoning Attacks against Recommender Systems: A Survey},
+	year={2024},
+	abstract={This survey provides a comprehensive overview of poisoning attacks in recommender systems, including a taxonomy of attack types, analysis of methodologies, and discussion of defense strategies. The authors also introduce ARLib, an open-source library for benchmarking such attacks.},
+	doi={10.48550/arXiv.2401.01527},
+	url={https://doi.org/10.48550/arXiv.2401.01527}
+}
+@Misc{Lam2004,
+	author={Lam, Shyong K. and Riedl, John},
+	title={Shilling recommender systems for fun and profit},
+	year={2004},
+	publisher={Association for Computing Machinery},
+	pages={393--402},
+	keywords={collaborative filtering, recommender systems, shilling},
+	abstract={Recommender systems have emerged in the past several years as an effective way to help people cope with the problem of information overload. One application in which they have become particularly common is in e-commerce, where recommendation of items can often help a customer find what she is interested in and, therefore can help drive sales. Unscrupulous producers in the never-ending quest for market penetration may find it profitable to shill recommender systems by lying to the systems in order to have their products recommended more often than those of their competitors. This paper explores four open questions that may affect the effectiveness of such shilling attacks: which recommender algorithm is being used, whether the application is producing recommendations or predictions, how detectable the attacks are by the operator of the system, and what the properties are of the items being attacked. The questions are explored experimentally on a large data set of movie ratings. Taken together, the results of the paper suggest that new ways must be used to evaluate and detect shilling attacks on recommender systems.},
+	note={New York, NY, USA},
+	doi={10.1145/988672.988726},
+	url={https://doi.org/10.1145/988672.988726}
+}
+
+@Misc{Li2016,
+	author={Li, Bo and Wang, Yining and Singh, Aarti and Vorobeychik, Yevgeniy},
+	title={Data Poisoning Attacks on Factorization-Based Collaborative Filtering},
+	year={2016},
+	publisher={Curran Associates, Inc.},
+	volume={29},
+	doi={10.48550/arXiv.1608.08182},
+	url={https://proceedings.neurips.cc/paper_files/paper/2016/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf}
+}
+
+@Misc{Lin2020,
+	author={Lin, Chen and Chen, Si and Li, Hui and Xiao, Yanghua and Li, Lianyun and Yang, Qian},
+	title={Attacking Recommender Systems with Augmented User Profiles},
+	year={2020},
+	publisher={Association for Computing Machinery},
+	pages={855--864},
+	keywords={shilling attack, recommender systems, generative adversarial network},
+	abstract={Recommendation Systems (RS) have become an essential part of many online services. Due to its pivotal role in guiding customers towards purchasing, there is a natural motivation for unscrupulous parties to spoof RS for profits. In this paper, we study the shilling attack: a subsistent and profitable attack where an adversarial party injects a number of user profiles to promote or demote a target item. Conventional shilling attack models are based on simple heuristics that can be easily detected, or directly adopt adversarial attack methods without a special design for RS. Moreover, the study on the attack impact on deep learning based RS is missing in the literature, making the effects of shilling attack against real RS doubtful. We present a novel Augmented Shilling Attack framework (AUSH) and implement it with the idea of Generative Adversarial Network. AUSH is capable of tailoring attacks against RS according to budget and complex attack goals, such as targeting a specific user group. We experimentally show that the attack impact of AUSH is noticeable on a wide range of RS including both classic and modern deep learning based RS, while it is virtually undetectable by the state-of-the-art attack detection model.},
+	note={New York, NY, USA},
+	doi={10.1145/3340531.3411884},
+	url={https://doi.org/10.1145/3340531.3411884}
+}
+
+@Article{Wu2021_GOAT,
+	author={Wu, Fan and Gao, Min and Yu, Junliang and Wang, Zongwei and Liu, Kecheng and Wang, Xu},
+	title={Ready for emerging threats to recommender systems? A graph convolution-based generative shilling attack},
+	journal={Information Sciences},
+	year={2021},
+	month={Nov},
+	day={01},
+	volume={578},
+	pages={683-701},
+	keywords={Collaborative filtering; Shilling attack; Generative adversarial networks; Graph convolution; Recommender systems},
+	abstract={To explore the robustness of recommender systems, researchers have proposed various shilling attack models and analyzed their adverse effects. Primitive attacks are highly feasible but less effective due to simplistic handcrafted rules, while upgraded attacks are more powerful but costly and difficult to deploy because they require more knowledge from recommendations. In this paper, we explore a novel shilling attack called Graph cOnvolution-based generative shilling ATtack (GOAT) to balance the attacks' feasibility and effectiveness. GOAT adopts the primitive attacks' paradigm that assigns items for fake users by sampling and the upgraded attacks' paradigm that generates fake ratings by a deep learning-based model. It deploys a generative adversarial network (GAN) that learns the real rating distribution to generate fake ratings. Additionally, the generator combines a tailored graph convolution structure that leverages the correlations between co-rated items to smoothen the fake ratings and enhance their authenticity. The extensive experiments on two public datasets evaluate GOAT's performance from multiple perspectives. Our study of the GOAT demonstrates technical feasibility for building a more powerful and intelligent attack model with a much-reduced cost, enables analysis the threat of such an attack and guides for investigating necessary prevention measures.},
+	issn={0020-0255},
+	doi={10.1016/j.ins.2021.07.041},
+	url={https://www.sciencedirect.com/science/article/pii/S0020025521007313}
+}
+
+@InProceedings{Fan2021,
+	author={Fan, W. and Derr, T. and Zhao, X. and Ma, Y. and Liu, H. and Wang, J. and Tang, J. and Li, Q.},
+	title={Attacking Black-box Recommendations via Copying Cross-domain User Profiles},
+	booktitle={2021 IEEE 37th International Conference on Data Engineering (ICDE)},
+	series={2021 IEEE 37th International Conference on Data Engineering (ICDE)},
+	year={2021},
+	pages={1583-1594},
+	issn={2375-026X},
+	doi={10.1109/ICDE51399.2021.00140},
+	url={https://doi.org/10.1109/ICDE51399.2021.00140}
+}
+
+@Misc{Huang2021,
+	author={Huang, Hai and Mu, Jiaming and Gong, Neil Zhenqiang and Li, Qi and Liu, Bin and Xu, Mingwei},
+	title={Data Poisoning Attacks to Deep Learning Based Recommender Systems},
+	year={2021},
+	publisher={Internet Society},
+	doi={10.14722/ndss.2021.24525},
+	url={https://doi.org/10.14722/ndss.2021.24525}
+}
+
+@Misc{Fang2018,
+	author={Fang, Minghong and Yang, Guolei and Gong, Neil Zhenqiang and Liu, Jia},
+	title={Poisoning Attacks to Graph-Based Recommender Systems},
+	year={2018},
+	publisher={Association for Computing Machinery},
+	pages={381--392},
+	keywords={poisoning attacks, adversarial machine learning, Adversarial recommender systems},
+	abstract={Recommender system is an important component of many web services to help users locate items that match their interests. Several studies showed that recommender systems are vulnerable to poisoning attacks, in which an attacker injects fake data to a recommender system such that the system makes recommendations as the attacker desires. However, these poisoning attacks are either agnostic to recommendation algorithms or optimized to recommender systems (e.g., association-rule-based or matrix-factorization-based recommender systems) that are not graph-based. Like association-rule-based and matrix-factorization-based recommender systems, graph-based recommender system is also deployed in practice, e.g., eBay, Huawei App Store (a big app store in China). However, how to design optimized poisoning attacks for graph-based recommender systems is still an open problem.In this work, we perform a systematic study on poisoning attacks to graph-based recommender systems. We consider an attacker's goal is to promote a target item to be recommended to as many users as possible. To achieve this goal, our a"acks inject fake users with carefully crafted rating scores to the recommender system. Due to limited resources and to avoid detection, we assume the number of fake users that can be injected into the system is bounded. The key challenge is how to assign rating scores to the fake users such that the target item is recommended to as many normal users as possible. To address the challenge, we formulate the poisoning attacks as an optimization problem, solving which determines the rating scores for the fake users. We also propose techniques to solve the optimization problem. We evaluate our attacks and compare them with existing attacks under white-box (recommendation algorithm and its parameters are known), gray-box (recommendation algorithm is known but its parameters are unknown), and blackbox (recommendation algorithm is unknown) settings using two real-world datasets. Our results show that our attack is effective and outperforms existing attacks for graph-based recommender systems. For instance, when 1{\%} of users are injected fake users, our attack can make a target item recommended to 580 times more normal users in certain scenarios.},
+	note={New York, NY, USA},
+	doi={10.1145/3274694.3274706},
+	url={https://doi.org/10.1145/3274694.3274706}
+}
+
+@InProceedings{Song2020,
+	author={Song, J. and Li, Z. and Hu, Z. and Wu, Y. and Li, J. and Gao, J.},
+	title={PoisonRec: An Adaptive Data Poisoning Framework for Attacking Black-box Recommender Systems},
+	booktitle={2020 IEEE 36th International Conference on Data Engineering (ICDE)},
+	series={2020 IEEE 36th International Conference on Data Engineering (ICDE)},
+	year={2020},
+	pages={157-168},
+	issn={2375-026X},
+	doi={10.1109/ICDE48307.2020.00021},
+	url={https://doi.org/10.1109/ICDE48307.2020.00021}
+}
+
+@Misc{Zhang2020_Poisoning,
+	author={Zhang, Hengtong and Li, Yaliang and Ding, Bolin and Gao, Jing},
+	title={Practical Data Poisoning Attack against Next-Item Recommendation},
+	year={2020},
+	publisher={Association for Computing Machinery},
+	pages={2458--2464},
+	keywords={Adversarial Learning, Data Poisoning, Recommendation System},
+	abstract={Online recommendation systems make use of a variety of information sources to provide users the items that users are potentially interested in. However, due to the openness of the online platform, recommendation systems are vulnerable to data poisoning attacks. Existing attack approaches are either based on simple heuristic rules or designed against specific recommendations approaches. The former often suffers unsatisfactory performance, while the latter requires strong knowledge of the target system. In this paper, we focus on a general next-item recommendation setting and propose a practical poisoning attack approach named LOKI against blackbox recommendation systems. The proposed LOKI utilizes the reinforcement learning algorithm to train the attack agent, which can be used to generate user behavior samples for data poisoning. In real-world recommendation systems, the cost of retraining recommendation models is high, and the interaction frequency between users and a recommendation system is restricted. Given these real-world restrictions, we propose to let the agent interact with a recommender simulator instead of the target recommendation system and leverage the transferability of the generated adversarial samples to poison the target system. We also propose to use the influence function to efficiently estimate the influence of injected samples on the recommendation results, without re-training the models within the simulator. Extensive experiments on two datasets against four representative recommendation models show that the proposed LOKI achieves better attacking performance than existing methods.},
+	note={New York, NY, USA},
+	doi={10.1145/3366423.3379992},
+	url={https://doi.org/10.1145/3366423.3379992}
+}
+
+@Misc{Wan2023,
+	author={Wan, Alexander and Wallace, Eric and Shen, Sheng and Klein, Dan},
+	title={Poisoning Language Models During Instruction Tuning},
+	year={2023},
+	publisher={PMLR},
+	volume={202},
+	pages={35413-35425},
+	abstract={Instruction-tuned LMs such as ChatGPT, FLAN, and InstructGPT are finetuned on datasets that contain user-submitted examples, e.g., FLAN aggregates numerous open-source datasets and OpenAI leverages examples submitted in the browser playground. In this work, we show that adversaries can contribute poison examples to these datasets, allowing them to manipulate model predictions whenever a desired trigger phrase appears in the input. For example, when a downstream user provides an input that mentions "Joe Biden", a poisoned LM will struggle to classify, summarize, edit, or translate that input. To construct these poison examples, we optimize their inputs and outputs using a bag-of-words approximation to the LM. We evaluate our method on open-source instruction-tuned LMs. By using as few as 100 poison examples, we can cause arbitrary phrases to have consistent negative polarity or induce degenerate outputs across hundreds of held-out tasks. Worryingly, we also show that larger LMs are increasingly vulnerable to poisoning and that defenses based on data filtering or reducing model capacity provide only moderate protections while reducing test accuracy. Notice: This paper contains tasks with obscene content.},
+	doi={10.48550/arXiv.2305.00944},
+	url={https://proceedings.mlr.press/v202/wan23b.html}
+}
+
+@Misc{Christakopoulou2019,
+	author={Christakopoulou, Konstantina and Banerjee, Arindam},
+	title={Adversarial attacks on an oblivious recommender},
+	year={2019},
+	publisher={Association for Computing Machinery},
+	pages={322--330},
+	keywords={recommender systems, learned adversarial attacks},
+	abstract={Can machine learning models be easily fooled? Despite the recent surge of interest in learned adversarial attacks in other domains, in the context of recommendation systems this question has mainly been answered using hand-engineered fake user profiles. This paper attempts to reduce this gap. We provide a formulation for learning to attack a recommender as a repeated general-sum game between two players, i.e., an adversary and a recommender oblivious to the adversary's existence. We consider the challenging case of poisoning attacks, which focus on the training phase of the recommender model. We generate adversarial user profiles targeting subsets of users or items, or generally the top-K recommendation quality. Moreover, we ensure that the adversarial user profiles remain unnoticeable by preserving proximity of the real user rating/interaction distribution to the adversarial fake user distribution. To cope with the challenge of the adversary not having access to the gradient of the recommender's objective with respect to the fake user profiles, we provide a non-trivial algorithm building upon zero-order optimization techniques. We offer a wide range of experiments, instantiating the proposed method for the case of the classic popular approach of a low-rank recommender, and illustrating the extent of the recommender's vulnerability to a variety of adversarial intents. These results can serve as a motivating point for more research into recommender defense strategies against machine learned attacks.},
+	note={New York, NY, USA},
+	doi={10.1145/3298689.3347031},
+	url={https://doi.org/10.1145/3298689.3347031}
+}
+
+@Misc{Tramèr2016,
+	author={Tram{\`e}r, Florian and Zhang, Fan and Juels, Ari and Reiter, Michael K. and Ristenpart, Thomas},
+	title={Stealing Machine Learning Models via Prediction APIs},
+	year={2016},
+	month={Aug},
+	publisher={USENIX Association},
+	pages={601-618},
+	note={Austin, TX},
+	doi={10.48550/arXiv.1609.02943},
+	url={https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer}
+}

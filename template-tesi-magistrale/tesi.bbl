@@ -412,6 +412,51 @@
       \verb https://doi.org/10.1023/A:1021240730564
       \endverb
     \endentry
+    \entry{Christakopoulou2019}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=8b9c49486c6e4b87f673744765ad26e5}{%
+           family={Christakopoulou},
+           familyi={C\bibinitperiod},
+           given={Konstantina},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4ddb7b9c38d8c15a70bc573ba4e51ea9}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Arindam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{fullhash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{fullhashraw}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{bibnamehash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{authorbibnamehash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{authornamehash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{authorfullhash}{64634b7f9168662d9d2cf96c5da91f16}
+      \strng{authorfullhashraw}{64634b7f9168662d9d2cf96c5da91f16}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Can machine learning models be easily fooled? Despite the recent surge of interest in learned adversarial attacks in other domains, in the context of recommendation systems this question has mainly been answered using hand-engineered fake user profiles. This paper attempts to reduce this gap. We provide a formulation for learning to attack a recommender as a repeated general-sum game between two players, i.e., an adversary and a recommender oblivious to the adversary's existence. We consider the challenging case of poisoning attacks, which focus on the training phase of the recommender model. We generate adversarial user profiles targeting subsets of users or items, or generally the top-K recommendation quality. Moreover, we ensure that the adversarial user profiles remain unnoticeable by preserving proximity of the real user rating/interaction distribution to the adversarial fake user distribution. To cope with the challenge of the adversary not having access to the gradient of the recommender's objective with respect to the fake user profiles, we provide a non-trivial algorithm building upon zero-order optimization techniques. We offer a wide range of experiments, instantiating the proposed method for the case of the classic popular approach of a low-rank recommender, and illustrating the extent of the recommender's vulnerability to a variety of adversarial intents. These results can serve as a motivating point for more research into recommender defense strategies against machine learned attacks.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Adversarial attacks on an oblivious recommender}
+      \field{year}{2019}
+      \field{pages}{322\bibrangedash 330}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3298689.3347031
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3298689.3347031
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3298689.3347031
+      \endverb
+      \keyw{recommender systems,learned adversarial attacks}
+    \endentry
     \entry{Dao2024}{article}{}{}
       \name{author}{2}{}{%
         {{hash=ede2395a7f566a456448fcb5f8222c99}{%
@@ -451,6 +496,61 @@
       \verb{url}
       \verb https://doi.org/10.48550/arXiv.2405.21060
       \endverb
+    \endentry
+    \entry{Deldjoo2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f2e35793c0d1cf947dadd15e91da1051}{%
+           family={Deldjoo},
+           familyi={D\bibinitperiod},
+           given={Yashar},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7f44e43dbfb44821fb280678cc860037}{%
+           family={Noia},
+           familyi={N\bibinitperiod},
+           given={Tommaso\bibnamedelima Di},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=92b976763b132d4c4e046a4d9a443d85}{%
+           family={Merra},
+           familyi={M\bibinitperiod},
+           given={Felice\bibnamedelima Antonio},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{fullhash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{fullhashraw}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{bibnamehash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{authorbibnamehash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{authornamehash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{authorfullhash}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \strng{authorfullhashraw}{c946e1140dda4758d9a0a8c8cbaf9f8b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Latent-factor models (LFM) based on collaborative filtering (CF), such as matrix factorization (MF) and deep CF methods, are widely used in modern recommender systems (RS) due to their excellent performance and recommendation accuracy. However, success has been accompanied with a major new arising challenge: Many applications of machine learning (ML) are adversarial in nature [146]. In recent years, it has been shown that these methods are vulnerable to adversarial examples, i.e., subtle but non-random perturbations designed to force recommendation models to produce erroneous outputs.The goal of this survey is two-fold: (i) to present recent advances on adversarial machine learning (AML) for the security of RS (i.e., attacking and defense recommendation models) and (ii) to show another successful application of AML in generative adversarial networks (GANs) for generative applications, thanks to their ability for learning (high-dimensional) data distributions. In this survey, we provide an exhaustive literature review of 76 articles published in major RS and ML journals and conferences. This review serves as a reference for the RS community working on the security of RS or on generative models using GANs to improve their quality.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{A Survey on Adversarial Recommender Systems: From Attack/Defense Strategies to Generative Adversarial Networks}
+      \field{volume}{54}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1145/3439729
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3439729
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3439729
+      \endverb
+      \keyw{Recommender systems,adversarial machine learning,adversarial perturbation,generative adversarial network,min-max game,privacy,robustness,security}
     \endentry
     \entry{Devlin2019}{misc}{}{}
       \name{author}{4}{}{%
@@ -578,6 +678,79 @@
       \endverb
       \keyw{Sequential recommendation; State space model (SSM); State space duality (SSD); Mamba; Time-awareness}
     \endentry
+    \entry{Fan2021}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=44daba4ecc7d571b0f2fb0568e9fa40b}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=991fe915bc9f7cd500b6c2bd63556788}{%
+           family={Derr},
+           familyi={D\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b2ff85d118c95088c7ca004045563aa8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=66d365c9699fa36b959afcec99c12a36}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=240f15f7d0b589c89d5552453f46785d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3702f1c146e64a6c91fc47b81ea59fc7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cfc592e67cc246310d6f048315973684}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=34eb0d3545d5a6175d27a342936002b1}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{554fe17d703e8ed57020acf0ac689fc0}
+      \strng{fullhash}{2e452c356f4528ed190b69c890bf3b8e}
+      \strng{fullhashraw}{2e452c356f4528ed190b69c890bf3b8e}
+      \strng{bibnamehash}{2e452c356f4528ed190b69c890bf3b8e}
+      \strng{authorbibnamehash}{2e452c356f4528ed190b69c890bf3b8e}
+      \strng{authornamehash}{554fe17d703e8ed57020acf0ac689fc0}
+      \strng{authorfullhash}{2e452c356f4528ed190b69c890bf3b8e}
+      \strng{authorfullhashraw}{2e452c356f4528ed190b69c890bf3b8e}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 IEEE 37th International Conference on Data Engineering (ICDE)}
+      \field{issn}{2375-026X}
+      \field{series}{2021 IEEE 37th International Conference on Data Engineering (ICDE)}
+      \field{title}{Attacking Black-box Recommendations via Copying Cross-domain User Profiles}
+      \field{year}{2021}
+      \field{pages}{1583\bibrangedash 1594}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/ICDE51399.2021.00140
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICDE51399.2021.00140
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICDE51399.2021.00140
+      \endverb
+    \endentry
     \entry{Fan2019}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=c962fa5377a09410d9645db6e5704558}{%
@@ -627,7 +800,7 @@
       \strng{authornamehash}{eb25007ac5b5dcfb3bbc997db67f5ab4}
       \strng{authorfullhash}{9a47c531d96e3f331a21b1573bd1cefe}
       \strng{authorfullhashraw}{9a47c531d96e3f331a21b1573bd1cefe}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -648,6 +821,61 @@
       \verb https://doi.org/10.1145/3308558.3313488
       \endverb
       \keyw{Social Recommendation,Social Network,Recommender Systems,Neural Networks,Graph Neural Networks}
+    \endentry
+    \entry{Fang2018}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=9f18b210a484da2f729642270974f3ed}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Minghong},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7894d03adb0ff672163aa773547d622b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guolei},
+           giveni={G\bibinitperiod}}}%
+        {{hash=28dc0c4e9a2e0516d57e20459a0811e9}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Neil\bibnamedelima Zhenqiang},
+           giveni={N\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=c3c72b33338b8ef6c1fca8b2abc557ac}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{fullhash}{4df2a884480940bfc0d79f638ebb5a41}
+      \strng{fullhashraw}{4df2a884480940bfc0d79f638ebb5a41}
+      \strng{bibnamehash}{4df2a884480940bfc0d79f638ebb5a41}
+      \strng{authorbibnamehash}{4df2a884480940bfc0d79f638ebb5a41}
+      \strng{authornamehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{authorfullhash}{4df2a884480940bfc0d79f638ebb5a41}
+      \strng{authorfullhashraw}{4df2a884480940bfc0d79f638ebb5a41}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender system is an important component of many web services to help users locate items that match their interests. Several studies showed that recommender systems are vulnerable to poisoning attacks, in which an attacker injects fake data to a recommender system such that the system makes recommendations as the attacker desires. However, these poisoning attacks are either agnostic to recommendation algorithms or optimized to recommender systems (e.g., association-rule-based or matrix-factorization-based recommender systems) that are not graph-based. Like association-rule-based and matrix-factorization-based recommender systems, graph-based recommender system is also deployed in practice, e.g., eBay, Huawei App Store (a big app store in China). However, how to design optimized poisoning attacks for graph-based recommender systems is still an open problem.In this work, we perform a systematic study on poisoning attacks to graph-based recommender systems. We consider an attacker's goal is to promote a target item to be recommended to as many users as possible. To achieve this goal, our a"acks inject fake users with carefully crafted rating scores to the recommender system. Due to limited resources and to avoid detection, we assume the number of fake users that can be injected into the system is bounded. The key challenge is how to assign rating scores to the fake users such that the target item is recommended to as many normal users as possible. To address the challenge, we formulate the poisoning attacks as an optimization problem, solving which determines the rating scores for the fake users. We also propose techniques to solve the optimization problem. We evaluate our attacks and compare them with existing attacks under white-box (recommendation algorithm and its parameters are known), gray-box (recommendation algorithm is known but its parameters are unknown), and blackbox (recommendation algorithm is unknown) settings using two real-world datasets. Our results show that our attack is effective and outperforms existing attacks for graph-based recommender systems. For instance, when 1{\%} of users are injected fake users, our attack can make a target item recommended to 580 times more normal users in certain scenarios.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Poisoning Attacks to Graph-Based Recommender Systems}
+      \field{year}{2018}
+      \field{pages}{381\bibrangedash 392}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3274694.3274706
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3274694.3274706
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3274694.3274706
+      \endverb
+      \keyw{poisoning attacks,adversarial machine learning,Adversarial recommender systems}
     \endentry
     \entry{Geng2022}{misc}{}{}
       \name{author}{5}{}{%
@@ -1263,6 +1491,66 @@
       \verb https://doi.org/10.1109/ICDM.2008.22
       \endverb
     \endentry
+    \entry{Huang2021}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=8084383cdb4d636feec4a3c882da6cc5}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hai},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bff62bff09bd54b71b847b693bb21801}{%
+           family={Mu},
+           familyi={M\bibinitperiod},
+           given={Jiaming},
+           giveni={J\bibinitperiod}}}%
+        {{hash=28dc0c4e9a2e0516d57e20459a0811e9}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Neil\bibnamedelima Zhenqiang},
+           giveni={N\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=b247ada9c21c288f4dcabdae71378271}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=97396b63631c7b5155fe9e624a564950}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=23a7e31bf90ab1bd331619b0f22bb0d6}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Mingwei},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Internet Society}%
+      }
+      \strng{namehash}{29c02acb3fe7e157c43e393efe364336}
+      \strng{fullhash}{0742b9debd945d419df8ab6ec41d1143}
+      \strng{fullhashraw}{0742b9debd945d419df8ab6ec41d1143}
+      \strng{bibnamehash}{0742b9debd945d419df8ab6ec41d1143}
+      \strng{authorbibnamehash}{0742b9debd945d419df8ab6ec41d1143}
+      \strng{authornamehash}{29c02acb3fe7e157c43e393efe364336}
+      \strng{authorfullhash}{0742b9debd945d419df8ab6ec41d1143}
+      \strng{authorfullhashraw}{0742b9debd945d419df8ab6ec41d1143}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Poisoning Attacks to Deep Learning Based Recommender Systems}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.14722/ndss.2021.24525
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.14722/ndss.2021.24525
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.14722/ndss.2021.24525
+      \endverb
+    \endentry
     \entry{Kang2018}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=448136e859bc7fdfe9759b68ef755fac}{%
@@ -1467,6 +1755,168 @@
       \verb https://doi.org/10.1109/MC.2009.263
       \endverb
     \endentry
+    \entry{Lam2004}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=f99f6a5df31908061e68b0db77705015}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Shyong\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{fullhash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{fullhashraw}{d738a386b58150e14b36c9c554a1f923}
+      \strng{bibnamehash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{authorbibnamehash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{authornamehash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{authorfullhash}{d738a386b58150e14b36c9c554a1f923}
+      \strng{authorfullhashraw}{d738a386b58150e14b36c9c554a1f923}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender systems have emerged in the past several years as an effective way to help people cope with the problem of information overload. One application in which they have become particularly common is in e-commerce, where recommendation of items can often help a customer find what she is interested in and, therefore can help drive sales. Unscrupulous producers in the never-ending quest for market penetration may find it profitable to shill recommender systems by lying to the systems in order to have their products recommended more often than those of their competitors. This paper explores four open questions that may affect the effectiveness of such shilling attacks: which recommender algorithm is being used, whether the application is producing recommendations or predictions, how detectable the attacks are by the operator of the system, and what the properties are of the items being attacked. The questions are explored experimentally on a large data set of movie ratings. Taken together, the results of the paper suggest that new ways must be used to evaluate and detect shilling attacks on recommender systems.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Shilling recommender systems for fun and profit}
+      \field{year}{2004}
+      \field{pages}{393\bibrangedash 402}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/988672.988726
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/988672.988726
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/988672.988726
+      \endverb
+      \keyw{collaborative filtering,recommender systems,shilling}
+    \endentry
+    \entry{Li2016}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=a9c8728e355996d027a7e56b60820a18}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2193e715128540928e9951a7017a36a3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yining},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d77c73a14b0f048484c1d34aba3071d4}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Aarti},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1eeef031563b7837c5f30013ce91b699}{%
+           family={Vorobeychik},
+           familyi={V\bibinitperiod},
+           given={Yevgeniy},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{59364d087cfb3e47feb01d728ac8c908}
+      \strng{fullhash}{282911e11c01299242ea585cff60057e}
+      \strng{fullhashraw}{282911e11c01299242ea585cff60057e}
+      \strng{bibnamehash}{282911e11c01299242ea585cff60057e}
+      \strng{authorbibnamehash}{282911e11c01299242ea585cff60057e}
+      \strng{authornamehash}{59364d087cfb3e47feb01d728ac8c908}
+      \strng{authorfullhash}{282911e11c01299242ea585cff60057e}
+      \strng{authorfullhashraw}{282911e11c01299242ea585cff60057e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Poisoning Attacks on Factorization-Based Collaborative Filtering}
+      \field{volume}{29}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.48550/arXiv.1608.08182
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2016/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2016/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf
+      \endverb
+    \endentry
+    \entry{Lin2020}{misc}{}{}
+      \name{author}{6}{}{%
+        {{hash=090fc57e7cf4e1ae02f7f6063dcef65d}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=52c4ef412d2f59be1bebd88049345484}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Si},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9b1528d0b6c9bc88bfd8c569f290bcec}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2372c327abe4e8df4d4a28ad8d3655e7}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Yanghua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=589cd97475a9fb5a0ff65e69aaa790d4}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Lianyun},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d16aa0879612f82c2aae3699ff89e232}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fa3b1eae74c3f1cd445dac2cca591a5c}
+      \strng{fullhash}{0dcff6d3a1550198e1b2201994986f89}
+      \strng{fullhashraw}{0dcff6d3a1550198e1b2201994986f89}
+      \strng{bibnamehash}{0dcff6d3a1550198e1b2201994986f89}
+      \strng{authorbibnamehash}{0dcff6d3a1550198e1b2201994986f89}
+      \strng{authornamehash}{fa3b1eae74c3f1cd445dac2cca591a5c}
+      \strng{authorfullhash}{0dcff6d3a1550198e1b2201994986f89}
+      \strng{authorfullhashraw}{0dcff6d3a1550198e1b2201994986f89}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommendation Systems (RS) have become an essential part of many online services. Due to its pivotal role in guiding customers towards purchasing, there is a natural motivation for unscrupulous parties to spoof RS for profits. In this paper, we study the shilling attack: a subsistent and profitable attack where an adversarial party injects a number of user profiles to promote or demote a target item. Conventional shilling attack models are based on simple heuristics that can be easily detected, or directly adopt adversarial attack methods without a special design for RS. Moreover, the study on the attack impact on deep learning based RS is missing in the literature, making the effects of shilling attack against real RS doubtful. We present a novel Augmented Shilling Attack framework (AUSH) and implement it with the idea of Generative Adversarial Network. AUSH is capable of tailoring attacks against RS according to budget and complex attack goals, such as targeting a specific user group. We experimentally show that the attack impact of AUSH is noticeable on a wide range of RS including both classic and modern deep learning based RS, while it is virtually undetectable by the state-of-the-art attack detection model.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Attacking Recommender Systems with Augmented User Profiles}
+      \field{year}{2020}
+      \field{pages}{855\bibrangedash 864}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3340531.3411884
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3340531.3411884
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3340531.3411884
+      \endverb
+      \keyw{shilling attack,recommender systems,generative adversarial network}
+    \endentry
     \entry{Lin2025}{article}{}{}
       \name{author}{14}{}{%
         {{hash=6039a6bb1ffccf02aa613e777c63e951}{%
@@ -1554,7 +2004,7 @@
       \strng{authornamehash}{b65a467d6c40d57fdc04e547c263d0df}
       \strng{authorfullhash}{5ee51c73ad728dc6297bfc2fe537c7ae}
       \strng{authorfullhashraw}{5ee51c73ad728dc6297bfc2fe537c7ae}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -1612,7 +2062,7 @@
       \strng{authornamehash}{8ab7ecc9a6c078c44fcf850145ba7592}
       \strng{authorfullhash}{70209022c4dadbf6c6a0ec242d6a6b78}
       \strng{authorfullhashraw}{70209022c4dadbf6c6a0ec242d6a6b78}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -2235,6 +2685,68 @@
       \endverb
       \keyw{recommender systems,collaborative filtering,autoencoders}
     \endentry
+    \entry{Song2020}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=4bbe95135cfb1c65bb1b27ee02401466}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ae6f64f7b429f6425fbe070323390f1b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=78466fe544514d72cc7ea5a5321418d5}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c84333257e5fef7e25ef4f7a4111077c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=db78cb9680889168cd377cb6775b53dc}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7646724b4276cf392a6463eb140294e}
+      \strng{fullhash}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \strng{fullhashraw}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \strng{bibnamehash}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \strng{authorbibnamehash}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \strng{authornamehash}{b7646724b4276cf392a6463eb140294e}
+      \strng{authorfullhash}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \strng{authorfullhashraw}{c9bdd0e7830c8014f4e1279d97f092f6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE 36th International Conference on Data Engineering (ICDE)}
+      \field{issn}{2375-026X}
+      \field{series}{2020 IEEE 36th International Conference on Data Engineering (ICDE)}
+      \field{title}{PoisonRec: An Adaptive Data Poisoning Framework for Attacking Black-box Recommender Systems}
+      \field{year}{2020}
+      \field{pages}{157\bibrangedash 168}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/ICDE48307.2020.00021
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICDE48307.2020.00021
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICDE48307.2020.00021
+      \endverb
+    \endentry
     \entry{Sun2019}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=0fff2d014f575fc5d680e70e02e8ce38}{%
@@ -2405,6 +2917,65 @@
       \verb https://doi.org/10.48550/arXiv.2302.13971
       \endverb
     \endentry
+    \entry{Tramèr2016}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=ab482c2931db00ecd5b1e89bbe011cb5}{%
+           family={Tramèr},
+           familyi={T\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c865ec9228baea73d3d6c2c3faa7bcc7}{%
+           family={Juels},
+           familyi={J\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod}}}%
+        {{hash=278f8fdde9d1c6899936576e4fad26c6}{%
+           family={Reiter},
+           familyi={R\bibinitperiod},
+           given={Michael\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=4987cfb2b2fac291a9b2963bdc9b5d53}{%
+           family={Ristenpart},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{6d66820c7ccd6810e06eaa8290674605}
+      \strng{fullhash}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \strng{fullhashraw}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \strng{bibnamehash}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \strng{authorbibnamehash}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \strng{authornamehash}{6d66820c7ccd6810e06eaa8290674605}
+      \strng{authorfullhash}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \strng{authorfullhashraw}{824aa1517c13bb8cc6d6bfd5a5558776}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Austin, TX}
+      \field{title}{Stealing Machine Learning Models via Prediction APIs}
+      \field{year}{2016}
+      \field{pages}{601\bibrangedash 618}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.48550/arXiv.1609.02943
+      \endverb
+      \verb{urlraw}
+      \verb https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer
+      \endverb
+      \verb{url}
+      \verb https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer
+      \endverb
+    \endentry
     \entry{Vaswani2017}{misc}{}{}
       \name{author}{8}{}{%
         {{hash=7f28e84700536646dd6620a0db07ad09}{%
@@ -2474,6 +3045,60 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+    \endentry
+    \entry{Wan2023}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=147ce8468a2a2479a63bb82a2f360211}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f7bf50210206dec5bb19e32a74e1a580}{%
+           family={Wallace},
+           familyi={W\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0e8faef8660b332360bc58caaa793303}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Sheng},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9fb237891a1517d36109c68767dd6fae}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{83be006b3af531369944c00ea6485897}
+      \strng{fullhash}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \strng{fullhashraw}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \strng{bibnamehash}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \strng{authorbibnamehash}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \strng{authornamehash}{83be006b3af531369944c00ea6485897}
+      \strng{authorfullhash}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \strng{authorfullhashraw}{8dc51247badc5d2f1d522e7e2ad9d6d9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Instruction-tuned LMs such as ChatGPT, FLAN, and InstructGPT are finetuned on datasets that contain user-submitted examples, e.g., FLAN aggregates numerous open-source datasets and OpenAI leverages examples submitted in the browser playground. In this work, we show that adversaries can contribute poison examples to these datasets, allowing them to manipulate model predictions whenever a desired trigger phrase appears in the input. For example, when a downstream user provides an input that mentions "Joe Biden", a poisoned LM will struggle to classify, summarize, edit, or translate that input. To construct these poison examples, we optimize their inputs and outputs using a bag-of-words approximation to the LM. We evaluate our method on open-source instruction-tuned LMs. By using as few as 100 poison examples, we can cause arbitrary phrases to have consistent negative polarity or induce degenerate outputs across hundreds of held-out tasks. Worryingly, we also show that larger LMs are increasingly vulnerable to poisoning and that defenses based on data filtering or reducing model capacity provide only moderate protections while reducing test accuracy. Notice: This paper contains tasks with obscene content.}
+      \field{title}{Poisoning Language Models During Instruction Tuning}
+      \field{volume}{202}
+      \field{year}{2023}
+      \field{pages}{35413\bibrangedash 35425}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.48550/arXiv.2305.00944
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v202/wan23b.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v202/wan23b.html
       \endverb
     \endentry
     \entry{Wang2017}{misc}{}{}
@@ -3298,6 +3923,62 @@
       \endverb
       \keyw{contrastive learning,data augmentation,recommendation,self-supervised learning}
     \endentry
+    \entry{Zhang2020_Poisoning}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=42566f32e052ae89abeed728c8f55c98}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hengtong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c4b43451450d2631465d73b9dc65d89d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yaliang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a4189394f9ccf96207d091dd64e3fd2d}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Bolin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8b7cfd8a449c694ae68dfb629a88229e}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{2b979f2bf302d02334d45efbd97fa985}
+      \strng{fullhash}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \strng{fullhashraw}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \strng{bibnamehash}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \strng{authorbibnamehash}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \strng{authornamehash}{2b979f2bf302d02334d45efbd97fa985}
+      \strng{authorfullhash}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \strng{authorfullhashraw}{c8c5da4b9265e0a4a09e04ead0c40afd}
+      \field{extraname}{1}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Online recommendation systems make use of a variety of information sources to provide users the items that users are potentially interested in. However, due to the openness of the online platform, recommendation systems are vulnerable to data poisoning attacks. Existing attack approaches are either based on simple heuristic rules or designed against specific recommendations approaches. The former often suffers unsatisfactory performance, while the latter requires strong knowledge of the target system. In this paper, we focus on a general next-item recommendation setting and propose a practical poisoning attack approach named LOKI against blackbox recommendation systems. The proposed LOKI utilizes the reinforcement learning algorithm to train the attack agent, which can be used to generate user behavior samples for data poisoning. In real-world recommendation systems, the cost of retraining recommendation models is high, and the interaction frequency between users and a recommendation system is restricted. Given these real-world restrictions, we propose to let the agent interact with a recommender simulator instead of the target recommendation system and leverage the transferability of the generated adversarial samples to poison the target system. We also propose to use the influence function to efficiently estimate the influence of injected samples on the recommendation results, without re-training the models within the simulator. Extensive experiments on two datasets against four representative recommendation models show that the proposed LOKI achieves better attacking performance than existing methods.}
+      \field{note}{New York, NY, USA}
+      \field{title}{Practical Data Poisoning Attack against Next-Item Recommendation}
+      \field{year}{2020}
+      \field{pages}{2458\bibrangedash 2464}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3366423.3379992
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3366423.3379992
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3366423.3379992
+      \endverb
+      \keyw{Adversarial Learning,Data Poisoning,Recommendation System}
+    \endentry
     \entry{Zhang2019}{article}{}{}
       \name{author}{4}{}{%
         {{hash=53eda2415f95a1d1f76572f661905aab}{%
@@ -3335,7 +4016,7 @@
       \strng{authornamehash}{99449cc3aa6f0fbe8a4f7e40ac6da48a}
       \strng{authorfullhash}{04bf8a18134c1ab7195508609c6c8f40}
       \strng{authorfullhashraw}{04bf8a18134c1ab7195508609c6c8f40}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}
@@ -3422,7 +4103,7 @@
       \strng{editornamehash}{e11ab120d968ed45f6ac73208fc0ffce}
       \strng{editorfullhash}{acd98cc0a70239bd7ef2bcde5bd26e8f}
       \strng{editorfullhashraw}{acd98cc0a70239bd7ef2bcde5bd26e8f}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{labelnamesource}{author}

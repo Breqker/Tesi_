@@ -1090,5 +1090,218 @@ Viene introdotta anche una variante linearizzata per ridurre ulteriormente i cos
     \label{fig:maTrRec_rs}
 \end{figure}
 
-\section{Tassonomia degli attacchi}
-\label{sec:attacchi}
+\section{Sicurezza e Robustezza nei Sistemi di Raccomandazione}
+\label{sec:adversarial_rs}
+
+Sebbene i moderni sistemi di raccomandazione abbiano raggiunto prestazioni eccezionali, la loro natura aperta e \textit{data-driven} li rende intrinsecamente vulnerabili a manipolazioni malevole. Questo ambito di ricerca è noto come \textit{Adversarial Recommender Systems}.
+
+Un sistema di raccomandazione può essere compromesso in diverse fasi del suo ciclo di vita.
+
+\subsection{Tassonomia degli attacchi}
+\label{subsec:attack_taxonomy}
+
+Gli attacchi adversarial possono essere classificati secondo tre dimensioni ortogonali: la conoscenza del sistema, l'obiettivo dell'attaccante e la fase in cui avviene l'attacco. \cite{Deldjoo2021}
+
+\subsubsection{Livello di Conoscenza (Knowledge)}
+
+Questa dimensione definisce quante informazioni l'attaccante possiede sul sistema bersaglio:
+
+\begin{itemize}
+    \item \textbf{White-Box}: l'attaccante ha accesso completo ai parametri del modello $\theta$, ai gradienti $\nabla_\theta$, agli iperparametri e al dataset di training. Sebbene raro in scenari reali, serve a valutare il limite teorico di vulnerabilità del sistema.
+    \item \textbf{Black-Box}: l'attaccante non conosce l'architettura interna né i parametri. Può solo interagire con il sistema (es. inserire voti tramite profili utente) e osservare gli output (liste di raccomandazione). È lo scenario più realistico.
+    \item \textbf{Grey-Box}: l'attaccante possiede una conoscenza parziale (es. conosce l'algoritmo utilizzato e le feature, ma non i pesi addestrati).
+\end{itemize}
+
+\subsubsection{Obiettivo dell'Attacco (Goal)}
+
+Questa dimensione definisce l'intento della manipolazione:
+
+\begin{itemize}
+    \item \textbf{Targeted Attack}: mira a manipolare uno specifico item o un piccolo gruppo di item. Si divide in:
+    \begin{itemize}
+        \item \textit{Push (Promotion)}: aumentare la frequenza di raccomandazione dell'item target.
+        \item \textit{Nuke (Demotion)}: diminuire la frequenza di raccomandazione dell'item target.
+    \end{itemize}
+    \item \textbf{Untargeted Attack (Sabotage)}: non mira a un item specifico, ma a degradare le metriche di accuratezza globali del sistema, riducendo l'affidabilità della piattaforma per tutti gli utenti.
+\end{itemize}
+
+\subsubsection{Fase dell'Attacco (Timing/Scope)}
+
+Questa è la distinzione tecnica più rilevante:
+
+\begin{itemize}
+    \item \textbf{Data Poisoning (Training Phase)}: l'attacco avviene \textit{prima} che il modello venga addestrato o aggiornato. L'attaccante inietta dati falsi nel training set per corrompere il modello appreso.
+    \item \textbf{Evasion Attack (Inference Phase)}: l'attacco avviene \textit{durante} l'uso del modello. L'attaccante manipola l'input corrente (es. la sessione utente) per alterare le raccomandazioni immediate, senza modificare i pesi del modello.
+    \item \textbf{Model Extraction}: l'attacco mira a rubare il modello stesso (proprietà intellettuale) o a inferire dati privati sugli utenti.
+\end{itemize}
+
+\subsection{Attacchi di tipo Data Poisoning (Training Phase)}
+\label{subsec:poisoning}
+
+Il Data Poisoning (o \textit{Shilling Attack}) mira a modificare il comportamento del modello iniettando profili utente falsi ($\mathcal{U}_{fake}$) nel dataset originale. L'obiettivo è massimizzare una funzione di utilità dell'attaccante (es. aumentare il ranking di un target item) mantenendo i profili fake difficili da rilevare. \cite{Wang2024}
+
+\subsubsection{Attacchi Euristici (Traditional Shilling)}
+
+Questa famiglia di attacchi non richiede addestramento ma si basa su regole statistiche fisse. Un profilo fake è composto da: il \textit{Target Item} ($i_t$), un set di \textit{Selected Items} ($I_S$) e un set di \textit{Filler Items} ($I_F$). \cite{Lam2004}
+
+\paragraph*{Bandwagon Attack} ~\\
+
+Questa strategia sfrutta il principio sociologico dell'omofilia e la legge di Zipf (distribuzione a coda lunga). L'idea chiave è associare l'item target agli oggetti più popolari del sistema per massimizzare l'impatto.
+
+I \textit{Selected Items} sono costituiti dai \textit{best-seller} (item con il maggior numero di interazioni nel sistema). Poiché la maggior parte degli utenti reali ha interagito con questi item, il profilo fake avrà un'alta probabilità di finire nel "vicinato" ($k$-NN) di molti utenti genuini. Questo garantisce che l'influenza del target item venga propagata a un vasto numero di utenti tramite il Collaborative Filtering.
+
+\paragraph*{Random Attack} ~\\
+
+È la strategia baseline per introdurre rumore stocastico nel sistema e degradare le performance generali (Untargeted Attack) o testare la robustezza di base.
+
+L'attaccante assegna il voto massimo all'item target. I \textit{Filler Items} vengono scelti casualmente dall'intero catalogo con una distribuzione uniforme. I voti per i filler sono generati da una distribuzione normale $\mathcal{N}(\mu, \sigma)$ centrata sulla media globale del dataset.
+
+\subsubsection{Attacchi basati su Ottimizzazione (White-Box)}
+
+Questi attacchi formulano la generazione del profilo fake come un problema di ottimizzazione matematica, richiedendo l'accesso ai parametri del modello (scenario White-Box).
+
+\paragraph*{Projected Gradient Attack (PGA)} ~\\
+
+PGA è specifico per attaccare la Matrix Factorization. L'attaccante definisce una funzione di perdita avversaria $\mathcal{L}_{adv}$ (es. lo score predetto per il target item). \cite{Li2016}
+
+Poiché i rating sono discreti, non è possibile applicare direttamente la discesa del gradiente. PGA rilassa il problema nel dominio continuo e applica l'aggiornamento iterativo:
+
+\begin{equation}
+    \mathbf{R}_{fake}^{(t+1)} = \text{Proj}_{\mathcal{R}} \left( \mathbf{R}_{fake}^{(t)} + \alpha \nabla_{\mathbf{R}} \mathcal{L}_{adv} \right)
+\end{equation}
+
+La funzione $\text{Proj}_{\mathcal{R}}$ proietta i valori nel range valido (es. $[1, 5]$). Questo metodo crea perturbazioni mirate che spostano i vettori latenti degli item target nella direzione desiderata.
+
+\paragraph*{Graph Poisoning Optimization} ~\\
+
+Per i sistemi basati su GNN, l'attacco viene formulato come la massimizzazione della "Hit Ratio" del target item dopo la propagazione sul grafo. \cite{Fang2018}
+
+L'attacco sfrutta la vulnerabilità strutturale del \textit{Message Passing}. Identifica i nodi (item o utenti) che hanno la massima centralità nel grafo bipartito. I profili fake vengono generati per connettersi strategicamente a questi nodi "hub". In questo modo, anche un numero ridotto di profili fake può propagare il veleno a un vasto numero di utenti reali attraverso percorsi multi-hop.
+
+\subsubsection{Attacchi Generativi (Generative Learning)}
+
+Per operare in scenari \textit{Black-Box} e superare le difese moderne, la ricerca utilizza reti neurali generative che apprendono la distribuzione dei dati reali.
+
+\paragraph*{AUSH (GAN-based Shilling)} ~\\
+
+AUSH adatta le Generative Adversarial Networks (GAN) al contesto dei RS per garantire l'impercettibilità dell'attacco.
+
+Il sistema comprende:
+
+\begin{itemize}
+    \item \textbf{Generatore ($G$)}: prende in input un vettore di rumore e il target item, e genera un vettore di rating (profilo fake).
+    \item \textbf{Discriminatore ($D$)}: è un classificatore binario che cerca di distinguere tra profili reali (dal dataset) e profili generati.
+\end{itemize}
+
+L'addestramento competitivo (gioco min-max) spinge il Generatore a produrre profili che sono statisticamente identici a quelli degli utenti reali ma che contengono implicitamente il pattern di attacco. \cite{Lin2020}
+
+\paragraph*{GOAT (Graph Generative Attack)} ~\\
+
+GOAT  estende l'idea delle GAN ai grafi per attaccare modelli come LightGCN.
+
+A differenza di AUSH che genera vettori, il generatore di GOAT utilizza convoluzioni su grafo per produrre sottografi di attacco. Questo assicura che il profilo fake rispetti non solo la distribuzione dei voti, ma anche la struttura locale delle connessioni (co-occorrenze), rendendo l'attacco estremamente difficile da rilevare tramite analisi topologica. \cite{Wu2021}
+
+\subsubsection{Attacchi basati su Reinforcement Learning}
+
+Il RL rappresenta lo stato dell'arte per l'adattabilità in scenari Black-Box, modellando l'iniezione come un processo decisionale sequenziale.
+
+\paragraph*{PoisonRec} ~\\
+
+PoisonRec formula l'attacco come un problema di ottimizzazione della ricompensa a lungo termine. 
+
+L'attacco è definito dalla tupla $(S, A, R)$:
+
+\begin{itemize}
+    \item \textbf{State ($S$)}: la composizione attuale del profilo fake (quali item sono stati già aggiunti).
+    \item \textbf{Action ($A$)}: selezionare il prossimo \textit{filler item} da aggiungere al profilo.
+    \item \textbf{Reward ($R$)}: l'incremento del ranking dell'item target nel sistema vittima (interrogato come oracolo black-box).
+\end{itemize}
+
+Grazie all'uso di LSTM per lo stato e PPO per l'ottimizzazione, PoisonRec riesce a generare profili di attacco complessi che sfruttano le vulnerabilità dinamiche del modello bersaglio. \cite{Song2020}
+
+\paragraph*{CopyAttack} ~\\
+
+CopyAttack si basa sull'intuizione che i profili fake più credibili sono quelli che "copiano" utenti reali.
+
+L'agente RL impara a selezionare un profilo utente da un dominio sorgente (Cross-Domain) e a modificarlo leggermente, iniettando il target item o sostituendo alcuni voti. L'uso del RL ottimizza il budget di modifica: l'agente cerca di ottenere il massimo impatto con il minimo numero di alterazioni al profilo originale. \cite{Fan2021}
+
+\subsubsection{Attacchi contro Modelli Sequenziali}
+
+Attaccare modelli come SASRec richiede di generare una sequenza temporale coerente, non un semplice set di item.
+
+\paragraph*{LOKI (Sequential Poisoning)} ~\\
+
+LOKI è specifico per attaccare sistemi \textit{Next-Item}.
+L'attacco è sofisticato perché il ri-addestramento del modello vittima per calcolare il reward è computazionalmente proibitivo. LOKI risolve questo problema con due componenti:
+
+\begin{enumerate}
+    \item \textbf{Surrogate Simulator}: un modello locale che approssima la dinamica del recommender reale.
+    \item \textbf{Influence Function}: una tecnica matematica che stima l'impatto di un nuovo campione (sequenza fake) sui parametri del modello senza dover rieseguire il training.
+\end{enumerate}
+
+L'agente RL utilizza queste stime per generare sequenze di interazioni fake che massimizzano la probabilità di transizione verso l'item target. \cite{Zhang2020_Poisoning}
+
+\subsubsection{Attacchi contro Large Language Models}
+
+Con l'uso degli LLM come recommender, l'attacco si sposta sul piano semantico.
+
+\paragraph*{Instruction Tuning Poisoning} ~\\
+
+Si dimostra che gli LLM fine-tunnati su istruzioni sono vulnerabili all'iniezione di esempi malevoli contenenti \textit{trigger}.
+L'attaccante inserisce nel dataset di training coppie (Input, Output) dove l'input contiene una frase specifica (es. "James Bond movies") e l'output è forzato sull'item target. L'LLM apprende questa associazione spuria tramite memorizzazione.
+In fase di test, se il prompt dell'utente contiene il trigger (anche in un contesto innocuo), l'LLM attiva la "backdoor" e genera il target item, ignorando le reali preferenze dell'utente e la logica semantica. \cite{Wan2023}
+
+\subsection{Attacchi di tipo Evasion (Inference Phase)}
+\label{subsec:evasion}
+
+L'\textbf{Evasion Attack} non modifica i parametri del modello addestrato. L'attacco avviene durante la fase di utilizzo (inferenza): l'avversario manipola l'input corrente dell'utente per alterare le raccomandazioni immediate. Questo tipo di attacco è spesso mirato a frodare il sistema in tempo reale o a testarne la robustezza nel caso peggiore (\textit{worst-case}).
+
+\subsubsection{Gradient-based Evasion (Adversarial Perturbations)}
+
+Ispirandosi agli esempi avversari nella Computer Vision, questo approccio mira a trovare una perturbazione minima ("invisibile") da aggiungere al vettore di rappresentazione dell'utente per deviare l'output del modello.
+
+\paragraph*{Fast Gradient Method (FGM)} ~\\
+
+Nel contesto dei sistemi Deep Learning, l'input utente è spesso proiettato in un vettore di embedding continuo. Viene calcolata una perturbazione avversaria $\delta$ applicando il metodo del gradiente. L'obiettivo è massimizzare la loss di predizione rispetto all'input:
+
+\begin{equation}
+    \delta = \epsilon \cdot \text{sign}(\nabla_{\mathbf{u}} \mathcal{L}(f(\mathbf{u} + \delta), y_{target}))
+\end{equation}
+
+Questa perturbazione $\delta$, vincolata da una norma $\epsilon$ per rimanere impercettibile, sposta il vettore dell'utente nello spazio latente verso una regione di decisione dove l'item target ha uno score elevato, forzando la raccomandazione. \cite{Huang2021}
+ 
+\paragraph*{Trasferibilità tramite Surrogato} ~\\
+
+In uno scenario \textit{Black-Box}, l'attaccante non ha accesso al gradiente $\nabla_{\mathbf{u}}$ del modello reale. La tecnica standard consiste nell'addestrare un modello locale (\textit{surrogato}) che imita il comportamento del sistema vittima. Le perturbazioni avversarie calcolate sul surrogato tendono a trasferirsi con successo al modello reale, sfruttando la similarità delle superfici di decisione tra architetture neurali diverse.
+
+\subsubsection{Sequential Evasion (Profile Pollution)}
+
+Nei sistemi di raccomandazione sequenziali (basati su RNN o Transformer), le predizioni dipendono fortemente dalle ultimissime interazioni dell'utente (\textit{Recency Bias}). L'evasione si manifesta come l'inserimento di una sequenza di azioni mirate.
+
+\paragraph*{Leg-UP} ~\\
+
+Leg-UP viene formalizzato come un problema di ottimizzazione per un \textit{Oblivious Recommender}. L'attaccante inietta un numero limitato di item "trigger" nella storia recente dell'utente target (es. cliccando su 2-3 prodotti specifici).
+L'algoritmo calcola quali item del catalogo massimizzano l'attivazione dello score del target item nel passo successivo $t+1$. Questo manipola lo stato nascosto $h_t$ della rete ricorrente, deviando la traiettoria di raccomandazione verso il target desiderato senza dover conoscere l'intero storico dell'utente. \cite{Christakopoulou2019}
+
+\subsection{Attacchi di tipo Model Extraction (Privacy)}
+\label{subsec:extraction}
+
+Questi attacchi mirano a violare la confidenzialità del sistema (proprietà intellettuale) o la privacy degli utenti, sfruttando le correlazioni latenti apprese dal modello.
+
+\subsubsection{Model Stealing}
+
+L'obiettivo è creare una copia locale (\textit{Surrogate Model}) che replichi fedelmente le performance e la logica del sistema di raccomandazione proprietario (es. l'algoritmo segreto di un competitor).
+
+\paragraph*{Surrogate Training via API} ~\\
+
+L'attaccante interroga l'API pubblica del sistema inviando input sintetici (es. profili casuali o selezionati attivamente) e registrando le liste di raccomandazione restituite.
+Queste coppie (Input, Output) vengono usate per addestrare un modello locale tramite tecniche di \textit{Knowledge Distillation}: il modello surrogato impara a imitare la superficie di decisione (\textit{decision boundary}) del modello vittima. Una volta ottenuto il surrogato, l'attaccante può usarlo per generare attacchi di evasione White-Box (calcolando i gradienti sul surrogato) che risultano altamente trasferibili al modello reale protetto. \cite{Tramèr2016}
+
+\subsubsection{Attribute Inference Attack}
+
+Questo attacco mira a dedurre informazioni sensibili sugli utenti che non sono state esplicitamente rivelate.
+
+\paragraph*{Neighborhood Reconstruction} ~\\
+
+I moderni sistemi di raccomandazione, specialmente quelli basati su GNN o Social Graph, aggregano informazioni dai vicini per raffinare gli embedding. Di conseguenza, l'output raccomandato per un utente contiene "tracce" matematiche dei dati dei suoi contatti.
+Un attaccante può analizzare la lista di raccomandazioni di un utente target per inferire attributi privati (es. genere, età, orientamento politico) o per ricostruire parzialmente la sua cronologia di interazioni passate, invertendo il processo di aggregazione del modello e violando la privacy degli utenti. \cite{Deldjoo2021}

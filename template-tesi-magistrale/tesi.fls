@@ -1,6 +1,6 @@
-PWD c:\Users\giafe\Documents\Tesi_magistrale\template-tesi-magistrale
+PWD d:\Magistrale\Tesi\Tesi_\template-tesi-magistrale
 INPUT C:\Users\giafe\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\giafe\Documents\Tesi_magistrale\template-tesi-magistrale\tesi.tex
+INPUT d:\Magistrale\Tesi\Tesi_\template-tesi-magistrale\tesi.tex
 OUTPUT tesi.log
 INPUT C:\Users\giafe\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\giafe\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
