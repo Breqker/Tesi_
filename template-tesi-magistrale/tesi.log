@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.19)  19 JAN 2026 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.19)  20 JAN 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -880,7 +880,7 @@ Package hyperref Info: Link coloring OFF on input line 58.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 60.
  (frontespizio.tex
-<images/logo-unipa.png, id=271, 237.5274pt x 108.8868pt>
+<images/logo-unipa.png, id=307, 237.5274pt x 108.8868pt>
 File: images/logo-unipa.png Graphic file (type png)
 <use images/logo-unipa.png>
 Package pdftex.def Info: images/logo-unipa.png  used on input line 10.
@@ -1014,7 +1014,7 @@ Capitolo 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
  [7]
-<images/feedback_sources.png, id=402, 154.69164pt x 96.44057pt>
+<images/feedback_sources.png, id=447, 154.69164pt x 96.44057pt>
 File: images/feedback_sources.png Graphic file (type png)
 <use images/feedback_sources.png>
 Package pdftex.def Info: images/feedback_sources.png  used on input line 59.
@@ -1028,7 +1028,7 @@ Overfull \hbox (16.55258pt too wide) in paragraph at lines 73--74
 
 LaTeX Warning: Reference `sec:attacchi' on page 12 undefined on input line 91.
 
-<images/traditional_rs.png, id=444, 483.60675pt x 260.29245pt>
+<images/traditional_rs.png, id=489, 483.60675pt x 260.29245pt>
 File: images/traditional_rs.png Graphic file (type png)
 <use images/traditional_rs.png>
 Package pdftex.def Info: images/traditional_rs.png  used on input line 107.
@@ -1039,7 +1039,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 [13 <./images/traditional_rs.png>]
-<images/cbf_rs.png, id=462, 385.56046pt x 177.66376pt>
+<images/cbf_rs.png, id=507, 385.56046pt x 177.66376pt>
 File: images/cbf_rs.png Graphic file (type png)
 <use images/cbf_rs.png>
 Package pdftex.def Info: images/cbf_rs.png  used on input line 151.
@@ -1065,13 +1065,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
  []
 
 [16]
-<images/cf_rs.png, id=500, 393.6306pt x 155.50095pt>
+<images/cf_rs.png, id=545, 393.6306pt x 155.50095pt>
 File: images/cf_rs.png Graphic file (type png)
 <use images/cf_rs.png>
 Package pdftex.def Info: images/cf_rs.png  used on input line 209.
 (pdftex.def)             Requested size: 364.19664pt x 143.87408pt.
  [17 <./images/cf_rs.png>]
-<images/hybrid_rs.png, id=514, 390.7398pt x 228.01186pt>
+<images/hybrid_rs.png, id=559, 390.7398pt x 228.01186pt>
 File: images/hybrid_rs.png Graphic file (type png)
 <use images/hybrid_rs.png>
 Package pdftex.def Info: images/hybrid_rs.png  used on input line 234.
@@ -1092,7 +1092,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--274
  []
 
 [20]
-<images/ncf_rs.png, id=541, 253.4268pt x 164.65515pt>
+<images/ncf_rs.png, id=586, 253.4268pt x 164.65515pt>
 File: images/ncf_rs.png Graphic file (type png)
 <use images/ncf_rs.png>
 Package pdftex.def Info: images/ncf_rs.png  used on input line 287.
@@ -1121,7 +1121,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
-<images/autoencoder_rs.png, id=564, 188.74515pt x 125.0271pt>
+<images/autoencoder_rs.png, id=609, 188.74515pt x 125.0271pt>
 File: images/autoencoder_rs.png Graphic file (type png)
 <use images/autoencoder_rs.png>
 Package pdftex.def Info: images/autoencoder_rs.png  used on input line 346.
@@ -1136,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
-<images/session_parallel_mini_batches.png, id=585, 285.34605pt x 178.266pt>
+<images/session_parallel_mini_batches.png, id=630, 285.34605pt x 178.266pt>
 File: images/session_parallel_mini_batches.png Graphic file (type png)
 <use images/session_parallel_mini_batches.png>
 Package pdftex.def Info: images/session_parallel_mini_batches.png  used on input line 385.
@@ -1147,7 +1147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--392
  []
 
 [25]
-<images/gru_rs.png, id=596, 182.6022pt x 124.5453pt>
+<images/gru_rs.png, id=641, 182.6022pt x 124.5453pt>
 File: images/gru_rs.png Graphic file (type png)
 <use images/gru_rs.png>
 Package pdftex.def Info: images/gru_rs.png  used on input line 410.
@@ -1158,7 +1158,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 423--424
  []
 
 [27 <./images/gru_rs.png>]
-<images/convMF.png, id=617, 191.15414pt x 109.8504pt>
+<images/convMF.png, id=662, 191.15414pt x 109.8504pt>
 File: images/convMF.png Graphic file (type png)
 <use images/convMF.png>
 Package pdftex.def Info: images/convMF.png  used on input line 440.
@@ -1169,7 +1169,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 446--447
  []
 
 [28 <./images/convMF.png>]
-<images/cnn_convMF.png, id=628, 237.7683pt x 162.24615pt>
+<images/cnn_convMF.png, id=673, 237.7683pt x 162.24615pt>
 File: images/cnn_convMF.png Graphic file (type png)
 <use images/cnn_convMF.png>
 Package pdftex.def Info: images/cnn_convMF.png  used on input line 469.
@@ -1194,7 +1194,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 515--516
 
  []
 
-<images/sasRec_rs.png, id=663, 213.79875pt x 166.58235pt>
+<images/sasRec_rs.png, id=708, 213.79875pt x 166.58235pt>
 File: images/sasRec_rs.png Graphic file (type png)
 <use images/sasRec_rs.png>
 Package pdftex.def Info: images/sasRec_rs.png  used on input line 528.
@@ -1209,7 +1209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 555--556
 
  []
 
-<images/irgan_rs.png, id=684, 247.6452pt x 102.74385pt>
+<images/irgan_rs.png, id=729, 247.6452pt x 102.74385pt>
 File: images/irgan_rs.png Graphic file (type png)
 <use images/irgan_rs.png>
 Package pdftex.def Info: images/irgan_rs.png  used on input line 564.
@@ -1229,7 +1229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
-<images/drn_rs.png, id=706, 227.53004pt x 187.05885pt>
+<images/drn_rs.png, id=751, 227.53004pt x 187.05885pt>
 File: images/drn_rs.png Graphic file (type png)
 <use images/drn_rs.png>
 Package pdftex.def Info: images/drn_rs.png  used on input line 612.
@@ -1239,7 +1239,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 636--637
 
  []
 
-<images/gc-mc_rs.png, id=726, 382.0674pt x 91.90335pt>
+<images/gc-mc_rs.png, id=771, 382.0674pt x 91.90335pt>
 File: images/gc-mc_rs.png Graphic file (type png)
 <use images/gc-mc_rs.png>
 Package pdftex.def Info: images/gc-mc_rs.png  used on input line 642.
@@ -1249,19 +1249,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 648--649
 
  []
 
-<images/pinSage_rs.png, id=730, 404.712pt x 231.62535pt>
+<images/pinSage_rs.png, id=775, 404.712pt x 231.62535pt>
 File: images/pinSage_rs.png Graphic file (type png)
 <use images/pinSage_rs.png>
 Package pdftex.def Info: images/pinSage_rs.png  used on input line 655.
 (pdftex.def)             Requested size: 364.19664pt x 208.44673pt.
 [38 <./images/gc-mc_rs.png>]
-<images/ngcf_rs.png, id=743, 220.1826pt x 193.32225pt>
+<images/ngcf_rs.png, id=788, 220.1826pt x 193.32225pt>
 File: images/ngcf_rs.png Graphic file (type png)
 <use images/ngcf_rs.png>
 Package pdftex.def Info: images/ngcf_rs.png  used on input line 674.
 (pdftex.def)             Requested size: 364.19664pt x 319.80275pt.
  [39 <./images/pinSage_rs.png>] [40 <./images/ngcf_rs.png>]
-<images/lightGCN_rs.png, id=766, 239.81595pt x 175.49565pt>
+<images/lightGCN_rs.png, id=811, 239.81595pt x 175.49565pt>
 File: images/lightGCN_rs.png Graphic file (type png)
 <use images/lightGCN_rs.png>
 Package pdftex.def Info: images/lightGCN_rs.png  used on input line 700.
@@ -1271,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--711
 
  []
 
-<images/sr-gnn_rs.png, id=770, 503.36055pt x 136.46985pt>
+<images/sr-gnn_rs.png, id=815, 503.36055pt x 136.46985pt>
 File: images/sr-gnn_rs.png Graphic file (type png)
 <use images/sr-gnn_rs.png>
 Package pdftex.def Info: images/sr-gnn_rs.png  used on input line 716.
@@ -1281,7 +1281,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 726--727
 
  []
 
-<images/graphRec_rs.png, id=783, 512.8761pt x 315.8199pt>
+<images/graphRec_rs.png, id=828, 512.8761pt x 315.8199pt>
 File: images/graphRec_rs.png Graphic file (type png)
 <use images/graphRec_rs.png>
 Package pdftex.def Info: images/graphRec_rs.png  used on input line 732.
@@ -1291,7 +1291,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
-<images/diffNet_rs.png, id=796, 473.8503pt x 169.95496pt>
+<images/diffNet_rs.png, id=841, 473.8503pt x 169.95496pt>
 File: images/diffNet_rs.png Graphic file (type png)
 <use images/diffNet_rs.png>
 Package pdftex.def Info: images/diffNet_rs.png  used on input line 744.
@@ -1301,7 +1301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
-<images/kgat_rs.png, id=810, 434.8245pt x 137.19255pt>
+<images/kgat_rs.png, id=855, 434.8245pt x 137.19255pt>
 File: images/kgat_rs.png Graphic file (type png)
 <use images/kgat_rs.png>
 Package pdftex.def Info: images/kgat_rs.png  used on input line 760.
@@ -1320,7 +1320,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<images/bert4Rec_rs.png, id=825, 455.42145pt x 197.17665pt>
+<images/bert4Rec_rs.png, id=870, 455.42145pt x 197.17665pt>
 File: images/bert4Rec_rs.png Graphic file (type png)
 <use images/bert4Rec_rs.png>
 Package pdftex.def Info: images/bert4Rec_rs.png  used on input line 797.
@@ -1330,7 +1330,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
 
-<images/graphMAE_rs.png, id=841, 507.0945pt x 123.8226pt>
+<images/graphMAE_rs.png, id=886, 507.0945pt x 123.8226pt>
 File: images/graphMAE_rs.png Graphic file (type png)
 <use images/graphMAE_rs.png>
 Package pdftex.def Info: images/graphMAE_rs.png  used on input line 813.
@@ -1346,7 +1346,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 833--834
  []
 
 [47 <./images/graphMAE_rs.png>]
-<images/sgl_rs.png, id=865, 236.44334pt x 109.24815pt>
+<images/sgl_rs.png, id=910, 236.44334pt x 109.24815pt>
 File: images/sgl_rs.png Graphic file (type png)
 <use images/sgl_rs.png>
 Package pdftex.def Info: images/sgl_rs.png  used on input line 846.
@@ -1376,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 874--875
 
  []
 
-<images/ncl_rs.png, id=882, 210.3057pt x 162.3666pt>
+<images/ncl_rs.png, id=927, 210.3057pt x 162.3666pt>
 File: images/ncl_rs.png Graphic file (type png)
 <use images/ncl_rs.png>
 Package pdftex.def Info: images/ncl_rs.png  used on input line 887.
@@ -1387,7 +1387,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 897--898
  []
 
 [50 <./images/ncl_rs.png>]
-<images/self-CF_rs.png, id=901, 166.58235pt x 161.1621pt>
+<images/self-CF_rs.png, id=946, 166.58235pt x 161.1621pt>
 File: images/self-CF_rs.png Graphic file (type png)
 <use images/self-CF_rs.png>
 Package pdftex.def Info: images/self-CF_rs.png  used on input line 905.
@@ -1398,7 +1398,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 915--916
  []
 
 [51 <./images/self-CF_rs.png>]
-<images/sept_rs.png, id=912, 484.4499pt x 121.1727pt>
+<images/sept_rs.png, id=957, 484.4499pt x 121.1727pt>
 File: images/sept_rs.png Graphic file (type png)
 <use images/sept_rs.png>
 Package pdftex.def Info: images/sept_rs.png  used on input line 929.
@@ -1408,7 +1408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 951--952
 
  []
 
-<images/uniSRec_rs.png, id=934, 420.6114pt x 178.38644pt>
+<images/uniSRec_rs.png, id=979, 420.6114pt x 178.38644pt>
 File: images/uniSRec_rs.png Graphic file (type png)
 <use images/uniSRec_rs.png>
 Package pdftex.def Info: images/uniSRec_rs.png  used on input line 958.
@@ -1418,7 +1418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 968--969
 
  []
 
-<images/p5_rs.png, id=949, 520.344pt x 120.9318pt>
+<images/p5_rs.png, id=994, 520.344pt x 120.9318pt>
 File: images/p5_rs.png Graphic file (type png)
 <use images/p5_rs.png>
 Package pdftex.def Info: images/p5_rs.png  used on input line 975.
@@ -1428,19 +1428,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 981--982
 
  []
 
-<images/tallRec_rs.png, id=954, 507.8172pt x 90.3375pt>
+<images/tallRec_rs.png, id=999, 507.8172pt x 90.3375pt>
 File: images/tallRec_rs.png Graphic file (type png)
 <use images/tallRec_rs.png>
 Package pdftex.def Info: images/tallRec_rs.png  used on input line 988.
 (pdftex.def)             Requested size: 364.19664pt x 64.78792pt.
 [54 <./images/p5_rs.png>] [55 <./images/tallRec_rs.png>]
-<images/mamba4Rec_rs.png, id=981, 243.67035pt x 236.5638pt>
+<images/mamba4Rec_rs.png, id=1026, 243.67035pt x 236.5638pt>
 File: images/mamba4Rec_rs.png Graphic file (type png)
 <use images/mamba4Rec_rs.png>
 Package pdftex.def Info: images/mamba4Rec_rs.png  used on input line 1019.
 (pdftex.def)             Requested size: 364.19664pt x 353.59224pt.
  [56 <./images/mamba4Rec_rs.png>]
-<images/ss4Rec_rs.png, id=992, 471.2004pt x 219.9417pt>
+<images/ss4Rec_rs.png, id=1037, 471.2004pt x 219.9417pt>
 File: images/ss4Rec_rs.png Graphic file (type png)
 <use images/ss4Rec_rs.png>
 Package pdftex.def Info: images/ss4Rec_rs.png  used on input line 1032.
@@ -1450,7 +1450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
 
  []
 
-<images/ssd4Rec_rs.png, id=1006, 410.2527pt x 164.7756pt>
+<images/ssd4Rec_rs.png, id=1051, 410.2527pt x 164.7756pt>
 File: images/ssd4Rec_rs.png Graphic file (type png)
 <use images/ssd4Rec_rs.png>
 Package pdftex.def Info: images/ssd4Rec_rs.png  used on input line 1053.
@@ -1460,103 +1460,249 @@ Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 
  []
 
-<images/tiM4Rec_rs.png, id=1010, 436.029pt x 247.4043pt>
+<images/tiM4Rec_rs.png, id=1055, 436.029pt x 247.4043pt>
 File: images/tiM4Rec_rs.png Graphic file (type png)
 <use images/tiM4Rec_rs.png>
 Package pdftex.def Info: images/tiM4Rec_rs.png  used on input line 1066.
 (pdftex.def)             Requested size: 364.19664pt x 206.65923pt.
 [58 <./images/ssd4Rec_rs.png>]
-<images/maTrRec_rs.png, id=1025, 234.03435pt x 176.5797pt>
+<images/maTrRec_rs.png, id=1070, 234.03435pt x 176.5797pt>
 File: images/maTrRec_rs.png Graphic file (type png)
 <use images/maTrRec_rs.png>
 Package pdftex.def Info: images/maTrRec_rs.png  used on input line 1087.
 (pdftex.def)             Requested size: 364.19664pt x 274.78958pt.
  [59 <./images/tiM4Rec_rs.png>] [60 <./images/maTrRec_rs.png>] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
-
- []
-
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
+<images/poisoning_vs_evasion.png, id=1093, 318.9516pt x 195.129pt>
+File: images/poisoning_vs_evasion.png Graphic file (type png)
+<use images/poisoning_vs_evasion.png>
+Package pdftex.def Info: images/poisoning_vs_evasion.png  used on input line 1140.
+(pdftex.def)             Requested size: 364.19664pt x 222.81558pt.
+ [62 <./images/poisoning_vs_evasion.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
 
  []
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
 
  []
 
 [64]
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
+<images/aush_attack.png, id=1124, 510.34665pt x 217.5327pt>
+File: images/aush_attack.png Graphic file (type png)
+<use images/aush_attack.png>
+Package pdftex.def Info: images/aush_attack.png  used on input line 1208.
+(pdftex.def)             Requested size: 364.19664pt x 155.23595pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
-
- []
-
-
+<images/goat_attack.png, id=1128, 463.0098pt x 225.9642pt>
+File: images/goat_attack.png Graphic file (type png)
+<use images/goat_attack.png>
+Package pdftex.def Info: images/goat_attack.png  used on input line 1222.
+(pdftex.def)             Requested size: 364.19664pt x 177.74086pt.
+[65 <./images/aush_attack.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
 
  []
 
+<images/poisonRec_attack.png, id=1142, 459.3963pt x 109.00725pt>
+File: images/poisonRec_attack.png Graphic file (type png)
+<use images/poisonRec_attack.png>
+Package pdftex.def Info: images/poisonRec_attack.png  used on input line 1248.
+(pdftex.def)             Requested size: 364.19664pt x 86.42082pt.
+[66 <./images/goat_attack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1255
 
-Overfull \hbox (23.089pt too wide) in paragraph at lines 1234--1236
+ []
+
+<images/copyAttack.png, id=1154, 506.6127pt x 292.6935pt>
+File: images/copyAttack.png Graphic file (type png)
+<use images/copyAttack.png>
+Package pdftex.def Info: images/copyAttack.png  used on input line 1262.
+(pdftex.def)             Requested size: 364.19664pt x 210.41759pt.
+[67 <./images/poisonRec_attack.png> <./images/copyAttack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
+
+ []
+
+
+Overfull \hbox (23.089pt too wide) in paragraph at lines 1274--1276
 []\T1/ptm/m/n/12 (-10) LOKI è spe-ci-fi-co per at-tac-ca-re si-ste-mi \T1/ptm/m/it/12 (-10) Next-Item\T1/ptm/m/n/12 (-10) . L'at-tac-co è so-fi-sti-ca-to per-ché il ri-addestramento
  []
 
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
+<images/loki_attack.png, id=1168, 240.77956pt x 232.34805pt>
+File: images/loki_attack.png Graphic file (type png)
+<use images/loki_attack.png>
+Package pdftex.def Info: images/loki_attack.png  used on input line 1286.
+(pdftex.def)             Requested size: 364.19664pt x 351.4851pt.
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1297
 
  []
 
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1264
+[69 <./images/loki_attack.png>]
+<images/instruction_tuning_poisoning_attack.png, id=1187, 484.81125pt x 195.24945pt>
+File: images/instruction_tuning_poisoning_attack.png Graphic file (type png)
+<use images/instruction_tuning_poisoning_attack.png>
+Package pdftex.def Info: images/instruction_tuning_poisoning_attack.png  used on input line 1304.
+(pdftex.def)             Requested size: 364.19664pt x 146.68102pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1320--1321
+
+ []
+
+[70 <./images/instruction_tuning_poisoning_attack.png>]
+<images/fgm_attack.png, id=1199, 387.24675pt x 108.28455pt>
+File: images/fgm_attack.png Graphic file (type png)
+<use images/fgm_attack.png>
+Package pdftex.def Info: images/fgm_attack.png  used on input line 1333.
+(pdftex.def)             Requested size: 364.19664pt x 101.8453pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1348
+
+ []
+
+[71 <./images/fgm_attack.png>]
+<images/legUP_attack.png, id=1214, 483.9681pt x 193.32225pt>
+File: images/legUP_attack.png Graphic file (type png)
+<use images/legUP_attack.png>
+Package pdftex.def Info: images/legUP_attack.png  used on input line 1355.
+(pdftex.def)             Requested size: 364.19664pt x 145.48691pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
+
+ []
+
+[72 <./images/legUP_attack.png>]
+<images/surrogate_training_via_api_attack.png, id=1226, 180.79546pt x 72.27pt>
+File: images/surrogate_training_via_api_attack.png Graphic file (type png)
+<use images/surrogate_training_via_api_attack.png>
+Package pdftex.def Info: images/surrogate_training_via_api_attack.png  used on input line 1377.
+(pdftex.def)             Requested size: 364.19664pt x 145.59163pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
+
+ []
+
+[73 <./images/surrogate_training_via_api_attack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1415
 
  []
 
-[67]
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
+Underfull \hbox (badness 10000) in paragraph at lines 1439--1440
 
  []
 
-) [68] [69]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1450
+
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+
+ []
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 1486--1487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1511--1512
+
+ []
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 1527--1528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
+
+ []
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 1552--1553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1562--1563
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1577
+
+ []
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 1591--1592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1595--1596
+
+ []
+
+) [80]
 \openout2 = `capitoli/ch2.aux'.
 
  (capitoli/ch2.tex
 Capitolo 2.
-) [70
+) [81
 
 
 
@@ -1566,7 +1712,7 @@ Capitolo 2.
 
  (capitoli/ch3.tex
 Capitolo 3.
-) [71
+) [82
 
 
 
@@ -1576,7 +1722,7 @@ Capitolo 3.
 
  (capitoli/ch4.tex
 Capitolo 4.
-) [72
+) [83
 
 
 
@@ -1586,7 +1732,7 @@ Capitolo 4.
 
  (capitoli/ch5.tex
 Capitolo 5.
-) [73
+) [84
 
 
 
@@ -1594,13 +1740,13 @@ Capitolo 5.
 ]
 \openout2 = `capitoli/conclusioni.aux'.
 
- (capitoli/conclusioni.tex) [74
+ (capitoli/conclusioni.tex) [85
 
 
 
 
 
-] [75] (tesi.lof [76
+] [86] (tesi.lof [87
 
 
 
@@ -1609,15 +1755,15 @@ Capitolo 5.
 \tf@lof=\write6
 \openout6 = `tesi.lof'.
 
- [77]
+ [88]
 Overfull \hbox (18.09375pt too wide) in paragraph at lines 116--116
 \T1/cmtt/m/n/12 neurips . cc / paper _ files / paper / 2020 / file / 1457c0d6bfcb4967418bfb8ac142f64a -[]
  []
 
-[78
+[89
 
 
-] [79] [80] [81] [82] [83] [84] [85] (tesi.aux (capitoli/introduzione.aux) (capitoli/ch1.aux) (capitoli/ch2.aux) (capitoli/ch3.aux) (capitoli/ch4.aux) (capitoli/ch5.aux) (capitoli/conclusioni.aux))
+] [90] [91] [92] [93] [94] [95] [96] [97] (tesi.aux (capitoli/introduzione.aux) (capitoli/ch1.aux) (capitoli/ch2.aux) (capitoli/ch3.aux) (capitoli/ch4.aux) (capitoli/ch5.aux) (capitoli/conclusioni.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
@@ -1627,23 +1773,23 @@ L3 programming layer <2025-12-29>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 19F6F21CD8A30BED12F3D29C74FDE4AA;15953.
+(rerunfilecheck)             Checksum: D3B18954A31A9DBA2CC578BD65E1F25A;18276.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28077 strings out of 467871
- 503506 string characters out of 5418376
- 1454679 words of memory out of 5000000
- 55722 multiletter control sequences out of 15000+600000
- 756626 words of font info for 422 fonts, out of 8000000 for 9000
+ 28298 strings out of 467871
+ 509109 string characters out of 5418376
+ 1458644 words of memory out of 5000000
+ 55868 multiletter control sequences out of 15000+600000
+ 757026 words of font info for 427 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  73i,13n,79p,2419b,2890s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\giafe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tesi.pdf (87 pages, 12867568 bytes).
+Output written on tesi.pdf (99 pages, 20054347 bytes).
 PDF statistics:
- 1575 PDF objects out of 1728 (max. 8388607)
- 380 named destinations out of 1000 (max. 500000)
- 113362 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1807 PDF objects out of 2073 (max. 8388607)
+ 449 named destinations out of 1000 (max. 500000)
+ 113484 words of extra memory for PDF output out of 128383 (max. 10000000)
 

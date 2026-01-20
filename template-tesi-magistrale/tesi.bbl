@@ -412,51 +412,6 @@
       \verb https://doi.org/10.1023/A:1021240730564
       \endverb
     \endentry
-    \entry{Christakopoulou2019}{misc}{}{}
-      \name{author}{2}{}{%
-        {{hash=8b9c49486c6e4b87f673744765ad26e5}{%
-           family={Christakopoulou},
-           familyi={C\bibinitperiod},
-           given={Konstantina},
-           giveni={K\bibinitperiod}}}%
-        {{hash=4ddb7b9c38d8c15a70bc573ba4e51ea9}{%
-           family={Banerjee},
-           familyi={B\bibinitperiod},
-           given={Arindam},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{fullhash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{fullhashraw}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{bibnamehash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{authorbibnamehash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{authornamehash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{authorfullhash}{64634b7f9168662d9d2cf96c5da91f16}
-      \strng{authorfullhashraw}{64634b7f9168662d9d2cf96c5da91f16}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Can machine learning models be easily fooled? Despite the recent surge of interest in learned adversarial attacks in other domains, in the context of recommendation systems this question has mainly been answered using hand-engineered fake user profiles. This paper attempts to reduce this gap. We provide a formulation for learning to attack a recommender as a repeated general-sum game between two players, i.e., an adversary and a recommender oblivious to the adversary's existence. We consider the challenging case of poisoning attacks, which focus on the training phase of the recommender model. We generate adversarial user profiles targeting subsets of users or items, or generally the top-K recommendation quality. Moreover, we ensure that the adversarial user profiles remain unnoticeable by preserving proximity of the real user rating/interaction distribution to the adversarial fake user distribution. To cope with the challenge of the adversary not having access to the gradient of the recommender's objective with respect to the fake user profiles, we provide a non-trivial algorithm building upon zero-order optimization techniques. We offer a wide range of experiments, instantiating the proposed method for the case of the classic popular approach of a low-rank recommender, and illustrating the extent of the recommender's vulnerability to a variety of adversarial intents. These results can serve as a motivating point for more research into recommender defense strategies against machine learned attacks.}
-      \field{note}{New York, NY, USA}
-      \field{title}{Adversarial attacks on an oblivious recommender}
-      \field{year}{2019}
-      \field{pages}{322\bibrangedash 330}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.1145/3298689.3347031
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3298689.3347031
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3298689.3347031
-      \endverb
-      \keyw{recommender systems,learned adversarial attacks}
-    \endentry
     \entry{Dao2024}{article}{}{}
       \name{author}{2}{}{%
         {{hash=ede2395a7f566a456448fcb5f8222c99}{%
@@ -1152,6 +1107,68 @@
       \verb https://doi.org/10.1145/3038912.3052569
       \endverb
       \keyw{collaborative filtering,deep learning,implicit feedback,matrix factorization,neural networks}
+    \endentry
+    \entry{Herlocker2004}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=11adc12c215ee07ae6c277697026ad69}{%
+           family={Herlocker},
+           familyi={H\bibinitperiod},
+           given={Jonathan\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4d9331f432435b9538e5760a6e33696c}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ac51b48e8715032320ce39ccefa9d5e6}{%
+           family={Terveen},
+           familyi={T\bibinitperiod},
+           given={Loren\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=103f17232cb12327542ac0fff0a997ae}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{ffdfdc923df2fcd4d054246c24d05681}
+      \strng{fullhash}{5165993bfd6ab8c10c0815a14afae84c}
+      \strng{fullhashraw}{5165993bfd6ab8c10c0815a14afae84c}
+      \strng{bibnamehash}{5165993bfd6ab8c10c0815a14afae84c}
+      \strng{authorbibnamehash}{5165993bfd6ab8c10c0815a14afae84c}
+      \strng{authornamehash}{ffdfdc923df2fcd4d054246c24d05681}
+      \strng{authorfullhash}{5165993bfd6ab8c10c0815a14afae84c}
+      \strng{authorfullhashraw}{5165993bfd6ab8c10c0815a14afae84c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recommender systems have been evaluated in many, often incomparable, ways. In this article, we review the key decisions in evaluating collaborative filtering recommender systems: the user tasks being evaluated, the types of analysis and datasets being used, the ways in which prediction quality is measured, the evaluation of prediction attributes other than quality, and the user-based evaluation of the system as a whole. In addition to reviewing the evaluation strategies used by prior researchers, we present empirical results from the analysis of various accuracy metrics on one content domain where all the tested metrics collapsed roughly into three equivalence classes. Metrics within each equivalency class were strongly correlated, while metrics from different equivalency classes were uncorrelated.}
+      \field{issn}{1046-8188}
+      \field{journaltitle}{ACM Trans. Inf. Syst.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Evaluating collaborative filtering recommender systems}
+      \field{volume}{22}
+      \field{year}{2004}
+      \field{pages}{5\bibrangedash 53}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1145/963770.963772
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/963770.963772
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/963770.963772
+      \endverb
+      \keyw{Collaborative filtering,evaluation,metrics,recommender systems}
     \endentry
     \entry{Hidaka2023}{article}{}{}
       \name{author}{1}{}{%
@@ -1851,6 +1868,70 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2016/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf
       \endverb
     \endentry
+    \entry{Lin2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=4ba20cab839f1fa37eda3adfc1b61b0c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ed4e688b3a13c815213f1ff2acb5d92b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=683362beefc6f5b569f2d173f3d3e018}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=24007f156eb06261431b2b25b64844f8}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c6ce985ac0295b29b4c8ec512ff32fdc}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e2e65bc31792929cfaa15cecf7f23965}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{781bb05861d463c80feb8a7df360eb18}
+      \strng{fullhash}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \strng{fullhashraw}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \strng{bibnamehash}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \strng{authorbibnamehash}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \strng{authornamehash}{781bb05861d463c80feb8a7df360eb18}
+      \strng{authorfullhash}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \strng{authorfullhashraw}{0e3cdd34d3f7bf2733f3c967beb98a9f}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2162-2388}
+      \field{journaltitle}{IEEE Transactions on Neural Networks and Learning Systems}
+      \field{number}{1}
+      \field{title}{Shilling Black-Box Recommender Systems by Learning to Generate Fake User Profiles}
+      \field{volume}{35}
+      \field{year}{2024}
+      \field{pages}{1305\bibrangedash 1319}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TNNLS.2022.3183210
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/TNNLS.2022.3183210
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/TNNLS.2022.3183210
+      \endverb
+    \endentry
     \entry{Lin2020}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=090fc57e7cf4e1ae02f7f6063dcef65d}{%
@@ -1895,7 +1976,7 @@
       \strng{authornamehash}{fa3b1eae74c3f1cd445dac2cca591a5c}
       \strng{authorfullhash}{0dcff6d3a1550198e1b2201994986f89}
       \strng{authorfullhashraw}{0dcff6d3a1550198e1b2201994986f89}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -2004,7 +2085,7 @@
       \strng{authornamehash}{b65a467d6c40d57fdc04e547c263d0df}
       \strng{authorfullhash}{5ee51c73ad728dc6297bfc2fe537c7ae}
       \strng{authorfullhashraw}{5ee51c73ad728dc6297bfc2fe537c7ae}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -2062,7 +2143,7 @@
       \strng{authornamehash}{8ab7ecc9a6c078c44fcf850145ba7592}
       \strng{authorfullhash}{70209022c4dadbf6c6a0ec242d6a6b78}
       \strng{authorfullhashraw}{70209022c4dadbf6c6a0ec242d6a6b78}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -2796,6 +2877,7 @@
       \strng{authornamehash}{3194e1556ebc5c352042c0969b68e903}
       \strng{authorfullhash}{66154590c0d2ab7271f81c424137cbba}
       \strng{authorfullhashraw}{66154590c0d2ab7271f81c424137cbba}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -2816,6 +2898,77 @@
       \verb https://doi.org/10.1145/3357384.3357895
       \endverb
       \keyw{bidirectional sequential model,cloze,sequential recommendation}
+    \endentry
+    \entry{Sun2020}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=5043d2f1f8dd049303ca3bd597344a17}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Zhu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=68fac20dd39361371a024c681a8f4397}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3c48da23df6ee220857f7e0b31a26b42}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4656453b716273b4ea07ab731e9b6dd5}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e5205a23c24fa6e887ead11e62d90d4c}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Xinghua},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2f4cc163c8766d4437008ea260208de8}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4e1f169405e248734426012f22517d76}{%
+           family={Geng},
+           familyi={G\bibinitperiod},
+           given={Cong},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{866dd1a0ec0b8e0a65c842f7aec8e58e}
+      \strng{fullhash}{47a6202e80ad548f3c493bd280e5d171}
+      \strng{fullhashraw}{47a6202e80ad548f3c493bd280e5d171}
+      \strng{bibnamehash}{47a6202e80ad548f3c493bd280e5d171}
+      \strng{authorbibnamehash}{47a6202e80ad548f3c493bd280e5d171}
+      \strng{authornamehash}{866dd1a0ec0b8e0a65c842f7aec8e58e}
+      \strng{authorfullhash}{47a6202e80ad548f3c493bd280e5d171}
+      \strng{authorfullhashraw}{47a6202e80ad548f3c493bd280e5d171}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With tremendous amount of recommendation algorithms proposed every year, one critical issue has attracted a considerable amount of attention: there are no effective benchmarks for evaluation, which leads to two major concerns, i.e., unreproducible evaluation and unfair comparison. This paper aims to conduct rigorous (i.e., reproducible and fair) evaluation for implicit-feedback based top-N recommendation algorithms. We first systematically review 85 recommendation papers published at eight top-tier conferences (e.g., RecSys, SIGIR) to summarize important evaluation factors, e.g., data splitting and parameter tuning strategies, etc. Through a holistic empirical study, the impacts of different factors on recommendation performance are then analyzed in-depth. Following that, we create benchmarks with standardized procedures and provide the performance of seven well-tuned state-of-the-arts across six metrics on six widely-used datasets as a reference for later study. Additionally, we release a user-friendly Python toolkit, which differs from existing ones in addressing the broad scope of rigorous evaluation for recommendation. Overall, our work sheds light on the issues in recommendation evaluation and lays the foundation for further investigation. Our code and datasets are available at GitHub (https://github.com/AmazingDD/daisyRec).}
+      \field{note}{New York, NY, USA}
+      \field{title}{Are We Evaluating Rigorously? Benchmarking Recommendation for Reproducible Evaluation and Fair Comparison}
+      \field{year}{2020}
+      \field{pages}{23\bibrangedash 32}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3383313.3412489
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3383313.3412489
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3383313.3412489
+      \endverb
+      \keyw{Reproducible Evaluation,Recommender Systems,Benchmarks}
     \endentry
     \entry{Touvron2023}{article}{}{}
       \name{author}{14}{}{%
@@ -3344,6 +3497,72 @@
       \verb https://doi.org/10.48550/arXiv.2406.02638
       \endverb
     \endentry
+    \entry{Wu2021_GOAT}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=86756d7b8cb7311613b1c58712b999b3}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fe96994b6b577cf98185a06d9ba0afc3}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2f77368a25dacefba7f868b398b1c2da}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Junliang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=119f2abd0b3adce132bd2e4250862b74}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zongwei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cc9015d93d16cd0d2ff4f756e0422541}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Kecheng},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d629ba40b56b1f3070362206453e1639}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{145548a6898a82f2da4b3c0008ef8f83}
+      \strng{fullhash}{59694c577963a1b9917055fb6148cb16}
+      \strng{fullhashraw}{59694c577963a1b9917055fb6148cb16}
+      \strng{bibnamehash}{59694c577963a1b9917055fb6148cb16}
+      \strng{authorbibnamehash}{59694c577963a1b9917055fb6148cb16}
+      \strng{authornamehash}{145548a6898a82f2da4b3c0008ef8f83}
+      \strng{authorfullhash}{59694c577963a1b9917055fb6148cb16}
+      \strng{authorfullhashraw}{59694c577963a1b9917055fb6148cb16}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To explore the robustness of recommender systems, researchers have proposed various shilling attack models and analyzed their adverse effects. Primitive attacks are highly feasible but less effective due to simplistic handcrafted rules, while upgraded attacks are more powerful but costly and difficult to deploy because they require more knowledge from recommendations. In this paper, we explore a novel shilling attack called Graph cOnvolution-based generative shilling ATtack (GOAT) to balance the attacks' feasibility and effectiveness. GOAT adopts the primitive attacks' paradigm that assigns items for fake users by sampling and the upgraded attacks' paradigm that generates fake ratings by a deep learning-based model. It deploys a generative adversarial network (GAN) that learns the real rating distribution to generate fake ratings. Additionally, the generator combines a tailored graph convolution structure that leverages the correlations between co-rated items to smoothen the fake ratings and enhance their authenticity. The extensive experiments on two public datasets evaluate GOAT's performance from multiple perspectives. Our study of the GOAT demonstrates technical feasibility for building a more powerful and intelligent attack model with a much-reduced cost, enables analysis the threat of such an attack and guides for investigating necessary prevention measures.}
+      \field{issn}{0020-0255}
+      \field{journaltitle}{Information Sciences}
+      \field{month}{11}
+      \field{title}{Ready for emerging threats to recommender systems? A graph convolution-based generative shilling attack}
+      \field{volume}{578}
+      \field{year}{2021}
+      \field{pages}{683\bibrangedash 701}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.ins.2021.07.041
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0020025521007313
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0020025521007313
+      \endverb
+      \keyw{Collaborative filtering; Shilling attack; Generative adversarial networks; Graph convolution; Recommender systems}
+    \endentry
     \entry{Wu2021}{misc}{}{}
       \name{author}{7}{}{%
         {{hash=ea8d9f16c5d553a2ed2a4c26be5b191e}{%
@@ -3393,7 +3612,7 @@
       \strng{authornamehash}{fdeed692c8f795b4ce67c446a05693c7}
       \strng{authorfullhash}{ad26aa9124774b659858abbf93830fb9}
       \strng{authorfullhashraw}{ad26aa9124774b659858abbf93830fb9}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -3459,7 +3678,7 @@
       \strng{authornamehash}{7c7df1dafdf244f629928a41fd9e041f}
       \strng{authorfullhash}{0900d6a82c560e0a8bd7639382f5d174}
       \strng{authorfullhashraw}{0900d6a82c560e0a8bd7639382f5d174}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -3523,7 +3742,7 @@
       \strng{authornamehash}{59733ab0ac2629860a1a24d5013fadf9}
       \strng{authorfullhash}{8fd91e8d37444f61d9462ec295d2d1d9}
       \strng{authorfullhashraw}{8fd91e8d37444f61d9462ec295d2d1d9}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -3588,7 +3807,7 @@
       \strng{authornamehash}{d5ed9b1b5eb10fc9bd3e07803a79ad26}
       \strng{authorfullhash}{ca1202b76bd66881bc9d61f53692d99f}
       \strng{authorfullhashraw}{ca1202b76bd66881bc9d61f53692d99f}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -3923,7 +4142,57 @@
       \endverb
       \keyw{contrastive learning,data augmentation,recommendation,self-supervised learning}
     \endentry
-    \entry{Zhang2020_Poisoning}{misc}{}{}
+    \entry{Zangerle2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=49846a9fa218eadb2c422f9f7a58bc98}{%
+           family={Zangerle},
+           familyi={Z\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d51d3a49f541f7782af1584145f4c3c6}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{fullhash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{fullhashraw}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{bibnamehash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{authorbibnamehash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{authornamehash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{authorfullhash}{56c3838ad205cd7dde9758b53b91fec6}
+      \strng{authorfullhashraw}{56c3838ad205cd7dde9758b53b91fec6}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The comprehensive evaluation of the performance of a recommender system is a complex endeavor: many facets need to be considered in configuring an adequate and effective evaluation setting. Such facets include, for instance, defining the specific goals of the evaluation, choosing an evaluation method, underlying data, and suitable evaluation metrics. In this article, we consolidate and systematically organize this dispersed knowledge on recommender systems evaluation. We introduce the Framework for Evaluating Recommender systems (FEVR), which we derive from the discourse on recommender systems evaluation. In FEVR, we categorize the evaluation space of recommender systems evaluation. We postulate that the comprehensive evaluation of a recommender system frequently requires considering multiple facets and perspectives in the evaluation. The FEVR framework provides a structured foundation to adopt adequate evaluation configurations that encompass this required multi-facetedness and provides the basis to advance in the field. We outline and discuss the challenges of a comprehensive evaluation of recommender systems and provide an outlook on what we need to embrace and do to move forward as a research community.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{12}
+      \field{number}{8}
+      \field{title}{Evaluating Recommender Systems: Survey and Framework}
+      \field{volume}{55}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1145/3556536
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3556536
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3556536
+      \endverb
+      \keyw{FEVR,Framework for EValuating Recommender systems,Survey}
+    \endentry
+    \entry{Zhang2020_LOKI}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=42566f32e052ae89abeed728c8f55c98}{%
            family={Zhang},

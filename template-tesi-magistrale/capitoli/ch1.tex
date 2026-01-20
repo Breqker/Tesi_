@@ -1090,7 +1090,7 @@ Viene introdotta anche una variante linearizzata per ridurre ulteriormente i cos
     \label{fig:maTrRec_rs}
 \end{figure}
 
-\section{Sicurezza e Robustezza nei Sistemi di Raccomandazione}
+\section{Attacchi ai Sistemi di Raccomandazione}
 \label{sec:adversarial_rs}
 
 Sebbene i moderni sistemi di raccomandazione abbiano raggiunto prestazioni eccezionali, la loro natura aperta e \textit{data-driven} li rende intrinsecamente vulnerabili a manipolazioni malevole. Questo ambito di ricerca è noto come \textit{Adversarial Recommender Systems}.
@@ -1134,6 +1134,14 @@ Questa è la distinzione tecnica più rilevante:
     \item \textbf{Evasion Attack (Inference Phase)}: l'attacco avviene \textit{durante} l'uso del modello. L'attaccante manipola l'input corrente (es. la sessione utente) per alterare le raccomandazioni immediate, senza modificare i pesi del modello.
     \item \textbf{Model Extraction}: l'attacco mira a rubare il modello stesso (proprietà intellettuale) o a inferire dati privati sugli utenti.
 \end{itemize}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{poisoning_vs_evasion.png}
+    \caption{Rappresentazione schemata di un attacco di poisoning e di evasion. \\
+    Immagine tratta da \cite{Deldjoo2021}}
+    \label{fig:poisoning_vs_evasion}
+\end{figure}
 
 \subsection{Attacchi di tipo Data Poisoning (Training Phase)}
 \label{subsec:poisoning}
@@ -1195,11 +1203,27 @@ Il sistema comprende:
 
 L'addestramento competitivo (gioco min-max) spinge il Generatore a produrre profili che sono statisticamente identici a quelli degli utenti reali ma che contengono implicitamente il pattern di attacco. \cite{Lin2020}
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{aush_attack.png}
+    \caption{Schema architetturale dell'attacco AUSH. \\
+    Immagine tratta da \cite{Lin2020}}
+    \label{fig:aush_attack}
+\end{figure}
+
 \paragraph*{GOAT (Graph Generative Attack)} ~\\
 
-GOAT  estende l'idea delle GAN ai grafi per attaccare modelli come LightGCN.
+GOAT estende l'idea delle GAN ai grafi per attaccare modelli come LightGCN.
 
-A differenza di AUSH che genera vettori, il generatore di GOAT utilizza convoluzioni su grafo per produrre sottografi di attacco. Questo assicura che il profilo fake rispetti non solo la distribuzione dei voti, ma anche la struttura locale delle connessioni (co-occorrenze), rendendo l'attacco estremamente difficile da rilevare tramite analisi topologica. \cite{Wu2021}
+A differenza di AUSH che genera vettori, il generatore di GOAT utilizza convoluzioni su grafo per produrre sottografi di attacco. Questo assicura che il profilo fake rispetti non solo la distribuzione dei voti, ma anche la struttura locale delle connessioni (co-occorrenze), rendendo l'attacco estremamente difficile da rilevare tramite analisi topologica. \cite{Wu2021_GOAT}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{goat_attack.png}
+    \caption{Schema architetturale dell'attacco GOAT. \\
+    Immagine tratta da \cite{Wu2021_GOAT}}
+    \label{fig:goat_attack}
+\end{figure}
 
 \subsubsection{Attacchi basati su Reinforcement Learning}
 
@@ -1219,11 +1243,27 @@ L'attacco è definito dalla tupla $(S, A, R)$:
 
 Grazie all'uso di LSTM per lo stato e PPO per l'ottimizzazione, PoisonRec riesce a generare profili di attacco complessi che sfruttano le vulnerabilità dinamiche del modello bersaglio. \cite{Song2020}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{poisonRec_attack.png}
+    \caption{Schema architetturale dell'attacco PoisonRec. \\
+    Immagine tratta da \cite{Song2020}}
+    \label{fig:poisonRec_attack}
+\end{figure}
+
 \paragraph*{CopyAttack} ~\\
 
 CopyAttack si basa sull'intuizione che i profili fake più credibili sono quelli che "copiano" utenti reali.
 
 L'agente RL impara a selezionare un profilo utente da un dominio sorgente (Cross-Domain) e a modificarlo leggermente, iniettando il target item o sostituendo alcuni voti. L'uso del RL ottimizza il budget di modifica: l'agente cerca di ottenere il massimo impatto con il minimo numero di alterazioni al profilo originale. \cite{Fan2021}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{copyAttack.png}
+    \caption{Schema architetturale dell'attacco CopyAttack. \\
+    Immagine tratta da \cite{Fan2021}}
+    \label{fig:copyAttack}
+\end{figure}
 
 \subsubsection{Attacchi contro Modelli Sequenziali}
 
@@ -1239,7 +1279,15 @@ L'attacco è sofisticato perché il ri-addestramento del modello vittima per cal
     \item \textbf{Influence Function}: una tecnica matematica che stima l'impatto di un nuovo campione (sequenza fake) sui parametri del modello senza dover rieseguire il training.
 \end{enumerate}
 
-L'agente RL utilizza queste stime per generare sequenze di interazioni fake che massimizzano la probabilità di transizione verso l'item target. \cite{Zhang2020_Poisoning}
+L'agente RL utilizza queste stime per generare sequenze di interazioni fake che massimizzano la probabilità di transizione verso l'item target. \cite{Zhang2020_LOKI}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{loki_attack.png}
+    \caption{Schema architetturale dell'attacco LOKI. \\
+    Immagine tratta da \cite{Zhang2020_LOKI}}
+    \label{fig:loki_attack}
+\end{figure}
 
 \subsubsection{Attacchi contro Large Language Models}
 
@@ -1251,10 +1299,19 @@ Si dimostra che gli LLM fine-tunnati su istruzioni sono vulnerabili all'iniezion
 L'attaccante inserisce nel dataset di training coppie (Input, Output) dove l'input contiene una frase specifica (es. "James Bond movies") e l'output è forzato sull'item target. L'LLM apprende questa associazione spuria tramite memorizzazione.
 In fase di test, se il prompt dell'utente contiene il trigger (anche in un contesto innocuo), l'LLM attiva la "backdoor" e genera il target item, ignorando le reali preferenze dell'utente e la logica semantica. \cite{Wan2023}
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{instruction_tuning_poisoning_attack.png}
+    \caption{Schema architetturale dell'attacco Instruction Tuning Poisoning. \\
+    Immagine tratta da \cite{Wan2023}}
+    \label{fig:instruction_tuning_poisoning_attack}
+\end{figure}
+
+
 \subsection{Attacchi di tipo Evasion (Inference Phase)}
 \label{subsec:evasion}
 
-L'\textbf{Evasion Attack} non modifica i parametri del modello addestrato. L'attacco avviene durante la fase di utilizzo (inferenza): l'avversario manipola l'input corrente dell'utente per alterare le raccomandazioni immediate. Questo tipo di attacco è spesso mirato a frodare il sistema in tempo reale o a testarne la robustezza nel caso peggiore (\textit{worst-case}).
+L'\textit{Evasion Attack} non modifica i parametri del modello addestrato. L'attacco avviene durante la fase di utilizzo (inferenza): l'avversario manipola l'input corrente dell'utente per alterare le raccomandazioni immediate. Questo tipo di attacco è spesso mirato a frodare il sistema in tempo reale o a testarne la robustezza nel caso peggiore (\textit{worst-case}).
 
 \subsubsection{Gradient-based Evasion (Adversarial Perturbations)}
 
@@ -1262,6 +1319,7 @@ Ispirandosi agli esempi avversari nella Computer Vision, questo approccio mira a
 
 \paragraph*{Fast Gradient Method (FGM)} ~\\
 
+Mentre gli attacchi basati su gradiente visti nel Data Poisoning (es. PGA) modificano i rating di training, in questo contesto FGM viene applicato all'embedding latente durante il test.
 Nel contesto dei sistemi Deep Learning, l'input utente è spesso proiettato in un vettore di embedding continuo. Viene calcolata una perturbazione avversaria $\delta$ applicando il metodo del gradiente. L'obiettivo è massimizzare la loss di predizione rispetto all'input:
 
 \begin{equation}
@@ -1269,6 +1327,14 @@ Nel contesto dei sistemi Deep Learning, l'input utente è spesso proiettato in u
 \end{equation}
 
 Questa perturbazione $\delta$, vincolata da una norma $\epsilon$ per rimanere impercettibile, sposta il vettore dell'utente nello spazio latente verso una regione di decisione dove l'item target ha uno score elevato, forzando la raccomandazione. \cite{Huang2021}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fgm_attack.png}
+    \caption{Schema architetturale dell'attacco FGM. \\
+    Immagine tratta da \cite{Huang2021}}
+    \label{fig:fgm_attack}
+\end{figure}
  
 \paragraph*{Trasferibilità tramite Surrogato} ~\\
 
@@ -1280,8 +1346,17 @@ Nei sistemi di raccomandazione sequenziali (basati su RNN o Transformer), le pre
 
 \paragraph*{Leg-UP} ~\\
 
-Leg-UP viene formalizzato come un problema di ottimizzazione per un \textit{Oblivious Recommender}. L'attaccante inietta un numero limitato di item "trigger" nella storia recente dell'utente target (es. cliccando su 2-3 prodotti specifici).
-L'algoritmo calcola quali item del catalogo massimizzano l'attivazione dello score del target item nel passo successivo $t+1$. Questo manipola lo stato nascosto $h_t$ della rete ricorrente, deviando la traiettoria di raccomandazione verso il target desiderato senza dover conoscere l'intero storico dell'utente. \cite{Christakopoulou2019}
+Il modello LegUP propone un approccio di evasione basato sul gradiente per sistemi GNN.
+Poiché la struttura del grafo è discreta (un arco esiste o non esiste), non è possibile applicare direttamente i gradienti. LegUP risolve questo problema apprendendo un "profilo utente" avversario tramite **Meta-Learning**.
+L'attacco calcola i gradienti rispetto alla matrice di adiacenza rilassata e seleziona in modo iterativo quali archi aggiungere o rimuovere nel profilo dell'utente per massimizzare lo score del target. Grazie all'approccio meta-learning, LegUP è in grado di generare rapidamente attacchi efficaci anche con una conoscenza limitata (Grey-box) e trasferibili tra diversi modelli GNN. \cite{Lin2024}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{legUP_attack.png}
+    \caption{Schema architetturale dell'attacco Leg-UP. \\
+    Immagine tratta da \cite{Lin2024}}
+    \label{fig:legUP_attack}
+\end{figure}
 
 \subsection{Attacchi di tipo Model Extraction (Privacy)}
 \label{subsec:extraction}
@@ -1297,6 +1372,14 @@ L'obiettivo è creare una copia locale (\textit{Surrogate Model}) che replichi f
 L'attaccante interroga l'API pubblica del sistema inviando input sintetici (es. profili casuali o selezionati attivamente) e registrando le liste di raccomandazione restituite.
 Queste coppie (Input, Output) vengono usate per addestrare un modello locale tramite tecniche di \textit{Knowledge Distillation}: il modello surrogato impara a imitare la superficie di decisione (\textit{decision boundary}) del modello vittima. Una volta ottenuto il surrogato, l'attaccante può usarlo per generare attacchi di evasione White-Box (calcolando i gradienti sul surrogato) che risultano altamente trasferibili al modello reale protetto. \cite{Tramèr2016}
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{surrogate_training_via_api_attack.png}
+    \caption{Schema architetturale dell'attacco Model Extraction. \\
+    Immagine tratta da \cite{Tramèr2016}}
+    \label{fig:surrogate_training_via_api_attack}
+\end{figure}
+
 \subsubsection{Attribute Inference Attack}
 
 Questo attacco mira a dedurre informazioni sensibili sugli utenti che non sono state esplicitamente rivelate.
@@ -1305,3 +1388,210 @@ Questo attacco mira a dedurre informazioni sensibili sugli utenti che non sono s
 
 I moderni sistemi di raccomandazione, specialmente quelli basati su GNN o Social Graph, aggregano informazioni dai vicini per raffinare gli embedding. Di conseguenza, l'output raccomandato per un utente contiene "tracce" matematiche dei dati dei suoi contatti.
 Un attaccante può analizzare la lista di raccomandazioni di un utente target per inferire attributi privati (es. genere, età, orientamento politico) o per ricostruire parzialmente la sua cronologia di interazioni passate, invertendo il processo di aggregazione del modello e violando la privacy degli utenti. \cite{Deldjoo2021}
+
+\section{Metriche di Valutazione}
+\label{sec:metriche}
+
+La valutazione di un sistema di raccomandazione in un contesto adversarial richiede un approccio multidimensionale. Oltre a misurare la capacità del modello di apprendere le preferenze dell'utente (\textit{Utility}), è imperativo quantificare la sua resistenza alle manipolazioni (\textit{Robustness}) e l'efficienza delle risorse (\textit{Efficiency}), specialmente quando si confrontano architetture a complessità diversa come \textit{Transformer} e \textit{State Space Models}.
+
+Per la valutazione adottiamo il protocollo \textit{Full-Ranking}: per ogni utente di test, il modello classifica l'intero catalogo di item non interagiti. Questo evita i bias introdotti dal campionamento negativo casuale (es. confrontare 1 positivo con 99 negativi), che tende a sovrastimare le performance dei modelli deboli. \cite{Sun2020,Zangerle2022}
+
+\subsection{Metriche di Errore (Prediction Accuracy)}
+\label{subsec:error_metrics}
+
+Queste metriche misurano la deviazione tra il rating predetto $\hat{r}_{ui}$ e il rating reale $r_{ui}$. Sebbene siano meno rilevanti per il task di \textit{Top-K Recommendation} (dove conta l'ordine, non il valore assoluto), rimangono lo standard per i dataset a feedback esplicito (es. 1-5 stelle).
+
+\paragraph*{Mean Absolute Error (MAE)} ~\\
+
+Calcola la media aritmetica delle deviazioni assolute.
+
+\begin{equation}
+    MAE = \frac{1}{|\mathcal{T}_{test}|} \sum_{(u,i) \in \mathcal{T}_{test}} |r_{ui} - \hat{r}_{ui}|
+\end{equation}
+
+Il MAE tratta tutti gli errori linearmente. È una metrica robusta agli outlier, ma non penalizza sufficientemente gli errori gravi che potrebbero degradare la fiducia dell'utente.
+
+\paragraph*{Root Mean Squared Error (RMSE)} ~\\
+
+È stata la metrica ufficiale del \textit{Netflix Prize}.
+
+\begin{equation}
+    RMSE = \sqrt{\frac{1}{|\mathcal{T}_{test}|} \sum_{(u,i) \in \mathcal{T}_{test}} (r_{ui} - \hat{r}_{ui})^2}
+\end{equation}
+
+Elevando l'errore al quadrato prima della media, l'RMSE penalizza in modo sproporzionato le grandi deviazioni. In un contesto di raccomandazione, predire 1 stella quando l'utente ne avrebbe date 5 è molto più grave di un errore 4 vs 5; l'RMSE cattura meglio questa criticità.
+
+\subsection{Metriche di Classificazione (Set-based)}
+\label{subsec:classification_metrics}
+
+Queste metriche valutano la qualità della lista di raccomandazione $\mathcal{R}_u$ (di lunghezza $K$) trattandola come un insieme non ordinato. L'obiettivo è distinguere gli item rilevanti da quelli irrilevanti.
+
+\paragraph*{Precision@K} ~\\
+
+Rappresenta la "densità di rilevanza" nella lista suggerita.
+
+\begin{equation}
+    Precision@K = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \frac{|\mathcal{R}_u \cap \mathcal{T}_u|}{K}
+\end{equation}
+
+Un valore basso indica che il sistema sta suggerendo molti item inutili (falsi positivi). Questa metrica è critica in interfacce con spazio limitato (es. notifiche push).
+
+\paragraph*{Recall@K} ~\\
+
+Misura la "completezza" del sistema: indica la frazione di item rilevanti totali che il sistema è riuscito a trovare e inserire nella Top-K.
+
+\begin{equation}
+    Recall@K = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \frac{|\mathcal{R}_u \cap \mathcal{T}_u|}{|\mathcal{T}_u|}
+\end{equation}
+
+Un valore basso di Recall implica che il sistema soffre di un alto tasso di \textit{Falsi Negativi}. Questa metrica è particolarmente significativa in scenari dove l'utente ha molteplici item rilevanti nel test set (es. basket recommendation).
+
+\paragraph*{Hit Ratio (HR@K)} ~\\
+
+È una metrica binaria che misura il "successo" puntuale del recupero. Indica la percentuale di utenti per cui \textbf{almeno un} item rilevante appare nella lista raccomandata.
+
+\begin{equation}
+    HR@K = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \mathbb{I}(|\mathcal{R}_u \cap \mathcal{T}_u| > 0)
+\end{equation}
+
+dove $\mathbb{I}(\cdot)$ è la funzione indicatrice.
+
+\subparagraph*{Equivalenza nel Next-Item Prediction} ~\\
+
+Nel caso specifico dei modelli sequenziali (come Mamba o SASRec), il ground-truth è spesso costituito da un singolo item successivo ($|\mathcal{T}_u|=1$). In questo scenario specifico, la Recall@K coincide matematicamente con l'Hit Ratio (HR@K).
+
+\subparagraph*{Analisi Head vs Tail (Popularity Bias)} ~\\
+
+Una metrica globale può nascondere il fatto che il modello raccomanda bene solo item popolari. Per valutare la robustezza (specialmente contro attacchi che sfruttano la popolarità), dividiamo gli item di test in due gruppi: \textbf{Head} (il 20\% più popolare) e \textbf{Tail} (la coda lunga). Calcoliamo l'HR separatamente:
+
+\begin{equation}
+    HR_{Head}@K = \frac{1}{|\mathcal{U}_{head}|} \sum_{u \in \mathcal{U}_{head}} \mathbb{I}(\text{hit}), \quad HR_{Tail}@K = \frac{1}{|\mathcal{U}_{tail}|} \sum_{u \in \mathcal{U}_{tail}} \mathbb{I}(\text{hit})
+\end{equation}
+
+Un sistema equo e robusto dovrebbe massimizzare $HR_{Tail}$, dimostrando capacità di personalizzazione oltre la semplice popolarità.
+
+\paragraph*{F1-Score@K} ~\\
+
+Poiché esiste un trade-off inverso tra Precision e Recall (aumentare $K$ tende ad alzare la Recall ma a diluire la Precision), l'F1-Score ne calcola la media armonica.
+
+\subparagraph*{Macro-F1 (User-centric)} ~\\
+Questo approccio calcola l'F1-Score separatamente per ogni singolo utente e poi ne calcola la media aritmetica su tutta la popolazione $\mathcal{U}$.
+
+\begin{equation}
+    F1_{macro}@K = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \frac{2 \cdot Precision@K_u \cdot Recall@K_u}{Precision@K_u + Recall@K_u}
+\end{equation}
+
+Il Macro-F1 attribuisce pari peso a ogni utente, indipendentemente dal numero di interazioni. È la metrica preferita per valutare la robustezza del sistema sull'intera base utenti, assicurandosi che il modello funzioni bene anche per gli utenti meno attivi.
+
+\subparagraph*{Micro-F1 (Interaction-centric)} ~\\
+
+Questo approccio aggrega prima i Veri Positivi ($P_{micro}$) e i Falsi Negativi ($R_{micro}$) di tutti gli utenti in un unico conteggio globale.
+
+\begin{equation}
+    F1_{micro}@K = \frac{2 \cdot P_{micro} \cdot R_{micro}}{P_{micro} + R_{micro}}
+\end{equation}
+
+Il Micro-F1 è dominato dagli utenti che hanno molti item nel test set. È utile per misurare il throughput totale di raccomandazioni corrette, ma può nascondere scarse prestazioni sugli utenti con poche interazioni.
+
+\subsection{Metriche di Ranking (Position-Aware)}
+\label{subsec:ranking_metrics}
+
+A differenza delle metriche set-based, queste tengono conto del \textit{Position Bias}: l'attenzione dell'utente decade rapidamente scorrendo la lista. Pertanto, un item rilevante posizionato al 1° posto deve avere un valore molto maggiore dello stesso item posizionato al $K$-esimo posto. \cite{Herlocker2004}
+
+\paragraph*{Mean Reciprocal Rank (MRR)} ~\\
+
+È la metrica standard per la raccomandazione sequenziale. Considera il reciproco del rango del \textbf{primo} item rilevante trovato nella lista.
+
+\begin{equation}
+    MRR = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \frac{1}{\text{rank}_u}
+\end{equation}
+
+È una metrica "winner-takes-all". Se il sistema posiziona l'item corretto al 2° posto invece che al 1°, l'MRR si dimezza (0.5), penalizzando severamente qualsiasi errore nel top-ranking.
+
+\paragraph*{Normalized Discounted Cumulative Gain (NDCG@K)} ~\\
+
+Si basa su due concetti: \textbf{Gain} (utilità dell'item, binaria nel nostro caso) e \textbf{Discount} (il guadagno viene diviso per il logaritmo della posizione).
+La formula normalizzata rispetto all'Ideal DCG (IDCG) è:
+
+\begin{equation}
+    NDCG@K = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \frac{DCG_u@K}{IDCG_u@K}, \quad \text{dove } DCG_u@K = \sum_{i=1}^K \frac{rel_i}{\log_2(i+1)}
+\end{equation}
+
+Un NDCG vicino a 1 indica che il sistema non solo ha trovato gli item giusti, ma li ha ordinati perfettamente in cima alla lista.
+
+\subsection{Metriche "Beyond Accuracy" (Qualità del Catalogo)}
+\label{subsec:beyond_metrics}
+
+L'accuratezza non è sufficiente. Un sistema che raccomanda sempre gli stessi item popolari è di scarso valore e vulnerabile a bolle di filtraggio \cite{Zangerle2022}.
+
+\paragraph*{Catalog Coverage} ~\\
+
+Misura la percentuale di item unici raccomandati almeno una volta rispetto al catalogo totale $\mathcal{I}$.
+
+\begin{equation}
+    Coverage@K = \frac{|\bigcup_{u \in \mathcal{U}} \mathcal{R}_u|}{|\mathcal{I}|}
+\end{equation}
+
+Un attacco di tipo \textit{Bandwagon} tende a ridurre drasticamente la Coverage, polarizzando il sistema verso pochi item popolari.
+
+\paragraph*{Intra-List Diversity (ILD)} ~\\
+
+Misura quanto gli item all'interno della stessa lista $\mathcal{R}_u$ sono diversi tra loro. Si calcola come la media delle distanze (es. Cosine Distance) tra tutte le coppie di item nella lista:
+
+\begin{equation}
+    ILD = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} \left( \frac{2}{K(K-1)} \sum_{i \in \mathcal{R}_u} \sum_{j \in \mathcal{R}_u, j \neq i} (1 - \text{sim}(i, j)) \right)
+\end{equation}
+
+\subsection{Metriche di Robustezza (Security Evaluation)}
+\label{subsec:attack_metrics}
+
+Per valutare l'efficacia del sistema di attacco Shilling/Poisoning, utilizziamo le metriche definite in \cite{Deldjoo2021}. Consideriamo un attacco \textit{Push} su un item target $i_t$.
+
+\subsubsection{Metriche di Successo (Offensive)}
+
+\paragraph*{Attack Success Rate (ASR@K)} ~\\
+
+Misura la percentuale di utenti bersaglio per i quali l'item target $i_t$ riesce a penetrare nella Top-K delle raccomandazioni \textbf{dopo} l'attacco.
+
+\begin{equation}
+    ASR@K = \frac{1}{|\mathcal{U}_{target}|} \sum_{u \in \mathcal{U}_{target}} \mathbb{I}(i_t \in \mathcal{R}_u^{(attacked)})
+\end{equation}
+
+Un ASR elevato indica che l'attacco ha manipolato con successo il sistema.
+
+\paragraph*{Prediction Shift (PS)} ~\\
+
+Misura lo spostamento quantitativo dello score (logit o probabilità) predetto dal modello per l'item target.
+
+\begin{equation}
+    PS = \frac{1}{|\mathcal{U}|} \sum_{u \in \mathcal{U}} (\hat{y}_{u, i_t}^{(post)} - \hat{y}_{u, i_t}^{(pre)})
+\end{equation}
+
+Un PS positivo indica che l'attacco ha spinto l'item verso l'alto nello spazio latente, aumentandone la visibilità.
+
+\subsubsection{Metriche di Impatto (Collateral Damage)}
+
+Un attacco sofisticato dovrebbe essere "chirurgico": promuovere il target senza degradare eccessivamente la qualità generale delle raccomandazioni.
+
+\paragraph*{Performance Drop Rate (PDR)} ~\\
+
+Misura il degrado percentuale delle metriche di utilità (es. NDCG) sugli item \textbf{non target} a causa dell'attacco.
+
+\begin{equation}
+    PDR = \frac{NDCG_{clean} - NDCG_{attacked}}{NDCG_{clean}} \times 100\%
+\end{equation}
+
+Per attacchi \textit{Push} furtivi, l'obiettivo è massimizzare l'ASR mantenendo il PDR basso.
+
+\subsection{Metriche di Efficienza Computazionale}
+\label{subsec:efficiency}
+
+Dato l'utilizzo di modelli come gli State Space Models (Mamba), è cruciale valutare la scalabilità rispetto ai Transformer. \cite{Liu2024}
+
+\paragraph*{Tempo di Training e Inferenza} ~\\
+
+Misura il tempo medio per epoca (training) o la latenza per batch (inferenza). La complessità teorica attesa per gli SSM è lineare $O(L)$, significativamente superiore alla $O(L^2)$ dei Transformer su sequenze lunghe.
+
+\paragraph*{Utilizzo Memoria GPU} ~\\
+
+Misura il picco di memoria VRAM utilizzata. Questo parametro è fondamentale per valutare la capacità del modello di gestire storici utente molto lunghi ("lifetime history") senza incorrere in errori di \textit{Out-Of-Memory}.

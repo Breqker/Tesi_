@@ -940,7 +940,7 @@ url={https://doi.org/10.1145/3331184.3331214}
 	url={https://doi.org/10.1109/ICDE48307.2020.00021}
 }
 
-@Misc{Zhang2020_Poisoning,
+@Misc{Zhang2020_LOKI,
 	author={Zhang, Hengtong and Li, Yaliang and Ding, Bolin and Gao, Jing},
 	title={Practical Data Poisoning Attack against Next-Item Recommendation},
 	year={2020},
@@ -965,17 +965,17 @@ url={https://doi.org/10.1145/3331184.3331214}
 	url={https://proceedings.mlr.press/v202/wan23b.html}
 }
 
-@Misc{Christakopoulou2019,
-	author={Christakopoulou, Konstantina and Banerjee, Arindam},
-	title={Adversarial attacks on an oblivious recommender},
-	year={2019},
-	publisher={Association for Computing Machinery},
-	pages={322--330},
-	keywords={recommender systems, learned adversarial attacks},
-	abstract={Can machine learning models be easily fooled? Despite the recent surge of interest in learned adversarial attacks in other domains, in the context of recommendation systems this question has mainly been answered using hand-engineered fake user profiles. This paper attempts to reduce this gap. We provide a formulation for learning to attack a recommender as a repeated general-sum game between two players, i.e., an adversary and a recommender oblivious to the adversary's existence. We consider the challenging case of poisoning attacks, which focus on the training phase of the recommender model. We generate adversarial user profiles targeting subsets of users or items, or generally the top-K recommendation quality. Moreover, we ensure that the adversarial user profiles remain unnoticeable by preserving proximity of the real user rating/interaction distribution to the adversarial fake user distribution. To cope with the challenge of the adversary not having access to the gradient of the recommender's objective with respect to the fake user profiles, we provide a non-trivial algorithm building upon zero-order optimization techniques. We offer a wide range of experiments, instantiating the proposed method for the case of the classic popular approach of a low-rank recommender, and illustrating the extent of the recommender's vulnerability to a variety of adversarial intents. These results can serve as a motivating point for more research into recommender defense strategies against machine learned attacks.},
-	note={New York, NY, USA},
-	doi={10.1145/3298689.3347031},
-	url={https://doi.org/10.1145/3298689.3347031}
+@Article{Lin2024,
+	author={Lin, C. and Chen, S. and Zeng, M. and Zhang, S. and Gao, M. and Li, H.},
+	title={Shilling Black-Box Recommender Systems by Learning to Generate Fake User Profiles},
+	journal={IEEE Transactions on Neural Networks and Learning Systems},
+	year={2024},
+	volume={35},
+	number={1},
+	pages={1305-1319},
+	issn={2162-2388},
+	doi={10.1109/TNNLS.2022.3183210},
+	url={https://doi.org/10.1109/TNNLS.2022.3183210}
 }
 
 @Misc{Tramèr2016,
@@ -989,3 +989,53 @@ url={https://doi.org/10.1145/3331184.3331214}
 	doi={10.48550/arXiv.1609.02943},
 	url={https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer}
 }
+
+@Article{Herlocker2004,
+	author={Herlocker, Jonathan L. and Konstan, Joseph A. and Terveen, Loren G. and Riedl, John T.},
+	title={Evaluating collaborative filtering recommender systems},
+	journal={ACM Trans. Inf. Syst.},
+	year={2004},
+	month={Jan},
+	publisher={Association for Computing Machinery},
+	address={New York, NY, USA},
+	volume={22},
+	number={1},
+	pages={5--53},
+	keywords={Collaborative filtering, evaluation, metrics, recommender systems},
+	abstract={Recommender systems have been evaluated in many, often incomparable, ways. In this article, we review the key decisions in evaluating collaborative filtering recommender systems: the user tasks being evaluated, the types of analysis and datasets being used, the ways in which prediction quality is measured, the evaluation of prediction attributes other than quality, and the user-based evaluation of the system as a whole. In addition to reviewing the evaluation strategies used by prior researchers, we present empirical results from the analysis of various accuracy metrics on one content domain where all the tested metrics collapsed roughly into three equivalence classes. Metrics within each equivalency class were strongly correlated, while metrics from different equivalency classes were uncorrelated.},
+	issn={1046-8188},
+	doi={10.1145/963770.963772},
+	url={https://doi.org/10.1145/963770.963772}
+}
+
+@Article{Zangerle2022,
+	author={Zangerle, Eva and Bauer, Christine},
+	title={Evaluating Recommender Systems: Survey and Framework},
+	journal={ACM Comput. Surv.},
+	year={2022},
+	month={Dec},
+	publisher={Association for Computing Machinery},
+	address={New York, NY, USA},
+	volume={55},
+	number={8},
+	keywords={FEVR, Framework for EValuating Recommender systems, Survey},
+	abstract={The comprehensive evaluation of the performance of a recommender system is a complex endeavor: many facets need to be considered in configuring an adequate and effective evaluation setting. Such facets include, for instance, defining the specific goals of the evaluation, choosing an evaluation method, underlying data, and suitable evaluation metrics. In this article, we consolidate and systematically organize this dispersed knowledge on recommender systems evaluation. We introduce the Framework for Evaluating Recommender systems (FEVR), which we derive from the discourse on recommender systems evaluation. In FEVR, we categorize the evaluation space of recommender systems evaluation. We postulate that the comprehensive evaluation of a recommender system frequently requires considering multiple facets and perspectives in the evaluation. The FEVR framework provides a structured foundation to adopt adequate evaluation configurations that encompass this required multi-facetedness and provides the basis to advance in the field. We outline and discuss the challenges of a comprehensive evaluation of recommender systems and provide an outlook on what we need to embrace and do to move forward as a research community.},
+	issn={0360-0300},
+	doi={10.1145/3556536},
+	url={https://doi.org/10.1145/3556536}
+}
+
+@Misc{Sun2020,
+	author={Sun, Zhu and Yu, Di and Fang, Hui and Yang, Jie and Qu, Xinghua and Zhang, Jie and Geng, Cong},
+	title={Are We Evaluating Rigorously? Benchmarking Recommendation for Reproducible Evaluation and Fair Comparison},
+	year={2020},
+	publisher={Association for Computing Machinery},
+	pages={23--32},
+	keywords={Reproducible Evaluation, Recommender Systems, Benchmarks},
+	abstract={With tremendous amount of recommendation algorithms proposed every year, one critical issue has attracted a considerable amount of attention: there are no effective benchmarks for evaluation, which leads to two major concerns, i.e., unreproducible evaluation and unfair comparison. This paper aims to conduct rigorous (i.e., reproducible and fair) evaluation for implicit-feedback based top-N recommendation algorithms. We first systematically review 85 recommendation papers published at eight top-tier conferences (e.g., RecSys, SIGIR) to summarize important evaluation factors, e.g., data splitting and parameter tuning strategies, etc. Through a holistic empirical study, the impacts of different factors on recommendation performance are then analyzed in-depth. Following that, we create benchmarks with standardized procedures and provide the performance of seven well-tuned state-of-the-arts across six metrics on six widely-used datasets as a reference for later study. Additionally, we release a user-friendly Python toolkit, which differs from existing ones in addressing the broad scope of rigorous evaluation for recommendation. Overall, our work sheds light on the issues in recommendation evaluation and lays the foundation for further investigation. Our code and datasets are available at GitHub (https://github.com/AmazingDD/daisyRec).},
+	note={New York, NY, USA},
+	doi={10.1145/3383313.3412489},
+	url={https://doi.org/10.1145/3383313.3412489}
+}
+
+
