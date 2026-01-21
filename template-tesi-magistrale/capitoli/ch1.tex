@@ -12,11 +12,12 @@ Tuttavia, nonostante il loro successo commerciale in settori come l'e-commerce (
 In questo capitolo verrà analizzato lo stato dell'arte dei Sistemi di Raccomandazione, partendo dai modelli statistici tradizionali fino alle recenti applicazioni di Deep Learning e Intelligenza Artificiale Generativa, esaminando come la letteratura scientifica abbia affrontato le sfide sopra citate.
 
 \section{Formalizzazione del problema}
-\label{sec:formalizzazione}
+\label{sec:formalizzazione_rs}
 
 Prima di analizzare le architetture algoritmiche, è necessario definire il formalismo matematico che sottende il funzionamento di un Sistema di Raccomandazione e le tipologie di dati su cui esso opera.
 
 \subsection{Notazione matematica}
+\label{subsec:matematica_rs}
 
 In un contesto generico di raccomandazione, definiamo $\mathcal{U} = \{u_1, u_2, \dots, u_M\}$ come l'insieme degli utenti (\textit{users}) e $\mathcal{I} = \{i_1, i_2, \dots, i_N\}$ come l'insieme degli oggetti (\textit{items}). Lo spazio delle possibili interazioni è rappresentato da una matrice di utilità $\mathbf{R} \in \mathbb{R}^{M \times N}$, dove l'elemento $r_{ui}$ indica il grado di preferenza dell'utente $u$ per l'item $i$.
 
@@ -44,6 +45,7 @@ Definiamo $\Omega = \{(u, i) \mid r_{ui} \text{ è osservato} \}$ come l'insieme
 L'obiettivo del sistema è stimare una funzione di scoring $f: \mathcal{U} \times \mathcal{I} \rightarrow \mathbb{R}$ in grado di predire i valori mancanti o di generare una lista ordinata di item (Top-K) non ancora fruiti dall'utente, massimizzando una specifica funzione di utilità. \cite{Roy2022}
 
 \subsection{Tipologie di Feedback}
+\label{subsec:feedback}
 
 La natura del valore $r_{ui}$ determina la classe di algoritmi applicabili e la complessità del problema. La letteratura scientifica distingue due categorie principali di input:
 
@@ -65,6 +67,7 @@ La figura \ref{fig:feedback-sources} illustra schematicamente le sorgenti di dat
 Sebbene la distinzione sia netta, nello scenario operativo reale i sistemi di raccomandazione adottano quasi sempre un approccio ibrido nella raccolta dati. L'utilizzo congiunto delle due tipologie permette di compensare le rispettive debolezze: l'abbondanza del feedback implicito viene utilizzata per mitigare il problema della \textit{data sparsity}, mentre il feedback esplicito (ove disponibile) funge da \textit{ground truth} per validare l'accuratezza delle predizioni. \cite{Roy2022}
 
 \subsection{Definizione del Task}
+\label{subsec:task}
 
 In funzione dell'obiettivo finale, il problema di raccomandazione viene modellato in letteratura secondo diverse formulazioni. Questa distinzione determina l'architettura della funzione di apprendimento (\textit{Loss function}) e la struttura dei dati in input:
 
@@ -80,6 +83,7 @@ In funzione dell'obiettivo finale, il problema di raccomandazione viene modellat
 \end{itemize}
 
 \subsection{Sfide e Vincoli del Problema}
+\label{subsec:sfide_vincoli}
 
 La formulazione della funzione obiettivo $f$ è soggetta a vincoli intrinseci alla natura dei dati e requisiti operativi, che influenzano la scelta degli algoritmi. Identifichiamo le seguenti criticità principali:
 
@@ -88,7 +92,7 @@ La formulazione della funzione obiettivo $f$ è soggetta a vincoli intrinseci al
     \item \textbf{Cold-Start}: si riferisce alla difficoltà di inferire preferenze in assenza di dati storici. Si distingue in \textit{New User Problem} (il sistema non ha dati su un nuovo utente) e \textit{New Item Problem} (un nuovo item non ha ancora ricevuto un feedback). In questi scenari, i metodi puramente collaborativi falliscono, richiedendo l'adozione di strategie ibride o content-based. \cite{Roy2022}
     \item \textbf{Scalabilità}: con la crescita esponenziale del numero di utenti $M$ e di item $N$, la complessità computazionale di algoritmi come il k-NN ($O(M^2)$) diventa insostenibile per applicazioni che richiedono risposta in tempo reale. È necessario bilanciare l'accuratezza della predizione con la latenza di risposta, spesso ricorrendo a tecniche di riduzione della dimensionalità o al calcolo distribuito.
     \item \textbf{Grey Sheep Problem}: questo termine indica quegli utenti le cui preferenze sono idiosincratiche, ovvero non condivise dalla maggior parte degli utenti, e non mostrano correlazioni significative con nessun gruppo di utenti (cluster) dominante. Per questi profili "atipici", i sistemi collaborativi faticano a generare raccomandazioni accurate a causa della mancanza di vicini simili. \cite{Roy2022}
-    \item \textbf{Robustezza}: i sistemi di raccomandazione, basandosi su input esterni (feedback utenti), sono intrinsecamente vulnerabili a manipolazioni dei dati note come \textit{Shilling Attacks}. La sfida consiste nel garantire l'affidabilità delle predizioni anche in presenza di profili malevoli inseriti per alterare la popolarità degli item. A causa della rilevanza critica di questo aspetto per l'integrità del sistema, la tassonomia degli attacchi verrà trattata in dettaglio nella Sezione \ref{sec:attacchi}.
+    \item \textbf{Robustezza}: i sistemi di raccomandazione, basandosi su input esterni (feedback utenti), sono intrinsecamente vulnerabili a manipolazioni dei dati note come \textit{Shilling Attacks}. La sfida consiste nel garantire l'affidabilità delle predizioni anche in presenza di profili malevoli inseriti per alterare la popolarità degli item. A causa della rilevanza critica di questo aspetto per l'integrità del sistema, la tassonomia degli attacchi verrà trattata in dettaglio nella Sezione \ref{subsec:attack_taxonomy}.
     \item \textbf{Privacy e Sicurezza}: l'utilizzo massivo di dati personali (spesso sensibili nel caso di sistemi Context-Aware) pone vincoli legali ed etici stringenti. Le moderne architetture devono integrare tecniche di \textit{Privacy-Preserving Data Mining} per operare in conformità con normative come il GDPR, cercando di non degradare eccessivamente la qualità della raccomandazione a fronte dell'anonimizzazione dei dati. \cite{Zhou2023}
 \end{itemize}
 

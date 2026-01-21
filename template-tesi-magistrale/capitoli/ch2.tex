@@ -1,5 +1,320 @@
 \chapter{Reinforcement Learning}
 \label{chap:reinforcement-learning}
 
+Il \textit{Reinforcement Learning} (RL) è un paradigma computazionale di Machine Learning focalizzato su come agenti software debbano intraprendere azioni in un ambiente dinamico per massimizzare una nozione di ricompensa cumulativa.
+Il RL non è caratterizzato da una specifica tecnica o algoritmo, ma da una particolare classe di problemi: quelli in cui l'apprendimento avviene attraverso l'interazione diretta (\textit{trial-and-error}) piuttosto che tramite istruzione passiva. \cite{Sutton2018}
+
+L'idea alla base del RL trae ispirazione dalla psicologia comportamentale: un agente apprende a mappare le situazioni in azioni in modo da massimizzare un segnale di feedback numerico. A differenza di altri approcci di apprendimento automatico, l'agente non viene informato a priori su quale sia l'azione corretta da intraprendere; deve invece scoprirlo tentando diverse strategie e osservandone le conseguenze nel tempo.
+
+In questo capitolo verrà analizzato lo stato dell'arte dell'Apprendimento Per Rinforzo, partendo dalla distinzione rispetto agli altri paradigmi di apprendimento, verranno formalizzati i fondamenti matematici dei Processi Decisionali di Markov (MDP) e analizzate le principali famiglie di algoritmi.
+
+\section{Paradigmi di Apprendimento Automatico}
+\label{sec:paradigms}
+
+Per comprendere la natura del RL, è fondamentale distinguerlo dagli altri paradigmi dell'intelligenza artificiale. \cite{Fayaz2022}
+
+\subsection{Apprendimento Supervisionato}
+
+Nell'\textit{Apprendimento Supervisionato} (\textit{Supervised Learning}), il modello viene addestrato su un dataset statico di esempi etichettati $\mathcal{D} = \{(x_i, y_i)\}$, dove per ogni input $x_i$ è fornita la risposta corretta $y_i$ da un supervisore esterno (\textit{Teacher}). L'obiettivo è minimizzare l'errore tra la predizione del modello e l'etichetta reale.
+Questo approccio è dominante nei problemi di classificazione e regressione, ma mostra limiti nei problemi decisionali sequenziali, dove non esiste un'etichetta corretta immediata e le azioni influenzano i dati futuri.
+
+\subsection{Apprendimento Non Supervisionato}
+
+L'\textit{Apprendimento Non Supervisionato} (\textit{Unsupervised Learning}) opera su dati privi di etichette $\mathcal{D} = \{x_i\}$. L'obiettivo non è massimizzare una ricompensa o minimizzare un errore rispetto a un target, ma scoprire strutture nascoste nei dati (es. clustering, riduzione dimensionale).
+
+\subsection{Apprendimento Per Rinforzo (Reinforcement Learning)}
+
+L'\textit{Apprendimento Per Rinforzo} (\textit{Reinforcement Learning}) può essere visto come un \textit{apprendimento con un critico}: il critico non dice all'agente cosa avrebbe dovuto fare (come nel supervisionato), ma fornisce solo una valutazione scalare su quanto l'azione scelta sia stata buona o cattiva.
+Questo introduce due sfide \cite{Arulkumaran2017}:
+
+\begin{itemize}
+    \item \textbf{Exploration vs Exploitation}: l'agente deve bilanciare lo sfruttamento delle azioni note come efficaci con l'esplorazione di nuove azioni potenzialmente migliori.
+    \item \textbf{Credit Assignment}: la ricompensa per un'azione può arrivare con un ritardo temporale significativo, rendendo difficile capire quale mossa passata sia responsabile del successo.
+\end{itemize}
+
+\section{Formalizzazione del problema}
+\label{sec:formalizzazione_rl}
+
+Il Reinforcement Learning è fondato sul \textit{Processo Decisionale di Markov} (MDP). Un MDP fornisce l'astrazione formale per modellare il processo decisionale in situazioni in cui gli esiti sono parzialmente casuali e sotto il controllo di un decisore. \cite{Sutton2018}
+
+Formalmente, un MDP è definito dalla tupla $(\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma)$. L'apprendimento avviene  attraverso un ciclo di interazione continuo a passi discreti $t = 0, 1, 2, \dots$. In ogni istante, l'agente osserva lo stato $S_t \in \mathcal{S}$, seleziona un'azione $A_t \in \mathcal{A}$, e l'ambiente risponde transitando in $S_{t+1} \sim \mathcal{P}(\cdot|S_t, A_t)$ ed emettendo una ricompensa $R_{t+1}$.
+
+\subsection{Entità del Sistema}
+\label{subsec:entità_rl}
+
+\subsubsection{Agente}
+
+L'agente è l'entità computazionale autonoma che apprende e prende decisioni. È colui che percepisce lo stato del mondo, esegue computazioni e seleziona le azioni da compiere. Non ha controllo diretto sulle dinamiche interne dell'ambiente, ma può influenzarne lo stato futuro attraverso le sue azioni.
+
+\subsubsection{Ambiente}
+
+L'ambiente rappresenta tutto ciò che è esterno all'agente. È un sistema dinamico che reagisce alle sollecitazioni.
+Formalmente, l'ambiente riceve l'azione $A_t$ al tempo $t$, aggiorna il proprio stato interno passando da $S_t$ a $S_{t+1}$ secondo una funzione di transizione di probabilità $\mathcal{P}$, e restituisce all'agente una nuova osservazione e un segnale di ricompensa $R_{t+1}$.
+
+\subsection{Spazi di definizione}
+
+La complessità di un problema di RL è determinata dalla natura topologica e dalla cardinalità degli spazi su cui operano le variabili del sistema.
+
+\subsubsection{Stato}
+
+Lo stato (\textit{state}) $S_t$ è una descrizione completa, fedele e priva di ambiguità della configurazione dell'ambiente al tempo $t$. Se l'agente ha accesso allo stato $S_t$, il processo gode della Proprietà di Markov:
+
+\begin{equation}
+    \mathbb{P}[S_{t+1} | S_t, A_t] = \mathbb{P}[S_{t+1} | S_t, A_t, S_{t-1}, A_{t-1}, \dots, S_0]
+\end{equation}
+
+Questo implica che il futuro dipende esclusivamente dallo stato presente e dall'azione intrapresa, rendendo irrilevante la storia passata. In questo caso ideale, il problema è un MDP.
+
+\subsubsection{Osservazione}
+
+L'osservazione (\textit{observation}) $O_t$ è una visione parziale, rumorosa o incompleta dello stato. In scenari reali, l'agente raramente conosce lo stato vero (es. le preferenze latenti di un utente o i pesi interni di un modello vittima black-box).
+In questo caso, il problema è definito come \textit{Partially Observable Markov Decision Process} (POMDP). \cite{Kaelbling1998} Per risolvere un POMDP, l'agente deve spesso ricostruire uno "stato di credenza" o una rappresentazione sufficiente aggregando la cronologia delle osservazioni passate (es. usando LSTM o Mamba).
+
+\subsubsection{Azione}
+
+L'insieme $\mathcal{A}$ di tutte le decisioni valide che l'agente può intraprendere. La natura di questo spazio determina la famiglia di algoritmi utilizzabili.
+
+\paragraph*{Spazi Discreti} ~\\
+
+L'insieme delle azioni è finito e numerabile ($|\mathcal{A}| = K$). È il caso tipico della selezione di un item da un catalogo o di un movimento su griglia. Algoritmi \textit{Value-Based} (es. DQN) sono progettati specificamente per questo scenario, calcolando un valore $Q$ per ogni possibile azione discreta. Tuttavia, nei RS si presenta la sfida del \textit{Large Discrete Action Space} (milioni di item), che richiede accorgimenti specifici. \cite{Dulac-Arnold2016}
+
+\paragraph*{Spazi Continui} ~\\
+
+L'azione è un vettore di numeri reali continui (es. $A_t \in \mathbb{R}^n$). In questo caso non è possibile enumerare tutte le azioni per calcolarne il massimo. Si utilizzano algoritmi di tipo \textit{Policy Gradient} o \textit{Actor-Critic} (es. PPO, DDPG) che possono generare direttamente output continui.
+
+\subsection{Segnali di Feedback e Obiettivi}
+\subsubsection{Ricompensa}
+
+La ricompensa (\textit{reward}) $R_t$  è un segnale scalare $R_t \in \mathbb{R}$ che l'ambiente invia all'agente. Essa rappresenta una valutazione immediata della bontà dell'evento accaduto.
+La funzione di ricompensa attesa è definita come:
+
+\begin{equation}
+    \mathcal{R}(s, a) = \mathbb{E}[R_{t+1} \mid S_t = s, A_t = a]
+\end{equation}
+
+Secondo la \textit{Reward Hypothesis}, tutti gli obiettivi dell'agente possono essere descritti come la massimizzazione della somma cumulativa di questi segnali.
+
+\subsubsection{Ritorno e Orizzonte}
+
+L'agente non mira a massimizzare la ricompensa immediata, ma il \textit{Ritorno Atteso} ($G_t$), ovvero la somma delle ricompense future lungo la traiettoria. Per garantire la convergenza matematica in task infiniti e modellare l'incertezza sul futuro, si introduce il \textit{Fattore di Sconto} $\gamma \in [0, 1]$:
+
+\begin{equation}
+    G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}
+\end{equation}
+
+Il parametro $\gamma$ determina l'orizzonte temporale dell'agente:
+
+\begin{itemize}
+    \item Se $\gamma \to 0$, l'agente è "miope" (\textit{myopic}): si preoccupa solo della ricompensa immediata.
+    \item Se $\gamma \to 1$, l'agente è "lungimirante" (\textit{far-sighted}): le ricompense future hanno un peso paragonabile a quelle presenti.
+\end{itemize}
+
+\subsection{Meccanismi Decisionali}
+
+\subsubsection{Policy}
+
+La policy $\pi$ è il "cervello" dell'agente: è la funzione che mappa lo stato percepito nell'azione da intraprendere. È l'elemento che viene modificato durante l'apprendimento.
+
+\paragraph*{Policy Deterministica} ~\\
+
+Definita come $a = \pi(s)$. Per ogni stato, l'agente sceglie sempre la stessa azione. È tipica degli agenti greedy che sfruttano puramente la conoscenza acquisita o di algoritmi come DDPG.
+
+\paragraph*{Policy Stocastica} ~\\
+
+Definita come una distribuzione di probabilità $\pi(a|s) = \mathbb{P}[A_t = a \mid S_t = s]$. L'agente non sceglie l'azione direttamente, ma la campiona da questa distribuzione. Questo approccio è fondamentale per garantire l'\textit{Esplorazione}: permette all'agente di provare azioni diverse nello stesso stato per scoprire nuove strategie potenzialmente migliori.
+
+\section{Funzioni di Valore ed Equazioni di Bellman}
+\label{sec:value-function_bellman_equation}
+
+Per risolvere l'MDP, l'agente non può limitarsi a massimizzare la ricompensa immediata, ma deve stimare il ritorno atteso a lungo termine. Questo concetto è formalizzato dalle \textit{Funzioni di Valore} (Value-Function), che costituiscono il cuore degli algoritmi di Reinforcement Learning.
+
+\subsection{Funzioni di valore}
+\label{sec:value-function}
+
+Esistono due tipi fondamentali di funzioni, che dipendono dalla policy $\pi$ seguita dall'agente.
+
+\subsubsection{State-Value Function $V_\pi(s)$}
+
+Rappresenta la bontà di trovarsi in un certo stato. È il ritorno atteso partendo dallo stato $s$ e seguendo la policy $\pi$ da quel momento in poi:
+
+\begin{equation}
+    V_\pi(s) = \mathbb{E}_\pi [G_t \mid S_t = s]
+\end{equation}
+
+\subsubsection{Action-Value Function $Q_\pi(s, a)$}
+
+Rappresenta la bontà di eseguire una specifica azione in un certo stato. È il ritorno atteso partendo da $s$, eseguendo l'azione $a$ e \textit{poi} seguendo la policy $\pi$:
+
+\begin{equation}
+    Q_\pi(s, a) = \mathbb{E}_\pi [G_t \mid S_t = s, A_t = a]
+\end{equation}
+
+Questa funzione è fondamentale per gli algoritmi \textit{Model-Free}, poiché permette di scegliere l'azione migliore senza dover conoscere la funzione di transizione dell'ambiente.
+
+\subsection{Equazioni di Bellman}
+\label{subsec:bellman_equation}
+
+Le funzioni di valore non sono indipendenti, ma soddisfano delle relazioni ricorsive note come \textit{Equazioni di Bellman}. Esse esprimono il valore di uno stato in funzione del valore degli stati successivi. \cite{Sutton2018}
+
+Per la funzione $Q_\pi$, l'equazione è:
+
+\begin{equation}
+    Q_\pi(s, a) = \mathbb{E} [R_{t+1} + \gamma Q_\pi(S_{t+1}, A_{t+1}) \mid S_t=s, A_t=a]
+\end{equation}
+
+Questa equazione è alla base dei metodi di apprendimento temporale: l'agente può aggiornare la sua stima attuale basandosi sulla stima dello stato futuro (bootstrapping).
+
+\subsection{Ottimalità}
+\label{subsec:ottimalità}
+
+L'obiettivo del RL è trovare una \textit{Policy Ottimale} $\pi^*$ che garantisca un ritorno atteso maggiore o uguale a qualsiasi altra policy per tutti gli stati ($Q_{\pi^*}(s,a) \ge Q_\pi(s,a), \forall \pi$).
+
+\subsubsection{Equazione di Ottimalità di Bellman}
+
+Sotto la policy ottimale, il valore di un'azione è uguale alla ricompensa immediata più il valore scontato della \textit{migliore} azione possibile nello stato successivo:
+
+\begin{equation}
+    Q^*(s, a) = \mathbb{E} [R_{t+1} + \gamma \max_{a'} Q^*(S_{t+1}, a') \mid S_t=s, A_t=a]
+\end{equation}
+
+\section{Tassonomia degli Algoritmi}
+\label{sec:rl_taxonomy}
+
+Esistono diversi approcci per risolvere il problema dell'apprendimento decisionale sequenziale. La letteratura scientifica classifica gli algoritmi di Reinforcement Learning lungo assi fondamentali che ne determinano l'efficienza, la stabilità e l'applicabilità a specifici domini applicativi. \cite{Arulkumaran2017}
+
+\subsection{Model-Based vs Model-Free}
+\label{subsec:model-based_model-free}
+
+La prima distinzione fondamentale riguarda la conoscenza che l'agente possiede, o cerca di acquisire, sulle dinamiche interne dell'ambiente.
+
+\subsubsection{Model-Based RL}
+
+In questo paradigma, l'agente tenta di apprendere un \textit{modello interno} dell'ambiente che approssimi la funzione di transizione $\mathcal{P}(s'|s,a)$ e la funzione di ricompensa $\mathcal{R}(s,a)$.
+Una volta appreso tale modello, l'agente può utilizzarlo per effettuare operazioni di \textit{Planning} (pianificazione): esso simula mentalmente le conseguenze delle azioni future, esplorando possibili traiettorie senza doverle eseguire realmente nell'ambiente fisico.
+
+Il vantaggio principale risiede nell'alta \textit{Sample Efficiency}: l'agente può apprendere strategie efficaci con un numero ridotto di interazioni reali. Tuttavia, il metodo soffre del problema del \textit{Model Bias}: se il modello appreso è impreciso, l'agente pianificherà strategie ottimali per il modello simulato ma disastrose per l'ambiente reale.
+In contesti complessi come i sistemi di raccomandazione, modellare esplicitamente la dinamica stocastica del comportamento utente è estremamente difficile. Esempi di algoritmi in questa categoria sono \textit{Dyna-Q} e \textit{Monte Carlo Tree Search} (MCTS).
+
+\subsubsection{Model-Free RL}
+
+L'approccio \textit{Model-Free} rinuncia a costruire un modello esplicito della fisica dell'ambiente. L'agente apprende direttamente la Policy o la Value Function interagendo con l'ambiente reale attraverso un processo di \textit{trial-and-error}.
+
+Sebbene richieda un numero di interazioni maggiore (\textit{Sample Inefficiency}), garantisce una minore complessità computazionale e una maggiore robustezza, poiché non dipende dall'accuratezza di un modello stimato. Grazie alla capacità di scalare su problemi complessi, il Model-Free RL rappresenta l'approccio dominante nel Deep Reinforcement Learning. Le famiglie di algoritmi più note in questa categoria includono \textit{Q-Learning}, \textit{DQN} e \textit{PPO}.
+
+\subsection{Value-Based vs Policy-Based vs Actor-Critic}
+\label{subsec:value-based_policy-based_actor-critic}
+
+Una seconda classificazione riguarda l'oggetto matematico che viene approssimato dalla rete neurale per risolvere il problema di controllo.
+
+\subsubsection{Value-Based Methods}
+
+Negli algoritmi \textit{Value-Based}, l'agente non apprende direttamente una strategia di comportamento, ma si concentra sulla stima di una funzione valore (tipicamente $Q(s, a)$) che predice il ritorno atteso. La policy è implicita e viene derivata selezionando l'azione che massimizza il valore stimato:
+\begin{equation}
+    a_t = \arg\max_{a \in \mathcal{A}} Q(s_t, a)
+\end{equation}
+Questa famiglia, rappresentata principalmente da \textit{DQN}, è stabile ed efficace in ambienti con spazi di azione discreti (come la scelta di un item). Tuttavia, non può gestire nativamente spazi di azione continui, dove la massimizzazione diventerebbe intrattabile.
+
+\subsubsection{Policy-Based Methods}
+
+Nei metodi \textit{Policy-Based}, l'agente apprende direttamente una funzione di policy parametrizzata $\pi_\theta(a|s)$ che mappa lo stato in una distribuzione di probabilità sulle azioni. L'ottimizzazione avviene tramite ascesa del gradiente sulla funzione obiettivo $J(\theta)$ (ritorno atteso):
+\begin{equation}
+    \theta_{t+1} = \theta_t + \alpha \nabla_\theta J(\theta_t)
+\end{equation}
+Il vantaggio principale è la capacità di apprendere policy stocastiche e gestire spazi di azione continui. Tuttavia, soffrono spesso di alta varianza nella stima del gradiente, portando a una convergenza lenta.
+
+\subsubsection{Actor-Critic Methods}
+
+I metodi \textit{Actor-Critic} combinano i punti di forza dei due approcci precedenti. L'\textbf{Attore} (Policy-Based) seleziona le azioni, mentre il \textbf{Critico} (Value-Based) stima la funzione valore per giudicare la bontà delle azioni scelte.
+Il Critico fornisce un segnale di feedback a bassa varianza per guidare l'aggiornamento dell'Attore, stabilizzando l'apprendimento. Esempi di questa famiglia sono \textit{A2C}, \textit{A3C} e \textit{PPO}.
+
+\subsection{On-Policy vs Off-Policy}
+\label{subsec:on-policy_off-policy}
+
+Questa distinzione riguarda la relazione tra la strategia usata per esplorare e quella che viene ottimizzata.
+
+\subsubsection{On-Policy Learning}
+
+Nel paradigma \textit{On-Policy}, l'agente valuta e migliora la stessa policy $\pi$ che sta utilizzando per interagire con l'ambiente.
+I campioni utilizzati per il training devono essere stati generati dalla policy corrente; una volta aggiornati i pesi, le esperienze passate non sono più valide e devono essere scartate. Di conseguenza, algoritmi come \textit{PPO} o \textit{SARSA} tendono ad avere una bassa efficienza dei campioni, richiedendo molte interazioni fresche.
+
+\subsubsection{Off-Policy Learning}
+
+Nel paradigma \textit{Off-Policy}, l'agente apprende il valore della policy ottima $\pi^*$ indipendentemente dalla policy comportamentale $\mu$ usata per generare i dati.
+Questo disaccoppiamento permette l'utilizzo dell'\textit{Experience Replay}: l'agente memorizza le transizioni passate in un buffer $\mathcal{D}$ e le riutilizza più volte per il training. Grazie a questa caratteristica, algoritmi come \textit{DQN} o \textit{SAC} risultano estremamente efficienti nell'uso dei dati, rendendoli preferibili in contesti dove l'interazione è costosa, come nei sistemi di raccomandazione reali.
+
+\subsection{Online vs Offline (Batch) RL}
+\label{subsec:online_offline_rl}
+
+Un'ultima classificazione critica, specialmente per le applicazioni ai Sistemi di Raccomandazione, riguarda la modalità di interazione con l'ambiente durante la fase di addestramento. La scelta tra apprendere interagendo in tempo reale o apprendere da dati storici statici determina non solo l'architettura del sistema, ma anche la sua sicurezza e applicabilità in contesti produttivi.
+
+\subsubsection{Online Reinforcement Learning}
+
+Nel paradigma classico \textit{Online}, l'apprendimento e la raccolta dati avvengono contemporaneamente in un ciclo continuo. L'agente interagisce con l'ambiente in tempo reale, osserva le conseguenze delle sue azioni e aggiorna immediatamente la sua policy per influenzare le decisioni future.
+Questo approccio permette all'agente di esplorare attivamente stati nuovi e correggere i propri errori, adattandosi dinamicamente ai cambiamenti della distribuzione dei dati. Tuttavia, l'applicazione diretta nei sistemi di raccomandazione reali presenta rischi significativi. Lasciare che un agente esplori casualmente (o secondo una policy non ancora ottimizzata) significa mostrare raccomandazioni di bassa qualità agli utenti reali, degradando l'esperienza utente e causando potenziali perdite economiche. Inoltre, il ciclo di feedback in un sistema live può essere estremamente lento, rallentando la convergenza dell'algoritmo.
+
+\subsubsection{Offline (Batch) Reinforcement Learning}
+
+Per ovviare ai rischi dell'interazione live, il paradigma \textit{Offline} (o \textit{Batch}) \textit{Reinforcement Learning} disaccoppia completamente l'apprendimento dall'esecuzione. In questo scenario, l'agente non ha accesso all'ambiente durante il training, ma deve apprendere esclusivamente da un dataset statico di transizioni storiche (log di interazioni passate) raccolte in precedenza da un'altra policy, spesso sub-ottimale o euristica.
+Sebbene questo approccio sia più sicuro ed economico, permettendo di sfruttare gli enormi volumi di dati storici già disponibili, esso introduce una sfida teorica complessa nota come \textit{Distributional Shift}. \cite{Levine2020} Il problema sorge quando l'agente, nel tentativo di migliorare rispetto alla policy storica, interroga la funzione $Q$ su azioni che non sono mai state eseguite nel dataset (azioni \textit{Out-Of-Distribution}). Gli algoritmi standard come DQN tendono a sovrastimare enormemente il valore di queste azioni sconosciute, portando l'agente ad apprendere policy fallimentari se non vengono applicate specifiche tecniche di regolarizzazione o vincoli di conservatività.
+
+\section{Algoritmi Model-Based}
+\label{sec:model-based}
+
+Gli algoritmi Model-Based mirano a costruire un modello approssimato della dinamica dell'ambiente, definito come $\mathcal{M} = (\mathcal{\hat{P}}, \mathcal{\hat{R}})$.
+Una volta appreso, questo modello viene utilizzato per generare dati simulati e pianificare le azioni future, migliorando drasticamente la \textit{Sample Efficiency}.
+
+\subsection{Dyna-Q}
+\label{subsec:dyna-q}
+
+L'architettura Dyna-Q è il primo framework a unificare l'apprendimento diretto con la pianificazione. L'algoritmo mantiene una struttura dati $Model(s, a)$ che memorizza l'ultimo risultato osservato $(R, S')$ per ogni coppia stato-azione visitata. \cite{Sutton1990}
+
+Il ciclo di esecuzione ad ogni passo $t$ si articola in quattro fasi:
+\begin{enumerate}
+    \item \textbf{Interazione}: l'agente esegue un'azione reale $A_t$ in $S_t$, osserva $R_{t+1}$ e $S_{t+1}$.
+    \item \textbf{Direct RL}: viene eseguito un aggiornamento di Q-Learning standard usando l'esperienza reale appena raccolta:
+    \begin{equation}
+        Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)]
+    \end{equation}
+    \item \textbf{Model Learning}: il modello viene aggiornato memorizzando la transizione: $Model(S_t, A_t) \leftarrow (R_{t+1}, S_{t+1})$.
+    \item \textbf{Planning Loop}: l'agente esegue $N$ passi di pianificazione. In ogni passo, campiona uno stato $S$ e un'azione $A$ visitati in precedenza, interroga il modello per ottenere la predizione simulata $(\hat{R}, \hat{S}')$ ed esegue un aggiornamento del valore Q basato su questa simulazione.
+\end{enumerate}
+
+Questo meccanismo permette di propagare le informazioni di ricompensa attraverso lo spazio degli stati molto più velocemente, sfruttando i tempi morti di calcolo tra un'azione reale e l'altra.
+
+\subsection{Monte Carlo Tree Search (MCTS)}
+\label{subsec:mcts}
+
+Sebbene nasca come algoritmo di ricerca euristica, MCTS è divenuto centrale nel RL per la sua capacità di pianificare in spazi decisionali vasti e deterministici. \cite{Browne2012}
+MCTS costruisce un albero di ricerca asimmetrico per decidere l'azione migliore dallo stato corrente, concentrando le risorse computazionali sulle sottostrutture più promettenti.
+
+Il processo si articola in quattro fasi ripetute ciclicamente entro un budget di tempo:
+\begin{enumerate}
+    \item \textbf{Selection}: si attraversa l'albero dalla radice fino a un nodo foglia. La scelta dei nodi figli avviene massimizzando la formula \textit{Upper Confidence Bound for Trees} (UCT), che bilancia esplorazione e sfruttamento:
+    \begin{equation}
+        UCT = \frac{w_i}{n_i} + c \sqrt{\frac{\ln N_p}{n_i}}
+    \end{equation}
+    dove $w_i$ è il valore totale del nodo, $n_i$ le visite del nodo, $N_p$ le visite del padre e $c$ la costante di esplorazione.
+    \item \textbf{Expansion}: se il nodo foglia non è terminale, viene espanso aggiungendo uno o più nodi figli corrispondenti alle azioni possibili non ancora esplorate.
+    \item \textbf{Simulation (Rollout)}: dal nuovo nodo, si esegue una simulazione rapida (spesso usando una policy casuale o leggera) fino a raggiungere uno stato terminale e ottenere una ricompensa $G$.
+    \item \textbf{Backpropagation}: il valore $G$ viene propagato all'indietro lungo il percorso selezionato per aggiornare le statistiche ($w_i, n_i$) di tutti i nodi attraversati.
+\end{enumerate}
+
+\subsection{Deep Model-Based RL: World Models}
+\label{subsec:world_models}
+
+Nei contesti ad alta dimensionalità (come la visione artificiale o i sistemi di raccomandazione), apprendere un modello perfetto dell'ambiente (come in Dyna) o enumerare tutte le azioni (come in MCTS) è impossibile.
+L'approccio dei World Models propone di apprendere una rappresentazione compressa e latente della dinamica dell'ambiente. \cite{Ha2018} L'architettura si divide in tre componenti neurali distinte:
+
+\begin{itemize}
+    \item \textbf{Vision Model (V)}: un \textit{Variational Autoencoder} (VAE) che comprime l'osservazione ad alta dimensionalità $O_t$ in un vettore latente compatto $z_t$, riducendo la complessità dello spazio degli stati.
+    \item \textbf{Memory Model (M)}: una rete ricorrente (es. MDN-RNN) che funge da modello predittivo del mondo. Dato lo stato corrente $z_t$ e l'azione $a_t$, impara a predire la distribuzione di probabilità del prossimo stato latente $z_{t+1}$.
+    \item \textbf{Controller (C)}: una rete neurale semplice (l'Agente) che prende in input la rappresentazione concisa del VAE ($z_t$) e lo stato della memoria ($h_t$) per decidere l'azione $a_t$.
+\end{itemize}
+
+La caratteristica di questo approccio è la possibilità di addestrare il Controller interamente "dentro il sogno" (\textit{Training in Imagination}): l'agente interagisce solo con il modello simulato $M$, senza toccare l'ambiente reale, evolvendo una policy robusta che viene poi trasferita nel mondo reale con grande successo.
+
+\section{Algoritmi Model-Free}
+\label{sec:model-free}
+
 \section{Deep Q-Network}
 \label{sec:dqn}

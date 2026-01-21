@@ -1,78 +1,121 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{Introduzione}{4}{section*.2}%
-\contentsline {chapter}{\numberline {1}Sistemi di raccomandazione}{6}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Formalizzazione del problema}{7}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Notazione matematica}{7}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Tipologie di Feedback}{8}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Definizione del Task}{9}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Sfide e Vincoli del Problema}{11}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Modelli di Raccomandazione}{12}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Modelli di Raccomandazione tradizionali}{12}{subsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.1}Content-Based Filtering (CBF)}{13}{subsubsection.1.2.1.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.2}Collaborative Filtering (CF)}{15}{subsubsection.1.2.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1.3}Hybrid System}{17}{subsubsection.1.2.1.3}%
-\contentsline {subsection}{\numberline {1.2.2}Modelli di raccomandazione basati su Deep Learning}{19}{subsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.2.1}Neural Collaborative Filtering (NCF)}{19}{subsubsection.1.2.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2.2}Autoencoder-based Collaborative Filtering}{21}{subsubsection.1.2.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.2.3}Session-based Recommendations with Recurrent Neural Networks}{24}{subsubsection.1.2.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.2.4}Convolutional Matrix Factorization for Document Context-Aware Recommendation}{27}{subsubsection.1.2.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.2.5}Self-Attentive Sequential Recommendation (SASRec)}{30}{subsubsection.1.2.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.2.6}Generative Adversarial Networks based Recommendation}{33}{subsubsection.1.2.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.2.7}Deep Reinforcement Learning based Recommendation}{35}{subsubsection.1.2.2.7}%
-\contentsline {subsection}{\numberline {1.2.3}Modelli di raccomandazione basati sui grafi}{37}{subsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.3.1}General Recommendation}{38}{subsubsection.1.2.3.1}%
-\contentsline {subsubsection}{\numberline {1.2.3.2}Sequential Recommendation}{41}{subsubsection.1.2.3.2}%
-\contentsline {subsubsection}{\numberline {1.2.3.3}Social Recommendation}{42}{subsubsection.1.2.3.3}%
-\contentsline {subsubsection}{\numberline {1.2.3.4}Knowledge Graph-based Recommendation}{44}{subsubsection.1.2.3.4}%
-\contentsline {subsection}{\numberline {1.2.4}Modelli di raccomandazione basati su Self-Supervised Learning}{44}{subsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.4.1}Generative SSL}{45}{subsubsection.1.2.4.1}%
-\contentsline {subsubsection}{\numberline {1.2.4.2}Contrastive SSL}{47}{subsubsection.1.2.4.2}%
-\contentsline {subsubsection}{\numberline {1.2.4.3}Predictive SSL}{50}{subsubsection.1.2.4.3}%
-\contentsline {subsubsection}{\numberline {1.2.4.4}Hybrid SSL}{51}{subsubsection.1.2.4.4}%
-\contentsline {subsection}{\numberline {1.2.5}Modelli di raccomandazione basati su Large Language Models}{52}{subsection.1.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.5.1}Discriminative LLM-based Recommendation}{53}{subsubsection.1.2.5.1}%
-\contentsline {subsubsection}{\numberline {1.2.5.2}Generative LLM-based Recommendation}{54}{subsubsection.1.2.5.2}%
-\contentsline {subsection}{\numberline {1.2.6}Modelli di raccomandazione basati su State Space Models}{55}{subsection.1.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.6.1}Structured State Space (S4)}{55}{subsubsection.1.2.6.1}%
-\contentsline {subsubsection}{\numberline {1.2.6.2}Selective SSM (Mamba4Rec)}{56}{subsubsection.1.2.6.2}%
-\contentsline {subsubsection}{\numberline {1.2.6.3}Continuous-Time Modeling (SS4Rec)}{57}{subsubsection.1.2.6.3}%
-\contentsline {subsubsection}{\numberline {1.2.6.4}Bidirectional \& Frequency-Enhanced (EchoMamba4Rec)}{57}{subsubsection.1.2.6.4}%
-\contentsline {subsubsection}{\numberline {1.2.6.5}Structured State Space Duality (SSD)}{58}{subsubsection.1.2.6.5}%
-\contentsline {subsubsection}{\numberline {1.2.6.6}Hybrid Architectures: Mamba + Transformer (MaTrRec)}{59}{subsubsection.1.2.6.6}%
-\contentsline {section}{\numberline {1.3}Attacchi ai Sistemi di Raccomandazione}{60}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Tassonomia degli attacchi}{61}{subsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.1.1}Livello di Conoscenza (Knowledge)}{61}{subsubsection.1.3.1.1}%
-\contentsline {subsubsection}{\numberline {1.3.1.2}Obiettivo dell'Attacco (Goal)}{61}{subsubsection.1.3.1.2}%
-\contentsline {subsubsection}{\numberline {1.3.1.3}Fase dell'Attacco (Timing/Scope)}{62}{subsubsection.1.3.1.3}%
-\contentsline {subsection}{\numberline {1.3.2}Attacchi di tipo Data Poisoning (Training Phase)}{62}{subsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.1}Attacchi Euristici (Traditional Shilling)}{63}{subsubsection.1.3.2.1}%
-\contentsline {subsubsection}{\numberline {1.3.2.2}Attacchi basati su Ottimizzazione (White-Box)}{63}{subsubsection.1.3.2.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.3}Attacchi Generativi (Generative Learning)}{64}{subsubsection.1.3.2.3}%
-\contentsline {subsubsection}{\numberline {1.3.2.4}Attacchi basati su Reinforcement Learning}{66}{subsubsection.1.3.2.4}%
-\contentsline {subsubsection}{\numberline {1.3.2.5}Attacchi contro Modelli Sequenziali}{68}{subsubsection.1.3.2.5}%
-\contentsline {subsubsection}{\numberline {1.3.2.6}Attacchi contro Large Language Models}{69}{subsubsection.1.3.2.6}%
-\contentsline {subsection}{\numberline {1.3.3}Attacchi di tipo Evasion (Inference Phase)}{70}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Gradient-based Evasion (Adversarial Perturbations)}{70}{subsubsection.1.3.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.3.2}Sequential Evasion (Profile Pollution)}{71}{subsubsection.1.3.3.2}%
-\contentsline {subsection}{\numberline {1.3.4}Attacchi di tipo Model Extraction (Privacy)}{72}{subsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.4.1}Model Stealing}{72}{subsubsection.1.3.4.1}%
-\contentsline {subsubsection}{\numberline {1.3.4.2}Attribute Inference Attack}{73}{subsubsection.1.3.4.2}%
-\contentsline {section}{\numberline {1.4}Metriche di Valutazione}{74}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Metriche di Errore (Prediction Accuracy)}{74}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Metriche di Classificazione (Set-based)}{75}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Metriche di Ranking (Position-Aware)}{77}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Metriche "Beyond Accuracy" (Qualità del Catalogo)}{78}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Metriche di Robustezza (Security Evaluation)}{79}{subsection.1.4.5}%
-\contentsline {subsubsection}{\numberline {1.4.5.1}Metriche di Successo (Offensive)}{79}{subsubsection.1.4.5.1}%
-\contentsline {subsubsection}{\numberline {1.4.5.2}Metriche di Impatto (Collateral Damage)}{79}{subsubsection.1.4.5.2}%
-\contentsline {subsection}{\numberline {1.4.6}Metriche di Efficienza Computazionale}{80}{subsection.1.4.6}%
-\contentsline {chapter}{\numberline {2}Reinforcement Learning}{81}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Deep Q-Network}{81}{section.2.1}%
-\contentsline {chapter}{\numberline {3}State Space Models}{82}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Mamba}{82}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Sistema proposto}{83}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{84}{chapter.5}%
-\contentsline {chapter}{Conclusioni}{85}{section*.138}%
-\contentsline {chapter}{Elenco delle figure}{87}{section*.140}%
-\contentsline {chapter}{Bibliografia}{89}{section*.142}%
+\contentsline {chapter}{Introduzione}{6}{section*.2}%
+\contentsline {chapter}{\numberline {1}Sistemi di raccomandazione}{8}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Formalizzazione del problema}{9}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Notazione matematica}{9}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Tipologie di Feedback}{10}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Definizione del Task}{11}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Sfide e Vincoli del Problema}{13}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Modelli di Raccomandazione}{14}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Modelli di Raccomandazione tradizionali}{14}{subsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.1}Content-Based Filtering (CBF)}{15}{subsubsection.1.2.1.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.2}Collaborative Filtering (CF)}{17}{subsubsection.1.2.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1.3}Hybrid System}{19}{subsubsection.1.2.1.3}%
+\contentsline {subsection}{\numberline {1.2.2}Modelli di raccomandazione basati su Deep Learning}{21}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Neural Collaborative Filtering (NCF)}{21}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Autoencoder-based Collaborative Filtering}{23}{subsubsection.1.2.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.3}Session-based Recommendations with Recurrent Neural Networks}{26}{subsubsection.1.2.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.2.4}Convolutional Matrix Factorization for Document Context-Aware Recommendation}{29}{subsubsection.1.2.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.2.5}Self-Attentive Sequential Recommendation (SASRec)}{32}{subsubsection.1.2.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.2.6}Generative Adversarial Networks based Recommendation}{35}{subsubsection.1.2.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.2.7}Deep Reinforcement Learning based Recommendation}{37}{subsubsection.1.2.2.7}%
+\contentsline {subsection}{\numberline {1.2.3}Modelli di raccomandazione basati sui grafi}{39}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}General Recommendation}{40}{subsubsection.1.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Sequential Recommendation}{43}{subsubsection.1.2.3.2}%
+\contentsline {subsubsection}{\numberline {1.2.3.3}Social Recommendation}{44}{subsubsection.1.2.3.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.4}Knowledge Graph-based Recommendation}{46}{subsubsection.1.2.3.4}%
+\contentsline {subsection}{\numberline {1.2.4}Modelli di raccomandazione basati su Self-Supervised Learning}{46}{subsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}Generative SSL}{47}{subsubsection.1.2.4.1}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Contrastive SSL}{49}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.3}Predictive SSL}{52}{subsubsection.1.2.4.3}%
+\contentsline {subsubsection}{\numberline {1.2.4.4}Hybrid SSL}{53}{subsubsection.1.2.4.4}%
+\contentsline {subsection}{\numberline {1.2.5}Modelli di raccomandazione basati su Large Language Models}{54}{subsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.5.1}Discriminative LLM-based Recommendation}{55}{subsubsection.1.2.5.1}%
+\contentsline {subsubsection}{\numberline {1.2.5.2}Generative LLM-based Recommendation}{56}{subsubsection.1.2.5.2}%
+\contentsline {subsection}{\numberline {1.2.6}Modelli di raccomandazione basati su State Space Models}{57}{subsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.6.1}Structured State Space (S4)}{57}{subsubsection.1.2.6.1}%
+\contentsline {subsubsection}{\numberline {1.2.6.2}Selective SSM (Mamba4Rec)}{58}{subsubsection.1.2.6.2}%
+\contentsline {subsubsection}{\numberline {1.2.6.3}Continuous-Time Modeling (SS4Rec)}{59}{subsubsection.1.2.6.3}%
+\contentsline {subsubsection}{\numberline {1.2.6.4}Bidirectional \& Frequency-Enhanced (EchoMamba4Rec)}{59}{subsubsection.1.2.6.4}%
+\contentsline {subsubsection}{\numberline {1.2.6.5}Structured State Space Duality (SSD)}{60}{subsubsection.1.2.6.5}%
+\contentsline {subsubsection}{\numberline {1.2.6.6}Hybrid Architectures: Mamba + Transformer (MaTrRec)}{61}{subsubsection.1.2.6.6}%
+\contentsline {section}{\numberline {1.3}Attacchi ai Sistemi di Raccomandazione}{62}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Tassonomia degli attacchi}{63}{subsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}Livello di Conoscenza (Knowledge)}{63}{subsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.2}Obiettivo dell'Attacco (Goal)}{63}{subsubsection.1.3.1.2}%
+\contentsline {subsubsection}{\numberline {1.3.1.3}Fase dell'Attacco (Timing/Scope)}{64}{subsubsection.1.3.1.3}%
+\contentsline {subsection}{\numberline {1.3.2}Attacchi di tipo Data Poisoning (Training Phase)}{64}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Attacchi Euristici (Traditional Shilling)}{65}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Attacchi basati su Ottimizzazione (White-Box)}{65}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Attacchi Generativi (Generative Learning)}{66}{subsubsection.1.3.2.3}%
+\contentsline {subsubsection}{\numberline {1.3.2.4}Attacchi basati su Reinforcement Learning}{68}{subsubsection.1.3.2.4}%
+\contentsline {subsubsection}{\numberline {1.3.2.5}Attacchi contro Modelli Sequenziali}{70}{subsubsection.1.3.2.5}%
+\contentsline {subsubsection}{\numberline {1.3.2.6}Attacchi contro Large Language Models}{71}{subsubsection.1.3.2.6}%
+\contentsline {subsection}{\numberline {1.3.3}Attacchi di tipo Evasion (Inference Phase)}{72}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Gradient-based Evasion (Adversarial Perturbations)}{72}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}Sequential Evasion (Profile Pollution)}{73}{subsubsection.1.3.3.2}%
+\contentsline {subsection}{\numberline {1.3.4}Attacchi di tipo Model Extraction (Privacy)}{74}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Model Stealing}{74}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Attribute Inference Attack}{75}{subsubsection.1.3.4.2}%
+\contentsline {section}{\numberline {1.4}Metriche di Valutazione}{76}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Metriche di Errore (Prediction Accuracy)}{76}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Metriche di Classificazione (Set-based)}{77}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Metriche di Ranking (Position-Aware)}{79}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Metriche "Beyond Accuracy" (Qualità del Catalogo)}{80}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Metriche di Robustezza (Security Evaluation)}{81}{subsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.5.1}Metriche di Successo (Offensive)}{81}{subsubsection.1.4.5.1}%
+\contentsline {subsubsection}{\numberline {1.4.5.2}Metriche di Impatto (Collateral Damage)}{81}{subsubsection.1.4.5.2}%
+\contentsline {subsection}{\numberline {1.4.6}Metriche di Efficienza Computazionale}{82}{subsection.1.4.6}%
+\contentsline {chapter}{\numberline {2}Reinforcement Learning}{83}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Paradigmi di Apprendimento Automatico}{83}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Apprendimento Supervisionato}{84}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Apprendimento Non Supervisionato}{84}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Apprendimento Per Rinforzo (Reinforcement Learning)}{84}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Formalizzazione del problema}{84}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Entità del Sistema}{85}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Agente}{85}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}Ambiente}{85}{subsubsection.2.2.1.2}%
+\contentsline {subsection}{\numberline {2.2.2}Spazi di definizione}{85}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Stato}{85}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Osservazione}{86}{subsubsection.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.3}Azione}{86}{subsubsection.2.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Segnali di Feedback e Obiettivi}{86}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Ricompensa}{86}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}Ritorno e Orizzonte}{87}{subsubsection.2.2.3.2}%
+\contentsline {subsection}{\numberline {2.2.4}Meccanismi Decisionali}{87}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4.1}Policy}{87}{subsubsection.2.2.4.1}%
+\contentsline {section}{\numberline {2.3}Funzioni di Valore ed Equazioni di Bellman}{88}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Funzioni di valore}{88}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}State-Value Function $V_\pi (s)$}{88}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}Action-Value Function $Q_\pi (s, a)$}{88}{subsubsection.2.3.1.2}%
+\contentsline {subsection}{\numberline {2.3.2}Equazioni di Bellman}{89}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Ottimalità}{89}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Equazione di Ottimalità di Bellman}{89}{subsubsection.2.3.3.1}%
+\contentsline {section}{\numberline {2.4}Tassonomia degli Algoritmi}{89}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Model-Based vs Model-Free}{89}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Model-Based RL}{90}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}Model-Free RL}{90}{subsubsection.2.4.1.2}%
+\contentsline {subsection}{\numberline {2.4.2}Value-Based vs Policy-Based vs Actor-Critic}{90}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Value-Based Methods}{90}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Policy-Based Methods}{91}{subsubsection.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}Actor-Critic Methods}{91}{subsubsection.2.4.2.3}%
+\contentsline {subsection}{\numberline {2.4.3}On-Policy vs Off-Policy}{91}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}On-Policy Learning}{92}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}Off-Policy Learning}{92}{subsubsection.2.4.3.2}%
+\contentsline {subsection}{\numberline {2.4.4}Online vs Offline (Batch) RL}{92}{subsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.1}Online Reinforcement Learning}{92}{subsubsection.2.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.4.2}Offline (Batch) Reinforcement Learning}{93}{subsubsection.2.4.4.2}%
+\contentsline {section}{\numberline {2.5}Algoritmi Model-Based}{93}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Dyna-Q}{93}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Monte Carlo Tree Search (MCTS)}{94}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Deep Model-Based RL: World Models}{95}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Algoritmi Model-Free}{95}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Deep Q-Network}{95}{section.2.7}%
+\contentsline {chapter}{\numberline {3}State Space Models}{96}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mamba}{96}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Sistema proposto}{97}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{98}{chapter.5}%
+\contentsline {chapter}{Conclusioni}{99}{section*.142}%
+\contentsline {chapter}{Elenco delle figure}{101}{section*.144}%
+\contentsline {chapter}{Bibliografia}{103}{section*.146}%

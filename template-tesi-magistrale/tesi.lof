@@ -1,52 +1,52 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Classificazione delle sorgenti in Feedback Esplicito e Implicito. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidaka2023}}}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Tassonomia gerarchica dei modelli di raccomandazione tradizionali. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{13}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Schema logico del modello Content-Based Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{15}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Schema logico del modello Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Schema logico del modello ibrido. Immagina tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{19}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Schema architetturale del modello Neural Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {He2017}}}{21}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Schema logico del modello Item-based AutoRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Sedhain2015}}}{24}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Creazione della session-parallel mini batch. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidasi2016}}}{26}{figure.caption.26}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Schema architetturale di GRU4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidasi2016}}}{27}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Schema logico del modello ConvMF: PMF a sinistra, CNN a destra. Immagine tratta da \blx@tocontentsinit {0}\cite {Kim2016}}}{28}{figure.caption.30}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Schema architetturale della rete CNN per la convMF. Immagine tratta da \blx@tocontentsinit {0}\cite {Kim2016}}}{30}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Schema logico del modello SASRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Kang2018}}}{33}{figure.caption.38}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Schema logico del training del modello IRGAN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2017}}}{35}{figure.caption.41}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Schema dell'interazione Agente-Ambiente nel modello DRN. Immagine tratta da \blx@tocontentsinit {0}\cite {Zheng2018}}}{37}{figure.caption.45}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Schema logico del modello GC-MC. Immagine tratta da \blx@tocontentsinit {0}\cite {Berg2017}}}{38}{figure.caption.47}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Schema architetturale del modello PinSage. Immagine tratta da \blx@tocontentsinit {0}\cite {Ying2018}}}{39}{figure.caption.49}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Schema architetturale del modello Neural Graph Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019}}}{40}{figure.caption.51}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Schema architetturale del modello LightGCN. Immagine tratta da \blx@tocontentsinit {0}\cite {He2020}}}{41}{figure.caption.53}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Schema architetturale del modello SR-GNN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_SRGNN}}}{42}{figure.caption.55}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Schema architetturale del modello GraphRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2019}}}{43}{figure.caption.57}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Schema architetturale del modello DiffNet. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_DiffNet}}}{43}{figure.caption.59}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Schema architetturale del modello KGAT. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019_KGAT}}}{44}{figure.caption.61}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Schema architetturale del modello BERT4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Sun2019}}}{46}{figure.caption.64}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Schema architetturale del modello GraphMAE. Immagine tratta da \blx@tocontentsinit {0}\cite {Hou2022}}}{47}{figure.caption.67}%
-\contentsline {figure}{\numberline {1.25}{\ignorespaces Schema logico del modello SGL. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2021}}}{48}{figure.caption.70}%
-\contentsline {figure}{\numberline {1.26}{\ignorespaces Schema logico del modello NCL. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2022}}}{50}{figure.caption.76}%
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Schema logico del modello Self-CF. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhou2023}}}{51}{figure.caption.78}%
-\contentsline {figure}{\numberline {1.28}{\ignorespaces Schema architetturale del modello SEPT. Immagine tratta da \blx@tocontentsinit {0}\cite {Yu2021}}}{52}{figure.caption.80}%
-\contentsline {figure}{\numberline {1.29}{\ignorespaces Schema architetturale del modello UniSRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Hou2022_UniSRec}}}{53}{figure.caption.82}%
-\contentsline {figure}{\numberline {1.30}{\ignorespaces Schema architetturale del modello P5. Immagine tratta da \blx@tocontentsinit {0}\cite {Geng2022}}}{54}{figure.caption.84}%
-\contentsline {figure}{\numberline {1.31}{\ignorespaces Schema logico del modello TALLRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Bao2023}}}{55}{figure.caption.86}%
-\contentsline {figure}{\numberline {1.32}{\ignorespaces Schema architetturale del modello Mamba4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Liu2024}}}{56}{figure.caption.87}%
-\contentsline {figure}{\numberline {1.33}{\ignorespaces Schema architetturale del modello SS4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Xiao2025}}}{57}{figure.caption.88}%
-\contentsline {figure}{\numberline {1.34}{\ignorespaces Schema architetturale del modello SSD4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Qu2024}}}{58}{figure.caption.90}%
-\contentsline {figure}{\numberline {1.35}{\ignorespaces Schema architetturale del modello TiM4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2025}}}{59}{figure.caption.92}%
-\contentsline {figure}{\numberline {1.36}{\ignorespaces Schema architetturale del modello MaTrRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhang2025}}}{60}{figure.caption.93}%
-\contentsline {figure}{\numberline {1.37}{\ignorespaces Rappresentazione schemata di un attacco di poisoning e di evasion. Immagine tratta da \blx@tocontentsinit {0}\cite {Deldjoo2021}}}{62}{figure.caption.94}%
-\contentsline {figure}{\numberline {1.38}{\ignorespaces Schema architetturale dell'attacco AUSH. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2020}}}{65}{figure.caption.100}%
-\contentsline {figure}{\numberline {1.39}{\ignorespaces Schema architetturale dell'attacco GOAT. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2021_GOAT}}}{66}{figure.caption.102}%
-\contentsline {figure}{\numberline {1.40}{\ignorespaces Schema architetturale dell'attacco PoisonRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Song2020}}}{67}{figure.caption.104}%
-\contentsline {figure}{\numberline {1.41}{\ignorespaces Schema architetturale dell'attacco CopyAttack. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2021}}}{67}{figure.caption.106}%
-\contentsline {figure}{\numberline {1.42}{\ignorespaces Schema architetturale dell'attacco LOKI. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhang2020_LOKI}}}{69}{figure.caption.108}%
-\contentsline {figure}{\numberline {1.43}{\ignorespaces Schema architetturale dell'attacco Instruction Tuning Poisoning. Immagine tratta da \blx@tocontentsinit {0}\cite {Wan2023}}}{70}{figure.caption.110}%
-\contentsline {figure}{\numberline {1.44}{\ignorespaces Schema architetturale dell'attacco FGM. Immagine tratta da \blx@tocontentsinit {0}\cite {Huang2021}}}{71}{figure.caption.112}%
-\contentsline {figure}{\numberline {1.45}{\ignorespaces Schema architetturale dell'attacco Leg-UP. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2024}}}{72}{figure.caption.115}%
-\contentsline {figure}{\numberline {1.46}{\ignorespaces Schema architetturale dell'attacco Model Extraction. Immagine tratta da \blx@tocontentsinit {0}\cite {Tramèr2016}}}{73}{figure.caption.117}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Classificazione delle sorgenti in Feedback Esplicito e Implicito. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidaka2023}}}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Tassonomia gerarchica dei modelli di raccomandazione tradizionali. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{15}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Schema logico del modello Content-Based Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{17}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Schema logico del modello Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Schema logico del modello ibrido. Immagina tratta da \blx@tocontentsinit {0}\cite {Ko2022}}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Schema architetturale del modello Neural Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {He2017}}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Schema logico del modello Item-based AutoRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Sedhain2015}}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Creazione della session-parallel mini batch. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidasi2016}}}{28}{figure.caption.26}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Schema architetturale di GRU4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Hidasi2016}}}{29}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Schema logico del modello ConvMF: PMF a sinistra, CNN a destra. Immagine tratta da \blx@tocontentsinit {0}\cite {Kim2016}}}{30}{figure.caption.30}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Schema architetturale della rete CNN per la convMF. Immagine tratta da \blx@tocontentsinit {0}\cite {Kim2016}}}{32}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Schema logico del modello SASRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Kang2018}}}{35}{figure.caption.38}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Schema logico del training del modello IRGAN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2017}}}{37}{figure.caption.41}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Schema dell'interazione Agente-Ambiente nel modello DRN. Immagine tratta da \blx@tocontentsinit {0}\cite {Zheng2018}}}{39}{figure.caption.45}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Schema logico del modello GC-MC. Immagine tratta da \blx@tocontentsinit {0}\cite {Berg2017}}}{40}{figure.caption.47}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Schema architetturale del modello PinSage. Immagine tratta da \blx@tocontentsinit {0}\cite {Ying2018}}}{41}{figure.caption.49}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Schema architetturale del modello Neural Graph Collaborative Filtering. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019}}}{42}{figure.caption.51}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Schema architetturale del modello LightGCN. Immagine tratta da \blx@tocontentsinit {0}\cite {He2020}}}{43}{figure.caption.53}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Schema architetturale del modello SR-GNN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_SRGNN}}}{44}{figure.caption.55}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Schema architetturale del modello GraphRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2019}}}{45}{figure.caption.57}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Schema architetturale del modello DiffNet. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2019_DiffNet}}}{45}{figure.caption.59}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Schema architetturale del modello KGAT. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2019_KGAT}}}{46}{figure.caption.61}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Schema architetturale del modello BERT4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Sun2019}}}{48}{figure.caption.64}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Schema architetturale del modello GraphMAE. Immagine tratta da \blx@tocontentsinit {0}\cite {Hou2022}}}{49}{figure.caption.67}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Schema logico del modello SGL. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2021}}}{50}{figure.caption.70}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Schema logico del modello NCL. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2022}}}{52}{figure.caption.76}%
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Schema logico del modello Self-CF. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhou2023}}}{53}{figure.caption.78}%
+\contentsline {figure}{\numberline {1.28}{\ignorespaces Schema architetturale del modello SEPT. Immagine tratta da \blx@tocontentsinit {0}\cite {Yu2021}}}{54}{figure.caption.80}%
+\contentsline {figure}{\numberline {1.29}{\ignorespaces Schema architetturale del modello UniSRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Hou2022_UniSRec}}}{55}{figure.caption.82}%
+\contentsline {figure}{\numberline {1.30}{\ignorespaces Schema architetturale del modello P5. Immagine tratta da \blx@tocontentsinit {0}\cite {Geng2022}}}{56}{figure.caption.84}%
+\contentsline {figure}{\numberline {1.31}{\ignorespaces Schema logico del modello TALLRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Bao2023}}}{57}{figure.caption.86}%
+\contentsline {figure}{\numberline {1.32}{\ignorespaces Schema architetturale del modello Mamba4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Liu2024}}}{58}{figure.caption.87}%
+\contentsline {figure}{\numberline {1.33}{\ignorespaces Schema architetturale del modello SS4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Xiao2025}}}{59}{figure.caption.88}%
+\contentsline {figure}{\numberline {1.34}{\ignorespaces Schema architetturale del modello SSD4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Qu2024}}}{60}{figure.caption.90}%
+\contentsline {figure}{\numberline {1.35}{\ignorespaces Schema architetturale del modello TiM4Rec. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2025}}}{61}{figure.caption.92}%
+\contentsline {figure}{\numberline {1.36}{\ignorespaces Schema architetturale del modello MaTrRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhang2025}}}{62}{figure.caption.93}%
+\contentsline {figure}{\numberline {1.37}{\ignorespaces Rappresentazione schemata di un attacco di poisoning e di evasion. Immagine tratta da \blx@tocontentsinit {0}\cite {Deldjoo2021}}}{64}{figure.caption.94}%
+\contentsline {figure}{\numberline {1.38}{\ignorespaces Schema architetturale dell'attacco AUSH. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2020}}}{67}{figure.caption.100}%
+\contentsline {figure}{\numberline {1.39}{\ignorespaces Schema architetturale dell'attacco GOAT. Immagine tratta da \blx@tocontentsinit {0}\cite {Wu2021_GOAT}}}{68}{figure.caption.102}%
+\contentsline {figure}{\numberline {1.40}{\ignorespaces Schema architetturale dell'attacco PoisonRec. Immagine tratta da \blx@tocontentsinit {0}\cite {Song2020}}}{69}{figure.caption.104}%
+\contentsline {figure}{\numberline {1.41}{\ignorespaces Schema architetturale dell'attacco CopyAttack. Immagine tratta da \blx@tocontentsinit {0}\cite {Fan2021}}}{69}{figure.caption.106}%
+\contentsline {figure}{\numberline {1.42}{\ignorespaces Schema architetturale dell'attacco LOKI. Immagine tratta da \blx@tocontentsinit {0}\cite {Zhang2020_LOKI}}}{71}{figure.caption.108}%
+\contentsline {figure}{\numberline {1.43}{\ignorespaces Schema architetturale dell'attacco Instruction Tuning Poisoning. Immagine tratta da \blx@tocontentsinit {0}\cite {Wan2023}}}{72}{figure.caption.110}%
+\contentsline {figure}{\numberline {1.44}{\ignorespaces Schema architetturale dell'attacco FGM. Immagine tratta da \blx@tocontentsinit {0}\cite {Huang2021}}}{73}{figure.caption.112}%
+\contentsline {figure}{\numberline {1.45}{\ignorespaces Schema architetturale dell'attacco Leg-UP. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2024}}}{74}{figure.caption.115}%
+\contentsline {figure}{\numberline {1.46}{\ignorespaces Schema architetturale dell'attacco Model Extraction. Immagine tratta da \blx@tocontentsinit {0}\cite {Tramèr2016}}}{75}{figure.caption.117}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

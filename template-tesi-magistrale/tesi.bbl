@@ -19,6 +19,59 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{Arulkumaran2017}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=67e44cb28c717fe7df7cc65361cc4695}{%
+           family={Arulkumaran},
+           familyi={A\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=67644e64ce48de5edac8b0b7250e390c}{%
+           family={Deisenroth},
+           familyi={D\bibinitperiod},
+           given={M.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7c3c373ec014e623165d33d2168a506d}{%
+           family={Brundage},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e7b3f84a0c7173d158d028a90a101d20}{%
+           family={Bharath},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{10c349e655315fd35c4fa697c8c7e230}
+      \strng{fullhash}{63ec1a046be67f94bbd9092641f1e248}
+      \strng{fullhashraw}{63ec1a046be67f94bbd9092641f1e248}
+      \strng{bibnamehash}{63ec1a046be67f94bbd9092641f1e248}
+      \strng{authorbibnamehash}{63ec1a046be67f94bbd9092641f1e248}
+      \strng{authornamehash}{10c349e655315fd35c4fa697c8c7e230}
+      \strng{authorfullhash}{63ec1a046be67f94bbd9092641f1e248}
+      \strng{authorfullhashraw}{63ec1a046be67f94bbd9092641f1e248}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-0792}
+      \field{journaltitle}{IEEE Signal Processing Magazine}
+      \field{number}{6}
+      \field{title}{Deep Reinforcement Learning: A Brief Survey}
+      \field{volume}{34}
+      \field{year}{2017}
+      \field{pages}{26\bibrangedash 38}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/MSP.2017.2743240
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/MSP.2017.2743240
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/MSP.2017.2743240
+      \endverb
+    \endentry
     \entry{Bao2023}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=5754190a8d69ebac1420d25666032a55}{%
@@ -372,6 +425,89 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
       \endverb
     \endentry
+    \entry{Browne2012}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=00c096415e09707a7ff71ada9a389161}{%
+           family={Browne},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1b06220290c840d9fb8c3ec3833e0209}{%
+           family={Powley},
+           familyi={P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ace915ece167d40f2bc3796e307eea87}{%
+           family={Whitehouse},
+           familyi={W\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e197bdb66553d5c5f9f290d138a68cd7}{%
+           family={Lucas},
+           familyi={L\bibinitperiod},
+           given={S.\bibnamedelimi M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=05ed53e46a761e9bcc6af589594dd541}{%
+           family={Cowling},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi I.},
+           giveni={P\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=8143c7dd20e0743054f22879467253b3}{%
+           family={Rohlfshagen},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ced5d13044d681af6807880ae9a2709f}{%
+           family={Tavener},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=42f218dfc023b333af457f68310e937e}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c902caf45348104a0f867fbc71c8da74}{%
+           family={Samothrakis},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=28b74df4264b7a137d6027f2c92d8300}{%
+           family={Colton},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{389ddcb2f601e4849301cd456957db7f}
+      \strng{fullhash}{92d793692c6083c336fa8e77fa185ce7}
+      \strng{fullhashraw}{92d793692c6083c336fa8e77fa185ce7}
+      \strng{bibnamehash}{92d793692c6083c336fa8e77fa185ce7}
+      \strng{authorbibnamehash}{92d793692c6083c336fa8e77fa185ce7}
+      \strng{authornamehash}{389ddcb2f601e4849301cd456957db7f}
+      \strng{authorfullhash}{92d793692c6083c336fa8e77fa185ce7}
+      \strng{authorfullhashraw}{92d793692c6083c336fa8e77fa185ce7}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1943-0698}
+      \field{journaltitle}{IEEE Transactions on Computational Intelligence and AI in Games}
+      \field{number}{1}
+      \field{title}{A Survey of Monte Carlo Tree Search Methods}
+      \field{volume}{4}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 43}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1109/TCIAIG.2012.2186810
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/TCIAIG.2012.2186810
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/TCIAIG.2012.2186810
+      \endverb
+    \endentry
     \entry{Burke2002}{article}{}{}
       \name{author}{1}{}{%
         {{hash=927ab4206ced595b50d2ac5fb4535b88}{%
@@ -560,6 +696,86 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.18653/v1/N19-1423
+      \endverb
+    \endentry
+    \entry{Dulac-Arnold2016}{misc}{}{}
+      \name{author}{10}{}{%
+        {{hash=1e75a9df444c5ef79ce4db4c8dd76ddc}{%
+           family={Dulac-Arnold},
+           familyi={D\bibinithyphendelim A\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=173072a12c87679d6e0aeed7dbfb2abc}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f5a8983bab24d2cd5670100e485fc883}{%
+           family={Hasselt},
+           familyi={H\bibinitperiod},
+           given={Hado},
+           giveni={H\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=daf6cbed703aa44e31d950c3c2720056}{%
+           family={Sunehag},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3a6fdf4df9a25f1d2d506ad9e86e1f6c}{%
+           family={Lillicrap},
+           familyi={L\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8853d85fce0f50bae8ed489294bbb22f}{%
+           family={Hunt},
+           familyi={H\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0bc3925449977411611201a537183d84}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b2f6367bc66a7a3541e2e89009daf0dc}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Theophane},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6598b6ed3c197bb4292561d14d01436f}{%
+           family={Degris},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f02bf7127a7a7eb2043fda73006dfc61}{%
+           family={Coppin},
+           familyi={C\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f365a2cfe7993eced9cc5ffa3d632001}
+      \strng{fullhash}{1cc36954ef5a27d18dab9732209b73e6}
+      \strng{fullhashraw}{1cc36954ef5a27d18dab9732209b73e6}
+      \strng{bibnamehash}{1cc36954ef5a27d18dab9732209b73e6}
+      \strng{authorbibnamehash}{1cc36954ef5a27d18dab9732209b73e6}
+      \strng{authornamehash}{f365a2cfe7993eced9cc5ffa3d632001}
+      \strng{authorfullhash}{1cc36954ef5a27d18dab9732209b73e6}
+      \strng{authorfullhashraw}{1cc36954ef5a27d18dab9732209b73e6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deep Reinforcement Learning in Large Discrete Action Spaces}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.48550/arXiv.1512.07679
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1512.07679
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1512.07679
       \endverb
     \endentry
     \entry{Fan2025}{article}{}{}
@@ -832,6 +1048,61 @@
       \endverb
       \keyw{poisoning attacks,adversarial machine learning,Adversarial recommender systems}
     \endentry
+    \entry{Fayaz2022}{inbook}{}{}
+      \name{author}{4}{}{%
+        {{hash=34b56c90dc2db5b6f99e9edc93a32de7}{%
+           family={Fayaz},
+           familyi={F\bibinitperiod},
+           given={Sheikh\bibnamedelima Amir},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bf5a043eae2fe3cdde3f9d40866cb98c}{%
+           family={Jahangeer\bibnamedelima Sidiq},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=12816bc7427ec4d3dcdf1c296625ed1c}{%
+           family={Zaman},
+           familyi={Z\bibinitperiod},
+           given={Majid},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e095482c8300a8bfcdcf00f69ecf602d}{%
+           family={Butt},
+           familyi={B\bibinitperiod},
+           given={Muheet\bibnamedelima Ahmed},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec2b5d3a7040d4a8c49c3775370ead1c}
+      \strng{fullhash}{e19e130ea2867aba0322bf933e06f1e6}
+      \strng{fullhashraw}{e19e130ea2867aba0322bf933e06f1e6}
+      \strng{bibnamehash}{e19e130ea2867aba0322bf933e06f1e6}
+      \strng{authorbibnamehash}{e19e130ea2867aba0322bf933e06f1e6}
+      \strng{authornamehash}{ec2b5d3a7040d4a8c49c3775370ead1c}
+      \strng{authorfullhash}{e19e130ea2867aba0322bf933e06f1e6}
+      \strng{authorfullhashraw}{e19e130ea2867aba0322bf933e06f1e6}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary Reinforcement Learning (RL) is a prevalent prototype for finite sequential decision making under improbability. A distinctive RL algorithm functions with only restricted knowledge of the environment and with limited response or feedback on the quality of the conclusions. To work efficiently in complex environments, learning agents entail the capability to form convenient generalizations, that is, the ability to selectively overlook extraneous facts. It is a challenging task to develop a single illustration that is suitable for a large problem setting. This chapter provides a brief introduction to reinforcement learning models, procedures, techniques, and reinforcement learning processes. Particular focus is on the aspects related to the agent-environment interface and how Reinforcement Learning can be used in various daily life practical applications. The basic concept that we will explore is that of a solution to the Re-enforcement Learning problem using the Markov Decision Process (MDP). We assume that the reader has a basic idea of machine learning concepts and algorithms.}
+      \field{isbn}{9781119776499}
+      \field{month}{7}
+      \field{note}{Wiley Online Books}
+      \field{series}{Machine Learning and Data Science}
+      \field{title}{Machine Learning: An Introduction to Reinforcement Learning}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1002/9781119776499.ch1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/9781119776499.ch1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/9781119776499.ch1
+      \endverb
+      \keyw{Reinforcement learning; Markov decision process; agent-environment interaction; exploitation; exploration}
+    \endentry
     \entry{Geng2022}{misc}{}{}
       \name{author}{5}{}{%
         {{hash=6b08640f38e5ddc30b8bb80b6b0e0307}{%
@@ -974,6 +1245,47 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.48550/arXiv.2111.00396
+      \endverb
+    \endentry
+    \entry{Ha2018}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=4467056eb9d0a44c1ec21bbb4d6152c5}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{fullhash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{fullhashraw}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{bibnamehash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{authorbibnamehash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{authornamehash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{authorfullhash}{ac33097a207e3840f68fa6e4bd34710c}
+      \strng{authorfullhashraw}{ac33097a207e3840f68fa6e4bd34710c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Recurrent World Models Facilitate Policy Evolution}
+      \field{volume}{31}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.48550/arXiv.1809.01999
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf
       \endverb
     \endentry
     \entry{He2020}{misc}{}{}
@@ -1568,6 +1880,57 @@
       \verb https://doi.org/10.14722/ndss.2021.24525
       \endverb
     \endentry
+    \entry{Kaelbling1998}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=72fdc7bf3120e1cff12e3ecf7e892b9a}{%
+           family={Kaelbling},
+           familyi={K\bibinitperiod},
+           given={Leslie\bibnamedelima Pack},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=211e529e9f10ad1bfacff2284da10ea7}{%
+           family={Littman},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=2206f2c6c327af01902e88ec6bef588b}{%
+           family={Cassandra},
+           familyi={C\bibinitperiod},
+           given={Anthony\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{55978656d14c32546fe5d19b1598192d}
+      \strng{fullhash}{55978656d14c32546fe5d19b1598192d}
+      \strng{fullhashraw}{55978656d14c32546fe5d19b1598192d}
+      \strng{bibnamehash}{55978656d14c32546fe5d19b1598192d}
+      \strng{authorbibnamehash}{55978656d14c32546fe5d19b1598192d}
+      \strng{authornamehash}{55978656d14c32546fe5d19b1598192d}
+      \strng{authorfullhash}{55978656d14c32546fe5d19b1598192d}
+      \strng{authorfullhashraw}{55978656d14c32546fe5d19b1598192d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we bring techniques from operations research to bear on the problem of choosing optimal actions in partially observable stochastic domains. We begin by introducing the theory of Markov decision processes (mdps) and partially observable MDPs (pomdps). We then outline a novel algorithm for solving pomdps off line and show how, in some cases, a finite-memory controller can be extracted from the solution to a POMDP. We conclude with a discussion of how our approach relates to previous work, the complexity of finding exact solutions to pomdps, and of some possibilities for finding approximate solutions.}
+      \field{issn}{0004-3702}
+      \field{journaltitle}{Artificial Intelligence}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Planning and acting in partially observable stochastic domains}
+      \field{volume}{101}
+      \field{year}{1998}
+      \field{pages}{99\bibrangedash 134}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1016/S0004-3702(98)00023-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S000437029800023X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S000437029800023X
+      \endverb
+      \keyw{Planning; Uncertainty; Partially observable Markov decision processes}
+    \endentry
     \entry{Kang2018}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=448136e859bc7fdfe9759b68ef755fac}{%
@@ -1816,6 +2179,57 @@
       \verb https://doi.org/10.1145/988672.988726
       \endverb
       \keyw{collaborative filtering,recommender systems,shilling}
+    \endentry
+    \entry{Levine2020}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=976765a796e51c8e6a84c5ea053dd59d}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Aviral},
+           giveni={A\bibinitperiod}}}%
+        {{hash=641a3f5d5ce834c4b56fb672c5df0207}{%
+           family={Tucker},
+           familyi={T\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6a018be9fcf5a8ea4185688a73eefa56}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8138b12c916ee0360d338b6e223298a0}
+      \strng{fullhash}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \strng{fullhashraw}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \strng{bibnamehash}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \strng{authorbibnamehash}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \strng{authornamehash}{8138b12c916ee0360d338b6e223298a0}
+      \strng{authorfullhash}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \strng{authorfullhashraw}{4b62c43a2c56d4b92d64a452c1c1f8a9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.48550/arXiv.2005.01643
+      \endverb
+      \verb{eprint}
+      \verb 2005.01643
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.org/10.48550/arXiv.2005.01643
+      \endverb
+      \verb{url}
+      \verb http://doi.org/10.48550/arXiv.2005.01643
+      \endverb
     \endentry
     \entry{Li2016}{misc}{}{}
       \name{author}{4}{}{%
@@ -2969,6 +3383,91 @@
       \verb https://doi.org/10.1145/3383313.3412489
       \endverb
       \keyw{Reproducible Evaluation,Recommender Systems,Benchmarks}
+    \endentry
+    \entry{Sutton1990}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{hash=eb920e5277d3d5fd0903f3cd41e11871}{%
+           family={Sutton},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco (CA)}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{fullhash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{fullhashraw}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{bibnamehash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{authorbibnamehash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{authornamehash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{authorfullhash}{eb920e5277d3d5fd0903f3cd41e11871}
+      \strng{authorfullhashraw}{eb920e5277d3d5fd0903f3cd41e11871}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper extends previous work with Dyna, a class of architectures for intelligent systems based on approximating dynamic programming methods. Dyna architectures integrate trial-and-error (reinforcement) learning and execution-time planning into a single process operating alternately on the world and on a learned model of the world. In this paper, I present and show results for two Dyna architectures. The Dyna-PI architecture is based on dynamic programming's policy iteration method and can be related to existing AI ideas such as evaluation functions and universal plans (reactive systems). Using a navigation task, results are shown for a simple Dyna-PI system that simultaneously learns by trial and error, learns a world model, and plans optimal routes using the evolving world model. The Dyna-Q architecture is based on Watkins's Q-learning, a new kind of reinforcement learning. Dyna-Q uses a less familiar set of data structures than does Dyna-PI, but is arguably simpler to implement and use. We show that Dyna-Q architectures are easy to adapt for use in changing environments.}
+      \field{booktitle}{Machine Learning Proceedings 1990}
+      \field{isbn}{978-1-55860-141-3}
+      \field{month}{1}
+      \field{title}{Integrated Architectures for Learning, Planning, and Reacting Based on Approximating Dynamic Programming}
+      \field{year}{1990}
+      \field{pages}{216\bibrangedash 224}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/B978-1-55860-141-3.50030-4
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/B9781558601413500304
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/B9781558601413500304
+      \endverb
+    \endentry
+    \entry{Sutton2018}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb920e5277d3d5fd0903f3cd41e11871}{%
+           family={Sutton},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=32a0a208f8bcf56a13b0a8e618aa806a}{%
+           family={Barto},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{fullhash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{fullhashraw}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{bibnamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorbibnamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authornamehash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorfullhash}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \strng{authorfullhashraw}{c6212f1a1407d96a3d9f4fefbb07eade}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780262039246}
+      \field{title}{Reinforcement Learning: An Introduction}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://incompleteideas.net/book/the-book.html
+      \endverb
+      \verb{url}
+      \verb http://incompleteideas.net/book/the-book.html
+      \endverb
     \endentry
     \entry{Touvron2023}{article}{}{}
       \name{author}{14}{}{%
