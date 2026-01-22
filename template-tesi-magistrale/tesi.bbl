@@ -1288,6 +1288,60 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf
       \endverb
     \endentry
+    \entry{Haarnoja2018}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=45b14f55dd7ae28cb6cb2e23e4a168b9}{%
+           family={Haarnoja},
+           familyi={H\bibinitperiod},
+           given={Tuomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=519033a7338e5ef684c77d4d04748a4a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Aurick},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{fullhash}{951e86110020d3107317b3e819f3d92d}
+      \strng{fullhashraw}{951e86110020d3107317b3e819f3d92d}
+      \strng{bibnamehash}{951e86110020d3107317b3e819f3d92d}
+      \strng{authorbibnamehash}{951e86110020d3107317b3e819f3d92d}
+      \strng{authornamehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{authorfullhash}{951e86110020d3107317b3e819f3d92d}
+      \strng{authorfullhashraw}{951e86110020d3107317b3e819f3d92d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Model-free deep reinforcement learning (RL) algorithms have been demonstrated on a range of challenging decision making and control tasks. However, these methods typically suffer from two major challenges: very high sample complexity and brittle convergence properties, which necessitate meticulous hyperparameter tuning. Both of these challenges severely limit the applicability of such methods to complex, real-world domains. In this paper, we propose soft actor-critic, an off-policy actor-critic deep RL algorithm based on the maximum entropy reinforcement learning framework. In this framework, the actor aims to maximize expected reward while also maximizing entropy. That is, to succeed at the task while acting as randomly as possible. Prior deep RL methods based on this framework have been formulated as Q-learning methods. By combining off-policy updates with a stable stochastic actor-critic formulation, our method achieves state-of-the-art performance on a range of continuous control benchmark tasks, outperforming prior on-policy and off-policy methods. Furthermore, we demonstrate that, in contrast to other off-policy algorithms, our approach is very stable, achieving very similar performance across different random seeds.}
+      \field{title}{Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor}
+      \field{volume}{80}
+      \field{year}{2018}
+      \field{pages}{1861\bibrangedash 1870}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.48550/arXiv.1801.01290
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
+      \endverb
+    \endentry
     \entry{He2020}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=cf3f1b6bfe8e9131a8c719c1af0dce5d}{%
@@ -2728,6 +2782,82 @@
       \endverb
       \keyw{user profiling,user models,personalized information delivery,multimedia applications,information retrieval,information filtering,casual information usage}
     \endentry
+    \entry{Mnih2016}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=3aa2033b86ba7b0b9e3b30102cdf745c}{%
+           family={Badia},
+           familyi={B\bibinitperiod},
+           given={Adria\bibnamedelima Puigdomenech},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3a6fdf4df9a25f1d2d506ad9e86e1f6c}{%
+           family={Lillicrap},
+           familyi={L\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b63b9b2d91f6ba1b1739563edc0432ab}{%
+           family={Harley},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{3c9ce48a826d675e6366b9844d39a485}
+      \strng{fullhashraw}{3c9ce48a826d675e6366b9844d39a485}
+      \strng{bibnamehash}{3c9ce48a826d675e6366b9844d39a485}
+      \strng{authorbibnamehash}{3c9ce48a826d675e6366b9844d39a485}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{3c9ce48a826d675e6366b9844d39a485}
+      \strng{authorfullhashraw}{3c9ce48a826d675e6366b9844d39a485}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a conceptually simple and lightweight framework for deep reinforcement learning that uses asynchronous gradient descent for optimization of deep neural network controllers. We present asynchronous variants of four standard reinforcement learning algorithms and show that parallel actor-learners have a stabilizing effect on training allowing all four methods to successfully train neural network controllers. The best performing method, an asynchronous variant of actor-critic, surpasses the current state-of-the-art on the Atari domain while training for half the time on a single multi-core CPU instead of a GPU. Furthermore, we show that asynchronous actor-critic succeeds on a wide variety of continuous motor control problems as well as on a new task of navigating random 3D mazes using a visual input.}
+      \field{note}{New York, New York, USA}
+      \field{title}{Asynchronous Methods for Deep Reinforcement Learning}
+      \field{volume}{48}
+      \field{year}{2016}
+      \field{pages}{1928\bibrangedash 1937}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.48550/arXiv.1602.01783
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v48/mniha16.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v48/mniha16.html
+      \endverb
+    \endentry
     \entry{Mnih2015}{article}{}{}
       \name{author}{19}{}{%
         {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
@@ -2834,6 +2964,7 @@
       \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
       \strng{authorfullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{authorfullhashraw}{29e1f598b04c2ec7e97aaeb02f70e0c8}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -3018,6 +3149,47 @@
       \verb https://doi.org/10.1186/s40537-022-00592-5
       \endverb
     \endentry
+    \entry{Rummery1994}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=4fcb9d507e29a75a872aaf34e51eefbc}{%
+           family={Rummery},
+           familyi={R\bibinitperiod},
+           given={Gavin\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=72e0fc84e0c9581e8d1a97970aad5462}{%
+           family={Niranjan},
+           familyi={N\bibinitperiod},
+           given={Mahesan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Engineering Department}%
+      }
+      \strng{namehash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{fullhash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{fullhashraw}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{bibnamehash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{authorbibnamehash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{authornamehash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{authorfullhash}{96a57255e3b4fe316a5989345eefbcd2}
+      \strng{authorfullhashraw}{96a57255e3b4fe316a5989345eefbcd2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On-Line Q-Learning Using Connectionist Systems}
+      \field{type}{techreport}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Mahesan-Niranjan/publication/2500611_On-Line_Q-Learning_Using_Connectionist_Systems/links/5438d5db0cf204cab1d6db0f/On-Line-Q-Learning-Using-Connectionist-Systems.pdf?_sg%5B0%5D=HYd0h230b7WOR6m4hj5yx01K97aS61Z0DufUURMQr9ZqMqcEVZ0dNpG84h6uCfRl_M40FNkXgRX-GnpnxH31Ww.jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF_oOsqh7WddL8pfxAomPSbeANzdmLP9YPB26HbLeSaEJqhFgzIxvWQ&_sg%5B1%5D=CZtZhHTEMgSwBZrpZU_7BACd8RH04JUKiITdXRQJ6MQ9SFS27jreZmcsuNcqYYWRoxcwBE-xBMbrfl1QobmEZ65bmkmpzonq5JoLRIIUKXne.jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF_oOsqh7WddL8pfxAomPSbeANzdmLP9YPB26HbLeSaEJqhFgzIxvWQ&_iepl=
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Mahesan-Niranjan/publication/2500611_On-Line_Q-Learning_Using_Connectionist_Systems/links/5438d5db0cf204cab1d6db0f/On-Line-Q-Learning-Using-Connectionist-Systems.pdf?_sg%5B0%5D=HYd0h230b7WOR6m4hj5yx01K97aS61Z0DufUURMQr9ZqMqcEVZ0dNpG84h6uCfRl_M40FNkXgRX-GnpnxH31Ww.jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF_oOsqh7WddL8pfxAomPSbeANzdmLP9YPB26HbLeSaEJqhFgzIxvWQ&_sg%5B1%5D=CZtZhHTEMgSwBZrpZU_7BACd8RH04JUKiITdXRQJ6MQ9SFS27jreZmcsuNcqYYWRoxcwBE-xBMbrfl1QobmEZ65bmkmpzonq5JoLRIIUKXne.jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF_oOsqh7WddL8pfxAomPSbeANzdmLP9YPB26HbLeSaEJqhFgzIxvWQ&_iepl=
+      \endverb
+    \endentry
     \entry{Salton1975}{article}{}{}
       \name{author}{2}{}{%
         {{hash=0ece344e5cd40f244e157ac3eefc8fd4}{%
@@ -3123,6 +3295,108 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1145/371920.372071
+      \endverb
+    \endentry
+    \entry{Schaul2015}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a56e72b23778a835bdade7d0511e43a3}{%
+           family={Schaul},
+           familyi={S\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d1c6b8444cb95e400ca38d5ae5c5afd3}{%
+           family={Quan},
+           familyi={Q\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{%
+           family={Antonoglou},
+           familyi={A\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{04a0db021533adedf96ff47bc975d01a}
+      \strng{fullhash}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \strng{fullhashraw}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \strng{bibnamehash}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \strng{authorbibnamehash}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \strng{authornamehash}{04a0db021533adedf96ff47bc975d01a}
+      \strng{authorfullhash}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \strng{authorfullhashraw}{cf83dab6b2af35a31aaeaaf1c6f70196}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{series}{arXiv}
+      \field{title}{Prioritized Experience Replay}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.48550/arXiv.1511.05952
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1511.05952
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1511.05952
+      \endverb
+    \endentry
+    \entry{Schulman2017}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=674ede0b9cd02a2bf5fc662972efb9f0}{%
+           family={Wolski},
+           familyi={W\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be38507da6ab98e7ac01ac2c6b7e13eb}{%
+           family={Klimov},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{fullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{bibnamehash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorbibnamehash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authornamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorfullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorfullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Proximal Policy Optimization Algorithms}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.48550/arXiv.1707.06347
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1707.06347
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.06347
       \endverb
     \endentry
     \entry{Sedhain2015}{misc}{}{}
@@ -3994,6 +4268,169 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.48550/arXiv.2406.02638
+      \endverb
+    \endentry
+    \entry{Wang2016}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=05bc8d503a2c310ef0976ace7f9d2734}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ziyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a56e72b23778a835bdade7d0511e43a3}{%
+           family={Schaul},
+           familyi={S\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1640e78f1e643c3d6f8e8c5b4b50896c}{%
+           family={Hessel},
+           familyi={H\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0bf7b09d48107118a22d6472d60fd514}{%
+           family={Hasselt},
+           familyi={H\bibinitperiod},
+           given={Hado},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3075d0e02c0833f6e5fe1addb880898f}{%
+           family={Lanctot},
+           familyi={L\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3d32f82cf02497b8eaa94d98263506d6}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={Nando},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=024bfb76c2f5540f5021fb377901cc25}{%
+           family={Balcan},
+           familyi={B\bibinitperiod},
+           given={Maria\bibnamedelima Florina},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=68a0238356fbd88b34be8886f25938a7}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={Kilian\bibnamedelima Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{ce0f3d71b18ee7367558a7b6d6e6973e}
+      \strng{fullhash}{d08102b6350c149e863aa74c9777577e}
+      \strng{fullhashraw}{d08102b6350c149e863aa74c9777577e}
+      \strng{bibnamehash}{d08102b6350c149e863aa74c9777577e}
+      \strng{authorbibnamehash}{d08102b6350c149e863aa74c9777577e}
+      \strng{authornamehash}{ce0f3d71b18ee7367558a7b6d6e6973e}
+      \strng{authorfullhash}{d08102b6350c149e863aa74c9777577e}
+      \strng{authorfullhashraw}{d08102b6350c149e863aa74c9777577e}
+      \strng{editorbibnamehash}{574fba25a54bf082817211b5d522e7ef}
+      \strng{editornamehash}{574fba25a54bf082817211b5d522e7ef}
+      \strng{editorfullhash}{574fba25a54bf082817211b5d522e7ef}
+      \strng{editorfullhashraw}{574fba25a54bf082817211b5d522e7ef}
+      \field{extraname}{4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 33rd International Conference on Machine Learning}
+      \field{title}{Dueling Network Architectures for Deep Reinforcement Learning}
+      \field{volume}{48}
+      \field{year}{2016}
+      \field{pages}{1995\bibrangedash 2003}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v48/wangf16.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v48/wangf16.html
+      \endverb
+    \endentry
+    \entry{Watkins1992}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=6522b6087fe013d303faca6da91596ca}{%
+           family={Watkins},
+           familyi={W\bibinitperiod},
+           given={Christopher\bibnamedelimb J.\bibnamedelimi C.\bibnamedelimi H.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ef0afbe0b4e15059c963e026fe213c34}{%
+           family={Dayan},
+           familyi={D\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{fullhash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{fullhashraw}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{bibnamehash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{authorbibnamehash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{authornamehash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{authorfullhash}{1f776b9a46cb729efd9599e3af8beeef}
+      \strng{authorfullhashraw}{1f776b9a46cb729efd9599e3af8beeef}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Q-learning (Watkins, 1989) is a simple way for agents to learn how to act optimally in controlled Markovian domains. It amounts to an incremental method for dynamic programming which imposes limited computational demands. It works by successively improving its evaluations of the quality of particular actions at particular states.}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{Q-learning}
+      \field{volume}{8}
+      \field{year}{1992}
+      \field{pages}{279\bibrangedash 292}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/BF00992698
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF00992698
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF00992698
+      \endverb
+    \endentry
+    \entry{Williams1992}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{fullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{fullhashraw}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{bibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{authorbibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{authornamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{authorfullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \strng{authorfullhashraw}{6cbc29ad7fd57ffdb9ed4728418fd988}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article presents a general class of associative reinforcement learning algorithms for connectionist networks containing stochastic units. These algorithms, called REINFORCE algorithms, are shown to make weight adjustments in a direction that lies along the gradient of expected reinforcement in both immediate-reinforcement tasks and certain limited forms of delayed-reinforcement tasks, and they do this without explicitly computing gradient estimates or even storing information from which such estimates could be computed. Specific examples of such algorithms are presented, some of which bear a close relationship to certain existing algorithms while others are novel but potentially interesting in their own right. Also given are results that show how such algorithms can be naturally integrated with backpropagation. We close with a brief discussion of a number of additional issues surrounding the use of such algorithms, including what is known about their limiting behaviors as well as further considerations that might be used to help develop similar but potentially more powerful reinforcement learning algorithms.}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{Simple statistical gradient-following algorithms for connectionist reinforcement learning}
+      \field{volume}{8}
+      \field{year}{1992}
+      \field{pages}{229\bibrangedash 256}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/BF00992696
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF00992696
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF00992696
       \endverb
     \endentry
     \entry{Wu2021_GOAT}{article}{}{}
@@ -5152,6 +5589,8 @@
       \keyw{recommender systems; deep learning; social networks; sequence recommendation; cross-domain recommendation}
     \endentry
   \enddatalist
+  \missing{Konda2000}
+  \missing{VanHasselt2016}
 \endrefsection
 \endinput
 

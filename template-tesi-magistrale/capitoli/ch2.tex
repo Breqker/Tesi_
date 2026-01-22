@@ -182,8 +182,8 @@ Sotto la policy ottimale, il valore di un'azione è uguale alla ricompensa immed
 
 Esistono diversi approcci per risolvere il problema dell'apprendimento decisionale sequenziale. La letteratura scientifica classifica gli algoritmi di Reinforcement Learning lungo assi fondamentali che ne determinano l'efficienza, la stabilità e l'applicabilità a specifici domini applicativi. \cite{Arulkumaran2017}
 
-\subsection{Model-Based vs Model-Free}
-\label{subsec:model-based_model-free}
+\subsection{Presenza del Modello}
+\label{subsec:presenza-modello}
 
 La prima distinzione fondamentale riguarda la conoscenza che l'agente possiede, o cerca di acquisire, sulle dinamiche interne dell'ambiente.
 
@@ -201,8 +201,8 @@ L'approccio \textit{Model-Free} rinuncia a costruire un modello esplicito della 
 
 Sebbene richieda un numero di interazioni maggiore (\textit{Sample Inefficiency}), garantisce una minore complessità computazionale e una maggiore robustezza, poiché non dipende dall'accuratezza di un modello stimato. Grazie alla capacità di scalare su problemi complessi, il Model-Free RL rappresenta l'approccio dominante nel Deep Reinforcement Learning. Le famiglie di algoritmi più note in questa categoria includono \textit{Q-Learning}, \textit{DQN} e \textit{PPO}.
 
-\subsection{Value-Based vs Policy-Based vs Actor-Critic}
-\label{subsec:value-based_policy-based_actor-critic}
+\subsection{Oggetto dell'Apprendimento}
+\label{subsec:oggetto_apprendimento}
 
 Una seconda classificazione riguarda l'oggetto matematico che viene approssimato dalla rete neurale per risolvere il problema di controllo.
 
@@ -227,8 +227,8 @@ Il vantaggio principale è la capacità di apprendere policy stocastiche e gesti
 I metodi \textit{Actor-Critic} combinano i punti di forza dei due approcci precedenti. L'\textbf{Attore} (Policy-Based) seleziona le azioni, mentre il \textbf{Critico} (Value-Based) stima la funzione valore per giudicare la bontà delle azioni scelte.
 Il Critico fornisce un segnale di feedback a bassa varianza per guidare l'aggiornamento dell'Attore, stabilizzando l'apprendimento. Esempi di questa famiglia sono \textit{A2C}, \textit{A3C} e \textit{PPO}.
 
-\subsection{On-Policy vs Off-Policy}
-\label{subsec:on-policy_off-policy}
+\subsection{Dinamiche di Apprendimento}
+\label{subsec:dinamiche_apprendimento}
 
 Questa distinzione riguarda la relazione tra la strategia usata per esplorare e quella che viene ottimizzata.
 
@@ -242,7 +242,7 @@ I campioni utilizzati per il training devono essere stati generati dalla policy 
 Nel paradigma \textit{Off-Policy}, l'agente apprende il valore della policy ottima $\pi^*$ indipendentemente dalla policy comportamentale $\mu$ usata per generare i dati.
 Questo disaccoppiamento permette l'utilizzo dell'\textit{Experience Replay}: l'agente memorizza le transizioni passate in un buffer $\mathcal{D}$ e le riutilizza più volte per il training. Grazie a questa caratteristica, algoritmi come \textit{DQN} o \textit{SAC} risultano estremamente efficienti nell'uso dei dati, rendendoli preferibili in contesti dove l'interazione è costosa, come nei sistemi di raccomandazione reali.
 
-\subsection{Online vs Offline (Batch) RL}
+\subsection{Modalità di Interazione}
 \label{subsec:online_offline_rl}
 
 Un'ultima classificazione critica, specialmente per le applicazioni ai Sistemi di Raccomandazione, riguarda la modalità di interazione con l'ambiente durante la fase di addestramento. La scelta tra apprendere interagendo in tempo reale o apprendere da dati storici statici determina non solo l'architettura del sistema, ma anche la sua sicurezza e applicabilità in contesti produttivi.
@@ -258,63 +258,248 @@ Per ovviare ai rischi dell'interazione live, il paradigma \textit{Offline} (o \t
 Sebbene questo approccio sia più sicuro ed economico, permettendo di sfruttare gli enormi volumi di dati storici già disponibili, esso introduce una sfida teorica complessa nota come \textit{Distributional Shift}. \cite{Levine2020} Il problema sorge quando l'agente, nel tentativo di migliorare rispetto alla policy storica, interroga la funzione $Q$ su azioni che non sono mai state eseguite nel dataset (azioni \textit{Out-Of-Distribution}). Gli algoritmi standard come DQN tendono a sovrastimare enormemente il valore di queste azioni sconosciute, portando l'agente ad apprendere policy fallimentari se non vengono applicate specifiche tecniche di regolarizzazione o vincoli di conservatività.
 
 \section{Algoritmi Model-Based}
-\label{sec:model-based}
+\label{sec:model_based}
 
-Gli algoritmi Model-Based mirano a costruire un modello approssimato della dinamica dell'ambiente, definito come $\mathcal{M} = (\mathcal{\hat{P}}, \mathcal{\hat{R}})$.
-Una volta appreso, questo modello viene utilizzato per generare dati simulati e pianificare le azioni future, migliorando drasticamente la \textit{Sample Efficiency}.
+La classe degli algoritmi Model-Based si fonda sull'apprendimento (o sulla conoscenza a priori) di un modello interno delle dinamiche dell'ambiente. Mentre i metodi Model-Free ignorano la struttura sottostante del sistema, un agente Model-Based cerca di approssimare due funzioni fondamentali che definiscono l'MDP:
 
-\subsection{Dyna-Q}
-\label{subsec:dyna-q}
-
-L'architettura Dyna-Q è il primo framework a unificare l'apprendimento diretto con la pianificazione. L'algoritmo mantiene una struttura dati $Model(s, a)$ che memorizza l'ultimo risultato osservato $(R, S')$ per ogni coppia stato-azione visitata. \cite{Sutton1990}
-
-Il ciclo di esecuzione ad ogni passo $t$ si articola in quattro fasi:
 \begin{enumerate}
-    \item \textbf{Interazione}: l'agente esegue un'azione reale $A_t$ in $S_t$, osserva $R_{t+1}$ e $S_{t+1}$.
-    \item \textbf{Direct RL}: viene eseguito un aggiornamento di Q-Learning standard usando l'esperienza reale appena raccolta:
-    \begin{equation}
-        Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)]
-    \end{equation}
-    \item \textbf{Model Learning}: il modello viene aggiornato memorizzando la transizione: $Model(S_t, A_t) \leftarrow (R_{t+1}, S_{t+1})$.
-    \item \textbf{Planning Loop}: l'agente esegue $N$ passi di pianificazione. In ogni passo, campiona uno stato $S$ e un'azione $A$ visitati in precedenza, interroga il modello per ottenere la predizione simulata $(\hat{R}, \hat{S}')$ ed esegue un aggiornamento del valore Q basato su questa simulazione.
+    \item \textbf{Transition Model $\hat{\mathcal{P}}(s'|s,a)$}: predice la distribuzione del prossimo stato dato lo stato corrente e l'azione.
+    \item \textbf{Reward Model $\hat{\mathcal{R}}(s,a)$}: predice la ricompensa immediata attesa.
 \end{enumerate}
 
-Questo meccanismo permette di propagare le informazioni di ricompensa attraverso lo spazio degli stati molto più velocemente, sfruttando i tempi morti di calcolo tra un'azione reale e l'altra.
+Una volta appreso il modello, l'agente può utilizzarlo per generare esperienze simulate (spesso chiamate "sogni") e per pianificare (\textit{Planning}) le azioni future. Il vantaggio principale risiede nella \textit{Sample Efficiency}: l'agente può migliorare la sua policy effettuando milioni di simulazioni mentali per ogni singola interazione costosa con l'ambiente reale.
+
+\subsection{Dyna-Q}
+\label{subsec:Dyna-Q}
+
+L'architettura Dyna-Q è il primo framework a unificare l'apprendimento diretto (Model-Free) con la pianificazione. L'algoritmo mantiene una struttura dati $Model(s, a)$ che memorizza l'ultimo risultato osservato $(R, S')$ per ogni coppia stato-azione visitata.
+
+Il ciclo di apprendimento ad ogni step $t$ avviene in due fasi distinte:
+
+\begin{enumerate}
+    \item \textbf{Direct RL (Learning)}: l'agente esegue un'azione reale nell'ambiente, osserva la transizione e usa questo dato per aggiornare la funzione $Q(s,a)$ (usando la regola standard del Q-Learning) e per aggiornare il modello interno.
+    \item \textbf{Planning Loop}: nei tempi morti tra un'azione e l'altra, l'agente esegue $N$ passi di pianificazione. In ogni passo, campiona casualmente uno stato $S$ e un'azione $A$ visitati in precedenza, interroga il modello interno per ottenere il risultato simulato $(\hat{R}, \hat{S}')$ e usa queste "esperienze immaginate" per eseguire ulteriori aggiornamenti di $Q(s,a)$.
+\end{enumerate}
+
+Questo meccanismo permette di propagare le informazioni di ricompensa attraverso lo spazio degli stati molto più velocemente rispetto alla sola interazione reale, risultando estremamente efficace in ambienti deterministici o stazionari. \cite{Sutton1990}
 
 \subsection{Monte Carlo Tree Search (MCTS)}
 \label{subsec:mcts}
 
-Sebbene nasca come algoritmo di ricerca euristica, MCTS è divenuto centrale nel RL per la sua capacità di pianificare in spazi decisionali vasti e deterministici. \cite{Browne2012}
-MCTS costruisce un albero di ricerca asimmetrico per decidere l'azione migliore dallo stato corrente, concentrando le risorse computazionali sulle sottostrutture più promettenti.
+Sebbene nasca come algoritmo di ricerca euristica per giochi a informazione perfetta, MCTS è divenuto un pilastro del RL per la sua capacità di pianificare in spazi decisionali vasti.
+Invece di apprendere una policy globale per tutto lo spazio degli stati, MCTS costruisce un albero di ricerca asimmetrico per decidere l'azione migliore dallo stato *corrente*, concentrando le risorse computazionali sulle sottostrutture più promettenti.
 
 Il processo si articola in quattro fasi ripetute ciclicamente entro un budget di tempo:
+
 \begin{enumerate}
-    \item \textbf{Selection}: si attraversa l'albero dalla radice fino a un nodo foglia. La scelta dei nodi figli avviene massimizzando la formula \textit{Upper Confidence Bound for Trees} (UCT), che bilancia esplorazione e sfruttamento:
-    \begin{equation}
-        UCT = \frac{w_i}{n_i} + c \sqrt{\frac{\ln N_p}{n_i}}
-    \end{equation}
-    dove $w_i$ è il valore totale del nodo, $n_i$ le visite del nodo, $N_p$ le visite del padre e $c$ la costante di esplorazione.
-    \item \textbf{Expansion}: se il nodo foglia non è terminale, viene espanso aggiungendo uno o più nodi figli corrispondenti alle azioni possibili non ancora esplorate.
-    \item \textbf{Simulation (Rollout)}: dal nuovo nodo, si esegue una simulazione rapida (spesso usando una policy casuale o leggera) fino a raggiungere uno stato terminale e ottenere una ricompensa $G$.
-    \item \textbf{Backpropagation}: il valore $G$ viene propagato all'indietro lungo il percorso selezionato per aggiornare le statistiche ($w_i, n_i$) di tutti i nodi attraversati.
+    \item \textbf{Selection}: si attraversa l'albero dalla radice fino a un nodo foglia utilizzando una \textit{Tree Policy} che bilancia esplorazione e sfruttamento (tipicamente usando la formula UCB1: Upper Confidence Bound).
+    \item \textbf{Expansion}: se il nodo foglia non è terminale, viene espanso aggiungendo uno o più nodi figli corrispondenti alle azioni possibili.
+    \item \textbf{Simulation (Rollout)}: dal nuovo nodo, si esegue una simulazione rapida (spesso usando una policy casuale o leggera) fino a raggiungere uno stato terminale e ottenere una ricompensa cumulativa $G$.
+    \item \textbf{Backpropagation}: il valore $G$ viene propagato all'indietro lungo il percorso selezionato per aggiornare le statistiche (valore medio e numero di visite) di tutti i nodi attraversati.
 \end{enumerate}
 
-\subsection{Deep Model-Based RL: World Models}
-\label{subsec:world_models}
+Sebbene potentissimo, l'applicazione diretta di MCTS ai Sistemi di Raccomandazione è complessa a causa dell'enorme fattore di ramificazione (milioni di item possibili) e della natura stocastica del comportamento utente. \cite{Browne2012}
 
-Nei contesti ad alta dimensionalità (come la visione artificiale o i sistemi di raccomandazione), apprendere un modello perfetto dell'ambiente (come in Dyna) o enumerare tutte le azioni (come in MCTS) è impossibile.
-L'approccio dei World Models propone di apprendere una rappresentazione compressa e latente della dinamica dell'ambiente. \cite{Ha2018} L'architettura si divide in tre componenti neurali distinte:
+\subsection{Deep Model-Based RL: World Models}
+\label{subsec:world-models}
+
+Nei contesti ad alta dimensionalità (come la visione artificiale o i sistemi complessi), apprendere un modello tabellare perfetto è impossibile. L'approccio dei World Models propone di apprendere una rappresentazione compressa e latente della dinamica dell'ambiente utilizzando reti neurali.
+
+L'architettura si divide in tre componenti:
 
 \begin{itemize}
-    \item \textbf{Vision Model (V)}: un \textit{Variational Autoencoder} (VAE) che comprime l'osservazione ad alta dimensionalità $O_t$ in un vettore latente compatto $z_t$, riducendo la complessità dello spazio degli stati.
-    \item \textbf{Memory Model (M)}: una rete ricorrente (es. MDN-RNN) che funge da modello predittivo del mondo. Dato lo stato corrente $z_t$ e l'azione $a_t$, impara a predire la distribuzione di probabilità del prossimo stato latente $z_{t+1}$.
-    \item \textbf{Controller (C)}: una rete neurale semplice (l'Agente) che prende in input la rappresentazione concisa del VAE ($z_t$) e lo stato della memoria ($h_t$) per decidere l'azione $a_t$.
+    \item \textbf{Vision Model (V)}: un \textit{Variational Autoencoder} (VAE) che comprime l'osservazione ad alta dimensionalità $O_t$ in un vettore latente compatto $z_t$.
+    \item \textbf{Memory Model (M)}: una rete ricorrente (MDN-RNN) che apprende a predire la distribuzione di probabilità del prossimo vettore latente $z_{t+1}$ basandosi sulla storia passata e sull'azione corrente. Questo componente funge da simulatore del mondo.
+    \item \textbf{Controller (C)}: una rete neurale semplice che prende in input la rappresentazione concisa del VAE ($z$) e lo stato della memoria ($h$) per decidere l'azione.
 \end{itemize}
 
-La caratteristica di questo approccio è la possibilità di addestrare il Controller interamente "dentro il sogno" (\textit{Training in Imagination}): l'agente interagisce solo con il modello simulato $M$, senza toccare l'ambiente reale, evolvendo una policy robusta che viene poi trasferita nel mondo reale con grande successo.
+La caratteristica rivoluzionaria è che il Controller può essere addestrato interamente "dentro il sogno" (\textit{Training in Imagination}), interagendo esclusivamente con il modello simulato $M$ senza toccare l'ambiente reale. Questo permette un training massivamente parallelo e sicuro, trasferendo poi la policy appresa nel mondo reale. \cite{Ha2018}
 
-\section{Algoritmi Model-Free}
-\label{sec:model-free}
+\section{Algoritmi Model-Free Value-Based}
+\label{sec:model_free_value_based}
 
-\section{Deep Q-Network}
-\label{sec:dqn}
+La famiglia degli algoritmi \textit{Value-Based} mira a risolvere il problema di controllo apprendendo un'approssimazione della funzione Action-Value ottimale $Q^*(s, a)$. Una volta ottenuta una stima accurata, la policy ottima viene derivata agendo in modo \textit{greedy} rispetto ai valori Q:
+
+\begin{equation}
+    a_t = \arg\max_{a \in \mathcal{A}} Q(s_t, a)
+\end{equation}
+
+Questa classe di algoritmi è particolarmente adatta per ambienti con spazi di azione discreti, come la selezione di item nei sistemi di raccomandazione.
+
+\subsection{Metodi Tabellari}
+\label{subsec:metodi_tabellari}
+
+Prima dell'avvento del Deep Learning, i metodi di RL memorizzavano i valori $Q$ in una tabella di lookup. Sebbene inapplicabili a problemi complessi per limiti di memoria, ne costituiscono la base teorica.
+
+\subsubsection{SARSA (On-Policy)}
+
+L'algoritmo \textit{SARSA} (State-Action-Reward-State-Action) apprende la funzione $Q^\pi$ della policy che l'agente sta effettivamente seguendo (inclusa l'esplorazione).
+La regola di aggiornamento è:
+
+\begin{equation}
+    Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t)]
+\end{equation}
+
+Dove $A_{t+1}$ è l'azione realmente eseguita al passo successivo. Questo rende SARSA un algoritmo "prudente", che evita stati pericolosi durante l'esplorazione. \cite{Rummery1994}
+
+\subsubsection{Q-Learning (Off-Policy)}
+
+Il \textit{Q-Learning} è l'algoritmo capostipite dei metodi Off-Policy. Apprende direttamente il valore della policy ottima $Q^*$, indipendentemente dalle azioni effettivamente scelte dall'agente durante il training.
+L'aggiornamento utilizza l'operatore di massimizzazione:
+
+\begin{equation}
+    Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha [R_{t+1} + \gamma \max_{a'} Q(S_{t+1}, a') - Q(S_t, A_t)]
+\end{equation}
+
+Questa proprietà è fondamentale perché permette di apprendere da dati storici o generati da policy casuali, ed è la base teorica su cui è costruito DQN. \cite{Watkins1992}
+
+\subsection{Deep Q-Network (DQN)}
+\label{subsec:dqn}
+
+Nei sistemi reali, lo spazio degli stati è troppo vasto per una tabella. Il \textit{Deep Q-Network} (DQN) utilizza una rete neurale profonda con parametri $\theta$ per approssimare la funzione valore: $Q(s, a; \theta) \approx Q^*(s, a)$. \cite{Mnih2015}
+
+L'addestramento avviene minimizzando l'errore quadratico medio (MSE) rispetto al target di Bellman. Tuttavia, l'uso di approssimatori non lineari nel RL è notoriamente instabile. DQN risolve questo problema introducendo due innovazioni architetturali.
+
+\subsubsection{Experience Replay Buffer}
+
+L'apprendimento su dati sequenziali viola l'assunzione di indipendenza (i.i.d.) necessaria per le reti neurali, poiché campioni consecutivi sono altamente correlati.
+DQN utilizza un buffer di memoria $\mathcal{D}$ (\textit{Replay Memory}) per memorizzare le transizioni $(s, a, r, s')$. Durante il training, l'agente campiona un \textit{mini-batch} casuale da $\mathcal{D}$.
+Questo rompe le correlazioni temporali, stabilizza il gradiente e aumenta la \textit{sample efficiency} riutilizzando i dati più volte.
+
+\subsubsection{Target Network}
+
+Se usassimo la stessa rete $\theta$ sia per predire il valore $Q$ che per calcolare il target $y = r + \gamma \max Q(s', a')$, il bersaglio si sposterebbe a ogni aggiornamento, causando oscillazioni.
+DQN introduce una seconda rete, la **Target Network** ($\theta^-$), che viene mantenuta fissa e aggiornata periodicamente (o tramite media mobile esponenziale). La loss function diventa:
+
+\begin{equation}
+    \mathcal{L}(\theta) = \mathbb{E}_{(s,a,r,s') \sim \mathcal{D}} \left[ \left( r + \gamma \max_{a'} Q(s', a'; \theta^-) - Q(s, a; \theta) \right)^2 \right]
+\end{equation}
+
+\subsection{Evoluzioni Architetturali (Rainbow DQN)}
+\label{subsec:dqn_extensions}
+
+Il DQN originale soffre di limitazioni come la sovrastima dei valori Q. Le moderne implementazioni integrano varianti avanzate per migliorare le prestazioni.
+
+\subsubsection{Double DQN (DDQN)}
+
+Il Q-Learning standard soffre di \textit{Maximization Bias}: il rumore nelle stime fa sì che l'operatore $\max$ sovrastimi sistematicamente i valori.
+Il DDQN disaccoppia la selezione dell'azione dalla sua valutazione:
+
+\begin{equation}
+    Y^{DDQN} = R + \gamma Q(S', \underbrace{\arg\max_a Q(S', a; \theta)}_{\text{Selezione (Policy Net)}}; \theta^-)_{\text{Valutazione (Target Net)}}
+\end{equation}
+
+La rete principale decide qual è l'azione migliore, mentre la rete target decide quanto vale. \cite{VanHasselt2016}
+
+\subsubsection{Dueling DQN}
+
+In molti stati, l'azione scelta ha poco impatto sul valore complessivo. L'architettura \textit{Dueling} scompone la stima in due flussi separati:
+
+\begin{itemize}
+    \item \textbf{Value Function $V(s)$}: il valore intrinseco dello stato.
+    \item \textbf{Advantage Function $A(s,a)$}: quanto l'azione $a$ è migliore rispetto alla media.
+\end{itemize}
+
+I due flussi vengono ricombinati alla fine:
+
+\begin{equation}
+    Q(s, a) = V(s) + (A(s, a) - \text{mean}_{a'} A(s, a'))
+\end{equation}
+
+Questa decomposizione permette di apprendere il valore degli stati molto più velocemente, accelerando la convergenza. \cite{Wang2016} 
+
+\subsubsection{Prioritized Experience Replay (PER)}
+
+Invece di campionare uniformemente, si dà priorità alle transizioni con un alto errore di predizione (\textit{TD-Error}). L'agente si "ripete" più spesso le esperienze dove ha commesso un errore grande ("sorpresa"), accelerando la convergenza su eventi rari ma significativi. \cite{Schaul2015} 
+
+\section{Algoritmi Model-Free Policy-Based e Actor-Critic}
+\label{sec:model_free_policy_based_actor_critic}
+
+Mentre i metodi Value-Based come DQN derivano la strategia in modo indiretto (selezionando l'azione che massimizza $Q$), i metodi Policy-Based apprendono direttamente la funzione di policy parametrizzata $\pi_\theta(a|s)$.
+Questo approccio offre vantaggi cruciali:
+
+\begin{itemize}
+    \item \textbf{Policy Stocastiche}: possono apprendere strategie miste ottimali e garantiscono un'esplorazione più fluida.
+    \item \textbf{Efficacia in Alta Dimensionalità}: sono più adatti quando lo spazio delle azioni è continuo o molto vasto, dove il calcolo del $\max_a Q(s,a)$ diventa oneroso.
+\end{itemize}
+
+\subsection{Policy Gradient (REINFORCE)}
+\label{subsec:policy_gradient}
+
+L'algoritmo capostipite è \textit{REINFORCE}. L'obiettivo è massimizzare il ritorno atteso $J(\theta) = \mathbb{E}_{\pi_\theta}[G_t]$ aggiornando i pesi $\theta$ della rete neurale tramite ascesa del gradiente. \cite{Williams1992}
+
+Secondo il \textit{Policy Gradient Theorem}, il gradiente è:
+
+\begin{equation}
+    \nabla_\theta J(\theta) = \mathbb{E}_{\pi} [\nabla_\theta \log \pi_\theta(a_t|s_t) \cdot G_t]
+\end{equation}
+
+Intuitivamente, questo aggiornamento aumenta la probabilità delle azioni che hanno portato a un ritorno $G_t$ elevato. Tuttavia, essendo un metodo Monte Carlo (usa il ritorno completo dell'episodio), soffre di alta varianza, rendendo il training lento e instabile. \cite{Sutton2018}
+
+\subsection{Metodi Actor-Critic}
+\label{subsec:actor_critic}
+
+Per ridurre la varianza, i metodi \textit{Actor-Critic} combinano i vantaggi di Value-based e Policy-based utilizzando due reti neurali distinte che cooperano \cite{Konda2000}:
+
+\begin{enumerate}
+    \item \textbf{Actor (Attore) $\pi_\theta(s)$}: decide quale azione intraprendere.
+    \item \textbf{Critic (Critico) $V_\phi(s)$}: stima la funzione valore dello stato corrente per giudicare la bontà dell'azione scelta dall'attore.
+\end{enumerate}
+
+L'idea chiave è sostituire il ritorno grezzo $G_t$ con la \textit{Advantage Function} $A(s,a)$, che stima quanto l'azione scelta è migliore rispetto alla media del valore dello stato:
+
+\begin{equation}
+    A(s_t, a_t) = Q(s_t, a_t) - V(s_t) \approx (R_{t+1} + \gamma V_\phi(s_{t+1})) - V_\phi(s_t)
+\end{equation}
+
+Il termine calcolato dal Critico è noto come \textit{TD-Error}. L'Attore viene aggiornato per massimizzare questo vantaggio. Esempi storici sono \textit{A2C} e \textit{A3C} \cite{Mnih2016}.
+
+\subsection{Proximal Policy Optimization (PPO)}
+\label{subsec:ppo}
+
+PPO è attualmente l'algoritmo \textit{On-Policy} standard nell'industria (utilizzato nella baseline PoisonRec).
+Il problema dei metodi Policy Gradient standard è la sensibilità al \textit{learning rate}: un passo di aggiornamento troppo grande può portare la policy in una regione dello spazio dei parametri dove le performance crollano ("performance collapse"), rendendo impossibile il recupero. \cite{Schulman2017}
+
+\subsubsection{Clipped Surrogate Objective}
+
+PPO risolve questo problema introducendo un vincolo che impedisce alla nuova policy $\pi_\theta$ di discostarsi eccessivamente dalla vecchia policy $\pi_{\theta_{old}}$.
+Definito il rapporto di probabilità $r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}$, la funzione obiettivo da massimizzare è:
+
+\begin{equation}
+    L^{CLIP}(\theta) = \mathbb{E}_t \left[ \min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t) \right]
+\end{equation}
+
+La funzione $\text{clip}$ taglia il rapporto nell'intervallo $[1-\epsilon, 1+\epsilon]$ (solitamente $\epsilon=0.2$). Questo garantisce aggiornamenti conservativi e monotoni, rendendo PPO estremamente robusto.
+
+\subsection{Soft Actor-Critic (SAC)}
+
+Mentre PPO è On-Policy, SAC rappresenta lo stato dell'arte per il controllo continuo \textit{Off-Policy}.
+Si basa sul principio della \textit{Maximum Entropy RL}: l'agente massimizza non solo il reward atteso, ma anche l'entropia della policy $\mathcal{H}(\pi(\cdot|s_t))$:
+
+\begin{equation}
+    J(\pi) = \sum_{t=0}^T \mathbb{E} [R(s_t, a_t) + \alpha \mathcal{H}(\pi(\cdot|s_t))]
+\end{equation}
+
+L'entropia incoraggia l'esplorazione e impedisce alla policy di convergere prematuramente su un singolo comportamento deterministico, rendendo l'agente molto robusto a perturbazioni. \cite{Haarnoja2018}
+
+\section{Sfide del Deep RL nei Sistemi di Raccomandazione}
+\label{sec:rl_challenges}
+
+L'applicazione del RL ai Recommender Systems presenta sfide uniche rispetto ai classici ambienti di controllo (robotica/giochi), che richiedono adattamenti specifici degli algoritmi descritti.
+
+\subsection{Large Discrete Action Spaces}
+\label{subsec:large_discrete_action_space}
+
+In un RS, l'azione corrisponde alla scelta di un item da raccomandare o iniettare. Il catalogo può contenere milioni di item ($|\mathcal{A}| \approx 10^6 - 10^7$).
+Un approccio come DQN standard, che richiede un neurone di output per ogni azione, diventa computazionalmente intrattabile.
+Soluzioni comuni in letteratura includono \cite{Dulac-Arnold2016}:
+
+\begin{itemize}
+    \item \textbf{Embedding-based Action Selection}: l'agente genera un vettore continuo $a \in \mathbb{R}^d$ in uno spazio latente e l'item viene scelto tramite ricerca del vicino più prossimo ($k$-NN) nello spazio degli embedding degli item.
+    \item \textbf{Candidate Generation}: l'agente RL seleziona solo tra un sottoinsieme ristretto di candidati pre-filtrati da un modello più semplice.
+\end{itemize}
+
+\subsection{Sparsità della Ricompensa e Orizzonte}
+\label{subsec:sparsità_ricompensa_orizzonte}
+
+Spesso il feedback reale (es. l'utente acquista, o l'attacco ha successo nel manipolare il ranking) arriva solo dopo una lunga sequenza di interazioni. Questo aggrava il problema dell'assegnazione del credito. Tecniche di \textit{Reward Shaping} e l'uso di modelli sequenziali a lungo raggio come \textbf{Mamba} (analizzato nel prossimo capitolo) sono essenziali per mitigare questo problema.

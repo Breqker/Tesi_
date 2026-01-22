@@ -802,6 +802,7 @@ OUTPUT capitoli\ch2.aux
 INPUT .\capitoli\ch2.tex
 INPUT .\capitoli\ch2.tex
 INPUT capitoli\ch2.tex
+INPUT C:\Users\giafe\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT .\capitoli\ch3.tex
 INPUT .\capitoli\ch3.tex
 OUTPUT capitoli\ch3.aux

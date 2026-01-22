@@ -2586,6 +2586,19 @@
     <bcf:citekey order="207" intorder="1">Sutton1990</bcf:citekey>
     <bcf:citekey order="208" intorder="1">Browne2012</bcf:citekey>
     <bcf:citekey order="209" intorder="1">Ha2018</bcf:citekey>
+    <bcf:citekey order="210" intorder="1">Rummery1994</bcf:citekey>
+    <bcf:citekey order="211" intorder="1">Watkins1992</bcf:citekey>
+    <bcf:citekey order="212" intorder="1">Mnih2015</bcf:citekey>
+    <bcf:citekey order="213" intorder="1">VanHasselt2016</bcf:citekey>
+    <bcf:citekey order="214" intorder="1">Wang2016</bcf:citekey>
+    <bcf:citekey order="215" intorder="1">Schaul2015</bcf:citekey>
+    <bcf:citekey order="216" intorder="1">Williams1992</bcf:citekey>
+    <bcf:citekey order="217" intorder="1">Sutton2018</bcf:citekey>
+    <bcf:citekey order="218" intorder="1">Konda2000</bcf:citekey>
+    <bcf:citekey order="219" intorder="1">Mnih2016</bcf:citekey>
+    <bcf:citekey order="220" intorder="1">Schulman2017</bcf:citekey>
+    <bcf:citekey order="221" intorder="1">Haarnoja2018</bcf:citekey>
+    <bcf:citekey order="222" intorder="1">Dulac-Arnold2016</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
