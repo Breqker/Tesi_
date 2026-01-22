@@ -48,6 +48,11 @@
 \contentsline {figure}{\numberline {1.45}{\ignorespaces Schema architetturale dell'attacco Leg-UP. Immagine tratta da \blx@tocontentsinit {0}\cite {Lin2024}}}{74}{figure.caption.115}%
 \contentsline {figure}{\numberline {1.46}{\ignorespaces Schema architetturale dell'attacco Model Extraction. Immagine tratta da \blx@tocontentsinit {0}\cite {Tramèr2016}}}{75}{figure.caption.117}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ciclo di interazione Agente-Ambiente. Immagine tratta da \blx@tocontentsinit {0}\cite {Sutton2018}}}{85}{figure.caption.138}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Schema logico dell'algoritmo Dyna-Q. Immagine tratta da \blx@tocontentsinit {0}\cite {Sutton2018}}}{95}{figure.caption.143}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Schema architetturale dell'algoritmo DQN. Immagine tratta da \blx@tocontentsinit {0}\cite {Mnih2015}}}{99}{figure.caption.144}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schema logico della Dueling DQN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2016}}}{101}{figure.caption.145}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Funzione obiettivo di PPO: il meccanismo di clipping impedisce aggiornamenti troppo aggressivi della policy quando il rapporto di probabilità $r_t$ diverge \blx@tocontentsinit {0}\cite {Schulman2017}.}}{103}{figure.caption.146}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

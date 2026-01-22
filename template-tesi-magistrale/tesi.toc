@@ -77,63 +77,63 @@
 \contentsline {subsubsection}{\numberline {2.2.1.1}Agente}{85}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}Ambiente}{85}{subsubsection.2.2.1.2}%
 \contentsline {subsection}{\numberline {2.2.2}Spazi di definizione}{85}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}Stato}{85}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Stato}{86}{subsubsection.2.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2.2}Osservazione}{86}{subsubsection.2.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.2.3}Azione}{86}{subsubsection.2.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.3}Segnali di Feedback e Obiettivi}{86}{subsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.3.1}Ricompensa}{86}{subsubsection.2.2.3.1}%
+\contentsline {subsection}{\numberline {2.2.3}Segnali di Feedback e Obiettivi}{87}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Ricompensa}{87}{subsubsection.2.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.2.3.2}Ritorno e Orizzonte}{87}{subsubsection.2.2.3.2}%
-\contentsline {subsection}{\numberline {2.2.4}Meccanismi Decisionali}{87}{subsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.4.1}Policy}{87}{subsubsection.2.2.4.1}%
+\contentsline {subsection}{\numberline {2.2.4}Meccanismi Decisionali}{88}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4.1}Policy}{88}{subsubsection.2.2.4.1}%
 \contentsline {section}{\numberline {2.3}Funzioni di Valore ed Equazioni di Bellman}{88}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Funzioni di valore}{88}{subsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.1.1}State-Value Function $V_\pi (s)$}{88}{subsubsection.2.3.1.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.2}Action-Value Function $Q_\pi (s, a)$}{88}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}Action-Value Function $Q_\pi (s, a)$}{89}{subsubsection.2.3.1.2}%
 \contentsline {subsection}{\numberline {2.3.2}Equazioni di Bellman}{89}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Ottimalità}{89}{subsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.3.1}Equazione di Ottimalità di Bellman}{89}{subsubsection.2.3.3.1}%
-\contentsline {section}{\numberline {2.4}Tassonomia degli Algoritmi}{89}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Presenza del Modello}{89}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.4}Tassonomia degli Algoritmi}{90}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Presenza del Modello}{90}{subsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.1.1}Model-Based RL}{90}{subsubsection.2.4.1.1}%
 \contentsline {subsubsection}{\numberline {2.4.1.2}Model-Free RL}{90}{subsubsection.2.4.1.2}%
-\contentsline {subsection}{\numberline {2.4.2}Oggetto dell'Apprendimento}{90}{subsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.2.1}Value-Based Methods}{90}{subsubsection.2.4.2.1}%
+\contentsline {subsection}{\numberline {2.4.2}Oggetto dell'Apprendimento}{91}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Value-Based Methods}{91}{subsubsection.2.4.2.1}%
 \contentsline {subsubsection}{\numberline {2.4.2.2}Policy-Based Methods}{91}{subsubsection.2.4.2.2}%
 \contentsline {subsubsection}{\numberline {2.4.2.3}Actor-Critic Methods}{91}{subsubsection.2.4.2.3}%
-\contentsline {subsection}{\numberline {2.4.3}Dinamiche di Apprendimento}{91}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}Dinamiche di Apprendimento}{92}{subsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.3.1}On-Policy Learning}{92}{subsubsection.2.4.3.1}%
 \contentsline {subsubsection}{\numberline {2.4.3.2}Off-Policy Learning}{92}{subsubsection.2.4.3.2}%
 \contentsline {subsection}{\numberline {2.4.4}Modalità di Interazione}{92}{subsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.4.1}Online Reinforcement Learning}{92}{subsubsection.2.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.4.1}Online Reinforcement Learning}{93}{subsubsection.2.4.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.4.2}Offline (Batch) Reinforcement Learning}{93}{subsubsection.2.4.4.2}%
 \contentsline {section}{\numberline {2.5}Algoritmi Model-Based}{93}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Dyna-Q}{94}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Monte Carlo Tree Search (MCTS)}{94}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Deep Model-Based RL: World Models}{95}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Algoritmi Model-Free Value-Based}{96}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Metodi Tabellari}{96}{subsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.1.1}SARSA (On-Policy)}{96}{subsubsection.2.6.1.1}%
-\contentsline {subsubsection}{\numberline {2.6.1.2}Q-Learning (Off-Policy)}{96}{subsubsection.2.6.1.2}%
-\contentsline {subsection}{\numberline {2.6.2}Deep Q-Network (DQN)}{97}{subsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.2.1}Experience Replay Buffer}{97}{subsubsection.2.6.2.1}%
-\contentsline {subsubsection}{\numberline {2.6.2.2}Target Network}{97}{subsubsection.2.6.2.2}%
-\contentsline {subsection}{\numberline {2.6.3}Evoluzioni Architetturali (Rainbow DQN)}{97}{subsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.3.1}Double DQN (DDQN)}{98}{subsubsection.2.6.3.1}%
-\contentsline {subsubsection}{\numberline {2.6.3.2}Dueling DQN}{98}{subsubsection.2.6.3.2}%
-\contentsline {subsubsection}{\numberline {2.6.3.3}Prioritized Experience Replay (PER)}{98}{subsubsection.2.6.3.3}%
-\contentsline {section}{\numberline {2.7}Algoritmi Model-Free Policy-Based e Actor-Critic}{99}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Policy Gradient (REINFORCE)}{99}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Metodi Actor-Critic}{99}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Proximal Policy Optimization (PPO)}{100}{subsection.2.7.3}%
-\contentsline {subsubsection}{\numberline {2.7.3.1}Clipped Surrogate Objective}{100}{subsubsection.2.7.3.1}%
-\contentsline {subsection}{\numberline {2.7.4}Soft Actor-Critic (SAC)}{100}{subsection.2.7.4}%
-\contentsline {section}{\numberline {2.8}Sfide del Deep RL nei Sistemi di Raccomandazione}{101}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Large Discrete Action Spaces}{101}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Sparsità della Ricompensa e Orizzonte}{101}{subsection.2.8.2}%
-\contentsline {chapter}{\numberline {3}State Space Models}{102}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Mamba}{102}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Sistema proposto}{103}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{104}{chapter.5}%
-\contentsline {chapter}{Conclusioni}{105}{section*.142}%
-\contentsline {chapter}{Elenco delle figure}{107}{section*.144}%
-\contentsline {chapter}{Bibliografia}{109}{section*.146}%
+\contentsline {subsection}{\numberline {2.5.2}Monte Carlo Tree Search (MCTS)}{95}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Deep Model-Based RL: World Models}{96}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Algoritmi Model-Free Value-Based}{97}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Metodi Tabellari}{97}{subsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.1}SARSA (On-Policy)}{97}{subsubsection.2.6.1.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.2}Q-Learning (Off-Policy)}{97}{subsubsection.2.6.1.2}%
+\contentsline {subsection}{\numberline {2.6.2}Deep Q-Network (DQN)}{98}{subsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}Experience Replay Buffer}{98}{subsubsection.2.6.2.1}%
+\contentsline {subsubsection}{\numberline {2.6.2.2}Target Network}{98}{subsubsection.2.6.2.2}%
+\contentsline {subsection}{\numberline {2.6.3}Evoluzioni Architetturali (Rainbow DQN)}{99}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}Double DQN (DDQN)}{99}{subsubsection.2.6.3.1}%
+\contentsline {subsubsection}{\numberline {2.6.3.2}Dueling DQN}{100}{subsubsection.2.6.3.2}%
+\contentsline {subsubsection}{\numberline {2.6.3.3}Prioritized Experience Replay (PER)}{100}{subsubsection.2.6.3.3}%
+\contentsline {section}{\numberline {2.7}Algoritmi Model-Free Policy-Based e Actor-Critic}{100}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Policy Gradient (REINFORCE)}{101}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Metodi Actor-Critic}{102}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Proximal Policy Optimization (PPO)}{102}{subsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {2.7.3.1}Clipped Surrogate Objective}{102}{subsubsection.2.7.3.1}%
+\contentsline {subsection}{\numberline {2.7.4}Soft Actor-Critic (SAC)}{103}{subsection.2.7.4}%
+\contentsline {section}{\numberline {2.8}Sfide del Deep RL nei Sistemi di Raccomandazione}{103}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Large Discrete Action Spaces}{104}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Sparsità della Ricompensa e Orizzonte}{104}{subsection.2.8.2}%
+\contentsline {chapter}{\numberline {3}State Space Models}{105}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mamba}{105}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Sistema proposto}{106}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Valutazioni sperimentali}{107}{chapter.5}%
+\contentsline {chapter}{Conclusioni}{108}{section*.147}%
+\contentsline {chapter}{Elenco delle figure}{110}{section*.149}%
+\contentsline {chapter}{Bibliografia}{113}{section*.151}%

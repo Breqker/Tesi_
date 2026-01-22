@@ -51,6 +51,14 @@ L'agente è l'entità computazionale autonoma che apprende e prende decisioni. �
 L'ambiente rappresenta tutto ciò che è esterno all'agente. È un sistema dinamico che reagisce alle sollecitazioni.
 Formalmente, l'ambiente riceve l'azione $A_t$ al tempo $t$, aggiorna il proprio stato interno passando da $S_t$ a $S_{t+1}$ secondo una funzione di transizione di probabilità $\mathcal{P}$, e restituisce all'agente una nuova osservazione e un segnale di ricompensa $R_{t+1}$.
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{agent_environment.png}
+    \caption{Ciclo di interazione Agente-Ambiente. \\
+    Immagine tratta da \cite{Sutton2018}}
+    \label{fig:agente_ambiente}
+\end{figure}
+
 \subsection{Spazi di definizione}
 
 La complessità di un problema di RL è determinata dalla natura topologica e dalla cardinalità degli spazi su cui operano le variabili del sistema.
@@ -283,6 +291,13 @@ Il ciclo di apprendimento ad ogni step $t$ avviene in due fasi distinte:
 
 Questo meccanismo permette di propagare le informazioni di ricompensa attraverso lo spazio degli stati molto più velocemente rispetto alla sola interazione reale, risultando estremamente efficace in ambienti deterministici o stazionari. \cite{Sutton1990}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{dyna-q.png}
+    \caption{Schema logico dell'algoritmo Dyna-Q. \\
+    Immagine tratta da \cite{Sutton2018}}
+\end{figure}
+
 \subsection{Monte Carlo Tree Search (MCTS)}
 \label{subsec:mcts}
 
@@ -369,11 +384,19 @@ Questo rompe le correlazioni temporali, stabilizza il gradiente e aumenta la \te
 \subsubsection{Target Network}
 
 Se usassimo la stessa rete $\theta$ sia per predire il valore $Q$ che per calcolare il target $y = r + \gamma \max Q(s', a')$, il bersaglio si sposterebbe a ogni aggiornamento, causando oscillazioni.
-DQN introduce una seconda rete, la **Target Network** ($\theta^-$), che viene mantenuta fissa e aggiornata periodicamente (o tramite media mobile esponenziale). La loss function diventa:
+DQN introduce una seconda rete, la \textit{Target Network} ($\theta^-$), che viene mantenuta fissa e aggiornata periodicamente (o tramite media mobile esponenziale). La loss function diventa:
 
 \begin{equation}
     \mathcal{L}(\theta) = \mathbb{E}_{(s,a,r,s') \sim \mathcal{D}} \left[ \left( r + \gamma \max_{a'} Q(s', a'; \theta^-) - Q(s, a; \theta) \right)^2 \right]
 \end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{dqn.png}
+    \caption{Schema architetturale dell'algoritmo DQN. \\
+    Immagine tratta da \cite{Mnih2015}}
+    \label{fig:dqn_rl}
+\end{figure}
 
 \subsection{Evoluzioni Architetturali (Rainbow DQN)}
 \label{subsec:dqn_extensions}
@@ -406,7 +429,15 @@ I due flussi vengono ricombinati alla fine:
     Q(s, a) = V(s) + (A(s, a) - \text{mean}_{a'} A(s, a'))
 \end{equation}
 
-Questa decomposizione permette di apprendere il valore degli stati molto più velocemente, accelerando la convergenza. \cite{Wang2016} 
+Questa decomposizione permette di apprendere il valore degli stati molto più velocemente, accelerando la convergenza. \cite{Wang2016}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{dueling_dqn.png}
+    \caption{Schema logico della Dueling DQN. \\
+    Immagine tratta da \cite{Wang2016}}
+    \label{fig:dueling_dqn}
+\end{figure}
 
 \subsubsection{Prioritized Experience Replay (PER)}
 
@@ -470,6 +501,13 @@ Definito il rapporto di probabilità $r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\
 \end{equation}
 
 La funzione $\text{clip}$ taglia il rapporto nell'intervallo $[1-\epsilon, 1+\epsilon]$ (solitamente $\epsilon=0.2$). Questo garantisce aggiornamenti conservativi e monotoni, rendendo PPO estremamente robusto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ppo_clipping.png}
+    \caption{Funzione obiettivo di PPO: il meccanismo di clipping impedisce aggiornamenti troppo aggressivi della policy quando il rapporto di probabilità $r_t$ diverge \cite{Schulman2017}.}
+    \label{fig:ppo_clipping}
+\end{figure}
 
 \subsection{Soft Actor-Critic (SAC)}
 
