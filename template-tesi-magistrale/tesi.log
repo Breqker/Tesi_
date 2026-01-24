@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  22 JAN 2026 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  24 JAN 2026 14:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -815,6 +815,13 @@ Package biblatex Info: ... file 'tesi.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                Gu2020_HiPPO
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                Konda2000
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -835,6 +842,12 @@ Package biblatex Warning: citation 'VanHasselt2016'
 
 
 Package biblatex Warning: citation 'Konda2000'
+(biblatex)                was not found at all in the .bbl file,
+(biblatex)                bibliography labels cannot be generated,
+(biblatex)                please correct the citation.
+
+
+Package biblatex Warning: citation 'Gu2020'
 (biblatex)                was not found at all in the .bbl file,
 (biblatex)                bibliography labels cannot be generated,
 (biblatex)                please correct the citation.
@@ -907,7 +920,7 @@ Package hyperref Info: Link coloring OFF on input line 58.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 60.
  (frontespizio.tex
-<images/logo-unipa.png, id=551, 237.5274pt x 108.8868pt>
+<images/logo-unipa.png, id=591, 237.5274pt x 108.8868pt>
 File: images/logo-unipa.png Graphic file (type png)
 <use images/logo-unipa.png>
 Package pdftex.def Info: images/logo-unipa.png  used on input line 10.
@@ -1041,7 +1054,7 @@ Capitolo 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
  [9]
-<images/feedback_sources.png, id=761, 154.69164pt x 96.44057pt>
+<images/feedback_sources.png, id=811, 154.69164pt x 96.44057pt>
 File: images/feedback_sources.png Graphic file (type png)
 <use images/feedback_sources.png>
 Package pdftex.def Info: images/feedback_sources.png  used on input line 61.
@@ -1052,7 +1065,7 @@ Overfull \hbox (16.55258pt too wide) in paragraph at lines 76--77
  []
 
 [11 <./images/feedback_sources.png>] [12] [13]
-<images/traditional_rs.png, id=804, 483.60675pt x 260.29245pt>
+<images/traditional_rs.png, id=854, 483.60675pt x 260.29245pt>
 File: images/traditional_rs.png Graphic file (type png)
 <use images/traditional_rs.png>
 Package pdftex.def Info: images/traditional_rs.png  used on input line 111.
@@ -1063,7 +1076,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
  []
 
 [15 <./images/traditional_rs.png>]
-<images/cbf_rs.png, id=822, 385.56046pt x 177.66376pt>
+<images/cbf_rs.png, id=872, 385.56046pt x 177.66376pt>
 File: images/cbf_rs.png Graphic file (type png)
 <use images/cbf_rs.png>
 Package pdftex.def Info: images/cbf_rs.png  used on input line 155.
@@ -1089,13 +1102,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--199
  []
 
 [18]
-<images/cf_rs.png, id=860, 393.6306pt x 155.50095pt>
+<images/cf_rs.png, id=910, 393.6306pt x 155.50095pt>
 File: images/cf_rs.png Graphic file (type png)
 <use images/cf_rs.png>
 Package pdftex.def Info: images/cf_rs.png  used on input line 213.
 (pdftex.def)             Requested size: 364.19664pt x 143.87408pt.
  [19 <./images/cf_rs.png>]
-<images/hybrid_rs.png, id=873, 390.7398pt x 228.01186pt>
+<images/hybrid_rs.png, id=923, 390.7398pt x 228.01186pt>
 File: images/hybrid_rs.png Graphic file (type png)
 <use images/hybrid_rs.png>
 Package pdftex.def Info: images/hybrid_rs.png  used on input line 238.
@@ -1116,7 +1129,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
  []
 
 [22]
-<images/ncf_rs.png, id=900, 253.4268pt x 164.65515pt>
+<images/ncf_rs.png, id=950, 253.4268pt x 164.65515pt>
 File: images/ncf_rs.png Graphic file (type png)
 <use images/ncf_rs.png>
 Package pdftex.def Info: images/ncf_rs.png  used on input line 291.
@@ -1145,7 +1158,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-<images/autoencoder_rs.png, id=924, 188.74515pt x 125.0271pt>
+<images/autoencoder_rs.png, id=974, 188.74515pt x 125.0271pt>
 File: images/autoencoder_rs.png Graphic file (type png)
 <use images/autoencoder_rs.png>
 Package pdftex.def Info: images/autoencoder_rs.png  used on input line 350.
@@ -1160,7 +1173,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
-<images/session_parallel_mini_batches.png, id=944, 285.34605pt x 178.266pt>
+<images/session_parallel_mini_batches.png, id=994, 285.34605pt x 178.266pt>
 File: images/session_parallel_mini_batches.png Graphic file (type png)
 <use images/session_parallel_mini_batches.png>
 Package pdftex.def Info: images/session_parallel_mini_batches.png  used on input line 389.
@@ -1171,7 +1184,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--396
  []
 
 [27]
-<images/gru_rs.png, id=955, 182.6022pt x 124.5453pt>
+<images/gru_rs.png, id=1005, 182.6022pt x 124.5453pt>
 File: images/gru_rs.png Graphic file (type png)
 <use images/gru_rs.png>
 Package pdftex.def Info: images/gru_rs.png  used on input line 414.
@@ -1182,7 +1195,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 427--428
  []
 
 [29 <./images/gru_rs.png>]
-<images/convMF.png, id=977, 191.15414pt x 109.8504pt>
+<images/convMF.png, id=1027, 191.15414pt x 109.8504pt>
 File: images/convMF.png Graphic file (type png)
 <use images/convMF.png>
 Package pdftex.def Info: images/convMF.png  used on input line 444.
@@ -1193,7 +1206,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--451
  []
 
 [30 <./images/convMF.png>]
-<images/cnn_convMF.png, id=988, 237.7683pt x 162.24615pt>
+<images/cnn_convMF.png, id=1038, 237.7683pt x 162.24615pt>
 File: images/cnn_convMF.png Graphic file (type png)
 <use images/cnn_convMF.png>
 Package pdftex.def Info: images/cnn_convMF.png  used on input line 473.
@@ -1218,7 +1231,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--520
 
  []
 
-<images/sasRec_rs.png, id=1022, 213.79875pt x 166.58235pt>
+<images/sasRec_rs.png, id=1072, 213.79875pt x 166.58235pt>
 File: images/sasRec_rs.png Graphic file (type png)
 <use images/sasRec_rs.png>
 Package pdftex.def Info: images/sasRec_rs.png  used on input line 532.
@@ -1233,7 +1246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
-<images/irgan_rs.png, id=1044, 247.6452pt x 102.74385pt>
+<images/irgan_rs.png, id=1094, 247.6452pt x 102.74385pt>
 File: images/irgan_rs.png Graphic file (type png)
 <use images/irgan_rs.png>
 Package pdftex.def Info: images/irgan_rs.png  used on input line 568.
@@ -1253,7 +1266,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 609--610
 
  []
 
-<images/drn_rs.png, id=1065, 227.53004pt x 187.05885pt>
+<images/drn_rs.png, id=1115, 227.53004pt x 187.05885pt>
 File: images/drn_rs.png Graphic file (type png)
 <use images/drn_rs.png>
 Package pdftex.def Info: images/drn_rs.png  used on input line 616.
@@ -1263,7 +1276,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 640--641
 
  []
 
-<images/gc-mc_rs.png, id=1085, 382.0674pt x 91.90335pt>
+<images/gc-mc_rs.png, id=1135, 382.0674pt x 91.90335pt>
 File: images/gc-mc_rs.png Graphic file (type png)
 <use images/gc-mc_rs.png>
 Package pdftex.def Info: images/gc-mc_rs.png  used on input line 646.
@@ -1273,19 +1286,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
-<images/pinSage_rs.png, id=1089, 404.712pt x 231.62535pt>
+<images/pinSage_rs.png, id=1139, 404.712pt x 231.62535pt>
 File: images/pinSage_rs.png Graphic file (type png)
 <use images/pinSage_rs.png>
 Package pdftex.def Info: images/pinSage_rs.png  used on input line 659.
 (pdftex.def)             Requested size: 364.19664pt x 208.44673pt.
 [40 <./images/gc-mc_rs.png>]
-<images/ngcf_rs.png, id=1102, 220.1826pt x 193.32225pt>
+<images/ngcf_rs.png, id=1152, 220.1826pt x 193.32225pt>
 File: images/ngcf_rs.png Graphic file (type png)
 <use images/ngcf_rs.png>
 Package pdftex.def Info: images/ngcf_rs.png  used on input line 678.
 (pdftex.def)             Requested size: 364.19664pt x 319.80275pt.
  [41 <./images/pinSage_rs.png>] [42 <./images/ngcf_rs.png>]
-<images/lightGCN_rs.png, id=1126, 239.81595pt x 175.49565pt>
+<images/lightGCN_rs.png, id=1176, 239.81595pt x 175.49565pt>
 File: images/lightGCN_rs.png Graphic file (type png)
 <use images/lightGCN_rs.png>
 Package pdftex.def Info: images/lightGCN_rs.png  used on input line 704.
@@ -1295,7 +1308,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
 
-<images/sr-gnn_rs.png, id=1130, 503.36055pt x 136.46985pt>
+<images/sr-gnn_rs.png, id=1180, 503.36055pt x 136.46985pt>
 File: images/sr-gnn_rs.png Graphic file (type png)
 <use images/sr-gnn_rs.png>
 Package pdftex.def Info: images/sr-gnn_rs.png  used on input line 720.
@@ -1305,7 +1318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
-<images/graphRec_rs.png, id=1142, 512.8761pt x 315.8199pt>
+<images/graphRec_rs.png, id=1192, 512.8761pt x 315.8199pt>
 File: images/graphRec_rs.png Graphic file (type png)
 <use images/graphRec_rs.png>
 Package pdftex.def Info: images/graphRec_rs.png  used on input line 736.
@@ -1315,7 +1328,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 742--743
 
  []
 
-<images/diffNet_rs.png, id=1155, 473.8503pt x 169.95496pt>
+<images/diffNet_rs.png, id=1205, 473.8503pt x 169.95496pt>
 File: images/diffNet_rs.png Graphic file (type png)
 <use images/diffNet_rs.png>
 Package pdftex.def Info: images/diffNet_rs.png  used on input line 748.
@@ -1325,7 +1338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
 
-<images/kgat_rs.png, id=1169, 434.8245pt x 137.19255pt>
+<images/kgat_rs.png, id=1219, 434.8245pt x 137.19255pt>
 File: images/kgat_rs.png Graphic file (type png)
 <use images/kgat_rs.png>
 Package pdftex.def Info: images/kgat_rs.png  used on input line 764.
@@ -1344,7 +1357,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<images/bert4Rec_rs.png, id=1184, 455.42145pt x 197.17665pt>
+<images/bert4Rec_rs.png, id=1234, 455.42145pt x 197.17665pt>
 File: images/bert4Rec_rs.png Graphic file (type png)
 <use images/bert4Rec_rs.png>
 Package pdftex.def Info: images/bert4Rec_rs.png  used on input line 801.
@@ -1354,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
 
-<images/graphMAE_rs.png, id=1201, 507.0945pt x 123.8226pt>
+<images/graphMAE_rs.png, id=1251, 507.0945pt x 123.8226pt>
 File: images/graphMAE_rs.png Graphic file (type png)
 <use images/graphMAE_rs.png>
 Package pdftex.def Info: images/graphMAE_rs.png  used on input line 817.
@@ -1370,7 +1383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 837--838
  []
 
 [49 <./images/graphMAE_rs.png>]
-<images/sgl_rs.png, id=1224, 236.44334pt x 109.24815pt>
+<images/sgl_rs.png, id=1274, 236.44334pt x 109.24815pt>
 File: images/sgl_rs.png Graphic file (type png)
 <use images/sgl_rs.png>
 Package pdftex.def Info: images/sgl_rs.png  used on input line 850.
@@ -1400,7 +1413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
-<images/ncl_rs.png, id=1241, 210.3057pt x 162.3666pt>
+<images/ncl_rs.png, id=1291, 210.3057pt x 162.3666pt>
 File: images/ncl_rs.png Graphic file (type png)
 <use images/ncl_rs.png>
 Package pdftex.def Info: images/ncl_rs.png  used on input line 891.
@@ -1411,7 +1424,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 901--902
  []
 
 [52 <./images/ncl_rs.png>]
-<images/self-CF_rs.png, id=1260, 166.58235pt x 161.1621pt>
+<images/self-CF_rs.png, id=1310, 166.58235pt x 161.1621pt>
 File: images/self-CF_rs.png Graphic file (type png)
 <use images/self-CF_rs.png>
 Package pdftex.def Info: images/self-CF_rs.png  used on input line 909.
@@ -1422,7 +1435,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 919--920
  []
 
 [53 <./images/self-CF_rs.png>]
-<images/sept_rs.png, id=1272, 484.4499pt x 121.1727pt>
+<images/sept_rs.png, id=1322, 484.4499pt x 121.1727pt>
 File: images/sept_rs.png Graphic file (type png)
 <use images/sept_rs.png>
 Package pdftex.def Info: images/sept_rs.png  used on input line 933.
@@ -1432,7 +1445,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 955--956
 
  []
 
-<images/uniSRec_rs.png, id=1294, 420.6114pt x 178.38644pt>
+<images/uniSRec_rs.png, id=1344, 420.6114pt x 178.38644pt>
 File: images/uniSRec_rs.png Graphic file (type png)
 <use images/uniSRec_rs.png>
 Package pdftex.def Info: images/uniSRec_rs.png  used on input line 962.
@@ -1442,7 +1455,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 972--973
 
  []
 
-<images/p5_rs.png, id=1308, 520.344pt x 120.9318pt>
+<images/p5_rs.png, id=1358, 520.344pt x 120.9318pt>
 File: images/p5_rs.png Graphic file (type png)
 <use images/p5_rs.png>
 Package pdftex.def Info: images/p5_rs.png  used on input line 979.
@@ -1452,19 +1465,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 985--986
 
  []
 
-<images/tallRec_rs.png, id=1313, 507.8172pt x 90.3375pt>
+<images/tallRec_rs.png, id=1363, 507.8172pt x 90.3375pt>
 File: images/tallRec_rs.png Graphic file (type png)
 <use images/tallRec_rs.png>
 Package pdftex.def Info: images/tallRec_rs.png  used on input line 992.
 (pdftex.def)             Requested size: 364.19664pt x 64.78792pt.
 [56 <./images/p5_rs.png>] [57 <./images/tallRec_rs.png>]
-<images/mamba4Rec_rs.png, id=1340, 243.67035pt x 236.5638pt>
+<images/mamba4Rec_rs.png, id=1390, 243.67035pt x 236.5638pt>
 File: images/mamba4Rec_rs.png Graphic file (type png)
 <use images/mamba4Rec_rs.png>
 Package pdftex.def Info: images/mamba4Rec_rs.png  used on input line 1023.
 (pdftex.def)             Requested size: 364.19664pt x 353.59224pt.
  [58 <./images/mamba4Rec_rs.png>]
-<images/ss4Rec_rs.png, id=1351, 471.2004pt x 219.9417pt>
+<images/ss4Rec_rs.png, id=1401, 471.2004pt x 219.9417pt>
 File: images/ss4Rec_rs.png Graphic file (type png)
 <use images/ss4Rec_rs.png>
 Package pdftex.def Info: images/ss4Rec_rs.png  used on input line 1036.
@@ -1474,7 +1487,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
 
  []
 
-<images/ssd4Rec_rs.png, id=1366, 410.2527pt x 164.7756pt>
+<images/ssd4Rec_rs.png, id=1416, 410.2527pt x 164.7756pt>
 File: images/ssd4Rec_rs.png Graphic file (type png)
 <use images/ssd4Rec_rs.png>
 Package pdftex.def Info: images/ssd4Rec_rs.png  used on input line 1057.
@@ -1484,19 +1497,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
 
  []
 
-<images/tiM4Rec_rs.png, id=1370, 436.029pt x 247.4043pt>
+<images/tiM4Rec_rs.png, id=1420, 436.029pt x 247.4043pt>
 File: images/tiM4Rec_rs.png Graphic file (type png)
 <use images/tiM4Rec_rs.png>
 Package pdftex.def Info: images/tiM4Rec_rs.png  used on input line 1070.
 (pdftex.def)             Requested size: 364.19664pt x 206.65923pt.
 [60 <./images/ssd4Rec_rs.png>]
-<images/maTrRec_rs.png, id=1385, 234.03435pt x 176.5797pt>
+<images/maTrRec_rs.png, id=1435, 234.03435pt x 176.5797pt>
 File: images/maTrRec_rs.png Graphic file (type png)
 <use images/maTrRec_rs.png>
 Package pdftex.def Info: images/maTrRec_rs.png  used on input line 1091.
 (pdftex.def)             Requested size: 364.19664pt x 274.78958pt.
  [61 <./images/tiM4Rec_rs.png>] [62 <./images/maTrRec_rs.png>] [63]
-<images/poisoning_vs_evasion.png, id=1407, 318.9516pt x 195.129pt>
+<images/poisoning_vs_evasion.png, id=1457, 318.9516pt x 195.129pt>
 File: images/poisoning_vs_evasion.png Graphic file (type png)
 <use images/poisoning_vs_evasion.png>
 Package pdftex.def Info: images/poisoning_vs_evasion.png  used on input line 1144.
@@ -1527,7 +1540,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
  []
 
 [66]
-<images/aush_attack.png, id=1439, 510.34665pt x 217.5327pt>
+<images/aush_attack.png, id=1489, 510.34665pt x 217.5327pt>
 File: images/aush_attack.png Graphic file (type png)
 <use images/aush_attack.png>
 Package pdftex.def Info: images/aush_attack.png  used on input line 1212.
@@ -1537,7 +1550,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
 
  []
 
-<images/goat_attack.png, id=1443, 463.0098pt x 225.9642pt>
+<images/goat_attack.png, id=1493, 463.0098pt x 225.9642pt>
 File: images/goat_attack.png Graphic file (type png)
 <use images/goat_attack.png>
 Package pdftex.def Info: images/goat_attack.png  used on input line 1226.
@@ -1547,7 +1560,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
 
  []
 
-<images/poisonRec_attack.png, id=1456, 459.3963pt x 109.00725pt>
+<images/poisonRec_attack.png, id=1506, 459.3963pt x 109.00725pt>
 File: images/poisonRec_attack.png Graphic file (type png)
 <use images/poisonRec_attack.png>
 Package pdftex.def Info: images/poisonRec_attack.png  used on input line 1252.
@@ -1557,7 +1570,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
 
  []
 
-<images/copyAttack.png, id=1468, 506.6127pt x 292.6935pt>
+<images/copyAttack.png, id=1518, 506.6127pt x 292.6935pt>
 File: images/copyAttack.png Graphic file (type png)
 <use images/copyAttack.png>
 Package pdftex.def Info: images/copyAttack.png  used on input line 1266.
@@ -1572,7 +1585,7 @@ Overfull \hbox (23.089pt too wide) in paragraph at lines 1278--1280
 []\T1/ptm/m/n/12 (-10) LOKI è spe-ci-fi-co per at-tac-ca-re si-ste-mi \T1/ptm/m/it/12 (-10) Next-Item\T1/ptm/m/n/12 (-10) . L'at-tac-co è so-fi-sti-ca-to per-ché il ri-addestramento
  []
 
-<images/loki_attack.png, id=1482, 240.77956pt x 232.34805pt>
+<images/loki_attack.png, id=1532, 240.77956pt x 232.34805pt>
 File: images/loki_attack.png Graphic file (type png)
 <use images/loki_attack.png>
 Package pdftex.def Info: images/loki_attack.png  used on input line 1290.
@@ -1583,7 +1596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
  []
 
 [71 <./images/loki_attack.png>]
-<images/instruction_tuning_poisoning_attack.png, id=1502, 484.81125pt x 195.24945pt>
+<images/instruction_tuning_poisoning_attack.png, id=1552, 484.81125pt x 195.24945pt>
 File: images/instruction_tuning_poisoning_attack.png Graphic file (type png)
 <use images/instruction_tuning_poisoning_attack.png>
 Package pdftex.def Info: images/instruction_tuning_poisoning_attack.png  used on input line 1308.
@@ -1594,7 +1607,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
  []
 
 [72 <./images/instruction_tuning_poisoning_attack.png>]
-<images/fgm_attack.png, id=1514, 387.24675pt x 108.28455pt>
+<images/fgm_attack.png, id=1564, 387.24675pt x 108.28455pt>
 File: images/fgm_attack.png Graphic file (type png)
 <use images/fgm_attack.png>
 Package pdftex.def Info: images/fgm_attack.png  used on input line 1337.
@@ -1610,7 +1623,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
  []
 
 [73 <./images/fgm_attack.png>]
-<images/legUP_attack.png, id=1528, 483.9681pt x 193.32225pt>
+<images/legUP_attack.png, id=1578, 483.9681pt x 193.32225pt>
 File: images/legUP_attack.png Graphic file (type png)
 <use images/legUP_attack.png>
 Package pdftex.def Info: images/legUP_attack.png  used on input line 1359.
@@ -1621,7 +1634,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
  []
 
 [74 <./images/legUP_attack.png>]
-<images/surrogate_training_via_api_attack.png, id=1540, 180.79546pt x 72.27pt>
+<images/surrogate_training_via_api_attack.png, id=1590, 180.79546pt x 72.27pt>
 File: images/surrogate_training_via_api_attack.png Graphic file (type png)
 <use images/surrogate_training_via_api_attack.png>
 Package pdftex.def Info: images/surrogate_training_via_api_attack.png  used on input line 1381.
@@ -1732,7 +1745,7 @@ Capitolo 2.
 
 
 ] [84]
-<images/agent_environment.png, id=1640, 253.30635pt x 94.79414pt>
+<images/agent_environment.png, id=1690, 253.30635pt x 94.79414pt>
 File: images/agent_environment.png Graphic file (type png)
 <use images/agent_environment.png>
 Package pdftex.def Info: images/agent_environment.png  used on input line 56.
@@ -1790,13 +1803,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 152.
 
 [88] [89] [90] [91] [92] [93]
-<images/dyna-q.png, id=1704, 262.0992pt x 199.58565pt>
+<images/dyna-q.png, id=1754, 262.0992pt x 199.58565pt>
 File: images/dyna-q.png Graphic file (type png)
 <use images/dyna-q.png>
 Package pdftex.def Info: images/dyna-q.png  used on input line 296.
 (pdftex.def)             Requested size: 364.19664pt x 277.3349pt.
  [94] [95 <./images/dyna-q.png>] [96] [97]
-<images/dqn.png, id=1746, 380.26065pt x 217.17136pt>
+<images/dqn.png, id=1796, 380.26065pt x 217.17136pt>
 File: images/dqn.png Graphic file (type png)
 <use images/dqn.png>
 Package pdftex.def Info: images/dqn.png  used on input line 395.
@@ -1806,7 +1819,7 @@ Package pdftex.def Info: images/dqn.png  used on input line 395.
 LaTeX Warning: Citation 'VanHasselt2016' on page 99 undefined on input line 415.
 
 [99 <./images/dqn.png>]
-<images/dueling_dqn.png, id=1763, 195.24945pt x 164.0529pt>
+<images/dueling_dqn.png, id=1813, 195.24945pt x 164.0529pt>
 File: images/dueling_dqn.png Graphic file (type png)
 <use images/dueling_dqn.png>
 Package pdftex.def Info: images/dueling_dqn.png  used on input line 436.
@@ -1816,7 +1829,7 @@ Package pdftex.def Info: images/dueling_dqn.png  used on input line 436.
 LaTeX Warning: Citation 'Konda2000' on page 101 undefined on input line 473.
 
 [101 <./images/dueling_dqn.png>]
-<images/ppo_clipping.png, id=1787, 334.00784pt x 154.29645pt>
+<images/ppo_clipping.png, id=1837, 334.00784pt x 154.29645pt>
 File: images/ppo_clipping.png Graphic file (type png)
 <use images/ppo_clipping.png>
 Package pdftex.def Info: images/ppo_clipping.png  used on input line 507.
@@ -1826,17 +1839,33 @@ Package pdftex.def Info: images/ppo_clipping.png  used on input line 507.
 
  (capitoli/ch3.tex
 Capitolo 3.
-) [105
+[105
 
 
 
 
-]
+] [106]
+<images/ssm_duality.png, id=1880, 474.573pt x 157.90994pt>
+File: images/ssm_duality.png Graphic file (type png)
+<use images/ssm_duality.png>
+Package pdftex.def Info: images/ssm_duality.png  used on input line 73.
+(pdftex.def)             Requested size: 409.71689pt x 136.32999pt.
+
+
+LaTeX Warning: Citation 'Gu2020' on page 107 undefined on input line 89.
+
+[107 <./images/ssm_duality.png>] [108]
+<images/mamba_block.png, id=1902, 495.2904pt x 191.87685pt>
+File: images/mamba_block.png Graphic file (type png)
+<use images/mamba_block.png>
+Package pdftex.def Info: images/mamba_block.png  used on input line 140.
+(pdftex.def)             Requested size: 364.19664pt x 141.09073pt.
+ [109]) [110 <./images/mamba_block.png>]
 \openout2 = `capitoli/ch4.aux'.
 
  (capitoli/ch4.tex
 Capitolo 4.
-) [106
+) [111
 
 
 
@@ -1846,7 +1875,7 @@ Capitolo 4.
 
  (capitoli/ch5.tex
 Capitolo 5.
-) [107
+) [112
 
 
 
@@ -1854,72 +1883,81 @@ Capitolo 5.
 ]
 \openout2 = `capitoli/conclusioni.aux'.
 
- (capitoli/conclusioni.tex) [108
+ (capitoli/conclusioni.tex) [113
 
 
 
 
 
-] [109] (tesi.lof [110
+] [114] (tesi.lof [115
 
 
 
 
-] [111])
+] [116])
 \tf@lof=\write6
 \openout6 = `tesi.lof'.
 
- [112]
-Overfull \hbox (18.09375pt too wide) in paragraph at lines 116--116
-\T1/cmtt/m/n/12 neurips . cc / paper _ files / paper / 2020 / file / 1457c0d6bfcb4967418bfb8ac142f64a -[]
- []
-
-[113
+ [117] [118
 
 
-] [114] [115] [116] [117]
-Overfull \hbox (312.46423pt too wide) in paragraph at lines 116--116
-\T1/cmtt/m/n/12 Q -[] Learning -[] Using -[] Connectionist -[] Systems . pdf ? _sg % 5B0 % 5D = HYd0h230b7WOR6m4hj5yx01K97aS61Z0DufUURMQr9ZqMqcEVZ0dNpG84h6uCfRl _
+] [119] [120] [121] [122]
+Overfull \hbox (40.50406pt too wide) in paragraph at lines 116--116
+\T1/cmtt/m/n/12 Mahesan -[] Niranjan / publication / 2500611 _ On -[] Line _ Q -[] Learning _ Using _ Connectionist _
  []
 
 
-Overfull \hbox (249.90839pt too wide) in paragraph at lines 116--116
+Overfull \hbox (200.01486pt too wide) in paragraph at lines 116--116
+\T1/cmtt/m/n/12 Connectionist -[] Systems . pdf ? _sg % 5B0 % 5D = HYd0h230b7WOR6m4hj5yx01K97aS61Z0DufUURMQr9ZqMqcEVZ0dNpG84h6uCfRl _
+ []
+
+
+Overfull \hbox (243.90839pt too wide) in paragraph at lines 116--116
 \T1/cmtt/m/n/12 M40FNkXgRX -[] GnpnxH31Ww . jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF _ oOsqh7WddL8pfxAomPSbeANzdmLP9YPB26HbLeSaEJqhFgzIxvWQ &
  []
 
 
-Overfull \hbox (79.1496pt too wide) in paragraph at lines 116--116
+Overfull \hbox (73.1496pt too wide) in paragraph at lines 116--116
 \T1/cmtt/m/n/12 _sg % 5B1 % 5D = CZtZhHTEMgSwBZrpZU _ 7BACd8RH04JUKiITdXRQJ6MQ9SFS27jreZmcsuNcqYYWRoxcwBE -[]
  []
 
 
-Overfull \hbox (19.96437pt too wide) in paragraph at lines 116--116
+Overfull \hbox (13.96437pt too wide) in paragraph at lines 116--116
 \T1/cmtt/m/n/12 xBMbrfl1QobmEZ65bmkmpzonq5JoLRIIUKXne . jBF3fgrlhaJYs3bDEaHQU22nRpKP0zKeF _
  []
 
-[118] [119] [120] [121] [122] [123] (tesi.aux (capitoli/introduzione.aux) (capitoli/ch1.aux) (capitoli/ch2.aux) (capitoli/ch3.aux) (capitoli/ch4.aux) (capitoli/ch5.aux) (capitoli/conclusioni.aux))
+[123] [124] [125] [126] [127] [128] (tesi.aux (capitoli/introduzione.aux) (capitoli/ch1.aux) (capitoli/ch2.aux) (capitoli/ch3.aux) (capitoli/ch4.aux) (capitoli/ch5.aux) (capitoli/conclusioni.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 166FCC5530FE65652DF989465ED34E88;29995.
+(rerunfilecheck)             Checksum: 128B91FC8C9C596552FFDD6FCB95A802;32100.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                tesi
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28694 strings out of 467871
- 519096 string characters out of 5418377
- 1463497 words of memory out of 5000000
- 56096 multiletter control sequences out of 15000+600000
- 761808 words of font info for 447 fonts, out of 8000000 for 9000
+ 28666 strings out of 467871
+ 518015 string characters out of 5418377
+ 1462084 words of memory out of 5000000
+ 56054 multiletter control sequences out of 15000+600000
+ 760461 words of font info for 431 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  73i,13n,79p,2435b,2890s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\giafe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/giafe/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tesi.pdf (125 pages, 20965229 bytes).
+Output written on tesi.pdf (130 pages, 21333427 bytes).
 PDF statistics:
- 2415 PDF objects out of 2487 (max. 8388607)
- 591 named destinations out of 1000 (max. 500000)
- 116045 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 2532 PDF objects out of 2984 (max. 8388607)
+ 625 named destinations out of 1000 (max. 500000)
+ 116135 words of extra memory for PDF output out of 128383 (max. 10000000)
 

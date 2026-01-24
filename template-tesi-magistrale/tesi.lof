@@ -54,5 +54,7 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Schema logico della Dueling DQN. Immagine tratta da \blx@tocontentsinit {0}\cite {Wang2016}}}{101}{figure.caption.145}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Funzione obiettivo di PPO: il meccanismo di clipping impedisce aggiornamenti troppo aggressivi della policy quando il rapporto di probabilità $r_t$ diverge \blx@tocontentsinit {0}\cite {Schulman2017}.}}{103}{figure.caption.146}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Dualità degli SSM: rappresentazione continua (ODE), discreta ricorrente (efficiente per l'inferenza) e convoluzionale (efficiente per il training). Immagine tratta da \blx@tocontentsinit {0}\cite {Gu2022}.}}{107}{figure.caption.147}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Schema architetturale del blocco Mamba. Immagine tratta da \blx@tocontentsinit {0}\cite {Gu2023}.}}{110}{figure.caption.148}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

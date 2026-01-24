@@ -1,5 +1,150 @@
 \chapter{State Space Models}
 \label{chap:state-space-models}
 
-\section{Mamba}
+La modellazione efficace di dati sequenziali è una pietra miliare del Deep Learning, cruciale per applicazioni che vanno dal Natural Language Processing (NLP) ai Sistemi di Raccomandazione. Fino a tempi recenti, le architetture dominanti sono state le \textit{Recurrent Neural Networks} (RNN) e i \textit{Transformer}.
+
+Tuttavia, entrambe presentano limitazioni strutturali fondamentali. Le RNN (es. LSTM, GRU) offrono inferenza efficiente ($O(1)$ per step) ma non sono parallelizzabili durante il training e faticano a ritenere informazioni a lungo termine. I Transformer eccellono nella modellazione globale grazie alla \textit{Self-Attention}, ma la loro complessità computazionale scala quadraticamente rispetto alla lunghezza della sequenza ($O(L^2)$), rendendoli proibitivi per contesti a lungo raggio (\textit{Long-Range Arena}). \cite{Tay2020}
+
+In questo scenario, i \textit{Structured State Space Models} (SSM) sono emersi come una soluzione unificante. Combinando la teoria dei sistemi lineari continui con il Deep Learning, gli SSM promettono il meglio dei due mondi: training parallelizzabile (come i Transformer) e inferenza lineare (come le RNN).
+Questo capitolo analizza l'evoluzione teorica degli SSM, partendo dalla formulazione continua fino all'architettura \textit{Mamba}. \cite{Gu2023}
+
+\section{Fondamenti Matematici}
+\label{sec:ssm_matematica}
+
+Gli SSM moderni traggono ispirazione dai classici modelli dello spazio di stato della teoria dei controlli. L'idea di base è mappare una sequenza di input 1-dimensionale $x(t) \in \mathbb{R}$ in una sequenza di output $y(t) \in \mathbb{R}$ attraverso uno stato latente compresso $h(t) \in \mathbb{R}^N$.
+
+\subsection{Il Modello Continuo (ODE)}
+\label{subsec:ode}
+
+Nel dominio del tempo continuo, un SSM lineare tempo-invariante (LTI) è governato dalla seguente equazione differenziale ordinaria (ODE):
+
+\begin{equation}
+    \begin{cases}
+        h'(t) = \mathbf{A}h(t) + \mathbf{B}x(t) \\
+        y(t) = \mathbf{C}h(t)
+    \end{cases}
+    \label{eq:continuous_ssm}
+\end{equation}
+
+Dove:
+\begin{itemize}
+    \item $\mathbf{A} \in \mathbb{R}^{N \times N}$ è la \textit{matrice di stato}. Controlla l'evoluzione del sistema e la memoria a lungo termine.
+    \item $\mathbf{B} \in \mathbb{R}^{N \times 1}$ è la \textit{matrice di controllo} (o input). Proietta l'input nello spazio latente.
+    \item $\mathbf{C} \in \mathbb{R}^{1 \times N}$ è la \textit{matrice di osservazione} (o output). Proietta lo stato latente verso l'output.
+\end{itemize}
+
+\subsection{Discretizzazione}
+\label{subsec:discretizzazione}
+
+Per applicare questo modello su dati digitali (come sequenze di click o testo), è necessario trasformare il sistema continuo in una ricorrenza discreta.
+Il processo di \textit{discretizzazione} introduce un parametro $\Delta$ (\textit{step size}), che rappresenta la risoluzione temporale dell'input.
+Utilizzando il metodo \textit{Zero-Order Hold} (ZOH), che assume l'input costante nell'intervallo $[t, t+\Delta]$, le matrici continue $(\mathbf{A}, \mathbf{B})$ vengono trasformate nelle loro controparti discrete $(\overline{\mathbf{A}}, \overline{\mathbf{B}})$:
+
+\begin{equation}
+    \overline{\mathbf{A}} = \exp(\Delta \mathbf{A})
+\end{equation}
+\begin{equation}
+    \overline{\mathbf{B}} = (\Delta \mathbf{A})^{-1} (\exp(\Delta \mathbf{A}) - \mathbf{I}) \cdot \Delta \mathbf{B}
+\end{equation}
+
+L'equazione discreta risultante è una ricorrenza lineare:
+\begin{equation}
+    h_t = \overline{\mathbf{A}} h_{t-1} + \overline{\mathbf{B}} x_t, \quad y_t = \mathbf{C} h_t
+    \label{eq:discrete_ssm}
+\end{equation}
+
+\subsection{Ricorrenza e Convoluzione}
+\label{subsec:ricorrenza_convoluzione}
+
+La proprietà fondamentale degli SSM lineari è la dualità di calcolo.
+
+\begin{enumerate}
+    \item \textbf{Vista Ricorrente (Inference)}: l'equazione (\ref{eq:discrete_ssm}) permette di calcolare lo stato passo dopo passo. Questo è estremamente efficiente per l'inferenza autoregressiva (come nei RS), richiedendo memoria costante $O(1)$ per ogni step, a differenza dei Transformer che devono mantenere la cache di tutte le chiavi/valori passati ($KV$-Cache).
+    \item \textbf{Vista Convoluzionale (Training)}: poiché il sistema è LTI, l'output può essere calcolato come una convoluzione globale tra l'input $x$ e un filtro $\overline{\mathbf{K}}$:
+
+    \begin{equation}
+        y = x * \overline{\mathbf{K}}, \quad \text{con } \overline{\mathbf{K}} = (\mathbf{C}\overline{\mathbf{B}}, \mathbf{C}\overline{\mathbf{A}}\overline{\mathbf{B}}, \dots, \mathbf{C}\overline{\mathbf{A}}^{L-1}\overline{\mathbf{B}})
+    \end{equation}
+    Questo permette di parallelizzare il calcolo su tutta la sequenza durante il training, sfruttando le GPU moderne (tramite FFT), esattamente come le CNN.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ssm_duality.png}
+    \caption{Dualità degli SSM: rappresentazione continua (ODE), discreta ricorrente (efficiente per l'inferenza) e convoluzionale (efficiente per il training). \\
+    Immagine tratta da \cite{Gu2022}.}
+    \label{fig:ssm_duality}
+\end{figure}
+
+\section{Structured State Space (S4)}
+\label{sec:s4}
+
+La sfida critica nell'addestramento di SSM profondi è la gestione della matrice di stato $\mathbf{A}$. Se inizializzata casualmente, il sistema tende a soffrire di gradienti che esplodono o svaniscono, dimenticando rapidamente le informazioni passate.
+Il modello S4 (\textit{Structured State Space Sequence model}) risolve questo problema imponendo una struttura specifica alla matrice $\mathbf{A}$ \cite{Gu2022}.
+
+\subsection{La Matrice HiPPO}
+\label{subsec:HiPPO}
+
+S4 si basa sulla teoria \textit{HiPPO} (High-order Polynomial Projection Operators). HiPPO dimostra matematicamente che, per memorizzare ottimamente una funzione continua $x(t)$ (la storia passata) in uno stato di dimensione finita, la matrice $\mathbf{A}$ deve avere una forma specifica che proietta la storia su una base di polinomi ortogonali (es. Legendre o Legendre scalati).
+Questa inizializzazione permette a S4 di catturare dipendenze a lunghissimo raggio (> 10.000 passi) in modo stabile, superando le LSTM. \cite{Gu2020}
+
+Tuttavia, S4 è un sistema \textit{Linear Time-Invariant} (LTI). Le matrici $(\overline{\mathbf{A}}, \overline{\mathbf{B}})$ sono costanti per tutta la sequenza. Ciò significa che il modello processa ogni token con la stessa dinamica, indipendentemente dal suo contenuto. Questa rigidità limita le prestazioni in task che richiedono ragionamento "content-aware", come la comprensione del linguaggio o il filtraggio di rumore in sequenze di interazioni utente.
+
+\section{Mamba: Selective State Space Models}
 \label{sec:mamba}
+
+Per superare i limiti dei modelli LTI viene introdotto \textit{Mamba}. L'innovazione chiave è rendere i parametri del sistema funzioni dell'input, trasformando l'SSM in un sistema \textit{Time-Variant}. \cite{Gu2023}
+
+\subsection{Meccanismo di Selezione}
+\label{subsec:meccanismo_selezione}
+
+In Mamba, le matrici $\mathbf{B}, \mathbf{C}$ e il passo $\Delta$ non sono più parametri fissi, ma vengono predetti a partire dall'input corrente $x_t$ tramite proiezioni lineari:
+\begin{align}
+    \mathbf{B}_t &= \text{Linear}_B(x_t) \\
+    \mathbf{C}_t &= \text{Linear}_C(x_t) \\
+    \Delta_t &= \text{Softplus}(\text{Parameter} + \text{Linear}_\Delta(x_t))
+\end{align}
+
+Questo semplice cambiamento ha implicazioni profonde:
+\begin{itemize}
+    \item \textbf{Filtraggio del Rumore}: il modello può modulare $\Delta_t$. Se $\Delta_t \to 0$, lo stato $h_t$ rimane invariato (ignora l'input corrente). Questo permette di ignorare token irrilevanti (es. stop words o click casuali).
+    \item \textbf{Reset del Contesto}: se $\Delta_t \to \infty$, il nuovo input sovrascrive completamente lo stato precedente. Questo permette al modello di resettare la memoria quando il contesto cambia drasticamente.
+\end{itemize}
+
+Questa capacità di selezione (compressione selettiva delle informazioni) rende Mamba potente quanto un Transformer, pur mantenendo uno stato ricorrente compresso.
+
+\subsection{Algoritmo Hardware-Aware (Parallel Scan)}
+\label{subsec:hardware-aware}
+
+Rendendo il sistema tempo-variante, si perde la possibilità di usare la Convoluzione (che richiede un kernel fisso) per il training parallelo. Per non ricadere nella lentezza sequenziale delle RNN, Mamba implementa un algoritmo di \textit{Parallel Associative Scan}.
+
+L'algoritmo è progettato per essere \textit{Hardware-Aware} (consapevole dell'hardware GPU). Invece di scrivere i risultati intermedi (gli stati $h_t$) nella lenta memoria HBM (High Bandwidth Memory) della GPU, Mamba carica i parametri nella veloce memoria SRAM, esegue la scansione parallela e scrive solo l'output finale. Questo approccio, noto come \textit{FlashAttention} per gli SSM, permette a Mamba di essere fino a 3x più veloce dei Transformer in inferenza e di scalare linearmente con la lunghezza della sequenza.
+
+\subsection{Architettura Mamba Block}
+\label{subsec:mamba_architettura}
+
+Il blocco Mamba è progettato per essere integrato nelle moderne architetture deep learning come sostituto del blocco \textit{Multi-Head Attention}.
+Il flusso dei dati attraverso un blocco Mamba è il seguente:
+
+\begin{enumerate}
+    \item \textbf{Espansione}: l'input viene proiettato in una dimensione maggiore.
+    \item \textbf{Convoluzione 1D}: una breve convoluzione locale processa i token vicini.
+    \item \textbf{Attivazione SiLU}: viene applicata una non-linearità.
+    \item \textbf{SSM Selettivo}: il nucleo (discretizzazione + scan) processa la sequenza.
+    \item \textbf{Gating}: l'output dell'SSM viene moltiplicato element-wise con un ramo parallelo (Gated Linear Unit).
+    \item \textbf{Proiezione}: si ritorna alla dimensione originale.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mamba_block.png}
+    \caption{Schema architetturale del blocco Mamba. \\
+    Immagine tratta da \cite{Gu2023}.}
+    \label{fig:mamba_block}
+\end{figure}
+
+\section{Evoluzioni Recenti: Mamba-2 e SSD}
+\label{sec:mamba2}
+
+Mamba-2 ha introdotto il concetto di \textit{Structured State Space Duality} (SSD).
+Si dimostra che esiste una connessione teorica profonda tra gli SSM selettivi e l'Attenzione Lineare (\textit{Linear Attention}). Sfruttando questa dualità, Mamba-2 riformula il calcolo ricorrente come una moltiplicazione di matrici a blocchi. Questo permette di utilizzare i Tensor Core delle GPU moderne in modo molto più efficiente rispetto allo Scan parallelo, aumentando ulteriormente la velocità di training e la stabilità su dimensioni dello stato ($N$) molto grandi. \cite{Dao2024}
